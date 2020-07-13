@@ -1,19 +1,20 @@
 #!/bin/sh -l
 
-
 [[ -n "$TOKEN" ]] || printf '\e[1;31m%-6s\e[m' "Create a secret called \"TOKEN\" with write permission to $GITHUB_REPOSITORY\n"
 [[ -n "$TOKEN" ]] || exit 1
-
-echo "1: $1"
-echo "2: $2"
 
 ORGS=$(echo "$1" | tr -d ' ' | tr ' ' '|')
 LANGUAGES=$(echo "$2" | tr -d ' ' | tr ' ' '|')
 
-ORGS="github octokit ubuntu git-for-windows"
-
 # Should this be an argument?
 CUTOFFDATE=1209600
+
+printf '\e[1;37m%-6s\e[m\n' "Collecting \"Help Wanted\" issues from repos in the following organizations:"
+echo $1 | tr ',' | while read ORG
+do
+    printf '\e[1;37m%-6s\e[m\n' "* $ORG"
+done
+
 
 REPO_OWNER=$GITHUB_ACTOR
 REPO_NAME=$(basename $(pwd))
