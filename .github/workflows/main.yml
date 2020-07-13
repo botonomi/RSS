@@ -26,3 +26,4 @@ jobs:
         id: hello
         with:
           orgs: 'Github,Mozilla,Facebook'
+          languages: TCL,C
