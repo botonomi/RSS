@@ -36,6 +36,9 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
         for PAGE in $(seq 1 $STOP)
         do
             # Reduce to repositories with issues
+            
+            echo "SNATCH https://api.github.com/users/$ORG/repos?page=$PAGE"
+            
             curl -k -s -u :$TOKEN "https://api.github.com/users/$ORG/repos?page=$PAGE" | jq '.[] | "\(.open_issues) \(.full_name)"' | tr -d '"' | awk '$1 > 0 { print $2}' | while read ISSUED
             do
                 # Only tell me about repos that contain languages I use
