@@ -28,6 +28,8 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
     echo '<rss version="2.0">'
     printf "<channel>\n<title>Help Wanted</title>\n<description>Help Wanted Issues</description>\n<link>$RSS_FEED_URL</link>\n"
 
+    echo $ORGS
+
     echo $ORGS | tr ',' ' ' | while read ORG
     do
     
