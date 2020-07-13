@@ -25,5 +25,5 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: hello
         with:
-          orgs: 'Github,Mozilla,Facebook'
+          orgs: 'Github,octokit,ubuntu'
           languages: shell,perl,python,go
