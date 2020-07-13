@@ -56,6 +56,7 @@ echo "Scrape https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/contents/feed.x
 # Harvest current SHA of feed.xml
 CURRENT_SHA=$(curl -L -s -u :$TOKEN https://api.github.com/repos/$GITHUB_REPOSITORY/contents/feed.xml | jq .sha | tr -d '"' | head -1)
 
+cat feed.xml
 
 #NOT YET
 #curl -s -u :$TOKEN -X PUT -d '{ "message":"RSS Refresh Activity", "sha":"'$CURRENT_SHA'", "content":"'$(cat feed.xml)'" }' https://api.github.com/repos/$GITHUB_REPOSITORY/contents/feed.xml
