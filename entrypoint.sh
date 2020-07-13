@@ -30,7 +30,7 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
 
     echo $ORGS
 
-    echo $ORGS | tr ',' ' ' | while read ORG
+    for ORG in $(echo $ORGS | tr ',' ' ')
     do
     
         echo;echo;echo $ORG;echo;echo;
