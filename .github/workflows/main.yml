@@ -9,9 +9,9 @@ on:
 #    - cron: "20 * * * *"
 
 jobs:
-  hello_world_job:
+  concentrator:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Concentrate Help Wanted issues
     
     env:
       TOKEN: ${{ secrets.TOKEN }}  
@@ -21,11 +21,8 @@ jobs:
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Hello world action step
+      - name: Get issues
         uses: ./ # Uses an action in the root directory
         id: hello
         with:
-          who-to-greet: 'Mona the Octocat'
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+          orgs: 'Github,Mozilla,Facebook'
