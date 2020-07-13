@@ -30,6 +30,9 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
 
     for ORG in $ORGS
     do
+    
+        echo;echo;echo $ORG;echo;echo;
+    
         #Plumb
         STOP=$(curl -k -v -u :$TOKEN "https://api.github.com/users/$ORG/repos" -o /dev/null 2>&1 | tr [:punct:] ' ' | awk '/next/ { print $21 }')
 
