@@ -1,0 +1,22 @@
+name: RSS
+
+on:
+  push:
+    branches: [ master ]
+
+#on:
+#  schedule:
+#    - cron: "20 * * * *"
+
+jobs:
+  generate_content_label:
+    runs-on: ubuntu-latest
+
+    env:
+      TOKEN: ${{ secrets.TOKEN }}   
+
+    steps:
+    - name: test
+      uses: ./
+      with:
+        count-forked: 'false'
