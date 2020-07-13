@@ -1,12 +1,12 @@
 name: RSS
 
-on:
-  push:
-    branches: [ master ]
-
 #on:
-#  schedule:
-#    - cron: "20 * * * *"
+#  push:
+#    branches: [ master ]
+
+on:
+  schedule:
+    - cron: "20 * * * *"
 
 jobs:
   concentrator:
