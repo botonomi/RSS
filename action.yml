@@ -7,7 +7,7 @@ inputs:
     description: 'Organizations to search'
     required: false
     default: 'Github,Mozilla'
-  langauges:
+  languages:
     description: 'Languages to filter repos against'
     required: false
     default: 'shell,python,go'
