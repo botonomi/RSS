@@ -7,7 +7,7 @@ ORGS=$(echo "$1" | tr -d ' ' | tr ' ' '|')
 LANGUAGES=$(echo "$2" | tr -d ' ' | tr ' ' '|')
 
 # Should this be an argument?
-CUTOFFDATE=1209600
+CUTOFFDATE=12096000
 
 printf '\e[1;37m%-6s\e[m\n' "Collecting \"Help Wanted\" issues from repos in the following organizations:"
 echo $1 | tr ',' "\n" | while read ORG
@@ -36,9 +36,6 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
         for PAGE in $(seq 1 $STOP)
         do
             # Reduce to repositories with issues
-            
-            echo "SNATCH https://api.github.com/users/$ORG/repos?page=$PAGE"
-            
             curl -k -s -u :$TOKEN "https://api.github.com/users/$ORG/repos?page=$PAGE" | jq '.[] | "\(.open_issues) \(.full_name)"' | tr -d '"' | awk '$1 > 0 { print $2}' | while read ISSUED
             do
                 # Only tell me about repos that contain languages I use
@@ -52,7 +49,7 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
     done
 
     printf "\n</channel>\n</rss>\n"
-#) | sed -e 's/&/&amp;/g' | perl -le 'while (<>) {chomp; $bfr.=$_;} $bfr =~ s/\)/\)\n/g; foreach $f (split(/\n/, $bfr)){ if ($f =~ /(.*)\[(.*?)\]\((.*?)\)(.*?)/) { print "$1 <a href=\"$3\">$2</a> $4\n"; } else { print $f; }}' | base64 | tr -d "\n" > feed.xml
+) | sed -e 's/&/&amp;/g' | perl -le 'while (<>) {chomp; $bfr.=$_;} $bfr =~ s/\)/\)\n/g; foreach $f (split(/\n/, $bfr)){ if ($f =~ /(.*)\[(.*?)\]\((.*?)\)(.*?)/) { print "$1 <a href=\"$3\">$2</a> $4\n"; } else { print $f; }}' | base64 | tr -d "\n" > feed.xml
 
 echo "Scrape https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/contents/feed.xml"
 
