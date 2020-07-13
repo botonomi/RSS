@@ -10,7 +10,7 @@ LANGUAGES=$(echo "$2" | tr -d ' ' | tr ' ' '|')
 CUTOFFDATE=1209600
 
 printf '\e[1;37m%-6s\e[m\n' "Collecting \"Help Wanted\" issues from repos in the following organizations:"
-echo $1 | tr ',' | while read ORG
+echo $1 | tr ',' "\n" | while read ORG
 do
     printf '\e[1;37m%-6s\e[m\n' "* $ORG"
 done
