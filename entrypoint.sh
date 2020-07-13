@@ -33,6 +33,8 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
         #Plumb
         STOP=$(curl -k -v -u :$TOKEN "https://api.github.com/users/$ORG/repos" -o /dev/null 2>&1 | tr [:punct:] ' ' | awk '/next/ { print $21 }')
 
+        echo "STOP: $STOP"
+
         for PAGE in $(seq 1 $STOP)
         do
             # Reduce to repositories with issues
