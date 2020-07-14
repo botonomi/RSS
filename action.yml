@@ -18,5 +18,5 @@ runs:
     - ${{ inputs.orgs }}
     - ${{ inputs.languages }}
 branding:
-  icon: 'box'  
+  icon: 'align-justify'  
   color: 'purple'
