@@ -1,7 +1,7 @@
 # action.yml
-name: 'Help-Wanted RSS'
+name: 'Issue RSS Feed'
 author: 'lbonanomi'
-description: 'Generate an RSS of Github Help-Wanted issues'
+description: 'Generate an RSS of Github issues by label'
 inputs:
   orgs:
     description: 'Organizations to search'
