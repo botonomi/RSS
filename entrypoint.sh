@@ -7,6 +7,7 @@ export ORGS=$(echo "$1" | tr -d ' ' | tr ' ' '|') #FIXME
 export LANGUAGES=$(echo "$2" | tr ',' '|')
 export LABELS=$(echo "$3" | tr ',' '|')
 
+
 export LABELS="Help Wanted"
 # Should this be an argument?
 CUTOFFDATE=12096000
@@ -17,7 +18,11 @@ do
     printf '\e[1;37m%-6s\e[m\n' "* $ORG"
 done
 
-echo "Filter for languages: $LANGUAGES"
+printf '\e[1;37m%-6s\e[m\n' "Filtering for languages:"
+echo $2 | tr ',' "\n" | while read LANGUAGE
+do
+    printf '\e[1;37m%-6s\e[m\n' "* $LANGUAGE"
+done
 
 REPO_OWNER=$GITHUB_ACTOR
 REPO_NAME=$(basename $(pwd))
@@ -54,9 +59,11 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
     printf "\n</channel>\n</rss>\n"
 ) | sed -e 's/&/&amp;/g' | perl -le 'while (<>) {chomp; $bfr.=$_;} $bfr =~ s/\)/\)\n/g; foreach $f (split(/\n/, $bfr)){ if ($f =~ /(.*)\[(.*?)\]\((.*?)\)(.*?)/) { print "$1 <a href=\"$3\">$2</a> $4\n"; } else { print $f; }}' | base64 | tr -d "\n" > feed.xml
 
-echo "Scrape https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/contents/feed.xml"
-
 # Harvest current SHA of feed.xml
 CURRENT_SHA=$(curl -L -s -u :$TOKEN https://api.github.com/repos/$GITHUB_REPOSITORY/contents/feed.xml | jq .sha | tr -d '"' | head -1)
 
-curl -s -u :$TOKEN -X PUT -d '{ "message":"RSS Refresh Activity", "sha":"'$CURRENT_SHA'", "content":"'$(cat feed.xml)'" }' https://api.github.com/repos/$GITHUB_REPOSITORY/contents/feed.xml
+# Publish new feed.xml
+curl -s -u :$TOKEN -X PUT -d '{ "message":"RSS Refresh Activity", "sha":"'$CURRENT_SHA'", "content":"'$(cat feed.xml)'" }' https://api.github.com/repos/$GITHUB_REPOSITORY/contents/feed.xml | jq .content.html_url
+
+# Push page
+curl -s -u :$TOKEN https://api.github.com/repos/$GITHUB_REPOSITORY/pages | jq .html_url | grep -q "$GITHUB_REPOSITORY" || curl -s -u :$TOKEN -X POST -H "Accept: application/vnd.github.switcheroo-preview+json" https://api.github.com/repos/$GITHUB_REPOSITORY/pages
