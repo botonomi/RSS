@@ -6,7 +6,7 @@ inputs:
   orgs:
     description: 'Organizations to search'
     required: false
-    default: 'Github,Mozilla'
+    default: 'github,octokit,ubuntu'
   languages:
     description: 'Languages to filter repos against'
     required: false
