@@ -1,12 +1,8 @@
 name: RSS
 
-#on:
-#  push:
-#    branches: [ gh-pages ]
-
 on:
   schedule:
-    - cron: "10 * * * *"
+    - cron: "00 */4 * * *"
 
 jobs:
   concentrator:
@@ -17,13 +13,11 @@ jobs:
       TOKEN: ${{ secrets.TOKEN }}  
       
     steps:
-      # To use this repository's private action,
-      # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
       - name: Get issues
         uses: ./ # Uses an action in the root directory
-        id: hello
+        id: RSS
         with:
-          orgs: 'Github,octokit,ubuntu'
+          orgs: 'github,octokit,ubuntu'
           languages: shell,perl,python,go
