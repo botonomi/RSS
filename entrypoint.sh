@@ -8,7 +8,7 @@ export LANGUAGES=$(echo "$2" | tr ',' '|')
 export LABELS=$(echo "$3" | tr ',' '|')
 
 
-export LABELS="Help Wanted"
+export LABELS="Help Wanted|Hacktoberfest"
 # Should this be an argument?
 CUTOFFDATE=12096000
 
@@ -36,28 +36,40 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
     echo '<rss version="2.0">'
     printf "<channel>\n<title>Help Wanted</title>\n<description>Help Wanted Issues</description>\n<link>$RSS_FEED_URL</link>\n"
 
-    for ORG in $(echo $ORGS | tr ',' ' ')
-    do
-        #Plumb
-        STOP=$(curl -k -v -u :$TOKEN "https://api.github.com/users/$ORG/repos" -o /dev/null 2>&1 | tr [:punct:] ' ' | awk '/next/ { print $21 }')
+for ORG in $ORGS
+do
+        STOP=$(curl -v -u :$TOKEN "https://api.github.com/users/$ORG/repos" -o /dev/null 2>&1 | tr [:punct:] ' ' | awk '/next/ { print $21 }')
 
         for PAGE in $(seq 1 $STOP)
         do
-            # Reduce to repositories with issues
-            curl -k -s -u :$TOKEN "https://api.github.com/users/$ORG/repos?page=$PAGE" | jq '.[] | "\(.open_issues) \(.full_name)"' | tr -d '"' | awk '$1 > 0 { print $2}' | while read ISSUED
-            do
-                # Only tell me about repos that contain languages I use
-                curl -k -s -u :$TOKEN "https://api.github.com/repos/$ISSUED/languages" | jq . | egrep -qi "$LANGUAGES" && (
-                    curl -s -u :$TOKEN "https://api.github.com/repos/$ISSUED/issues" | jq '.[] | "\(.updated_at)¡\(.labels[].name)¡\(.title)¡\(.html_url)¡\(.body)"' | egrep -i "$LABELS" > LABELLED;
-                    #cat LABELLED | awk -F"¡" '{ gsub(/[\"|\-|T|:|Z]/, " ", $1); if ((systime()-"'$CUTOFFDATE'")<mktime($1)) print $3"¡"$4"¡"$5 }' ;
-                    cat LABELLED | awk -F"¡" '{ gsub(/[\"|\-|T|:|Z]/, " ", $1); print $3"¡"$4"¡"$5 }' | awk -F"¡" '{ gsub(/\\n/, "<br\/>", $3); print "<item>\n\t<title>"$1"</title>\n\t<link>"$2"</link>\n\t<description><![CDATA["$3" ]]></description>\n</item>\n" }' 2>/dev/null | perl -e 'while(<>){$_=~s/\\r//g;print}'
-                )
-            done
+                curl -s -u :$TOKEN "https://api.github.com/users/$ORG/repos?page=$PAGE" | jq '.[] | "\(.open_issues) \(.full_name)"' | awk '$1 != "\"0" { gsub(/"/, ""); print $NF }' | while read I
+                do
+                        curl -s -u :$TOKEN "https://api.github.com/repos/$I/languages" | jq . | egrep -qi "$LANGUAGES" && (
+                                curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues" | jq '.[] | "\(.updated_at)¡\(.labels[].name)¡\(.title)¡\(.html_url)¡\(.body)"' | egrep -i "$LABELS" | while read RAW
+                                do
+                                        #echo "$RAW"
+                                        THEN=$(date -d $(echo "$RAW" | awk -F"¡" '{ gsub(/"/, ""); print $1 }') +%s )
+                                        DIFF=$(($(date +%s)-$THEN))
+
+                                        if [[ $DIFF -ge 12096000 ]]
+                                        then
+                                                true
+                                        else
+                                                LABELS=$(echo   "$RAW" | awk -F"¡" '{ print $2 }')
+                                                TITLE=$(echo    "$RAW" | awk -F"¡" '{ print $3 }')
+                                                URL=$(echo      "$RAW" | awk -F"¡" '{ print $4 }')
+                                                BODY=$(echo     "$RAW" | awk -F"¡" '{ print $5 }' | pandoc | sed -e 's/rn/<br>/g')
+                                                printf "<item>\t<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ $BODY ]]></description>\n</item>\n"
+                                        fi
+                                done
+                        )
+                done
         done
-    done
+done
+
 
     printf "\n</channel>\n</rss>\n"
-) | sed -e 's/&/&amp;/g' | perl -le 'while (<>) {chomp; $bfr.=$_;} $bfr =~ s/\)/\)\n/g; foreach $f (split(/\n/, $bfr)){ if ($f =~ /(.*)\[(.*?)\]\((.*?)\)(.*?)/) { print "$1 <a href=\"$3\">$2</a> $4\n"; } else { print $f; }}' | base64 | tr -d "\n" > feed.xml
+) | base64 | tr -d "\n" > feed.xml
 
 # Harvest current SHA of feed.xml
 CURRENT_SHA=$(curl -L -s -u :$TOKEN https://api.github.com/repos/$GITHUB_REPOSITORY/contents/feed.xml | jq .sha | tr -d '"' | head -1)
