@@ -4,10 +4,8 @@
 <title>Help Wanted</title>
 <description>Help Wanted Issues</description>
 <link>https://lbonanomi.github.io/workspace/feed.xml</link>
-  
-2 pages of Ubuntu
-"2020-08-21T07:53:33Z¡bug¡Null icons in Gnome 3.36.1 now show "missing icon" icons¡https://github.com/ubuntu/gnome-shell-extension-appindicator/issues/225¡Tray applets that have rows without an icon previously showed no icon, but as of upgrading from 3.36.0 to 3.36.1, now display an alert icon to signify that an icon couldn't be loaded.rnrn![null-icons](https://user-images.githubusercontent.com/1149238/78172704-85c2c400-7424-11ea-8f83-f8805b7344c7.png)rn"
-<item>	<title>Null icons in Gnome 3.36.1 now show "missing icon" icons</title>
+
+	<item>	<title>Null icons in Gnome 3.36.1 now show "missing icon" icons</title>
 	<link>https://github.com/ubuntu/gnome-shell-extension-appindicator/issues/225</link>
 	<description><![CDATA[ <p>Tray applets that have rows without an icon previously showed no icon, but as of upgrading from 3.36.0 to 3.36.1, now display an alert icon to signify that an icon couldn't be loaded.
 
@@ -22,7 +20,6 @@ Referencing https://kube
 etes.io/docs/tasks/administer-cluster/dns-custom-nameservers/#coredns this default is what I as a user had expected from coredns. While I can edit the configmap to make changes myself, for a better first time user experience consider using a configuration like this by default.
 &quot;</p> ]]></description>
 </item>
-"2020-09-29T13:46:03Z¡good first issue¡[coredns] default to host configuration not google public¡https://github.com/ubuntu/microk8s/issues/1606¡Deploying microk8s on an environment that does not allow access to public domain servers I discovered that the DNS add on is deploying coredns configured with google dns servers hard coded as the default forwarders. It would seem a better option would be to use the hosts DNS configuration rather than a public server that may or may not be allowed on the system.rnrnReferencing https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/#coredns this default is what I as a user had expected from coredns. While I can edit the configmap to make changes myself, for a better first time user experience consider using a configuration like this by default.rn"
 <item>	<title>[coredns] default to host configuration not google public</title>
 	<link>https://github.com/ubuntu/microk8s/issues/1606</link>
 	<description><![CDATA[ <p>Deploying microk8s on an environment that does not allow access to public domain servers I discovered that the DNS add on is deploying coredns configured with google dns servers hard coded as the default forwarders. It would seem a better option would be to use the hosts DNS configuration rather than a public server that may or may not be allowed on the system.
@@ -31,7 +28,6 @@ Referencing https://kube
 etes.io/docs/tasks/administer-cluster/dns-custom-nameservers/#coredns this default is what I as a user had expected from coredns. While I can edit the configmap to make changes myself, for a better first time user experience consider using a configuration like this by default.
 &quot;</p> ]]></description>
 </item>
-"2020-09-27T22:06:08Z¡bug¡Microk8s HA Cluster seems unstable¡https://github.com/ubuntu/microk8s/issues/1602¡I'm trying to run a 4 x Pi4 cluster.rnrnWas previously running on 1.18, but I was using latest/stable and things started going wonky this week - issues with pods talking to those on different nodes. When I started looking into things, I noticed it had upgraded to 1.19 at some point. The two _may_ be related, but may not.rnrnIn the process of trying to work out what was going on, things got a whole lot worse:rn`microk8s status` said that microk8s wasn't running.rn`microk8s inspect` said everything was fine.rn`microk8s kubectl` said it couldn't connect.rnrnI didn't have a whole lot on my cluster at this point, and everything important is on PVs, so decided to rebuild my cluster, redeploy etc, so I snap removed microk8s from each node, re-installed, checked HA was enabled (because it seems to be a good idea!), re-added the nodes and things were still screwy, but in a different way.rnrnI use lens to manage my cluster and I noticed that lens kept getting disconnected about every 5-10 minutes. I tried deploying something and the deployment was created but no pods were every spun up... I tried looking at logs etc but couldn't find anything obvious so decided to start properly from scratch and reinstalled ubuntu 20.04 on the 4 sd cards.rnrnI've now reinstalled microk8s on each node, checked HA is enabled, added a few other features and added all the nodes... and it still doesn't seem happy.rnrnI'm regularly getting this (though not as often as before I reinstalled from scratch!):rn![image](https://user-images.githubusercontent.com/1851814/94368647-2ac10f80-00dd-11eb-8b5c-53d1d2badb52.png)rnrnplus one of my nodes, which initially showed as ready, has turned "unhappy" (the warnings are because the node has change to "unready"):rn![image](https://user-images.githubusercontent.com/1851814/94369027-45948380-00df-11eb-8604-9eb076b36a6c.png)rnrnI decided to get take a screenshot of just using kubectl and whilst writing this, the same has happened to node 3:rn![image](https://user-images.githubusercontent.com/1851814/94369075-7eccf380-00df-11eb-9cfc-239c377cf1d4.png)rnrninspection report from node 1:rn[inspection-report-20200927_143617.tar.gz](https://github.com/ubuntu/microk8s/files/5288567/inspection-report-20200927_143617.tar.gz)rnrninspect report from node 2:rn[inspection-report-20200927_143534.tar.gz](https://github.com/ubuntu/microk8s/files/5288568/inspection-report-20200927_143534.tar.gz)rn"
 <item>	<title>Microk8s HA Cluster seems unstable</title>
 	<link>https://github.com/ubuntu/microk8s/issues/1602</link>
 	<description><![CDATA[ <p>I'm trying to run a 4 x Pi4 cluster.
@@ -67,7 +63,6 @@ inspect report from node 2:
 <a href="https://github.com/ubuntu/microk8s/files/5288568/inspection-report-20200927_143534.tar.gz">inspection-report-20200927_143534.tar.gz</a>
 &quot;</p> ]]></description>
 </item>
-"2020-09-29T17:25:04Z¡bug¡microk8s crashes with "FAIL:  Service snap.microk8s.daemon-apiserver is not running"¡https://github.com/ubuntu/microk8s/issues/1598¡Hello,rnI have installed microk8s 3 node cluster, all works great for a a couple of days but then it crashes for no evident reason to `apiserver FAILed`.rnrnBelow is `microk8s inspect` output and attached tarballrn[inspection-report-20200925_103006.tar.gz](https://github.com/ubuntu/microk8s/files/5282190/inspection-report-20200925_103006.tar.gz)rnrnrn```rnInspecting CertificatesrnInspecting servicesrn  Service snap.microk8s.daemon-cluster-agent is runningrn  Service snap.microk8s.daemon-containerd is runningrn **FAIL:  Service snap.microk8s.daemon-apiserver is not running**rnFor more details look at: sudo journalctl -u snap.microk8s.daemon-apiserverrn  Service snap.microk8s.daemon-apiserver-kicker is runningrn  Service snap.microk8s.daemon-control-plane-kicker is runningrn  Service snap.microk8s.daemon-proxy is runningrn  Service snap.microk8s.daemon-kubelet is runningrn  Service snap.microk8s.daemon-scheduler is runningrn  Service snap.microk8s.daemon-controller-manager is runningrn  Copy service arguments to the final report tarballrnInspecting AppArmor configurationrnGathering system informationrn  Copy processes list to the final report tarballrn  Copy snap list to the final report tarballrn  Copy VM name (or none) to the final report tarballrn  Copy disk usage information to the final report tarballrn  Copy memory usage information to the final report tarballrn  Copy server uptime to the final report tarballrn  Copy current linux distribution to the final report tarballrn  Copy openSSL information to the final report tarballrn  Copy network configuration to the final report tarballrnInspecting kubernetes clusterrn  Inspect kubernetes clusterrnrnBuilding the report tarballrn  Report tarball is at /var/snap/microk8s/1719/inspection-report-20200925_103006.tar.gzrn```rnThis is not first time it has happened. My attempt to deploy a small prod cluster based on microk8s is hindered because of this problem in test environment"
 <item>	<title>microk8s crashes with "FAIL:  Service snap.microk8s.daemon-apiserver is not running"</title>
 	<link>https://github.com/ubuntu/microk8s/issues/1598</link>
 	<description><![CDATA[ <p>Hello,
@@ -113,7 +108,6 @@ Building the report tarball
 </code>
 This is not first time it has happened. My attempt to deploy a small prod cluster based on microk8s is hindered because of this problem in test environment&quot;</p> ]]></description>
 </item>
-"2020-09-25T08:22:18Z¡Q&A¡Question regarding storage on multi-node install¡https://github.com/ubuntu/microk8s/issues/1597¡I set up a multi-node install of microk8s 1.19, and enabled storage.rnrnHowever, when I try to deploy a statefulset with a volume template, I run into issues.rnrnThe server pod can be brought up on a different node from the one the PV is actually created on, causing the pod to fail to start, as the directory for the volume does not exist.  Is this expected?  How can I ensure the volume is provisioned on the correct node?rnrnHere's the relevant bit from my helm template with the volume claim:rn``` yamlrnapiVersion: apps/v1rnkind: StatefulSetrnmetadata:rn  name: {{ $namePrefix }}-postgresrn  labels:rn    {{ include "baseline-study.selectorLabels" . | nindent 4 }}rnspec:rn  replicas: 1rn  serviceName: {{ $namePrefix }}-studydbrn  updateStrategy:rn    type: RollingUpdatern  selector:rn    matchLabels:rn      app: postgresrn      tier: databasern      {{- include "baseline-study.selectorLabels" . | nindent 6 }}rn    rn  template:rn    metadata:rn      labels:rn        app: postgresrn        tier: databasern        {{- include "baseline-study.selectorLabels" . | nindent 8 }}rn    spec:rn      {{- if .Values.postgres.configFile }}rn      {{ $pgconf := .Values.postgres.configFile }}rn      {{- if (len (.Files.Get $pgconf)) }}rn      volumes:rn        - name: {{ .Release.Name }}-pgconfigrn          configMap:rn              name: {{ .Release.Name }}-pgconfigrn      {{ end -}}rn      {{ end -}}rn      terminationGracePeriodSeconds: 10rnrn      containers:rn        - name: postgresrn          image: postgres:12.4rn          rn          {{- if .Values.postgres.configFile }}rn          {{ $pgconf := .Values.postgres.configFile }}rn          {{- if (len (.Files.Get $pgconf)) }}rn          args: rn           - -crn           - config_file=/etc/postgres.confrn          {{ end -}}rn          {{ end -}}rn          rn          imagePullPolicy: IfNotPresentrnrn          ports:rn            - name: postgresrn              containerPort: 5432rn              protocol: TCPrnrn          resources:rn            requests:rn              cpu: 100m     # TODO: is this right???rn              memory: 512Mi # TODO: is this right???rnrn          env:rn            - name: POSTGRES_USERrn              valueFrom:rn                secretKeyRef:rn                  key: pg.usernamern                  name: {{ $pgCredSecretName }}rn            - name: PGUSERrn              valueFrom:rn                secretKeyRef:rn                  key: pg.usernamern                  name: {{ $pgCredSecretName }}rn            - name: POSTGRES_PASSWORDrn              valueFrom:rn                secretKeyRef:rn                  key: pg.passwordrn                  name: {{ $pgCredSecretName }}rn            - name: POSTGRES_DBrn              value: studydbrn            - name: PGDATArn              value: /var/lib/data/postgresql/data/pgdatarn            - name: POD_IPrn              valueFrom:rn                fieldRef:rn                  apiVersion: v1rn                  fieldPath: status.podIPrnrnrn          livenessProbe:rn            exec:rn              command: ["sh","-c","exec pg_isready --host $POD_IP"]rn            failureThreshold: 6rn            initialDelaySeconds: 60rn            periodSeconds: 10rn            successThreshold: 1rn            timeoutSeconds: 5rnrn          readinessProbe:rn            exec:rn              command: ["sh","-c","exec pg_isready --host $POD_IP"]rn            failureThreshold: 3rn            initialDelaySeconds: 5rn            periodSeconds: 5rn            successThreshold: 1rn            timeoutSeconds: 3rnrnrn          volumeMounts:rn            - mountPath: /var/lib/postgresql/data/pgdatarn              name: {{ $namePrefix }}-data-volrn              subPath: postgres-dbrn            {{- if .Values.postgres.configFile }}rn            {{ $pgconf := .Values.postgres.configFile }}rn            {{- if (len (.Files.Get $pgconf)) }}rn            - name: {{ .Release.Name }}-pgconfigrn              mountPath: /etc/postgres.confrn              subPath: postgres.confrn            {{ end -}}rn            {{ end -}}rnrn            {{ $files := .Files.initdb }}rn            {{ range $files }}rn            - name: {{ $namePrefix }}-initdbrn              mountPath: /docker-entrypoint-initdb.d/{{ . }}rn              subPath: {{ . }}rn            {{ end }}rn  volumeClaimTemplates:rn    - metadata:rn        name: {{ $namePrefix }}-data-volrn        labels: {{ include "baseline-study.selectorLabels" . | nindent 10 }}rn      spec:rn        accessModes:rn          - ReadWriteOncern        resources:rn          requests:rn            storage: 10Grn```"
 <item>	<title>Question regarding storage on multi-node install</title>
 	<link>https://github.com/ubuntu/microk8s/issues/1597</link>
 	<description><![CDATA[ <p>I set up a multi-node install of microk8s 1.19, and enabled storage.
@@ -263,14 +257,12 @@ ame
             storage: 10G
 </code>&quot;</p> ]]></description>
 </item>
-"2020-09-27T22:04:31Z¡Q&A¡Microk8s - Error: failed to generate container XX spec: invalid environment variable "xec'¡https://github.com/ubuntu/microk8s/issues/1592¡I am using microk8s (+ helmcharts and values) and one of my containers is failing to start with spec: invalid environment variable "xec". That is the only output I am getting. Interestingly, there are no env vars named "xec" that the container is expecting to have. The service that is failing with the err message "spec: invalid environment variable "xec" has a configmap.yaml, a deployment.yaml and a service.yaml files. The image itself is being pulled from a container registry so I have no control over it. I also tried a newer version of the image, but alas. It works for everyone else. Could it be that microk8s cached some values or there is some bad layer ?rnAny ideas ?rnThanks."
 <item>	<title>Microk8s - Error: failed to generate container XX spec: invalid environment variable "xec'</title>
 	<link>https://github.com/ubuntu/microk8s/issues/1592</link>
 	<description><![CDATA[ <p>I am using microk8s (+ helmcharts and values) and one of my containers is failing to start with spec: invalid environment variable &quot;xec&quot;. That is the only output I am getting. Interestingly, there are no env vars named &quot;xec&quot; that the container is expecting to have. The service that is failing with the err message &quot;spec: invalid environment variable &quot;xec&quot; has a configmap.yaml, a deployment.yaml and a service.yaml files. The image itself is being pulled from a container registry so I have no control over it. I also tried a newer version of the image, but alas. It works for everyone else. Could it be that microk8s cached some values or there is some bad layer ?
 Any ideas ?
 Thanks.&quot;</p> ]]></description>
 </item>
-"2020-09-25T05:08:01Z¡bug¡Failed to disable prometheus: error: the path "/var/snap/microk8s/1668/kube-prometheus/manifests/" does not exist¡https://github.com/ubuntu/microk8s/issues/1590¡after upgrading microk8s prometheus somehow is not possible to disable anymorernrn$ microk8s disable prometheusrnDisabling old PrometheusrnDisabling Prometheusrnerror: the path "/var/snap/microk8s/1668/kube-prometheus/manifests/" does not existrnFailed to disable prometheusrn"
 <item>	<title>Failed to disable prometheus: error: the path "/var/snap/microk8s/1668/kube-prometheus/manifests/" does not exist</title>
 	<link>https://github.com/ubuntu/microk8s/issues/1590</link>
 	<description><![CDATA[ <p>after upgrading microk8s prometheus somehow is not possible to disable anymore
@@ -282,7 +274,6 @@ error: the path &quot;/var/snap/microk8s/1668/kube-prometheus/manifests/&quot; d
 Failed to disable prometheus
 &quot;</p> ]]></description>
 </item>
-"2020-09-27T22:05:45Z¡Q&A¡Failed to start ContainerManager¡https://github.com/ubuntu/microk8s/issues/1587¡All my pods end up stuck to **Pending**rn```bashrnkubectl get -n kube-system pods                                                                   rnNAME                                         READY   STATUS    RESTARTS   AGErncalico-kube-controllers-847c8c99d-t4kqm      0/1     Pending   0          164mrncalico-node-rmc8z                            0/1     Pending   0          164mrncoredns-86f78bb79c-gr5bf                     0/1     Pending   0          138mrnhostpath-provisioner-5c65fbdb4f-bb698        0/1     Pending   0          137mrnmetrics-server-8bbfb4bdb-vnlcl               0/1     Pending   0          136mrnkubernetes-dashboard-7ffd448895-69nf7        0/1     Pending   0          136mrndashboard-metrics-scraper-6c4568dc68-xxh2c   0/1     Pending   0          136mrn```rnBecause the default node does not seem availablern```bashrnkubectl get events --all-namespaces | grep -i kubernetes-dashboard-7ffd448895-69nf7                                                rnkube-system   10s         Warning   FailedScheduling          pod/kubernetes-dashboard-7ffd448895-69nf7        0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn't tolerate.rn```rnIt seems stuck in a weird looprn```rnkubectl describe nodesrn.....rn  Normal   Starting                 37s    kubelet, bifrost  Starting kubelet.rn  Warning  InvalidDiskCapacity      37s    kubelet, bifrost  invalid capacity 0 on image filesystemrn  Normal   NodeHasSufficientMemory  37s    kubelet, bifrost  Node bifrost status is now: NodeHasSufficientMemoryrn  Normal   Starting                 30s    kubelet, bifrost  Starting kubelet.rn  Warning  InvalidDiskCapacity      30s    kubelet, bifrost  invalid capacity 0 on image filesystemrn  Normal   NodeHasSufficientPID     30s    kubelet, bifrost  Node bifrost status is now: NodeHasSufficientPIDrn  Normal   NodeHasNoDiskPressure    30s    kubelet, bifrost  Node bifrost status is now: NodeHasNoDiskPressurern  Normal   NodeHasSufficientMemory  30s    kubelet, bifrost  Node bifrost status is now: NodeHasSufficientMemoryrn  Normal   Starting                 24s    kubelet, bifrost  Starting kubelet.rn.....rn```rnAnd I wonder whether has something to do with what I found in `journalctl`rnrn```rnmicrok8s.daemon-kubelet[1001446]: E0922 12:22:28.089018 1001446 kubelet.go:1765] skipping pod synchronization - container runtime status check may not have completed yetrnmicrok8s.daemon-kubelet[1001446]: I0922 12:22:28.091302 1001446 kubelet_node_status.go:70] Attempting to register node bifrostrnmicrok8s.daemon-kubelet[1001446]: I0922 12:22:28.102758 1001446 kubelet_node_status.go:108] Node bifrost was previously registeredrnmicrok8s.daemon-kubelet[1001446]: I0922 12:22:28.102861 1001446 kubelet_node_status.go:73] Successfully registered node bifrostrnmicrok8s.daemon-kubelet[1001446]: I0922 12:22:28.103699 1001446 cpu_manager.go:184] [cpumanager] starting with none policyrnmicrok8s.daemon-kubelet[1001446]: I0922 12:22:28.103734 1001446 cpu_manager.go:185] [cpumanager] reconciling every 10srnmicrok8s.daemon-kubelet[1001446]: I0922 12:22:28.103766 1001446 state_mem.go:36] [cpumanager] initializing new in-memory state storernmicrok8s.daemon-kubelet[1001446]: I0922 12:22:28.103994 1001446 state_mem.go:88] [cpumanager] updated default cpuset: ""rnmicrok8s.daemon-kubelet[1001446]: I0922 12:22:28.104003 1001446 state_mem.go:96] [cpumanager] updated cpuset assignments: "map[]"rnmicrok8s.daemon-kubelet[1001446]: I0922 12:22:28.104012 1001446 policy_none.go:43] [cpumanager] none policy: Startrnmicrok8s.daemon-kubelet[1001446]: F0922 12:22:28.104037 1001446 kubelet.go:1296] Failed to start ContainerManager failed to get rootfs info: failed to get device for dir "/var/snap/microk8s/common/var/lib/kubelet": could not find device with major: 0, minor: 28 in cached partitions maprnmicrok8s.daemon-kubelet[1001446]: goroutine 337 [running]:rnmicrok8s.daemon-kubelet[1001446]: k8s.io/kubernetes/vendor/k8s.io/klog/v2.stacks(0xc000010001, 0xc00060d800, 0xfd, 0xfd)rnmicrok8s.daemon-kubelet[1001446]:         /build/microk8s/parts/k8s-binaries/build/go/src/github.com/kubernetes/kubernetes/_output/local/go/src/k8s.io/kubernetes/vendor/k8s.io/klog/v2/klog.go:996 +0xb9rnmicrok8s.daemon-kubelet[1001446]: k8s.io/kubernetes/vendor/k8s.io/klog/v2.(*loggingT).output(0x6ef8140, 0xc000000003, 0x0, 0x0, 0xc0005c0070, 0x6b48993, 0xa, 0x510, 0x0)rn.....rn``` rnHow could I fix this? (If that's the reason why it fails)rnrn[inspection-report-20200922_135021.tar.gz](https://github.com/ubuntu/microk8s/files/5261157/inspection-report-20200922_135021.tar.gz)rnrn"
 <item>	<title>Failed to start ContainerManager</title>
 	<link>https://github.com/ubuntu/microk8s/issues/1587</link>
 	<description><![CDATA[ <p>All my pods end up stuck to <strong>Pending</strong>
@@ -356,38 +347,6 @@ How could I fix this? (If that's the reason why it fails)
 
 &quot;</p> ]]></description>
 </item>
-"2019-10-18T12:29:11Z¡enhancement¡depends option test regression¡https://github.com/ubuntu/ubuntu-make/issues/613¡There's a branch with the --depends option, that lists the needed (or installed) dependencies.rnThis introduced a regression in the tests, so it will not be merged until it's fixed.rnIf someone wants to have a go at finding the issue the branch is https://github.com/ubuntu/ubuntu-make/tree/list_dependsrnCloses #610 "
-"2019-10-18T12:29:11Z¡help wanted¡depends option test regression¡https://github.com/ubuntu/ubuntu-make/issues/613¡There's a branch with the --depends option, that lists the needed (or installed) dependencies.rnThis introduced a regression in the tests, so it will not be merged until it's fixed.rnIf someone wants to have a go at finding the issue the branch is https://github.com/ubuntu/ubuntu-make/tree/list_dependsrnCloses #610 "
-"2018-11-27T11:09:53Z¡enhancement¡Add CONTRIBUTING.md with helpful tips for newcomers¡https://github.com/ubuntu/ubuntu-make/issues/552¡Please add instruction to will add package to ubuntu-make"
-"2017-12-29T08:06:35Z¡enhancement¡Add Nim language¡https://github.com/ubuntu/ubuntu-make/issues/450¡Would it be possible for someone to add support for the [Nim](https://nim-lang.org/) language or give some guidance on how to add support myself? [Here](https://github.com/nim-lang/Nim#compiling) is the link to the Nim github page with compilation instructions.rn"
-"2017-12-29T08:06:35Z¡enhancement¡jython and pip¡https://github.com/ubuntu/ubuntu-make/issues/407¡It would be nice to be able to use jython and pip at the latest version.  Not sure that this is within or outside of what umake does.  See:rnrnhttp://askubuntu.com/questions/880758/how-to-add-jython-jars-for-a-user-to-the-path-enviroment-variablern```rnrnthufir@doge:~$ rnthufir@doge:~$ echo $PATHrn/home/thufir/.local/share/umake/bin:/home/thufir/bin:/home/thufir/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/binrnthufir@doge:~$ rnthufir@doge:~$ export PATH="/home/thufir/jython/bin/:$PATH"rnthufir@doge:~$ rnthufir@doge:~$ echo $PATHrn/home/thufir/jython/bin/:/home/thufir/.local/share/umake/bin:/home/thufir/bin:/home/thufir/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/binrnthufir@doge:~$ rnthufir@doge:~$ jython --versionrnJython 2.7.0rnthufir@doge:~$ rnthufir@doge:~$ which piprn/home/thufir/jython/bin//piprnthufir@doge:~$ rnthufir@doge:~$ which jythonrn/home/thufir/jython/bin//jythonrnthufir@doge:~$ rn```rnrnwould've been easier to use umake, if it were an option."
-"2017-11-10T10:39:54Z¡enhancement¡No CLI parameter to specify installation path directly from command line (unable to use ubuntu-make in chef)¡https://github.com/ubuntu/ubuntu-make/issues/403¡Does anyone have a reliable workaround to automatically accept the default installation path when prompted? Specifically for ide eclipse-jee.rnrnI tried using "yes", but then it doesn't set the default installation path at all and installs it into the void. "Expect" also gets confused, what I need is to set the installation path directly:rnrnumake ide eclipse-jee --path "/home/vagrant/.local/share/umake/ide/eclipse-jee"rnrnThis would make umake useful in automatic configuration management tools (e.g. chef).rn"
-"2017-11-10T10:39:54Z¡help wanted¡No CLI parameter to specify installation path directly from command line (unable to use ubuntu-make in chef)¡https://github.com/ubuntu/ubuntu-make/issues/403¡Does anyone have a reliable workaround to automatically accept the default installation path when prompted? Specifically for ide eclipse-jee.rnrnI tried using "yes", but then it doesn't set the default installation path at all and installs it into the void. "Expect" also gets confused, what I need is to set the installation path directly:rnrnumake ide eclipse-jee --path "/home/vagrant/.local/share/umake/ide/eclipse-jee"rnrnThis would make umake useful in automatic configuration management tools (e.g. chef).rn"
-"2017-12-29T08:06:34Z¡enhancement¡codeblocks and spacemacs support¡https://github.com/ubuntu/ubuntu-make/issues/366¡Are codeblocks and spacemacs in the list of your IDE?n"
-"2015-12-23T06:01:58Z¡bug¡Bad handling of low space on filesystem,¡https://github.com/ubuntu/ubuntu-make/issues/218¡It seems that ubuntu make has bad handling of the exception of lack of space.nWhile installing android studio on a more or less fresh installation of ubuntu 15.10 I could not install android studio. It dumped some strange errormessage which was lots of exceptions.  It did not actually say the drive was full.nnAfter finding out my drive was full (to small partition for a ubuntu install, i found out.) I resized it with gparted, and after that; I could install android studio with no errors at all.nSo it seems, I think, that ubuntu make has bad handling of the exception of lack of space.n"
-"2016-03-03T06:56:26Z¡enhancement¡Add "Resume" and "Continue" capability¡https://github.com/ubuntu/ubuntu-make/issues/215¡I was trying to install some software using ubuntu-make over a bad internet connection. The internet connection went down for a while. After regaining the connection, the download never "resume"d. nnI cancelled the download.nnWhen I restarted the download, ubuntu-make didn't "continue" the download from where it left off, instead it started downloading it from the beginning.nnIs it possible to add "resume" and "continue" capability to downloads on ubuntu-make?n"
-"2018-03-17T11:38:42Z¡enhancement¡Add Racket support¡https://github.com/ubuntu/ubuntu-make/issues/200¡It would be nice if support for Racket and DrRacket would be added. Please consider it, thx :smile: nhttp://racket-lang.org/n"
-"2018-03-17T11:38:42Z¡help wanted¡Add Racket support¡https://github.com/ubuntu/ubuntu-make/issues/200¡It would be nice if support for Racket and DrRacket would be added. Please consider it, thx :smile: nhttp://racket-lang.org/n"
-"2015-11-23T07:46:33Z¡bug¡Umake should safely remove all the packages it installed¡https://github.com/ubuntu/ubuntu-make/issues/192¡When I use the "-- remove" argument it does not remove all the packages that were installed. It would be good if "umake -r" also removes the redundant packages that it installed.n"
-"2015-11-23T07:46:33Z¡help wanted¡Umake should safely remove all the packages it installed¡https://github.com/ubuntu/ubuntu-make/issues/192¡When I use the "-- remove" argument it does not remove all the packages that were installed. It would be good if "umake -r" also removes the redundant packages that it installed.n"
-"2015-11-23T07:46:33Z¡question¡Umake should safely remove all the packages it installed¡https://github.com/ubuntu/ubuntu-make/issues/192¡When I use the "-- remove" argument it does not remove all the packages that were installed. It would be good if "umake -r" also removes the redundant packages that it installed.n"
-"2015-11-12T13:49:20Z¡enhancement¡Add: Lazarus IDE and FPC¡https://github.com/ubuntu/ubuntu-make/issues/149¡Please, add this great RAD solution. It can compile to different targets and architectures.nThe version provided in the USC it is old and conflicts with new versions.nhttp://www.lazarus-ide.org/n"
-"2015-11-12T13:49:20Z¡help wanted¡Add: Lazarus IDE and FPC¡https://github.com/ubuntu/ubuntu-make/issues/149¡Please, add this great RAD solution. It can compile to different targets and architectures.nThe version provided in the USC it is old and conflicts with new versions.nhttp://www.lazarus-ide.org/n"
-"2015-05-15T21:26:40Z¡enhancement¡Add Clojure support¡https://github.com/ubuntu/ubuntu-make/issues/105¡Clojure is a alternative for Java and there is a IDE for them called Nightcode: https://sekao.net/nightcode/n"
-"2017-03-31T08:34:08Z¡enhancement¡Support for Mono and Mono Develop¡https://github.com/ubuntu/ubuntu-make/issues/94¡It would be nice if support for Mono and Mono Develop would be added. Please consider it :)n"
-"2017-03-31T08:34:08Z¡help wanted¡Support for Mono and Mono Develop¡https://github.com/ubuntu/ubuntu-make/issues/94¡It would be nice if support for Mono and Mono Develop would be added. Please consider it :)n"
-"2015-04-27T06:12:57Z¡enhancement¡Add Perl support¡https://github.com/ubuntu/ubuntu-make/issues/85¡Please also add Perl support via perlbrew/plenv and Padre as IDE.n"
-"2015-04-27T06:12:57Z¡help wanted¡Add Perl support¡https://github.com/ubuntu/ubuntu-make/issues/85¡Please also add Perl support via perlbrew/plenv and Padre as IDE.n"
-"2017-03-12T23:03:34Z¡bug¡Install with sudo (to write in /opt) isn't supported¡https://github.com/ubuntu/ubuntu-make/issues/79¡Following the instructions on http://www.webupd8.org/2014/12/ubuntu-developer-tools-center-renamed.html, I tried to install Eclipse Luna 4.4 on an Ubuntu 14.04 box, using umake as follows:nn```nsudo add-apt-repository ppa:ubuntu-desktop/ubuntu-makensudo apt-get updatensudo apt-get install ubuntu-makenumake ide eclipsen```nnWhen asked for the target directory, I type in this location:nn```n/opt/eclipse/eclipse_4_4n```nnReason:  I do not want separate installations in each user directory (which appears to be the default).nnBefore installing, I created an alias for python=python3 in ~/.bash_aliases, and sourced the file.  This enables the umake scripts to use Python version 3.4.nnThe install script ends with the exceptions indicated below, copied from a Gnome terminal.  The permissions on /opt are the typical 755.  I tried tests where I created the target subdirectories beforehand, but that didn't work.  I also tried using sudo (sudo umake ide eclipse), but I get the same result.  nn---nnTERMINAL OUTPUT:nn~$ umake ide eclipsenChoose installation path: /opt/eclipse/eclipse_4_4nDownloading and installing requirements                                       |n100% |########################################################################|nInstalling EclipsenERROR: A decompression to /opt/eclipse/eclipse_4_4 failed: [Errno 8] Exec format error     |nTraceback (most recent call last):n  File "/usr/lib/python3/dist-packages/umake/decompressor.py", line 95, in _decompressn    archive.extractall(dest)n  File "/usr/lib/python3.4/tarfile.py", line 1979, in extractalln    self.extract(tarinfo, path, set_attrs=not tarinfo.isdir())n  File "/usr/lib/python3.4/tarfile.py", line 2018, in extractn    set_attrs=set_attrs)n  File "/usr/lib/python3.4/tarfile.py", line 2079, in _extract_membern    os.makedirs(upperdirs)n  File "/usr/lib/python3.4/os.py", line 227, in makedirsn    makedirs(head, mode, exist_ok)n  File "/usr/lib/python3.4/os.py", line 237, in makedirsn    mkdir(name, mode)nPermissionError: [Errno 13] Permission denied: '/opt/eclipse'nnDuring handling of the above exception, another exception occurred:nnTraceback (most recent call last):n  File "/usr/lib/python3.4/concurrent/futures/thread.py", line 54, in runn    result = self.fn(_self.args, *_self.kwargs)n  File "/usr/lib/python3/dist-packages/umake/decompressor.py", line 104, in _decompressn    archive = subprocess.Popen([name, "-o{}".format(dest)], stdout=subprocess.PIPE, stderr=subprocess.PIPE)n  File "/usr/lib/python3.4/subprocess.py", line 848, in __init__n    restore_signals, start_new_session)n  File "/usr/lib/python3.4/subprocess.py", line 1446, in _execute_childn    raise child_exception_type(errno_num, err_msg)nOSError: [Errno 8] Exec format errornERROR: [Errno 8] Exec format errorn|##########################################################################################|n"
-"2019-03-28T09:08:00Z¡enhancement¡Support updating tools¡https://github.com/ubuntu/ubuntu-make/issues/74¡Ok, the Twitter website just crashed my Firefox while I was in the middle of writing this up, so this writeup is gonna be shorter. :pnnSome tools can update themselves - stuff from PPAs, JetBrains, Eclipse, Android stuff I think. This doesn't concern these tools.nnSome tools can't, like go-lang and probably any other language support we add in the future. We should have an upgrade workflow for these tools.nnActually upgrading the tools should be easy due to our policy of always getting the latest upstream - remove&install. What we should improve is the way users know what needs to be updated.nnA subset of our tools should support reporting the version of a tool back. So when we install a tool, the version goes into the config file.nnThen users can ask umake - list all tools that have updates. We go through all installed tools from the config file, check if their modules support versioning. If they do, fetch latest upstream version, compare with the current version (if current version is missing, because the tool was installed before we added support for versions, flag as 'update available') and list everything that can be updated.n"
-"2020-04-01T15:49:56Z¡enhancement¡[Feature Request] get a list of the drivers used¡https://github.com/ubuntu/ubuntu-report/issues/30¡Hi @didrocks,rnrnIt would be very interesting to know the drivers of the most used hardware, this could help to optimize the kernel.rnIt would thus be necessary to take into account simply this:rn`lspci -vvnn | egrep "Kernel driver|Kernel modules" | cut -d: -f2 | uniq`rnrnThis would be very interesting for Linux kernel developers and people who compile custom kernels.rnrnThanks. Best regards,"
-"2020-04-01T15:49:34Z¡snap¡Snap: cannot access /var/lib/ubuntu_dist_channel (used for OEM information)¡https://github.com/ubuntu/ubuntu-report/issues/28¡Hello! I was trying to package ubuntu-report in one of my snaps, and found an issue that happens with the snapcraft.yaml file from this repository as well.rnrnOn a device with an OEM image, if I run the debian package:rnrn```rn$ ubuntu-report show | grep DCDrn    "DCD": "canonical-oem-somerville-bionic-amd64-xxx"rn```rnrnHowever, if I run the snap version, nothing comes out. I added debug info, and...rnrn```rn$ mysnap.ubuntu-report show -vv                                                                                                            rn(...)                                                                                                                rnINFO[0000] no DCD information: open /var/lib/ubuntu_dist_channel: no such file or directory                                                                                  rncouldn't open /var/lib/ubuntu_dist_channelrn(...)rn```rnrnIt seems to be an issue with the files available by default in a snap runtime environment. I've [asked a question on the snapcraft forum](https://forum.snapcraft.io/t/read-access-to-a-file-in-var-lib-on-the-host/11766).rnrnIn the meantime I just wanted to open an issue here so you are aware about this.rnrnCheers!"
-"2020-04-01T15:51:32Z¡enhancement¡[Feature Request] It would be interesting to know if people have touchscreens¡https://github.com/ubuntu/ubuntu-report/issues/22¡I think it would be useful to know how common touchscreens are.rnrnIf we knew more about this we could prioritise touch features like OSK accordingly.  If no one has a touchscreen, we could do something else instead.rn"
-"2020-04-01T15:51:45Z¡snap¡Create snap package¡https://github.com/ubuntu/ubuntu-report/issues/14¡Use classic confinement"
-"2020-04-01T15:52:40Z¡test-enhancement¡Use gofuzz¡https://github.com/ubuntu/ubuntu-report/issues/13¡Explore potential issues using gofuzz."
-"2020-04-01T15:51:58Z¡enhancement¡Support wayland for monitors config access¡https://github.com/ubuntu/ubuntu-report/issues/10¡Get monitor configs on wayland sessions."
-"2020-04-01T15:52:10Z¡enhancement¡CLI should be translatable.¡https://github.com/ubuntu/ubuntu-report/issues/9¡The CLI isn't the main use case, but we should make it translatable."
-"2020-09-29T18:16:01Z¡Area: gtk3¡Design idea¡https://github.com/ubuntu/yaru/issues/2373¡With the flat buttons the relatively strong shadow looks a bit too much in my opinion.rnAlso I've found that swapping selection fg and bg color reduces the jarring of the orange a lot and gives all three themes a "fresh" vibe?rnrnWhat do you think @clobrano @madsrh @ubuntujaggers @Jupiter007-43 ?rn:wastebasket: or :+1: ? rnrn![grafik](https://user-images.githubusercontent.com/15329494/94558884-badb9200-0260-11eb-966c-d6f5487fbd98.png)rnrn![grafik](https://user-images.githubusercontent.com/15329494/94558914-c929ae00-0260-11eb-8bac-6fa340e126b4.png)rnrn![grafik](https://user-images.githubusercontent.com/15329494/94558993-e199c880-0260-11eb-8e2c-e336c711a0fc.png)rn"
 <item>	<title>Design idea</title>
 	<link>https://github.com/ubuntu/yaru/issues/2373</link>
 	<description><![CDATA[ <p>With the flat buttons the relatively strong shadow looks a bit too much in my opinion.
@@ -403,7 +362,6 @@ What do you think <span class="citation">@clobrano</span> <span class="citation"
 <img src="https://user-images.githubusercontent.com/15329494/94558993-e199c880-0260-11eb-8e2c-e336c711a0fc.png" alt="grafik" />
 &quot;</p> ]]></description>
 </item>
-"2020-09-29T18:16:01Z¡Status: Design¡Design idea¡https://github.com/ubuntu/yaru/issues/2373¡With the flat buttons the relatively strong shadow looks a bit too much in my opinion.rnAlso I've found that swapping selection fg and bg color reduces the jarring of the orange a lot and gives all three themes a "fresh" vibe?rnrnWhat do you think @clobrano @madsrh @ubuntujaggers @Jupiter007-43 ?rn:wastebasket: or :+1: ? rnrn![grafik](https://user-images.githubusercontent.com/15329494/94558884-badb9200-0260-11eb-966c-d6f5487fbd98.png)rnrn![grafik](https://user-images.githubusercontent.com/15329494/94558914-c929ae00-0260-11eb-8bac-6fa340e126b4.png)rnrn![grafik](https://user-images.githubusercontent.com/15329494/94558993-e199c880-0260-11eb-8e2c-e336c711a0fc.png)rn"
 <item>	<title>Design idea</title>
 	<link>https://github.com/ubuntu/yaru/issues/2373</link>
 	<description><![CDATA[ <p>With the flat buttons the relatively strong shadow looks a bit too much in my opinion.
@@ -419,7 +377,6 @@ What do you think <span class="citation">@clobrano</span> <span class="citation"
 <img src="https://user-images.githubusercontent.com/15329494/94558993-e199c880-0260-11eb-8e2c-e336c711a0fc.png" alt="grafik" />
 &quot;</p> ]]></description>
 </item>
-"2020-09-29T18:16:01Z¡Status: Discussion¡Design idea¡https://github.com/ubuntu/yaru/issues/2373¡With the flat buttons the relatively strong shadow looks a bit too much in my opinion.rnAlso I've found that swapping selection fg and bg color reduces the jarring of the orange a lot and gives all three themes a "fresh" vibe?rnrnWhat do you think @clobrano @madsrh @ubuntujaggers @Jupiter007-43 ?rn:wastebasket: or :+1: ? rnrn![grafik](https://user-images.githubusercontent.com/15329494/94558884-badb9200-0260-11eb-966c-d6f5487fbd98.png)rnrn![grafik](https://user-images.githubusercontent.com/15329494/94558914-c929ae00-0260-11eb-8bac-6fa340e126b4.png)rnrn![grafik](https://user-images.githubusercontent.com/15329494/94558993-e199c880-0260-11eb-8e2c-e336c711a0fc.png)rn"
 <item>	<title>Design idea</title>
 	<link>https://github.com/ubuntu/yaru/issues/2373</link>
 	<description><![CDATA[ <p>With the flat buttons the relatively strong shadow looks a bit too much in my opinion.
@@ -435,28 +392,23 @@ What do you think <span class="citation">@clobrano</span> <span class="citation"
 <img src="https://user-images.githubusercontent.com/15329494/94558993-e199c880-0260-11eb-8e2c-e336c711a0fc.png" alt="grafik" />
 &quot;</p> ]]></description>
 </item>
-"2020-09-29T12:02:19Z¡Area: icon theme¡Log mimetype 48px size border is too strong¡https://github.com/ubuntu/yaru/issues/2372¡![grafik](https://user-images.githubusercontent.com/15329494/94555735-51598480-025c-11eb-816c-b29718982a87.png)rnrnCompared to the other "document"-style mimetypes"
 <item>	<title>Log mimetype 48px size border is too strong</title>
 	<link>https://github.com/ubuntu/yaru/issues/2372</link>
 	<description><![CDATA[ <p><img src="https://user-images.githubusercontent.com/15329494/94555735-51598480-025c-11eb-816c-b29718982a87.png" alt="grafik" />
 
 Compared to the other &quot;document&quot;-style mimetypes&quot;</p> ]]></description>
 </item>
-"2020-09-29T12:02:19Z¡Priority: Enhancement¡Log mimetype 48px size border is too strong¡https://github.com/ubuntu/yaru/issues/2372¡![grafik](https://user-images.githubusercontent.com/15329494/94555735-51598480-025c-11eb-816c-b29718982a87.png)rnrnCompared to the other "document"-style mimetypes"
 <item>	<title>Log mimetype 48px size border is too strong</title>
 	<link>https://github.com/ubuntu/yaru/issues/2372</link>
 	<description><![CDATA[ <p><img src="https://user-images.githubusercontent.com/15329494/94555735-51598480-025c-11eb-816c-b29718982a87.png" alt="grafik" />
 
 Compared to the other &quot;document&quot;-style mimetypes&quot;</p> ]]></description>
 </item>
-"2020-09-27T01:02:21Z¡automated pr¡Auto update new upstream snapshot for GNOME Shell¡https://github.com/ubuntu/yaru/pull/2368¡[New upstream GNOME Shell changes](https://github.com/ubuntu/yaru/actions?query=workflow%3A%22Update+PR+on+upstream+changes+once+landed+on+ubuntu%22) by GitHub Action"
 <item>	<title>Auto update new upstream snapshot for GNOME Shell</title>
 	<link>https://github.com/ubuntu/yaru/pull/2368</link>
-	<description><![CDATA[ <p><a href="https://github.com/ubuntu/yaru/actions?query=workflow0X0P+0"2020-09-27T01:02:21Z¡new upstream¡Auto update new upstream snapshot for GNOME Shell¡https://github.com/ubuntu/yaru/pull/2368¡[New upstream GNOME Shell changes](https://github.com/ubuntu/yaru/actions?query=workflow%3A%22Update+PR+on+upstream+changes+once+landed+on+ubuntu%22) by GitHub Action"
-<item>	<title>Auto update new upstream snapshot for GNOME Shell</title>
+	<description><![CDATA[ <p><a href="https://github.com/ubuntu/yaru/actions?query=workflow0X0P+0<item>	<title>Auto update new upstream snapshot for GNOME Shell</title>
 	<link>https://github.com/ubuntu/yaru/pull/2368</link>
-	<description><![CDATA[ <p><a href="https://github.com/ubuntu/yaru/actions?query=workflow0X0P+0"2020-09-22T15:29:48Z¡Area: gtk3¡gnome-web preferences page tabs are too close¡https://github.com/ubuntu/yaru/issues/2364¡Hi,rnThe new GNOME-Web preferences page is not compatible with Yaru themernrn**GNOME-Web (3.38) on Yaru:**rn![yaru-web](https://user-images.githubusercontent.com/54065734/93791852-5f9f1380-fc52-11ea-8786-2c9f6c91c76f.png)rnrnrn**GNOME-Web (3.38) on Adwaita:**rn![adwaita-web](https://user-images.githubusercontent.com/54065734/93792044-9ffe9180-fc52-11ea-9331-fc4f7774ae43.png)rnrnThanks!rn"
-<item>	<title>gnome-web preferences page tabs are too close</title>
+	<description><![CDATA[ <p><a href="https://github.com/ubuntu/yaru/actions?query=workflow0X0P+0<item>	<title>gnome-web preferences page tabs are too close</title>
 	<link>https://github.com/ubuntu/yaru/issues/2364</link>
 	<description><![CDATA[ <p>Hi,
 The new GNOME-Web preferences page is not compatible with Yaru theme
@@ -471,7 +423,6 @@ The new GNOME-Web preferences page is not compatible with Yaru theme
 Thanks!
 &quot;</p> ]]></description>
 </item>
-"2020-09-20T12:41:51Z¡Area: gtk3¡Default theme does not have the correct bg color for gnome disk analyser¡https://github.com/ubuntu/yaru/issues/2358¡![grafik](https://user-images.githubusercontent.com/15329494/93706763-04720180-fb2a-11ea-9c3e-7720d484f2ee.png)rnrnLight/dark worksrn![grafik](https://user-images.githubusercontent.com/15329494/93706777-181d6800-fb2a-11ea-9ecf-d17492384212.png)rn![grafik](https://user-images.githubusercontent.com/15329494/93706779-210e3980-fb2a-11ea-8dc5-dc6335d30923.png)rn"
 <item>	<title>Default theme does not have the correct bg color for gnome disk analyser</title>
 	<link>https://github.com/ubuntu/yaru/issues/2358</link>
 	<description><![CDATA[ <p><img src="https://user-images.githubusercontent.com/15329494/93706763-04720180-fb2a-11ea-9c3e-7720d484f2ee.png" alt="grafik" />
@@ -481,7 +432,6 @@ Light/dark works
 <img src="https://user-images.githubusercontent.com/15329494/93706779-210e3980-fb2a-11ea-8dc5-dc6335d30923.png" alt="grafik" />
 &quot;</p> ]]></description>
 </item>
-"2020-09-16T10:04:14Z¡Area: icon theme¡Some missing mimetype icons¡https://github.com/ubuntu/yaru/issues/2334¡Here's a few more mimetype icons we can add if anyone want's something to work on :) Some of these are pretty rare or even legacy, so here's a list to pick from in no particular order.rnMost of these can be tested with [the files here.](https://github.com/freedesktop/xdg-shared-mime-info)rnrn- [x] translation template (text/x-gettext-translation-template) #2338rn- [ ] .patch files (text/x-patch) #2341rn- [ ] Modelica model (text/x-modelica)rn- [ ] Xournal note file (application/x-xoj) and also .xoz ([see this issue](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/issues/2142))rn- [ ] binary differences between files (application/x-bsdiff)rn- [x] G-code file (text/x.gcode) #2343rn- [x] text/x-iMelody type (text/x-iMelody) _perhaps just missing a symlink_ #2336 rn- [ ] iptables configuration file (text/x-iptables)rn- [ ] NewzBin usenet index (application/x-nzb)rn- [x] IT 8.7 color calibration file (application/x-it87) _just missing a symlink_ #2335rn- [ ] Gradle scripts (text/x-gradle)rn- [ ] network packet capture (application/vnd.tcpdump.pcap)rn- [ ] Metalink file (application/metalink4+xml)rn- [ ] Web application cache file (text/cache-manifest)rn- [ ] BibTeX document (text/x-bibtex)rn- [ ] XPInstall installer module (application/x-xpinstall)rn- [ ] MATLAB file (text/x-matlab)rn- [ ] MathML document (application/mathml+xml)rn- [ ] message catalog (text/vnd.qt.linguist)rn- [ ] TriG RDF document (application/trig)rn- [ ] TNEF message (application/vnd.ms-tnef)rn- [ ] Windows Registry extract (text/x-ms-regedit)rn- [ ] reStructuredText document (text/x-rst)rn- [ ] Gherkin document (text/x-gherkin)rn- [ ] GNUnet search file (application/gnunet-directory)rn- [ ] WinHelp help file (application/winhlp)"
 <item>	<title>Some missing mimetype icons</title>
 	<link>https://github.com/ubuntu/yaru/issues/2334</link>
 	<description><![CDATA[ <p>Here's a few more mimetype icons we can add if anyone want's something to work on :) Some of these are pretty rare or even legacy, so here's a list to pick from in no particular order.
@@ -515,7 +465,6 @@ al note file (application/x-xoj) and also .xoz (<a href="https://github.com/Papi
 - [ ] GNUnet search file (application/gnunet-directory)
 - [ ] WinHelp help file (application/winhlp)&quot;</p> ]]></description>
 </item>
-"2020-09-01T18:52:17Z¡Area: mate¡Mate flavour¡https://github.com/ubuntu/yaru/pull/2331¡Initial proposal for a Yaru MATE gtk flavourrnrn![image](https://user-images.githubusercontent.com/2883614/91474546-a8092280-e89a-11ea-887e-9ddf16c8a477.png)rn"
 <item>	<title>Mate flavour</title>
 	<link>https://github.com/ubuntu/yaru/pull/2331</link>
 	<description><![CDATA[ <p>Initial proposal for a Yaru MATE gtk flavour
@@ -523,7 +472,6 @@ al note file (application/x-xoj) and also .xoz (<a href="https://github.com/Papi
 <img src="https://user-images.githubusercontent.com/2883614/91474546-a8092280-e89a-11ea-887e-9ddf16c8a477.png" alt="image" />
 &quot;</p> ]]></description>
 </item>
-"2020-08-28T21:40:31Z¡Area: icon theme¡Guidelines for mimetype icons for packages, archives and more...¡https://github.com/ubuntu/yaru/issues/2271¡**Hi**rnRelated to the discussion in #2251 rnrnThe outcome might just be to leave everything as it is, but if you have any thought please leave them below @ubuntujaggers @Feichtmeier @clobrano @Jupiter007-43 @avil25rnrnMy questions on the current icons:rn- The Flatpak pictogram is monochrome. Should they all be this way? Or should we add color to the Flatpak icon?rn- Is that a Windows logo? Why not change it like Eaglersdeveloper [suggested](https://github.com/snwh/suru-icon-theme/issues/65#issuecomment-399678431)?rn- Because the Window files are binary, should they have a solid background too or...?rn- Should all of these icons really be packages?rn- Or just leave everything as it is 👌 rnrnI have to admit that I'm in a bit over my head here with all the file types, so please be patient 😅 rnrnrn![image](https://user-images.githubusercontent.com/3986894/88183034-3ac9f800-cc31-11ea-9c27-a088a7166b05.png)rnrnrnThis looks pretty good, but didn't we already add text for zip, rar, 7z? 🤔 rn(doh, a package icon got included here) 😄 rn![image](https://user-images.githubusercontent.com/3986894/88183082-4e755e80-cc31-11ea-939c-6aec7ccc2809.png)rnrnImages files. Should these have a background color? rn![image](https://user-images.githubusercontent.com/3986894/88183168-6947d300-cc31-11ea-9f8d-bee4bcf34480.png)rnrnThere's a few more files we don't have yet which is for VirtualBox. Here are the icons from Suru++rn![image](https://user-images.githubusercontent.com/3986894/88185447-3bb05900-cc34-11ea-98e9-adb560552c88.png)rnrn"
 <item>	<title>Guidelines for mimetype icons for packages, archives and more...</title>
 	<link>https://github.com/ubuntu/yaru/issues/2271</link>
 	<description><![CDATA[ <p><strong>Hi</strong>
@@ -556,7 +504,6 @@ There's a few more files we don't have yet which is for VirtualBox. Here are the
 
 &quot;</p> ]]></description>
 </item>
-"2020-09-29T09:35:25Z¡Area: icon theme¡Enhance the current curl or add a paper fold on file icons¡https://github.com/ubuntu/yaru/issues/2268¡ **This issue is for discussing enhancing curl at the bottom of the mimetype icons or adding a paper fold at the top!**rnrnrn![image](https://user-images.githubusercontent.com/3986894/88099319-4e2a8400-cb9b-11ea-845a-317a02830904.png)rn_Enhanced, Fold and current_ 👆 rnrnFor a long time now, I've found the paper curl at the bottom of the mimetype icons to be too subtle. At the moment, the current curl is only present at 256 px (and above ofc). rnThe fold would be a clear distinction between the application and file icons.rnrnAdding the top fold, is a very controversial suggestion and it's also a massive amount of work to adapt the current 54 icons. A less intrusive suggestion is to increase the current curl.rnrnIn no particular order, here's document icons from OSX, Windows, Humanity, Adwaita, Papirus and Yaru 📄 rnrn![image](https://user-images.githubusercontent.com/3986894/88096590-2fc28980-cb97-11ea-8a0e-db49ec71dabd.png)rn"
 <item>	<title>Enhance the current curl or add a paper fold on file icons</title>
 	<link>https://github.com/ubuntu/yaru/issues/2268</link>
 	<description><![CDATA[ <p><strong>This issue is for discussing enhancing curl at the bottom of the mimetype icons or adding a paper fold at the top!</strong>
@@ -575,7 +522,6 @@ In no particular order, here's document icons from OSX, Windows, Humanity, Adwai
 <img src="https://user-images.githubusercontent.com/3986894/88096590-2fc28980-cb97-11ea-8a0e-db49ec71dabd.png" alt="image" />
 &quot;</p> ]]></description>
 </item>
-"2020-09-29T09:35:25Z¡Status: Discussion¡Enhance the current curl or add a paper fold on file icons¡https://github.com/ubuntu/yaru/issues/2268¡ **This issue is for discussing enhancing curl at the bottom of the mimetype icons or adding a paper fold at the top!**rnrnrn![image](https://user-images.githubusercontent.com/3986894/88099319-4e2a8400-cb9b-11ea-845a-317a02830904.png)rn_Enhanced, Fold and current_ 👆 rnrnFor a long time now, I've found the paper curl at the bottom of the mimetype icons to be too subtle. At the moment, the current curl is only present at 256 px (and above ofc). rnThe fold would be a clear distinction between the application and file icons.rnrnAdding the top fold, is a very controversial suggestion and it's also a massive amount of work to adapt the current 54 icons. A less intrusive suggestion is to increase the current curl.rnrnIn no particular order, here's document icons from OSX, Windows, Humanity, Adwaita, Papirus and Yaru 📄 rnrn![image](https://user-images.githubusercontent.com/3986894/88096590-2fc28980-cb97-11ea-8a0e-db49ec71dabd.png)rn"
 <item>	<title>Enhance the current curl or add a paper fold on file icons</title>
 	<link>https://github.com/ubuntu/yaru/issues/2268</link>
 	<description><![CDATA[ <p><strong>This issue is for discussing enhancing curl at the bottom of the mimetype icons or adding a paper fold at the top!</strong>
@@ -594,7 +540,6 @@ In no particular order, here's document icons from OSX, Windows, Humanity, Adwai
 <img src="https://user-images.githubusercontent.com/3986894/88096590-2fc28980-cb97-11ea-8a0e-db49ec71dabd.png" alt="image" />
 &quot;</p> ]]></description>
 </item>
-"2020-07-09T21:05:32Z¡Area: gtk3¡Gtk3: Different font colors in backdrop¡https://github.com/ubuntu/yaru/issues/2227¡White text should be "dimmed" equally in backdrop:rnrn![gif](https://user-images.githubusercontent.com/3986894/86543789-f85ea680-bf21-11ea-9ffb-4e0466722a00.gif)rnrnThe combobox text almost looks disabled in backdrop 🤷‍♂️ "
 <item>	<title>Gtk3: Different font colors in backdrop</title>
 	<link>https://github.com/ubuntu/yaru/issues/2227</link>
 	<description><![CDATA[ <p>White text should be &quot;dimmed&quot; equally in backdrop:
@@ -603,7 +548,6 @@ In no particular order, here's document icons from OSX, Windows, Humanity, Adwai
 
 The combobox text almost looks disabled in backdrop 🤷‍♂️ &quot;</p> ]]></description>
 </item>
-"2020-07-09T21:05:32Z¡upstream¡Gtk3: Different font colors in backdrop¡https://github.com/ubuntu/yaru/issues/2227¡White text should be "dimmed" equally in backdrop:rnrn![gif](https://user-images.githubusercontent.com/3986894/86543789-f85ea680-bf21-11ea-9ffb-4e0466722a00.gif)rnrnThe combobox text almost looks disabled in backdrop 🤷‍♂️ "
 <item>	<title>Gtk3: Different font colors in backdrop</title>
 	<link>https://github.com/ubuntu/yaru/issues/2227</link>
 	<description><![CDATA[ <p>White text should be &quot;dimmed&quot; equally in backdrop:
@@ -612,7 +556,6 @@ The combobox text almost looks disabled in backdrop 🤷‍♂️ &quot;</p> ]]>
 
 The combobox text almost looks disabled in backdrop 🤷‍♂️ &quot;</p> ]]></description>
 </item>
-"2020-09-26T10:56:58Z¡Area: gtk3¡OSD level scale invisible¡https://github.com/ubuntu/yaru/issues/2214¡Hi there, first of all, thanks for this very nice theme.rnrnI'm using Yaru 20.04 on openSUSE Tumbleweed and Leap 15.2 with Mate 1.24.0. There is a problem where the OSD horizontal fine-grained level/scale is invisible. Maybe some code could be borrowed from Numix, as it looks perfect under Numix.rnrn--------------rnrnYaru (light and normal all behave the same):rnrn![Screenshot at 2020-06-22 10-14-21](https://user-images.githubusercontent.com/2692138/85305326-880c4b80-b472-11ea-8d15-98d63fb4b3c6.png)rnrn---------------------rnrnNumix:rnrn![Screenshot at 2020-06-22 10-14-35](https://user-images.githubusercontent.com/2692138/85305349-90fd1d00-b472-11ea-9db7-e0e1611c0b26.png)rn"
 <item>	<title>OSD level scale invisible</title>
 	<link>https://github.com/ubuntu/yaru/issues/2214</link>
 	<description><![CDATA[ <p>Hi there, first of all, thanks for this very nice theme.
@@ -632,7 +575,6 @@ Numix:
 <img src="https://user-images.githubusercontent.com/2692138/85305349-90fd1d00-b472-11ea-9db7-e0e1611c0b26.png" alt="Screenshot at 2020-06-22 10-14-35" />
 &quot;</p> ]]></description>
 </item>
-"2020-09-26T10:56:58Z¡Area: mate¡OSD level scale invisible¡https://github.com/ubuntu/yaru/issues/2214¡Hi there, first of all, thanks for this very nice theme.rnrnI'm using Yaru 20.04 on openSUSE Tumbleweed and Leap 15.2 with Mate 1.24.0. There is a problem where the OSD horizontal fine-grained level/scale is invisible. Maybe some code could be borrowed from Numix, as it looks perfect under Numix.rnrn--------------rnrnYaru (light and normal all behave the same):rnrn![Screenshot at 2020-06-22 10-14-21](https://user-images.githubusercontent.com/2692138/85305326-880c4b80-b472-11ea-8d15-98d63fb4b3c6.png)rnrn---------------------rnrnNumix:rnrn![Screenshot at 2020-06-22 10-14-35](https://user-images.githubusercontent.com/2692138/85305349-90fd1d00-b472-11ea-9db7-e0e1611c0b26.png)rn"
 <item>	<title>OSD level scale invisible</title>
 	<link>https://github.com/ubuntu/yaru/issues/2214</link>
 	<description><![CDATA[ <p>Hi there, first of all, thanks for this very nice theme.
@@ -652,7 +594,6 @@ Numix:
 <img src="https://user-images.githubusercontent.com/2692138/85305349-90fd1d00-b472-11ea-9db7-e0e1611c0b26.png" alt="Screenshot at 2020-06-22 10-14-35" />
 &quot;</p> ]]></description>
 </item>
-"2020-09-26T10:56:58Z¡help wanted¡OSD level scale invisible¡https://github.com/ubuntu/yaru/issues/2214¡Hi there, first of all, thanks for this very nice theme.rnrnI'm using Yaru 20.04 on openSUSE Tumbleweed and Leap 15.2 with Mate 1.24.0. There is a problem where the OSD horizontal fine-grained level/scale is invisible. Maybe some code could be borrowed from Numix, as it looks perfect under Numix.rnrn--------------rnrnYaru (light and normal all behave the same):rnrn![Screenshot at 2020-06-22 10-14-21](https://user-images.githubusercontent.com/2692138/85305326-880c4b80-b472-11ea-8d15-98d63fb4b3c6.png)rnrn---------------------rnrnNumix:rnrn![Screenshot at 2020-06-22 10-14-35](https://user-images.githubusercontent.com/2692138/85305349-90fd1d00-b472-11ea-9db7-e0e1611c0b26.png)rn"
 <item>	<title>OSD level scale invisible</title>
 	<link>https://github.com/ubuntu/yaru/issues/2214</link>
 	<description><![CDATA[ <p>Hi there, first of all, thanks for this very nice theme.
@@ -672,7 +613,6 @@ Numix:
 <img src="https://user-images.githubusercontent.com/2692138/85305349-90fd1d00-b472-11ea-9db7-e0e1611c0b26.png" alt="Screenshot at 2020-06-22 10-14-35" />
 &quot;</p> ]]></description>
 </item>
-"2020-08-05T21:25:16Z¡Area: build¡Render Script¡https://github.com/ubuntu/yaru/issues/2212¡rn## To render the custom iconrnrn(What you were trying to do)rnI was trying to render a costume icon made with the blank template.rnI have the latest version of Inkscape and OptiPng.rnrn## Actual Behaviorrnrn(What happened instead)rnThere was no output. No text output and no final image output.rnrn## Steps to Reproduce the Problemrnrn  1. Try to render a costume icon using the render service"
 <item>	<title>Render Script</title>
 	<link>https://github.com/ubuntu/yaru/issues/2212</link>
 	<description><![CDATA[ <p>
@@ -691,13 +631,64 @@ There was no output. No text output and no final image output.
 
  1. Try to render a costume icon using the render service&quot;</p> ]]></description>
 </item>
-"2020-09-22T00:59:07Z¡automated pr¡Auto update new upstream snapshot for GTK¡https://github.com/ubuntu/yaru/pull/2197¡[New upstream GTK changes](https://github.com/ubuntu/yaru/actions?query=workflow%3A%22Update+PR+on+upstream+changes+once+landed+on+ubuntu%22) by GitHub Action"
 <item>	<title>Auto update new upstream snapshot for GTK</title>
 	<link>https://github.com/ubuntu/yaru/pull/2197</link>
-	<description><![CDATA[ <p><a href="https://github.com/ubuntu/yaru/actions?query=workflow0X0P+0"2020-09-22T00:59:07Z¡new upstream¡Auto update new upstream snapshot for GTK¡https://github.com/ubuntu/yaru/pull/2197¡[New upstream GTK changes](https://github.com/ubuntu/yaru/actions?query=workflow%3A%22Update+PR+on+upstream+changes+once+landed+on+ubuntu%22) by GitHub Action"
-<item>	<title>Auto update new upstream snapshot for GTK</title>
+	<description><![CDATA[ <p><a href="https://github.com/ubuntu/yaru/actions?query=workflow0X0P+0<item>	<title>Auto update new upstream snapshot for GTK</title>
 	<link>https://github.com/ubuntu/yaru/pull/2197</link>
-	<description><![CDATA[ <p><a href="https://github.com/ubuntu/yaru/actions?query=workflow0X0P+0"2020-09-29T19:07:51Z¡Priority: Low¡nemo: bookmark icons have inconsistent color¡https://github.com/ubuntu/yaru/issues/2191¡## Expected BehaviorrnAll Bookmarks should have the same icon colorrnrn## Actual BehaviorrnrnSome Bookmarks are dark while others are white.rn![Selection_002](https://user-images.githubusercontent.com/1280530/82285888-5115b800-9951-11ea-9a7f-a97026d1fc40.png)rnrnrn## Steps to Reproduce the Problemrnrn  1. Open nemo. Make sure there are bookmarks.rn  2. All icons should start as white. Click on a bookmark.rn  3. Click away from the previous bookmark to see the change in color. The clicked bookmark in step 2 is now dark.rn rnNote: nemo will remember the color of the icons until it has been restarted. `nemo -q` will reset the icons all back to white.rnrn## Software that presents the issuernrn- Name: nemorn- Version: 4.4.2rnrn## Yaru versionrnrnOfficial version from Ubuntu repositories: v20.04.6rn"
+	<description><![CDATA[ <p><a href="https://github.com/ubuntu/yaru/actions?query=workflow0X0P+0<item>	<title>nemo: bookmark icons have inconsistent color</title>
+	<link>https://github.com/ubuntu/yaru/issues/2191</link>
+	<description><![CDATA[ <h2 id="expected-behavior
+all-bookmarks-should-have-the-same-icon-color
+
+-actual-behavior
+
+some-bookmarks-are-dark-while-others-are-white.
+selection_002
+
+
+-steps-to-reproduce-the-problem
+
+-1.-open-nemo.-make-sure-there-are-bookmarks.
+-2.-all-icons-should-start-as-white.-click-on-a-bookmark.
+-3.-click-away-from-the-previous-bookmark-to-see-the-change-in-color.-the-clicked-bookmark-in-step-2-is-now-dark.
+-
+note-nemo-will-remember-the-color-of-the-icons-until-it-has-been-restarted.-nemo--q-will-reset-the-icons-all-back-to-white.
+
+-software-that-presents-the-issue
+
+--name-nemo
+--version-4.4.2
+
+-yaru-version
+
+official-version-from-ubuntu-repositories-v20.04.6
+">Expected Behavior
+All Bookmarks should have the same icon color
+
+## Actual Behavior
+
+Some Bookmarks are dark while others are white.
+<img src="https://user-images.githubusercontent.com/1280530/82285888-5115b800-9951-11ea-9a7f-a97026d1fc40.png" alt="Selection_002" />
+
+
+## Steps to Reproduce the Problem
+
+ 1. Open nemo. Make sure there are bookmarks.
+ 2. All icons should start as white. Click on a bookmark.
+ 3. Click away from the previous bookmark to see the change in color. The clicked bookmark in step 2 is now dark.
+ 
+Note: nemo will remember the color of the icons until it has been restarted. <code>nemo -q</code> will reset the icons all back to white.
+
+## Software that presents the issue
+
+- Name: nemo
+- Version: 4.4.2
+
+## Yaru version
+
+Official version from Ubuntu repositories: v20.04.6
+&quot;</h2> ]]></description>
+</item>
 <item>	<title>nemo: bookmark icons have inconsistent color</title>
 	<link>https://github.com/ubuntu/yaru/issues/2191</link>
 	<description><![CDATA[ <h2 id="expected-behavior
@@ -752,62 +743,6 @@ Note: nemo will remember the color of the icons until it has been restarted. <co
 Official version from Ubuntu repositories: v20.04.6
 &quot;</h2> ]]></description>
 </item>
-"2020-09-29T19:07:51Z¡Status: info-needed¡nemo: bookmark icons have inconsistent color¡https://github.com/ubuntu/yaru/issues/2191¡## Expected BehaviorrnAll Bookmarks should have the same icon colorrnrn## Actual BehaviorrnrnSome Bookmarks are dark while others are white.rn![Selection_002](https://user-images.githubusercontent.com/1280530/82285888-5115b800-9951-11ea-9a7f-a97026d1fc40.png)rnrnrn## Steps to Reproduce the Problemrnrn  1. Open nemo. Make sure there are bookmarks.rn  2. All icons should start as white. Click on a bookmark.rn  3. Click away from the previous bookmark to see the change in color. The clicked bookmark in step 2 is now dark.rn rnNote: nemo will remember the color of the icons until it has been restarted. `nemo -q` will reset the icons all back to white.rnrn## Software that presents the issuernrn- Name: nemorn- Version: 4.4.2rnrn## Yaru versionrnrnOfficial version from Ubuntu repositories: v20.04.6rn"
-<item>	<title>nemo: bookmark icons have inconsistent color</title>
-	<link>https://github.com/ubuntu/yaru/issues/2191</link>
-	<description><![CDATA[ <h2 id="expected-behavior
-all-bookmarks-should-have-the-same-icon-color
-
--actual-behavior
-
-some-bookmarks-are-dark-while-others-are-white.
-selection_002
-
-
--steps-to-reproduce-the-problem
-
--1.-open-nemo.-make-sure-there-are-bookmarks.
--2.-all-icons-should-start-as-white.-click-on-a-bookmark.
--3.-click-away-from-the-previous-bookmark-to-see-the-change-in-color.-the-clicked-bookmark-in-step-2-is-now-dark.
--
-note-nemo-will-remember-the-color-of-the-icons-until-it-has-been-restarted.-nemo--q-will-reset-the-icons-all-back-to-white.
-
--software-that-presents-the-issue
-
---name-nemo
---version-4.4.2
-
--yaru-version
-
-official-version-from-ubuntu-repositories-v20.04.6
-">Expected Behavior
-All Bookmarks should have the same icon color
-
-## Actual Behavior
-
-Some Bookmarks are dark while others are white.
-<img src="https://user-images.githubusercontent.com/1280530/82285888-5115b800-9951-11ea-9a7f-a97026d1fc40.png" alt="Selection_002" />
-
-
-## Steps to Reproduce the Problem
-
- 1. Open nemo. Make sure there are bookmarks.
- 2. All icons should start as white. Click on a bookmark.
- 3. Click away from the previous bookmark to see the change in color. The clicked bookmark in step 2 is now dark.
- 
-Note: nemo will remember the color of the icons until it has been restarted. <code>nemo -q</code> will reset the icons all back to white.
-
-## Software that presents the issue
-
-- Name: nemo
-- Version: 4.4.2
-
-## Yaru version
-
-Official version from Ubuntu repositories: v20.04.6
-&quot;</h2> ]]></description>
-</item>
-"2020-09-29T07:47:18Z¡Status: info-needed¡PSPP icon with yaru theme.¡https://github.com/ubuntu/yaru/issues/2181¡its all dark cannot see.rnrn![image](https://user-images.githubusercontent.com/12841320/81031669-bc20b280-8eac-11ea-8a94-1e99ae13ab49.png)rn"
 <item>	<title>PSPP icon with yaru theme.</title>
 	<link>https://github.com/ubuntu/yaru/issues/2181</link>
 	<description><![CDATA[ <p>its all dark cannot see.
@@ -815,7 +750,6 @@ Official version from Ubuntu repositories: v20.04.6
 <img src="https://user-images.githubusercontent.com/12841320/81031669-bc20b280-8eac-11ea-8a94-1e99ae13ab49.png" alt="image" />
 &quot;</p> ]]></description>
 </item>
-"2020-09-27T11:29:22Z¡Area: icon theme¡Evolution folder list looks strange in Ubuntu 20.04 - some icons missing?¡https://github.com/ubuntu/yaru/issues/2180¡## Actual Behaviorrnrn(What happened instead)rn![Снимок экрана от 2020-05-04 11-22-05](https://user-images.githubusercontent.com/5177608/80948044-0301a000-8dfa-11ea-9000-b30f87830582.png)rnrnrn## Steps to Reproduce the Problemrnrn  1. Install Evolution mail client with sudo apt install evolutionrn  1. Set up some email account to sync withrn  1. Look at the folder iconsrnrn## Software that presents the issuernrn- Name: Evolutionrn- Version: 3.36.1-2rnrnrn## Yaru versionrn```apt-cache policy yaru-theme-iconrnyaru-theme-icon:rn  Installed: 20.04.6rn  Candidate: 20.04.6rn  Version table:rn *** 20.04.6 500rn        500 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 Packagesrn        500 http://ru.archive.ubuntu.com/ubuntu focal/main i386 Packagesrn        100 /var/lib/dpkg/statusrn```"
 <item>	<title>Evolution folder list looks strange in Ubuntu 20.04 - some icons missing?</title>
 	<link>https://github.com/ubuntu/yaru/issues/2180</link>
 	<description><![CDATA[ <h2 id="actual-behavior
@@ -876,14 +810,10 @@ yaru-theme-icon:
         100 /var/lib/dpkg/status
 </code>&quot;</h2> ]]></description>
 </item>
-"2020-04-30T18:36:49Z¡Priority: Enhancement¡gnome-shell theme broken when using custom theme name and gnome-shell-gresource¡https://github.com/ubuntu/yaru/issues/2173¡I'm trying to make a custom theme based on yaru ([yaru-anycolor](https://github.com/fkohlgrueber/yaru-anycolor)) on Ubuntu 20.04 and the built gnome-shell theme doesn't work. The combination of `-D gnome-shell-gresource=true` and a theme name other than `Yaru` seems to be the problem.rnrn## Expected Behaviorrnrn- Successful login using `YaruTest` as shell themernrn## Actual Behaviorrnrn- Black screen for a couple of seconds, then returns to login screenrnrn## Steps to Reproduce the Problemrnrn- Change theme name to `YaruTest` (in meson.build)rn- Build yaru using `-D gnome-shell-gresource=true`rn- Log outrn- Select the `YaruTest` session and loginrnrn## Software that presents the issuernrn- Ubuntu 20.04 / Gnome 3.36.1rnrn## Yaru versionrnrn- Current master (1c3f661)rnrn## SolutionrnrnAfter some digging into this issue, I discovered that the theme name `Yaru` is hardcoded in `gnome-shell/src/data/gnome-shell-theme.gresource.xml`:rnrn```rn    ...rn    <file alias="Yaru/gnome-shell.css">gnome-shell.css</file>rn    <file alias="Yaru/gnome-shell-high-contrast.css">gnome-shell-high-contrast.css</file>rn    <file alias="Yaru-dark/gnome-shell.css">gnome-shell-dark.css</file>rn    <file alias="Yaru-dark/gnome-shell-high-contrast.css">gnome-shell-high-contrast-dark.css</file>rn    ...rn```rnrnReplacing `Yaru` with `YaruTest` in that file solves the issue for me. I don't know how this should properly be fixed. I think it'd be possible to make meson put the project name into the file during build. Another option might be to remove the theme name from the aliases completely, but I'm not sure if that plays nicely with gnome.rnrnI could write a PR once I know how this should be fixed.rnrnThanks in advance and have a nice day ;-)"
-"2020-04-30T18:36:49Z¡Status: not a bug¡gnome-shell theme broken when using custom theme name and gnome-shell-gresource¡https://github.com/ubuntu/yaru/issues/2173¡I'm trying to make a custom theme based on yaru ([yaru-anycolor](https://github.com/fkohlgrueber/yaru-anycolor)) on Ubuntu 20.04 and the built gnome-shell theme doesn't work. The combination of `-D gnome-shell-gresource=true` and a theme name other than `Yaru` seems to be the problem.rnrn## Expected Behaviorrnrn- Successful login using `YaruTest` as shell themernrn## Actual Behaviorrnrn- Black screen for a couple of seconds, then returns to login screenrnrn## Steps to Reproduce the Problemrnrn- Change theme name to `YaruTest` (in meson.build)rn- Build yaru using `-D gnome-shell-gresource=true`rn- Log outrn- Select the `YaruTest` session and loginrnrn## Software that presents the issuernrn- Ubuntu 20.04 / Gnome 3.36.1rnrn## Yaru versionrnrn- Current master (1c3f661)rnrn## SolutionrnrnAfter some digging into this issue, I discovered that the theme name `Yaru` is hardcoded in `gnome-shell/src/data/gnome-shell-theme.gresource.xml`:rnrn```rn    ...rn    <file alias="Yaru/gnome-shell.css">gnome-shell.css</file>rn    <file alias="Yaru/gnome-shell-high-contrast.css">gnome-shell-high-contrast.css</file>rn    <file alias="Yaru-dark/gnome-shell.css">gnome-shell-dark.css</file>rn    <file alias="Yaru-dark/gnome-shell-high-contrast.css">gnome-shell-high-contrast-dark.css</file>rn    ...rn```rnrnReplacing `Yaru` with `YaruTest` in that file solves the issue for me. I don't know how this should properly be fixed. I think it'd be possible to make meson put the project name into the file during build. Another option might be to remove the theme name from the aliases completely, but I'm not sure if that plays nicely with gnome.rnrnI could write a PR once I know how this should be fixed.rnrnThanks in advance and have a nice day ;-)"
-"2020-05-25T09:08:26Z¡Area: GNOME-shell¡lockscreen: "autosuspend" message has low visibility¡https://github.com/ubuntu/yaru/issues/2165¡I cannot take a screenshot, but the lockscreen shows sometimes a bubble at the bottom of the screen with a message, about autosuspend, black on a dark grey background which makes it hard to read"
 <item>	<title>lockscreen: "autosuspend" message has low visibility</title>
 	<link>https://github.com/ubuntu/yaru/issues/2165</link>
 	<description><![CDATA[ <p>I cannot take a screenshot, but the lockscreen shows sometimes a bubble at the bottom of the screen with a message, about autosuspend, black on a dark grey background which makes it hard to read&quot;</p> ]]></description>
 </item>
-"2020-09-26T11:06:56Z¡Area: gtk3¡In the gnome-shell calendar, days of a different month with events are colored differently from those without¡https://github.com/ubuntu/yaru/issues/2164¡![image](https://user-images.githubusercontent.com/10762082/80280572-24310500-8705-11ea-9627-3eaee8fd0383.png)rnrn##  Expected BehaviorrnAny day of a different month should be colored differently from the days of the current month. rnrn## Actual BehaviorrnDays of a different month that have events are colored the same as days of the current (selected) month (January 1. and 8. in the image above have the wrong color).rnrn## Steps to Reproduce the Problemrnrn  1. Add events to the calendar in the beginning or end of a monthrn  2. Open the calendar and look at the colors of the datesrnrn## Software that presents the issuernrn- Name: gnome-shellrn- Version: 3.36.1-5ubuntu1rnrn## Yaru versionrnrn```rn$ apt show yaru-theme-gnome-shell rnPackage: yaru-theme-gnome-shellrnVersion: 20.04.6rn```rnrn"
 <item>	<title>In the gnome-shell calendar, days of a different month with events are colored differently from those without</title>
 	<link>https://github.com/ubuntu/yaru/issues/2164</link>
 	<description><![CDATA[ <p><img src="https://user-images.githubusercontent.com/10762082/80280572-24310500-8705-11ea-9627-3eaee8fd0383.png" alt="image" />
@@ -914,7 +844,6 @@ Version: 20.04.6
 
 &quot;</p> ]]></description>
 </item>
-"2020-09-26T11:06:56Z¡Status: confirmed¡In the gnome-shell calendar, days of a different month with events are colored differently from those without¡https://github.com/ubuntu/yaru/issues/2164¡![image](https://user-images.githubusercontent.com/10762082/80280572-24310500-8705-11ea-9627-3eaee8fd0383.png)rnrn##  Expected BehaviorrnAny day of a different month should be colored differently from the days of the current month. rnrn## Actual BehaviorrnDays of a different month that have events are colored the same as days of the current (selected) month (January 1. and 8. in the image above have the wrong color).rnrn## Steps to Reproduce the Problemrnrn  1. Add events to the calendar in the beginning or end of a monthrn  2. Open the calendar and look at the colors of the datesrnrn## Software that presents the issuernrn- Name: gnome-shellrn- Version: 3.36.1-5ubuntu1rnrn## Yaru versionrnrn```rn$ apt show yaru-theme-gnome-shell rnPackage: yaru-theme-gnome-shellrnVersion: 20.04.6rn```rnrn"
 <item>	<title>In the gnome-shell calendar, days of a different month with events are colored differently from those without</title>
 	<link>https://github.com/ubuntu/yaru/issues/2164</link>
 	<description><![CDATA[ <p><img src="https://user-images.githubusercontent.com/10762082/80280572-24310500-8705-11ea-9627-3eaee8fd0383.png" alt="image" />
@@ -945,7 +874,6 @@ Version: 20.04.6
 
 &quot;</p> ]]></description>
 </item>
-"2020-09-29T06:39:35Z¡Area: GNOME-shell¡Date and day of the week in the right of the GNOME Shell message tray are missing the lower part¡https://github.com/ubuntu/yaru/issues/2146¡## Infornrn- Yaru version: 20.04.4rn- Ubuntu version: Ubuntu Focal Fossa (development branch)rn- Language: Japanesernrn## Screenshotrnrn![Screenshot_01](https://user-images.githubusercontent.com/63552361/79073456-b4447700-7d21-11ea-8ffd-6a35f9fca039.png)rn"
 <item>	<title>Date and day of the week in the right of the GNOME Shell message tray are missing the lower part</title>
 	<link>https://github.com/ubuntu/yaru/issues/2146</link>
 	<description><![CDATA[ <h2 id="info
@@ -968,9 +896,6 @@ screenshot_01
 <img src="https://user-images.githubusercontent.com/63552361/79073456-b4447700-7d21-11ea-8ffd-6a35f9fca039.png" alt="Screenshot_01" />
 &quot;</h2> ]]></description>
 </item>
-"2020-04-07T08:26:04Z¡Area: icon theme¡qt.svg: /usr/share/icons/Yaru/16x16/legacy/mail-receive.svg:1749: Could not resolve property: #linearGradient4073¡https://github.com/ubuntu/yaru/issues/2128¡Since a recent yaru update in Ubuntu 20.04, I'm seeing the following warnings when running qgit in a terminal, printed multiple times:rnrn    qt.svg: /usr/share/icons/Yaru/16x16/legacy/mail-receive.svg:1749: Could not resolve property: #linearGradient4073rn    qt.svg: /usr/share/icons/Yaru/16x16/legacy/mail-receive.svg:1749: Could not resolve property: #linearGradient4073rn    qt.svg: /usr/share/icons/Yaru/16x16/legacy/mail-receive.svg:1749: Could not resolve property: #linearGradient4073rn    qt.svg: /usr/share/icons/Yaru/16x16/legacy/mail-receive.svg:1749: Could not resolve property: #linearGradient4073rn    qt.svg: /usr/share/icons/Yaru/16x16/legacy/mail-receive.svg:1749: Could not resolve property: #linearGradient4073rn    qt.svg: /usr/share/icons/Yaru/16x16/legacy/mail-receive.svg:1749: Could not resolve property: #linearGradient4073rn    qt.svg: /usr/share/icons/Yaru/16x16/legacy/mail-receive.svg:1749: Could not resolve property: #linearGradient1241rn    qt.svg: /usr/share/icons/Yaru/16x16/legacy/mail-receive.svg:1749: Could not resolve property: #linearGradient1083rn    qt.svg: /usr/share/icons/Yaru/16x16/legacy/mail-receive.svg:1749: Could not resolve property: #linearGradient1083rn    qt.svg: /usr/share/icons/Yaru/16x16/legacy/mail-receive.svg:1749: Could not resolve property: #linearGradient1083rn    qt.svg: /usr/share/icons/Yaru/16x16/legacy/mail-receive.svg:1749: Could not resolve property: #linearGradient1083rn    qt.svg: /usr/share/icons/Yaru/16x16/legacy/mail-receive.svg:1749: Could not resolve property: #linearGradient946rnrnIt appears that icon was added in https://github.com/ubuntu/yaru/commit/4157370cb9037bda93f4db82ced351bdb352c04a.rnI can indeed see references to these gradients in the SVG source, but they are not defined anywhere in the same SVG."
-"2020-04-04T08:45:12Z¡help wanted¡Make Yaru compatible with budgie-panel¡https://github.com/ubuntu/yaru/issues/2078¡At the current state, using Yaru in budgie panel is almost unreadable. Is it possible to make a budgie-panel theme for Yaru? rnrn![Screenshot from 2020-03-16 11-53-05](https://user-images.githubusercontent.com/38846168/76770522-d7a8f000-677c-11ea-934d-6db9132a32c9.png)rn"
-"2020-09-26T20:25:14Z¡Area: gtk3¡[Bionic] Check mark (✓) is invisible in Firefox context menu¡https://github.com/ubuntu/yaru/issues/2064¡### Steps to see the issuern1. Open Firefox and go to a text fieldrn2. Right-click in a text field and select "Check Spelling"rn3. You should see a check mark (✓) beside "Check Spelling"rn4. The check mark is invisiblernrn### Software that presents the issuern- OS: Ubuntu 18.04rn- App: Firefoxrn- Version: 74rnrn### Yaru versionrn$ snap info communithemernsnap-id:      Yd6CISPIf6tEf3ZEJ0cqSoEg9rG2VkRirntracking:     latest/edgernrefresh-date: 11 days ago, at 19:12 CETrnchannels:rn  stable:    0.1    2019-03-13 (1768) 16MB -rn  candidate: ↑                             rn  beta:      ↑                             rn  edge:      29.180 2020-03-03 (1970) 18MB -rninstalled:   29.180            (1970) 18MB -rn"
 <item>	<title>[Bionic] Check mark (✓) is invisible in Firefox context menu</title>
 	<link>https://github.com/ubuntu/yaru/issues/2064</link>
 	<description><![CDATA[ <h3 id="steps-to-see-the-issue
@@ -1019,7 +944,6 @@ channels:
 installed: 29.180 (1970) 18MB -
 &quot;</h3> ]]></description>
 </item>
-"2020-09-26T20:25:14Z¡help wanted¡[Bionic] Check mark (✓) is invisible in Firefox context menu¡https://github.com/ubuntu/yaru/issues/2064¡### Steps to see the issuern1. Open Firefox and go to a text fieldrn2. Right-click in a text field and select "Check Spelling"rn3. You should see a check mark (✓) beside "Check Spelling"rn4. The check mark is invisiblernrn### Software that presents the issuern- OS: Ubuntu 18.04rn- App: Firefoxrn- Version: 74rnrn### Yaru versionrn$ snap info communithemernsnap-id:      Yd6CISPIf6tEf3ZEJ0cqSoEg9rG2VkRirntracking:     latest/edgernrefresh-date: 11 days ago, at 19:12 CETrnchannels:rn  stable:    0.1    2019-03-13 (1768) 16MB -rn  candidate: ↑                             rn  beta:      ↑                             rn  edge:      29.180 2020-03-03 (1970) 18MB -rninstalled:   29.180            (1970) 18MB -rn"
 <item>	<title>[Bionic] Check mark (✓) is invisible in Firefox context menu</title>
 	<link>https://github.com/ubuntu/yaru/issues/2064</link>
 	<description><![CDATA[ <h3 id="steps-to-see-the-issue
@@ -1068,7 +992,6 @@ channels:
 installed: 29.180 (1970) 18MB -
 &quot;</h3> ]]></description>
 </item>
-"2020-09-26T16:43:45Z¡Area: gtk3¡Default theme: Gnome clocks "hdysqueezer" buttons have wrong styling¡https://github.com/ubuntu/yaru/issues/2060¡![Bildschirmfoto von 2020-03-11 12-28-54](https://user-images.githubusercontent.com/15329494/76412485-faf62880-6393-11ea-859f-355c0776c88a.png)rnrnProbably because they are not included in our _headerbar.scss stylingrnIssues so far:rnrn- [ ] wrong hover/active/backdrop styling for those squeezer buttonsrn- [x] our compact mode is not working there, and the squeezer buttons stretch the whole headerbar including the buttonsrn- [x] circular buttons are stretched in the "add new" dialogue"
 <item>	<title>Default theme: Gnome clocks "hdysqueezer" buttons have wrong styling</title>
 	<link>https://github.com/ubuntu/yaru/issues/2060</link>
 	<description><![CDATA[ <p><img src="https://user-images.githubusercontent.com/15329494/76412485-faf62880-6393-11ea-859f-355c0776c88a.png" alt="Bildschirmfoto von 2020-03-11 12-28-54" />
@@ -1080,7 +1003,6 @@ Issues so far:
 - [x] our compact mode is not working there, and the squeezer buttons stretch the whole headerbar including the buttons
 - [x] circular buttons are stretched in the &quot;add new&quot; dialogue&quot;</p> ]]></description>
 </item>
-"2020-09-26T16:43:45Z¡upstream¡Default theme: Gnome clocks "hdysqueezer" buttons have wrong styling¡https://github.com/ubuntu/yaru/issues/2060¡![Bildschirmfoto von 2020-03-11 12-28-54](https://user-images.githubusercontent.com/15329494/76412485-faf62880-6393-11ea-859f-355c0776c88a.png)rnrnProbably because they are not included in our _headerbar.scss stylingrnIssues so far:rnrn- [ ] wrong hover/active/backdrop styling for those squeezer buttonsrn- [x] our compact mode is not working there, and the squeezer buttons stretch the whole headerbar including the buttonsrn- [x] circular buttons are stretched in the "add new" dialogue"
 <item>	<title>Default theme: Gnome clocks "hdysqueezer" buttons have wrong styling</title>
 	<link>https://github.com/ubuntu/yaru/issues/2060</link>
 	<description><![CDATA[ <p><img src="https://user-images.githubusercontent.com/15329494/76412485-faf62880-6393-11ea-859f-355c0776c88a.png" alt="Bildschirmfoto von 2020-03-11 12-28-54" />
@@ -1092,7 +1014,6 @@ Issues so far:
 - [x] our compact mode is not working there, and the squeezer buttons stretch the whole headerbar including the buttons
 - [x] circular buttons are stretched in the &quot;add new&quot; dialogue&quot;</p> ]]></description>
 </item>
-"2020-06-07T17:48:59Z¡Area: icon theme¡Progress cursor revert to Adwaita on Virtualbox¡https://github.com/ubuntu/yaru/issues/1996¡## Actual Behaviorrnrn![Capture d’écran du 2020-02-26 19-30-30](https://user-images.githubusercontent.com/36476595/75375572-a308ed80-58ce-11ea-8ea0-2ec0b5392b78.png)rnrnThe spinner is the Adwaita one.rnDMZ cursor not affected.rnrnTested on 19.10.rnI can't test on master (my test machine is already a VM)."
 <item>	<title>Progress cursor revert to Adwaita on Virtualbox</title>
 	<link>https://github.com/ubuntu/yaru/issues/1996</link>
 	<description><![CDATA[ <h2 id="actual-behavior
@@ -1113,7 +1034,6 @@ DMZ cursor not affected.
 Tested on 19.10.
 I can't test on master (my test machine is already a VM).&quot;</h2> ]]></description>
 </item>
-"2020-09-27T15:06:03Z¡Area: icon theme¡Add symlinks from our emblems for insync emblems¡https://github.com/ubuntu/yaru/issues/1973¡![image](https://user-images.githubusercontent.com/15329494/75113391-e99be500-564d-11ea-8f33-da14f8130d3d.png)rnrnMaybe a "low hanging fruit" :kiwi_fruit: :banana: :cherries: ?rnrnWill check if insync is okay with this, similar how I've checked that they are okay with the folder icon we have: https://github.com/ubuntu/yaru/issues/759#issuecomment-439012243"
 <item>	<title>Add symlinks from our emblems for insync emblems</title>
 	<link>https://github.com/ubuntu/yaru/issues/1973</link>
 	<description><![CDATA[ <p><img src="https://user-images.githubusercontent.com/15329494/75113391-e99be500-564d-11ea-8f33-da14f8130d3d.png" alt="image" />
@@ -1122,7 +1042,6 @@ Maybe a &quot;low hanging fruit&quot; :kiwi_fruit: :banana: :cherries: ?
 
 Will check if insync is okay with this, similar how I've checked that they are okay with the folder icon we have: https://github.com/ubuntu/yaru/issues/759#issuecomment-439012243&quot;</p> ]]></description>
 </item>
-"2020-09-27T15:06:03Z¡Priority: Low¡Add symlinks from our emblems for insync emblems¡https://github.com/ubuntu/yaru/issues/1973¡![image](https://user-images.githubusercontent.com/15329494/75113391-e99be500-564d-11ea-8f33-da14f8130d3d.png)rnrnMaybe a "low hanging fruit" :kiwi_fruit: :banana: :cherries: ?rnrnWill check if insync is okay with this, similar how I've checked that they are okay with the folder icon we have: https://github.com/ubuntu/yaru/issues/759#issuecomment-439012243"
 <item>	<title>Add symlinks from our emblems for insync emblems</title>
 	<link>https://github.com/ubuntu/yaru/issues/1973</link>
 	<description><![CDATA[ <p><img src="https://user-images.githubusercontent.com/15329494/75113391-e99be500-564d-11ea-8f33-da14f8130d3d.png" alt="image" />
@@ -1131,7 +1050,6 @@ Maybe a &quot;low hanging fruit&quot; :kiwi_fruit: :banana: :cherries: ?
 
 Will check if insync is okay with this, similar how I've checked that they are okay with the folder icon we have: https://github.com/ubuntu/yaru/issues/759#issuecomment-439012243&quot;</p> ]]></description>
 </item>
-"2020-09-25T11:54:28Z¡documentation¡Migrate existing user dir to zsys¡https://github.com/ubuntu/zsys/issues/167¡**Describe the bug**rnHow can i migrate existing user dir to zsys?rnrnI have a dpool/home/hcw home folder migrated into a fresh ubuntu 20.04 installrnby putting that data under rpool/USERDATA/home/hcw.rnHowever, userdata does not seem to work for that new dataset.rnrnzsysctrl show does only show the ubuntu-created users (there i had created a user hcw, but renamed / moved the dataset).rnrnrnrn**To Reproduce**rnSteps to reproduce the behavior:rn1. Install ubuntu 20.04 via "zfs root install" expert / experimental optionrn2. Create a user "hcw" during  install.rn3. After install move the rpool/USERDATA/hcw_9y5x50 away by changing the mountpoint.rn3. After install copy the other pools dpool/home/hcw to rpool/USERDATA/home/hcw (also create rpool/USERDATA/home).rnrn**Expected behavior**rnA documentation should exist how zsys detects user data and how to set up to migrate existing user datasets.rnrn"
 <item>	<title>Migrate existing user dir to zsys</title>
 	<link>https://github.com/ubuntu/zsys/issues/167</link>
 	<description><![CDATA[ <p><strong>Describe the bug</strong>
@@ -1157,7 +1075,6 @@ A documentation should exist how zsys detects user data and how to set up to mig
 
 &quot;</p> ]]></description>
 </item>
-"2020-09-25T11:54:28Z¡good first issue¡Migrate existing user dir to zsys¡https://github.com/ubuntu/zsys/issues/167¡**Describe the bug**rnHow can i migrate existing user dir to zsys?rnrnI have a dpool/home/hcw home folder migrated into a fresh ubuntu 20.04 installrnby putting that data under rpool/USERDATA/home/hcw.rnHowever, userdata does not seem to work for that new dataset.rnrnzsysctrl show does only show the ubuntu-created users (there i had created a user hcw, but renamed / moved the dataset).rnrnrnrn**To Reproduce**rnSteps to reproduce the behavior:rn1. Install ubuntu 20.04 via "zfs root install" expert / experimental optionrn2. Create a user "hcw" during  install.rn3. After install move the rpool/USERDATA/hcw_9y5x50 away by changing the mountpoint.rn3. After install copy the other pools dpool/home/hcw to rpool/USERDATA/home/hcw (also create rpool/USERDATA/home).rnrn**Expected behavior**rnA documentation should exist how zsys detects user data and how to set up to migrate existing user datasets.rnrn"
 <item>	<title>Migrate existing user dir to zsys</title>
 	<link>https://github.com/ubuntu/zsys/issues/167</link>
 	<description><![CDATA[ <p><strong>Describe the bug</strong>
@@ -1183,7 +1100,6 @@ A documentation should exist how zsys detects user data and how to set up to mig
 
 &quot;</p> ]]></description>
 </item>
-"2020-07-15T08:01:16Z¡enhancement¡Feature Request: persistent configurable loglevel¡https://github.com/ubuntu/zsys/issues/153¡**Describe the bug**rnloglevel changes via `zsysctl service loglevel` only affect the currently running daemon.  This is helpful for debugging problems with manually triggered calls.  Unfortunately, since zsysd is socket activated, it goes away fairly quickly, which resets the loglevel back to the 0 (warning).   rnrnIdeally I would like the loglevel to be configurable persistently, perhaps via /etc/zsys.confrnThis would greatly facilitate the debugging of timer triggered calls.  It would also enable an administrator to search logs for details on actions taken by zsys easily, without having to inspect the `zpool history` or inspecting the current state and comparing creation times.rnrn**To Reproduce**rnSteps to reproduce the behavior:rn1. Run `zsysctl service loglevel 1`rn2. Wait for next timer to trigger:  zsys-gc.timer or zsys-user-savestate.timerrn3. Check logs: `journalctl -u zsysd`rn4. No interesting log entries found for that triggerrnrn**Expected behavior**rnI would have liked to see the loglevel persist at least a little longer than a minute or so.  rnrn**For ubuntu users, please run and  copy the following:**rn1. `ubuntu-bug zsys --save=/tmp/report`rn2. Copy paste below `/tmp/report` content:rnReport is too large to include inline here.rn[report.txt](https://github.com/ubuntu/zsys/files/4838198/report.txt)rnrn**Installed versions:**rn - OS: Ubuntu 20.04 LTSrn- Zsysd running version: 0.4.5rnrn**Additional context**rnLong time zfs admin, just now trying out zsys on a workstation. rnrnrn"
 <item>	<title>Feature Request: persistent configurable loglevel</title>
 	<link>https://github.com/ubuntu/zsys/issues/153</link>
 	<description><![CDATA[ <p><strong>Describe the bug</strong>
@@ -1220,7 +1136,6 @@ Long time zfs admin, just now trying out zsys on a workstation.
 
 &quot;</p> ]]></description>
 </item>
-"2020-06-11T06:12:11Z¡enhancement¡Mount an entire state somewhere¡https://github.com/ubuntu/zsys/issues/151¡It can be very useful to browse the data in zfs snapshots. Snapshots can be browsed from the .zfs directory in the root of any dataset (where zfs will automount them for you on access), and you can mount them manually as well.rnrnThe typical Ubuntu zfs installation has a lot of datasets though, which quite fragments things. These exist for good reasons, but it becomes difficult to (for example) browse a coherent view of a specific state, as the state is spread over many datasets.rnrnIt would be useful if zsys can be asked to mount an entire state under some directory. This would mount the correct snapshot of each dataset involved in the state at the correct location, reproducing the entire file system (or at least that which is under zsys control) in the target directory. Zfs itself can't do this as it does not have a coherent view of what snapshots belong together, but zsys knows exactly which snapshots make up a state.rnrnOne interesting use case for this feature is to make a system state save, mount it somewhere, and then have any regular backup utility (which knows nothing about zfs) back it up. This ensures that the backup is atomic, and asking zsysctl to make and then mount a state save can easily be done from a pre-backup hook or with a script (and the post-backup hook would unmount and then delete the save, of course)."
 <item>	<title>Mount an entire state somewhere</title>
 	<link>https://github.com/ubuntu/zsys/issues/151</link>
 	<description><![CDATA[ <p>It can be very useful to browse the data in zfs snapshots. Snapshots can be browsed from the .zfs directory in the root of any dataset (where zfs will automount them for you on access), and you can mount them manually as well.
@@ -1231,7 +1146,6 @@ It would be useful if zsys can be asked to mount an entire state under some dire
 
 One interesting use case for this feature is to make a system state save, mount it somewhere, and then have any regular backup utility (which knows nothing about zfs) back it up. This ensures that the backup is atomic, and asking zsysctl to make and then mount a state save can easily be done from a pre-backup hook or with a script (and the post-backup hook would unmount and then delete the save, of course).&quot;</p> ]]></description>
 </item>
-"2020-06-08T06:23:08Z¡enhancement¡Demote and promote snapshots¡https://github.com/ubuntu/zsys/issues/150¡Add a "demote" command to convert a manual state save into an automatic state save.rnrnThe use case is that manual saves are taken into account when satisfying the garbage collection policies, and so deleting a manual save may cause unwanted gaps in the time line. But the user should not have to think about that sort of thing when cleaning up. So, it is better to just ask zsys to convert it to an automatic save. From that point zsys can delete it if it's superfluous, or keep it around if needed to satisfy the GC policy.rnrnFor example, suppose this time line, where the GC policy says to keep three saves, and currently there are two automatic saves (a) and one manual save (m):rn-----------a---------------a-----------------------------m------------------------> (time)rnI may decide I don't need that manual save anymore for whatever purpose I made it originally. However, deleting it would lead to this time line:rn-----------a---------------a------------------------------------------------------> (time)rnThis no longer satisfies the policy and leaves a pretty big gap. So, it is not what I actually want.rnrnIf the manual save is simply demoted instead, it would lead to this time line:rn-----------a---------------a-----------------------------a------------------------> (time)rnAnd all is still well. For now it is kept, and zsys will eventually delete it when it becomes too old.rnrnrnrnThere should also be a "promote" command, to turn an automatic save into a manual save, preventing it from being garbage collected.rnrnThe use case for this is when the user notices something has gone wrong but needs time to investigate and decide what to do.rnrnFor example, suppose I notice late in the day that some files I was working on got corrupted. And the snapshot made automatically two hours ago is fine, although of course older.rnrnAt this point I would not want to revert the entire system, as it's running fine and lots of other things happened (I do not want to revert the state of my browser or rss client for example, if that isn't necessary). I also don't want to just replace the project folder with the snapshot, as then two hours of work are definitely lost.rnrnInstead, I want to compare the snapshot with the current situation (for example with a diff tool) and see what can be salvaged. But it's late in the day and so I leave that for later.rnrnBut the next day rolls around and zsys garbage collects, and instead of hourly snapshots I now have three snapshots for yesterday. There is a good chance I now have to work with an older snapshot. This might get even worse if I have to leave it longer (friday to monday for example) as now there's just one snapshot for that day left.rnrnSo, I want to be able to "promote" the latest known good snapshot the moment I realize I am going to need it. This makes sure it won't be garbage collected, and names it so I can easily find it later."
 <item>	<title>Demote and promote snapshots</title>
 	<link>https://github.com/ubuntu/zsys/issues/150</link>
 	<description><![CDATA[ <p>Add a &quot;demote&quot; command to convert a manual state save into an automatic state save.
@@ -1265,7 +1179,6 @@ But the next day rolls around and zsys garbage collects, and instead of hourly s
 
 So, I want to be able to &quot;promote&quot; the latest known good snapshot the moment I realize I am going to need it. This makes sure it won't be garbage collected, and names it so I can easily find it later.&quot;</p> ]]></description>
 </item>
-"2020-06-08T06:25:00Z¡enhancement¡Implement zsysctl state reclaim command¡https://github.com/ubuntu/zsys/issues/121¡Unfortunately, as the history is non linear, there is no easy way to include real snapshot disk usage by snapshots (even upstream ZFS doesn’t have any facilities to that because it’s complex): the real take is "you should combine snapshots to free space, not only one". If you look at the USE size of a snapshots, you will indeed see very little space that can be taken by only removing on snapshot, as most of the space is common between multiple of them.rnSo, it’s not an individual snapshots that need to take into account, but a range (including its dependencies).rnrnThis command should analyze the best strategy to reclaim spaces by deleting states:rn- it should analyzes multiple sets and combination of snapshots and their dependenciesrn- it should start from the bigger space winner (writing area difference from current filesystem dataset) by looking at what was allocated when and what is out of date to currentrn- it should give easy `zsysctl state remove` command line for people to reclaim the state. This should be done by borning with times (and include any dependencies, even if outside of this time range)."
 <item>	<title>Implement zsysctl state reclaim command</title>
 	<link>https://github.com/ubuntu/zsys/issues/121</link>
 	<description><![CDATA[ <p>Unfortunately, as the history is non linear, there is no easy way to include real snapshot disk usage by snapshots (even upstream ZFS doesn’t have any facilities to that because it’s complex): the real take is &quot;you should combine snapshots to free space, not only one&quot;. If you look at the USE size of a snapshots, you will indeed see very little space that can be taken by only removing on snapshot, as most of the space is common between multiple of them.
@@ -1277,7 +1190,6 @@ This command should analyze the best strategy to reclaim spaces by deleting stat
 - it should give easy <code>zsysctl state remove</code> command line for people to reclaim the state. This should be done by bo
 ing with times (and include any dependencies, even if outside of this time range).&quot;</p> ]]></description>
 </item>
-"2020-05-26T14:51:27Z¡support¡Support split ROOT¡https://github.com/ubuntu/zsys/issues/101¡**Describe the bug**rnOn some systems, it is beneficial to have some of the root filesystem datasets split between different pools. For example having most of the root residing on a pool using NVME devices while having /srv and /var on a pool backed by HDDs.rnrn**To Reproduce**rnSteps to reproduce the behavior:rn1. Create ZFS layout with 3 pools: rpool, bpool, dpoolrn```rn# sudo zfs listrnNAME                                    USED  AVAIL     REFER  MOUNTPOINTrnbpool                                  90.7M   261M       96K  /bootrnbpool/BOOT                             89.9M   261M       96K  nonernbpool/BOOT/ubuntu_6pt3c8               89.8M   261M     89.7M  /bootrndpool                                   167M   142G      170K  /srvrndpool/ROOT                              161M   142G      170K  nonerndpool/ROOT/ubuntu_6pt3c8                161M   142G      170K  /rndpool/ROOT/ubuntu_6pt3c8/opt            170K   142G      170K  /optrndpool/ROOT/ubuntu_6pt3c8/srv            170K   142G      170K  /srvrndpool/ROOT/ubuntu_6pt3c8/var            161M   142G      170K  /varrndpool/ROOT/ubuntu_6pt3c8/var/cache      105M   142G      105M  /var/cacherndpool/ROOT/ubuntu_6pt3c8/var/lib       49.6M   142G      618K  /var/librndpool/ROOT/ubuntu_6pt3c8/var/lib/apt   35.9M   142G     35.9M  /var/lib/aptrndpool/ROOT/ubuntu_6pt3c8/var/lib/dpkg  13.0M   142G     13.0M  /var/lib/dpkgrndpool/ROOT/ubuntu_6pt3c8/var/lib/nfs    170K   142G      170K  /var/lib/nfsrndpool/ROOT/ubuntu_6pt3c8/var/log       5.17M   142G     5.17M  /var/logrndpool/ROOT/ubuntu_6pt3c8/var/mail       170K   142G      170K  /var/mailrndpool/ROOT/ubuntu_6pt3c8/var/snap       170K   142G      170K  /var/snaprndpool/ROOT/ubuntu_6pt3c8/var/spool      185K   142G      185K  /var/spoolrndpool/ROOT/ubuntu_6pt3c8/var/tmp        213K   142G      213K  /var/tmprndpool/ROOT/ubuntu_6pt3c8/var/www        170K   142G      170K  /var/wwwrndpool/USERDATA                          398K   142G      170K  /rndpool/USERDATA/rejsmont_ch3gdz          227K   142G      227K  /home/rejsmontrnrpool                                   659M  7.11G       96K  /rnrpool/ROOT                              658M  7.11G       96K  nonernrpool/ROOT/ubuntu_6pt3c8                658M  7.11G      658M  /rnrpool/ROOT/ubuntu_6pt3c8/usr            208K  7.11G       96K  /usrrnrpool/ROOT/ubuntu_6pt3c8/usr/local      112K  7.11G      112K  /usr/localrn```rnrn**Expected behavior**rn`zsysctl save -s` should create snapshots for datasets from both `rpool/ROOT/ubuntu_6pt3c8` and `dpool/ROOT/ubuntu_6pt3c8`. I tried associating `dpool/ROOT/ubuntu_6pt3c8` with `rpool/ROOT/ubuntu_6pt3c8` using `com.ubuntu.zsys:bootfs-datasets` property, but it did not result in snapshots being taken as expected.rnrn`adduser` should create user home under `dpool/USERDATA`. Snapshots for `dpool/USERDATA/rejsmont_ch3gdz` are taken as expected though (thanks to `com.ubuntu.zsys:bootfs-datasets` property).rnrnrn**Installed versions:**rn - OS: 20.04 LTS (Focal Fossa)rn- Zsysd running version: 0.4.5"
 <item>	<title>Support split ROOT</title>
 	<link>https://github.com/ubuntu/zsys/issues/101</link>
 	<description><![CDATA[ <p><strong>Describe the bug</strong>
@@ -1328,7 +1240,6 @@ rpool/ROOT/ubuntu_6pt3c8/usr/local      112K  7.11G      112K  /usr/local
  - OS: 20.04 LTS (Focal Fossa)
 - Zsysd running version: 0.4.5&quot;</p> ]]></description>
 </item>
-"2020-06-08T06:25:13Z¡enhancement¡Strategy to enroll existing manually created user datasets (like encrypted ones)¡https://github.com/ubuntu/zsys/issues/81¡I created a new dataset for a user, so that I can use zfs native encryption for the home. When I did zsysctl save it told me that there is no association for that user and did some autosave of the old filesystem. Now I destroyed the old file system and now zsysctl errors out because the file system does not exist.rnBut there is the encrypted file system and its mount point is the home of the user.rnHow do I associate a zfs with a user, so that zsysctl knows what to do?rnrnEven more fun - and I did not try it yet: ubuntu does not create new zfs for new users but just creates new home-directories under /home which is in rpool/USERDATA thus they will not be able to save their homes. But that is a problem of ubuntu."
 <item>	<title>Strategy to enroll existing manually created user datasets (like encrypted ones)</title>
 	<link>https://github.com/ubuntu/zsys/issues/81</link>
 	<description><![CDATA[ <p>I created a new dataset for a user, so that I can use zfs native encryption for the home. When I did zsysctl save it told me that there is no association for that user and did some autosave of the old filesystem. Now I destroyed the old file system and now zsysctl errors out because the file system does not exist.
@@ -1338,6 +1249,5 @@ How do I associate a zfs with a user, so that zsysctl knows what to do?
 Even more fun - and I did not try it yet: ubuntu does not create new zfs for new users but just creates new home-directories under /home which is in rpool/USERDATA thus they will not be able to save their homes. But that is a problem of ubuntu.&quot;</p> ]]></description>
 </item>
 
-
-
+	
 </channel></rss>
