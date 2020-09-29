@@ -1,344 +1,222 @@
-<?xml version="1.0" encoding="UTF-8" ?><rss version="2.0"><channel><title>Help Wanted</title><description>Help Wanted Issues</description><link>https://lbonanomi.github.io/workspace/feed.xml</link><item>	<title>Add Carthage compatibility badge to the README</title>	<link>https://github.com/github/Archimedes/issues/38</link>	<description><![CDATA[Using  <a href="https://github.com/Carthage/Carthage/blob/7a0153cc164e301c46527f6e20c886728a0dc218/README.md#declare-your-compatibility">these instructions</a> 
-
-.<br/>" ]]></description></item><item>	<title>Move from AppVeyor to GitHub Actions</title>	<link>https://github.com/github/certstore/issues/19</link>	<description><![CDATA[This file should be migrated to GitHub Actions: https://github.com/github/certstore/blob/main/.appveyor.yml" ]]></description></item><item>	<title>license yaml format issue</title>	<link>https://github.com/github/choosealicense.com/issues/758</link>	<description><![CDATA[The `using` part of the license.txt looks weird to me. It's an array of single-element map like this<br/>```yaml<br/>using:<br/>  - youtube-dl: https://github.com/rg3/youtube-dl/blob/master/LICENSE<br/>  - kakoune: https://github.com/mawww/kakoune/blob/master/UNLICENSE<br/>  - RDF.rb: https://github.com/ruby-rdf/rdf/blob/master/UNLICENSE<br/>```<br/>why not just use a single map like this<br/>```yaml<br/>using:<br/>  youtube-dl: https://github.com/rg3/youtube-dl/blob/master/LICENSE<br/>  kakoune: https://github.com/mawww/kakoune/blob/master/UNLICENSE<br/>  RDF.rb: https://github.com/ruby-rdf/rdf/blob/master/UNLICENSE<br/>```<br/>or an array of structered map<br/>```yaml<br/>using:<br/>  - name: youtube-dl<br/>    url: https://github.com/rg3/youtube-dl/blob/master/LICENSE<br/>  - name: kakoune<br/>    url: https://github.com/mawww/kakoune/blob/master/UNLICENSE<br/>  - name: RDF.rb<br/>    url: https://github.com/ruby-rdf/rdf/blob/master/UNLICENSE<br/>```<br/>It makes the deserialise code boilerplate, for e.g in Rust I have to declare this field like <br/>```Rust<br/>using: Option<Vec<HashMap<String, String>>>,<br/>```<br/>When using this `using` field, I have to iterate the vector, during which I have to iterate the single-element map!<br/>In other formats, it would be<br/>```Rust<br/>using: Option<HashMap<String, String>>,<br/>```<br/>or<br/>```Rust<br/>using: Option<Vec<SomeStruct>>,<br/>```" ]]></description></item><item>	<title>Improved user experience: choosealicense.com/appendix</title>	<link>https://github.com/github/choosealicense.com/issues/703</link>	<description><![CDATA[First, I really love this page:  <a href="https://choosealicense.com/appendix">https://choosealicense.com/appendix</a> 
-
-<br/><br/>One way it can be improved is to include some \"yes/no/undefined\" check-boxes along the top of the table.<br/>When you eg: check the box above: \"Same License\" it brings all \"same licenses\" to the top &amp; grays out all other licenses.<br/>* If you check several boxes, only those licenses with ALL checked conditions are highlighted.<br/>* Below those (partially grayed out, or something)
- are licenses that partially match the check-boxes (in decreasing number of matches)
-.<br/>* And below that too is the remaining licenses, totally grayed out.<br/><br/>That would make this page awesome to use.<br/>Thanks &amp; hope this helps." ]]></description></item><item>	<title>Test that license texts match SPDX plain license texts</title>	<link>https://github.com/github/choosealicense.com/issues/636</link>	<description><![CDATA[We should have a test that each license text in `_licenses` is the same as the plain text license in the SPDX collection to automate the requirement described at https://github.com/github/choosealicense.com/blob/gh-pages/CONTRIBUTING.md#adding-a-license<br/><br/>> The text of the license should match the corresponding text found in  <a href="https://github.com/spdx/license-list-data/blob/master/text/">spdx/license-list-data</a> 
-
-. If there are errors there, please fix them in  <a href="https://github.com/spdx/license-list-XML">spdx/license-list-XML</a> 
-
- (from which the plain text version is generated)
- so as to minimize license text variation and make it easier for choosealicense.com to eventually consume license texts directly from SPDX.<br/><br/>The test could clone spdx/license-list-data and compare each license we have cataloged in this project. Many existing licenses would probably have to be marked as expected failures due to bugs in SPDX output and discrepancies in how this project has cataloged some licenses. But we should address upfront for any new license cataloged here, and continue to chip away at the existing inconsistencies." ]]></description></item><item>	<title>Annotating license texts with license rules</title>	<link>https://github.com/github/choosealicense.com/issues/441</link>	<description><![CDATA[ <a href="https://github.com/github/choosealicense.com/pull/320#issuecomment-230746990">Comment/question today</a> 
-
- about whether EUPL-1.1 is accurately described reminded me to file this enhancement idea.<br/><br/>For each license, license rules could be annotated with ranges of text in the license pertinent to the rule. Highlighting of ranges could be turned on/off on individual license pages by selecting in the license rules (permissions/conditions/limitations)
- table. Very crude mockup taking a very simple case (the one condition of MIT)
-.<br/><br/>! <a href="https://cloud.githubusercontent.com/assets/40415/16633043/25735510-437c-11e6-84f8-1e504d48f345.png">mit-highlight-condition</a> 
-
-<br/><br/>Obviously this is not a big help for MIT, but for longer licenses, it can be tricky to figure out what bits of the license are pertinent for a particular rule, at least if you only want to read once, which is more already than I suspect most people do.<br/><br/>Such annotations _might_ be very helpful to \"demystify\" licenses, and creating them might be good QA for choosealicense.com license descriptions.<br/><br/>Probably the simplest way to to annotate would be to have one or more full text extracts for each license for each rule, though there are other ways to do it, inline or  <a href="https://github.com/hypothesis/h/wiki/robust-anchors">out of band</a> 
-
-.<br/><br/>Very low priority, may even be a bad idea, just recording it for now.<br/>" ]]></description></item><item>	<title>Add Free Art License</title>	<link>https://github.com/github/choosealicense.com/issues/314</link>	<description><![CDATA[ <a href="http://artlibre.org/licence/lal/en/">Free Art License 1.3</a> 
-
-<br/>" ]]></description></item><item>	<title>I18N</title>	<link>https://github.com/github/choosealicense.com/issues/68</link>	<description><![CDATA[Would love to see about baking in I18N support to choosealicense.com proper. See #67 and #62<br/><br/>We already have the bulk of the strings in a single file (`_config.yml`)
-, so it should just be a matter of abstracting out some of our variables, as far as I can tell.<br/><br/>Would love to take this on starting in August if there's interest. Would be a great exercise to set a standard for Jekyll L10N, and can iterate on some of the lessons learned form https://github.com/CMSgov/healthcare.gov.<br/><br/>@parkr any interest?<br/>@dhcole any insight / words of wisdom?<br/>" ]]></description></item><item>	<title>Support for locally present bundles</title>	<link>https://github.com/github/codeql-action/issues/154</link>	<description><![CDATA[I would like to run code-scanning with a custom code-scanning bundle<br/>that already is present on my local disk.  I can currently do that by<br/>making the following hack:<br/><br/>### 1 Install bundle in tool cache:<br/><br/>Use `toolCache.cacheDir` to install the bundle with a specially crafted ID:<br/><br/>```js<br/>tc.cacheDir(localBundlePath, 'CodeQL', \"0.0.0-XXX-DUMMY-BUNDLE-ID\")
-;<br/>```<br/><br/>### 2 Convince codeql to look in the tool cache:<br/><br/>The codeql action is then invoked with a dummy URL that will make codeql.ts lookup the bundle with the specially crafted ID:<br/><br/>```yaml<br/>        ...<br/>        tools: dummy://codeql-bundle-XXX-DUMMY-BUNDLE-ID/dummy<br/>        ...<br/>```<br/><br/>---<br/><br/>This works, but I would like a more reliable solution.  I am not sure<br/>what the best approach is for supporting my use case, but I am happy<br/>to look into implementing a suggestion.<br/>" ]]></description></item><item>	<title>TODO: Configure caching for fast building on CI</title>	<link>https://github.com/github/government.github.com/issues/750</link>	<description><![CDATA[Description and details here: https://github.com/gjtorikian/html-proofer#configuring-caching and https://github.com/gjtorikian/html-proofer#caching-with-travis" ]]></description></item><item>	<title>Dockerfile support</title>	<link>https://github.com/github/licensed/issues/272</link>	<description><![CDATA[Would be great if `licensed` supported analyzing `Dockerfile`s and what is installed there to track all dependencies of a project!" ]]></description></item><item>	<title>XML report for CI</title>	<link>https://github.com/github/licensed/issues/52</link>	<description><![CDATA[Hi,<br/><br/>I'm integrating licensed for a poc in our Jenkins pipeline. It could be great to get a report of all licenses checks in an XML formatted file; so we can process it using Jenkins plugins. For now, I have to analyse the `XXX dependencies checked, XXX warnings found.` string formatted output of `licensed status` command.<br/><br/>We can consider **licensed results** as **tests results**.<br/>* If all licenses check passed; then the overall test is **passed**.<br/>* If one license is found as unknown, or not matching any of allowed, ignored or reviewed configs; then the check/test **failed**.<br/><br/>Standards test output formats such as junit, nunit, mstest, google-test, etc. would be great cos already known by many CI tools. Junit is probably the most used one.<br/><br/>Organizing tests in \"groups\" matching the package type (npm, pip, go, etc.)
- and license type (mit, gpl...)
- would also allows to \"count\" the type of licenses found... providing some kind of statistics ^<br/><br/>Example of output in Jenkins test plugin results, processing the XML file could be:<br/>```<br/>Package                  Fail Skip Pass Total<br/>- total                     0    0   69    69<br/>- npm                       0    0   53    53<br/>  - mit                     0    0   45    45<br/>    - package1              0    0    1     1<br/>    - package 2             ...<br/>    - ...<br/>  - apache-2.0                              3<br/>    - package46<br/>    - ...<br/>  - bsd-3-clause                            1 <br/>    - package49<br/>  - isc                                     1<br/>    - package50<br/>  - unknown                                 3<br/>    - package51             1    0    0     1<br/>    - ...<br/>- go                                       16<br/>  - mit                                    14<br/>    - ...<br/>  - isc                                     1<br/>    - ...<br/>  - unknown                                 1<br/>    - packagexx             1    0    0     1<br/>    - ...<br/>```<br/>I did not fill the array; but you've got the point ;-)
-<br/><br/>Regards,<br/><br/>Chris" ]]></description></item><item>	<title>List of languages without a colour</title>	<link>https://github.com/github/linguist/issues/5003</link>	<description><![CDATA[Continuing from #4506. 49% (280)
- languages currently do not have a language assigned and show as grey (a lot of these are grouped languages that GitHub shows ungrouped in search results)
-.<br/><br/>List generated with https://gist.github.com/wopian/8639e5d24119cbd99548b73c18321686<br/><br/>## Early Sidenotes<br/><br/>- Languages without a logo or no other clear branding are being skipped. <br/><br/>- If the language has no logo and is developed by a sole company, their logo/brand is used.<br/><br/>- If a logo consists of multiple colours, I've listed them by most dominant (or in the case of Blitz, least blinding)
-.<br/><br/>- Will try and do 2 or more letters per day.<br/><br/>## Key<br/><br/>🙅 = No logo, no brand or lack of info for language<br/>❓ = No suitable colour, but is grouped into a language that has a colour<br/><br/>## Languages<br/><br/><!-- https://github.github.io/linguist/ --><br/><br/>### Numbers<br/><br/>- [ ] 4D `#004289` (source:  <a href="https://4d.com">brand</a> 
-
-)
-<br/><br/>### A<br/><br/>- [ ] ~ABNF~ 🙅<br/>- [ ] ~ASL~ 🙅<br/>- [ ] ~ASN.1~ 🙅 <br/>- [ ] Adobe Font Metrics `#da291c` (source: Adobe / Adobe PostScript)
-<br/>- [ ] Alpine Abuild `#0D597F` (grouped in `Shell`, source:  <a href="#0D597F">Alpine logo</a> 
-
-)
-<br/>- [ ] Altium Designer `#A89663` (source:  <a href="https://en.wikipedia.org/wiki/Altium_Designer">Altium Designer logo</a> 
-
-)
-<br/>- [ ] Ant Build System `#A9157E` (source:  <a href="https://en.wikipedia.org/wiki/Apache_Ant">Apache Ant logo</a> 
-
-)
-<br/>- [ ] ApacheConf `#D12127` (source:  <a href="http://httpd.apache.org/docs/2.4/configuring.html">Apache logo</a> 
-
-<br/>- [x] ~Apollo Guidance Computer (grouped in `Assembly`)
-~ #5001<br/>- [ ] ~AsciiDoc~ 🙅 Blue header? https://asciidoc.org/<br/>- [ ] Augeas `#9CC134`, `#65a703` or `#ebf8d5` (source:  <a href="https://augeas.net/docs/language.html">logo and brand</a> 
-
-)
-<br/>- [ ] Avro IDL `#0040FF` (source:  <a href="https://avro.apache.org/docs/1.9.2/idl.html">Apache Avro logo</a> 
-
-)
-<br/>- [ ] ~Awk~ 🙅<br/><br/>### B<br/><br/>- [ ] ~Befunge~ 🙅<br/>- [ ] BibTeX (grouped in `TeX`)
- ❓ Use green from `Tex`? (logo is black text)
-<br/>- [x] ~Bison (grouped in `Yacc`)
- ❓ Use colour from `Yacc`? (logo is a black &amp; white image)
-~ #5001<br/>- [ ] ~BitBake~ 🙅<br/>- [ ] BlitzBasic `#00D8FF`, `#00FFAE` (source:  <a href="https://en.wikipedia.org/wiki/Blitz_BASIC">Blitz BASIC logo</a> 
-
- - jeez)
-<br/>- [ ] Bluespec `#12223C` (source:  <a href="https://github.com/bluespec">Bluespec logo</a> 
-
-)
-<br/>- [ ] Brightscript `#662D91` (source:  <a href="https://developer.roku.com/en-gb/docs/references/brightscript/language/brightscript-language-reference.md">Roko Brightscript logo</a> 
-
-)
-<br/><br/>### C<br/><br/>- [ ] C-ObjDump ❓ Use colour from `C`?<br/>- [ ] C2hs Haskell (grouped in `Haskell`)
- ❓ Use purple from `Haskell`?<br/>- [ ] ~CLIPS~ 🙅 Maybe http://www.clipsrules.net/ https://sourceforge.net/projects/clipsrules/<br/>- [ ] CMake `#A3A3A3`, `#01BD00`, `#3132B9` or `#DA3434` (source:  <a href="https://en.wikipedia.org/wiki/CMake">logo</a> 
-
-)
-<br/>- [ ] ~COBOL~ 🙅<br/>- [ ] COLLADA `#F1A42B` (source:  <a href="https://en.wikipedia.org/wiki/COLLADA">logo</a> 
-
-)
-<br/>- [ ] ~CSV~ 🙅<br/>- [ ] ~CWeb~ 🙅<br/>- [ ] Cabal Config `#483465` (source:  <a href="https://www.haskell.org/cabal/">brand colours</a> 
-
-)
-<br/>- [ ] Cap'n Proto `#C42727` (source:  <a href="https://capnproto.org/">brand colours</a> 
-
-)
-<br/>- [ ] CartoCSS ❓ Use colour from `CSS`?<br/>- [ ] ~Charity~ 🙅<br/>- [ ] ChucK `#3F8000`, `#80FF00` or `#FF8500` (source:  <a href="https://en.wikipedia.org/wiki/ChucK">logo</a> 
-
-)
-<br/>- [ ] Closure Templates (grouped in `HTML`)
- ❓ Use colour from `Closure` or `HTML`?<br/>- [ ] Cloud Firestore Security Rules `#FFCA28`, `#FFA000` or `#F57C00` (source:  <a href="https://firebase.google.com/brand-guidelines">Firebase branding</a> 
-
-)
-<br/>- [ ] ~CoNLL-U~ 🙅<br/>- [ ] CodeQL `#5C31FF`, `#5c31ff` or `#151046` (source: https://semmle.com/codeql)
-<br/>- [x] ~ColdFusion CFC (grouped in `ColdFusion`)
-~ #5001<br/>- [ ] ~Cool~ 🙅<br/>- [ ] Coq `#CFB486` or `#CCA073` (source:  <a href="https://en.wikipedia.org/wiki/Coq">logo</a> 
-
-)
-<br/>- [ ] Cpp-ObjDump ❓ Use colour from `C++`?<br/>- [ ] ~Creole~ 🙅<br/>- [ ] Csound `#343433` (source:  <a href="https://csound.com/">logo</a> 
-
-)
-<br/>- [ ] Csound Document `#343433` (source:  <a href="https://csound.com/">logo</a> 
-
-)
-<br/>- [ ] Csound Score `#343433` (source:  <a href="https://csound.com/">logo</a> 
-
-)
-<br/>- [ ] ~Cycript~ 🙅<br/>- [ ] Cython `#3572A5` (grouped in `Python`)
-<br/>- [ ] ~cURL Config (grouped in `INI`)
-~ 🙅<br/><br/>### D<br/><br/>- [ ] D-ObjDump ❓ Use colour from `D`?<br/>- [ ] ~DIGITAL Command Language~ 🙅<br/>- [ ] ~DNS Zone~ 🙅<br/>- [ ] ~DTrace~ 🙅 Appears to have a mascot that uses an orange/pink/purple theme<br/>- [ ] Darcs Patch (source:  <a href="https://en.wikipedia.org/wiki/Darcs">logo</a> 
-
-, but its a gradient from white to 100% green)
-<br/>- [ ] ~Diff~ 🙅<br/>- [ ] DirectX 3D File (source:  <a href="https://en.wikipedia.org/wiki/DirectX">logo</a> 
-
-, another white to green gradient)
-<br/>- [ ] ~desktop~ 🙅<br/>- [ ] ~dircolors~ 🙅<br/><br/>### E<br/><br/>- [ ] ~EBNF~ 🙅<br/>- [ ] ECLiPSe `#AFEEFF`, `#00FFFF` or `#0057D7` (grouped in `prolog`, source:  <a href="http://eclipseclp.org/">logo and brand</a> 
-
-)
-<br/>- [x] ~EJS (grouped in `HTML`)
-~ #5001<br/>- [ ] ~EML~ 🙅<br/>- [ ] ~Eagle~ 🙅<br/>- [ ] Easybuild `#2A72ED`, `#069406` or `#B50811` (grouped in `Python`, source:  <a href="https://easybuild.readthedocs.io/en/latest/">logo</a> 
-
-)
-<br/>- [ ] Ecere Projects `#913960` (grouped in `JavaScript`)
- Configuration for `eC` (use same as language itself)
-<br/>- [ ] EditorConfig `#E0EFEF`, `#FEFEFE` or `#FFF2F2` (grouped in `INI`, source:  <a href="https://editorconfig.org/">logo and brand</a> 
-
-)
-<br/>- [ ] ~Edje Data Collection~ 🙅<br/>- [ ] ~edn~ 🙅<br/><br/>### F<br/><br/>- [ ] FIGlet Font `#FFDDBB` (source:  <a href="http://www.figlet.org/">brand</a> 
-
-)
-<br/>- [ ] Filebench WML `#FFC000` (source:  <a href="https://github.com/filebench">org logo</a> 
-
-)
-<br/>- [ ] ~Filterscript (grouped in `RenderScript`)
-~ 🙅<br/>- [ ] ~Formatted~ 🙅<br/>- [ ] Fortran Free Form `#4d41b1` (grouped in `Fortran`, source: same as `Fortran`)
-<br/>- [ ] fish `#4AAE47` or `#4A9BC8` (grouped in `Shell`, source:  <a href="https://fishshell.com/">logo</a> 
-
-)
-<br/><br/>### G<br/><br/>- [ ] GAMS `#F39619` or `#2b1a02` (source:  <a href="https://www.gams.com/img/gams_logo.svg">logo</a> 
-
-)
-<br/>- [ ] GAP `#0000ff` or `#ccffff` (source:  <a href="https://www.gap-system.org">site</a> 
-
-)
-<br/>- [ ] GCC Machine Description `#FFCFAB`, `#AB9A7E` or `#F39105` (source:  <a href="https://en.wikipedia.org/wiki/GNU_Compiler_Collection">logo</a> 
-
-)
-<br/>- [ ] ~GDB~ 🙅 Black &amp; white logo<br/>- [ ] GEDCOM `#003058` OR `#86B940`, `#9C947A` or `#BBB7B1` (first source: [logo of LDS Church (developers)
-](https://en.wikipedia.org/wiki/The_Church_of_Jesus_Christ_of_Latter-day_Saints)
-, second source: [logo of FamilySearch (operated by LDS and uses GEDCOM today)
-](https://en.wikipedia.org/wiki/GEDCOM#Versions)
-<br/>- [ ] GLSL `#5586A4` (source:  <a href="https://www.khronos.org/legal/trademarks/">openGL brand</a> 
-
-)
-<br/>- [ ] ~GN~ 🙅 Generate Ninja - No logo or branding<br/>- [ ] Genshi `#cc0000` or `#D5200C` (source:  <a href="https://genshi.edgewall.org/">branding and Edgewall logo</a> 
-
-)
-<br/>- [ ] Gentoo Ebuild `#beb8db`, `#54487a` or `#9400FF` (grouped in `Shell`, source:  <a href="https://www.gentoo.org/">brand</a> 
-
-)
-<br/>- [ ] Gentoo Eclass `#beb8db`, `#54487a` or `#9400FF` (grouped in `Shell`, source:  <a href="https://www.gentoo.org/">brand</a> 
-
-)
-<br/>- [ ] Gerber Image `#D01F25` or #D20B00` (source:  <a href="https://www.ucamco.com/en/gerber">logo or branding</a> 
-
-)
-<br/>- [ ] Gettext Catalog `#a42e2b` (source:  <a href="https://www.gnu.org/software/gettext/manual/index.html">GNU branding</a> 
-
-)
-<br/>- [ ] Git Attributes `#F44D27` (grouped in `INI`, source:  <a href="https://git-scm.com/">logo</a> 
-
-)
-<br/>- [ ] Git Config `#F44D27` (grouped in `INI`, source:  <a href="https://git-scm.com/">logo</a> 
-
-)
-<br/>- [ ] Glyph Bitmap Distribution Format `#da291c` (source: Adobe / Adobe PostScript)
-<br/>- [ ] Grace `#615f8b` (source:  <a href="http://gracelang.org/applications/">brand</a> 
-
-)
-<br/>- [ ] Gradle `#02303A` (source:  <a href="https://gradle.org/">logo and brand</a> 
-
-)
-<br/>- [ ] ~Graph Modeling Language~ 🙅<br/>- [ ] GraphQL `#e10098` (source:  <a href="https://graphql.org/img/logo.svg">logo</a> 
-
-)
-<br/>- [ ] Graphviz (DOT)
- ❓  <a href="https://graphviz.org/">complex logo</a> 
-
- with conflicting site branding (and a different favicon logo)
-<br/>- [ ] Groovy Server Pages (grouped in `Groovy`)
- `#76A8B8` (source:  <a href="https://github.com/apache/groovy">repo logo</a> 
-
-)
- OR `#4298B8` or `#46A5C8` (source:  <a href="https://groovy-lang.org/">branding and site logo</a> 
-
-)
-<br/>  - Groovy itself is orange on Linguist for some reason and I don't think it ever had an orange logo or branding going on - so may want to opt for Groovy's orange or raise an issue with Groovy maintainers/users<br/><br/>### H<br/><br/>- [ ] HAProxy `#3D6DA5` (source:  <a href="https://www.haproxy.org/">centre square from logo</a> 
-
-)
-<br/>- [ ] HCL `#000000` (source:  <a href="https://www.hashicorp.com/">logo and brand</a> 
-
-)
-<br/>- [ ] ~HLSL~ 🙅 No logo, proprietary shader language for DirectX by Microsoft<br/>- [ ] HTML+Django `#20AA76` or `#0C4B33` (grouped in `HTML`, source:  <a href="https://www.djangoproject.com/">branding</a> 
-
-)
-<br/>- [ ] HTML+ECR `#000100` or `#2E1052` (grouped in `HTML`, source: [logo (matching Crystal on Linguist)
- or brand accent](https://crystal-lang.org/api/0.35.1/ECR.html)
-)
-<br/>- [ ] HTML+EEX `#6e4a7e` (grouped in `HTML`, source: [logo (matching Elixir on Linguist)
-](https://elixirschool.com/en/lessons/specifics/eex/)
-)
-<br/>- [ ] HTML+ERB `#701516` (grouped in `HTML`, source: matching Ruby on Linguist)
-<br/>- [ ] HTML+PHP `#4F5D95` (grouped in `HTML`, source: matching PHP on Linguist)
-<br/>- [ ] HTML+Razor `#512BD4` (grouped in `HTML`, source:  <a href="https://github.com/dotnet">.NET logo</a> 
-
- and  <a href="https://dotnet.microsoft.com/">branding</a> 
-
-)
-<br/>- [ ] ~HTTP~ 🙅<br/>- [ ] HXML `#f68712` or `#DF7B12` (source:  <a href="https://haxe.org/manual/compiler-usage-hxml.html">Haxe logo</a> 
-
-)
-<br/>- [ ] ~HyPhy~ 🙅<br/><br/>### I<br/><br/>- [ ] ~INI~ 🙅<br/>- [ ] ~IRC log~ 🙅<br/>- [ ] Ignore List `#F44D27` (grouped in `INI`)
- (source:  <a href="https://git-scm.com/">logo</a> 
-
-)
- `.gitignore`<br/>- [ ] Inform 7 ❓  <a href="http://inform7.com/">complex logo</a> 
-
-<br/>- [ ] Inno Setup `#264b99` (source:  <a href="https://jrsoftware.org/isinfo.php">brand</a> 
-
-)
-<br/>- [ ] Isabelle ROOT `#FEFE00`, `#CECEE7` or `#CE4A4A` (grouped in `Isabelle`, source: yellow matching Isabelle on Linguist,  <a href="https://isabelle.in.tum.de/">other two from logo</a> 
-
-)
-<br/><br/>### J<br/><br/>- [x] ~JFlex (grouped in `Lex`)
-~ #5001<br/>-  <a href="https://www.json.org/json-en.html"> ] JSON `#3e3e3e` (source: average of gradient logo</a> 
-
-)
-<br/>- [ ] JSON with Comments `#3e3e3e` (grouped in `JSON`)
- ❓ Same as JSON<br/>- [ ] JSON5 `#267CB9` (source:  <a href="https://json5.org/">branding</a> 
-
-)
-<br/>- [ ] JSONLD `#0C479C` (source:  <a href="https://github.com/json-ld">logo</a> 
-
-<br/>- [ ] JSX `#f1e05a` (grouped in `JavaScript`, source: matching Javascript on Linguist)
-<br/>- [ ] Jasmin ❓  <a href="http://jasmin.sourceforge.net/">complex logo</a> 
-
-<br/>- [ ] Java Properties `#b07219` (source: matching Java on Linguist)
-<br/>- [ ] Java Server Pages `#b07219` OR `#f98200` or `#FEB940` (grouped in `Java`, source: matching Java on Linguist OR  <a href="https://jakarta.ee/">Jakarta logo or branding</a> 
-
-)
-<br/>  - Java Server Pages appears to have been rebranded[(https://en.wikipedia.org/wiki/Jakarta_Server_Pages)
- as Jakarta Server Pages at some point<br/>- [ ] JavaScript+ERB `#701516` (grouped in `JavaScript`, source: matching Ruby on Linguist)
-<br/>- [ ] Jison `#56B3CB` (grouped in `Yacc`, source:  <a href="https://zaa.ch/jison/docs/">logo and branding</a> 
-
-)
- <br/>- [ ] Jison Lex `#56B3CB` (grouped in `Lex`, source:  <a href="https://zaa.ch/jison/docs/">logo and branding</a> 
-
-)
- <br/><br/>### K<br/><br/>- [ ] KiCad Layout<br/>- [ ] KiCad Legacy Layout<br/>- [ ] KiCad Schematic<br/>- [ ] Kit<br/><br/>### L<br/><br/>- [ ] LTspice Symbol<br/>- [ ] LabVIEW<br/>- [ ] Lean<br/>- [ ] LilyPond<br/>- [ ] Limbo<br/>- [ ] Linker Script<br/>- [ ] Linux Kernel Module<br/>- [ ] Liquid<br/>- [ ] Literate Agda (grouped in `Agda`)
-<br/>- [ ] Literate CoffeeScript (grouped in `CoffeeScript`)
-<br/>- [ ] Literate Haskell (grouped in `Haskell`)
-<br/>- [ ] Logos<br/>- [ ] Logtalk<br/>- [ ] LoomScript<br/><br/>### M<br/><br/>- [ ] M<br/>- [ ] M4<br/>- [ ] M4Sugar (grouped in `M4`)
-<br/>- [ ] MUF (grouped in `Forth`)
-<br/>- [ ] Mako<br/>- [ ] Mathematica<br/>- [ ] Maven POM<br/>- [ ] MediaWiki<br/>- [ ] Microsoft Developer Studio Project<br/>- [ ] MiniD<br/>- [ ] Modelica<br/>- [ ] Modula-2<br/>- [ ] Module Management System<br/>- [ ] Monkey<br/>- [ ] Moocode<br/>- [ ] MoonScript<br/>- [ ] Motorola 68K Assembly (grouped in `Assembly`)
-<br/>- [ ] Muse<br/>- [ ] Mustache (grouped in `HTML`)
-<br/>- [ ] Myghty<br/>- [ ] mupad<br/><br/>### N<br/><br/>- [ ] NASL<br/>- [ ] NEON<br/>- [ ] NL<br/>- [ ] NPM Config (grouped in `INI`)
-<br/>- [ ] NSIS<br/>- [ ] Nginx<br/>- [ ] Ninja<br/>- [x] ~NumPy (grouped in `Python`)
-~ #5001<br/>- [ ] nanorc (grouped in `INI`)
-<br/><br/>### O<br/><br/>- [ ] ObjDump<br/>- [ ] Object Data Instance Notation<br/>- [ ] Opa<br/>- [ ] Open Policy Agent<br/>- [ ] OpenCL (grouped in `C`)
-<br/>- [ ] OpenEdge ABL<br/>- [ ] OpenRC runscript (grouped in `Shell`)
-<br/>- [ ] OpenSCAD<br/>- [ ] OpenStep Property List<br/>- [ ] OpenType Feature File<br/>- [ ] Org<br/>- [ ] Ox<br/><br/>### P<br/><br/>- [ ] PLpgSQL<br/>- [ ] POV-Ray SDL<br/>- [ ] Parrot Assembly (grouped in `Parrot`)
-<br/>- [ ] Parrot Internal Representation (grouped in `Parrot`)
-<br/>- [ ] Pic (grouped in `Roff`)
-<br/>- [ ] Pickle<br/>- [ ] PicoLisp<br/>- [ ] PlantUML<br/>- [ ] Pod<br/>- [ ] Pod 6<br/>- [ ] Pony<br/>- [ ] PostCSS (grouped in `CSS`)
-<br/>- [ ] Proguard<br/>- [ ] Protocol Buffer<br/>- [ ] Public Key<br/>- [ ] Pure Data<br/>- [ ] Python console (grouped in `Python`)
-<br/>- [ ] Python traceback (grouped in `Python`)
-<br/><br/>### Q<br/><br/>- [ ] QMake<br/><br/>### R<br/><br/>- [ ] RDoc<br/>- [ ] REALbasic<br/>- [ ] REXX<br/>- [ ] RMarkdown<br/>- [ ] RPC<br/>- [ ] RPM Spec<br/>- [ ] Raw token data<br/>- [ ] Readline Config (grouped in `INI`)
-<br/>- [ ] Redcode<br/>- [ ] Regular Expression<br/>- [ ] ~RenderScript~ 🙅<br/>- [ ] Rich Text Format<br/>- [ ] RobotFramework<br/>- [ ] Roff Manpage (grouped in `Roff`)
-<br/>- [ ] reStructuredText<br/><br/>### S<br/><br/>- [ ] SMT<br/>- [ ] SPARQL<br/>- [ ] SQL<br/>- [ ] SQLPL<br/>- [ ] SSH Config (grouped in `INI`)
-<br/>- [ ] STON (grouped in `Smalltalk`)
-<br/>- [ ] SWIG<br/>- [ ] Sage<br/>- [ ] Scaml (grouped in `HTML`)
-<br/>- [ ] Scilab<br/>- [ ] ShaderLab<br/>- [ ] ShellSession<br/>- [ ] Sieve<br/>- [ ] Smali<br/>- [ ] Smarty<br/>- [ ] Spline Font Database<br/>- [ ] Stata<br/>- [ ] SubRip Text<br/>- [ ] SugarSS (grouped in `CSS`)
-<br/><br/>### T<br/><br/>- [ ] TLA<br/>- [ ] TOML<br/>- [ ] TSQL<br/>- [ ] TSV<br/>- [ ] TSX (grouped in `TypeScript`)
-<br/>- [ ] TXL<br/>- [ ] Tcsh (grouped in `Shell`)
-<br/>- [ ] Tea<br/>- [ ] Texinfo<br/>- [ ] Text<br/>- [ ] Textile<br/>- [ ] Thrift<br/>- [ ] Turtle<br/>- [ ] Type Language<br/><br/>### U<br/><br/>- [x] ~Unified Parallel C (grouped in `C`)
-~ #5001<br/>- [ ] Unity3D Asset<br/>- [ ] Unix Assembly (grouped in `Assembly`)
-<br/>- [ ] UrWeb<br/><br/>### V<br/><br/>- [ ] Vim Help File<br/>- [ ] Vim Snippet<br/><br/>### W<br/><br/>- [ ] Wavefront Material<br/>- [ ] Wavefront Object<br/>- [ ] Web Ontology Language<br/>- [ ] WebIDL<br/>- [ ] WebVTT<br/>- [ ] Wget Config (grouped in `INI`)
-<br/>- [ ] Windows Registry Entries<br/>- [ ] World of Warcraft Addon Data<br/><br/>### X<br/><br/>- [ ] X BitMap (grouped in `C`)
-<br/>- [ ] X Font Directory Index<br/>- [ ] X PixMap (grouped in `C`)
-<br/>- [ ] XCompose<br/>- [ ] XML<br/>- [ ] XML Property List (grouped in `XML`)
-<br/>- [ ] XPages<br/>- [ ] XProc<br/>- [ ] XS<br/>- [ ] Xojo<br/>- [ ] Xtend<br/><br/>### Y<br/><br/>- [ ] YANG<br/><br/>### Z<br/>- [ ] Zeek<br/>- [ ] Zimpl" ]]></description></item><item>	<title>Proposal: Make triaging more welcoming to external contributors</title>	<link>https://github.com/github/linguist/issues/4982</link>	<description><![CDATA[I've contributed on and off to linguist since 2017 and over time I've observed a quite frustrating pattern with issues and pull requests: legitimate issues and pull requests get labelled quite quickly as stale (30 days)
- and then closed (60)
-, with no further option to reopen them.<br/><br/>I understand that this workflow may be convenient for maintainers, but it seems discouraging in a few ways:<br/><br/>- For a casual contributor, 60 days may be a too strict deadline for a Pull Request. It is quite frustrating to come back at a Pull Request a couple of months later (holidays or whatever reason for inactivity)
- to find you need to create a new one. <br/><br/>- For issues, closing an issue just because there is no PR in 60 days hides them from people who are looking for active ways to contribute. It also tends to promote filing duplicates without reading any of the previous discussion.<br/><br/>I think this could be improved in a way that promotes external contributions while maintaining convenience for maintainers. There are probably many good ways, but I'm thinking about something along the following lines:<br/><br/>- Pull Requests: Do not close them automatically (or extend the grace period)
-. There's 73 PRs closed as Stale over a ~2 years period. A few of them were mostly ready, so the project could probably benefit from keeping them alive for a while.<br/><br/>- Issues: Once an issue is confirmed to be a valid bug or feature request, add a label (e.g. `Help Wanted`)
- and exclude it from the Stale workflow. This label would be a great way for people looking to contribute, while making it clear to the reporter that it needs someone to work on it. Keeping them open and clearly marked also makes them more easily discoverable by users experiencing the same issue, so they can contribute to the discussion.<br/><br/>What do you think?" ]]></description></item><item>	<title>Question about tags</title>	<link>https://github.com/github/octocatalog-diff/issues/209</link>	<description><![CDATA[Is there any way to have octocatalog-diff do the opposite of --ignore-tags?  I'd like to be able to specify one or more tags and have octocatalog-diff only compare resources containing those tags?  This would help predict the behavior of running puppet with those tags." ]]></description></item><item>	<title>Consider not using LCS by default or allow switching it off</title>	<link>https://github.com/github/octocatalog-diff/issues/207</link>	<description><![CDATA[Hi,<br/><br/> <a href="https://github.com/github/octocatalog-diff/blob/master/lib/octocatalog-diff/catalog-diff/differ.rb#L525">Hashdiff</a> 
-
- uses  <a href="https://github.com/liufengyun/hashdiff#use_lcs">LCS by default</a> 
-
- when comparing arrays. This algorithm produces a friendlier and easier to read diff for humans, but at  <a href="https://github.com/liufengyun/hashdiff/issues/49">high cost</a> 
-
- O(n<sup>2</sup>)
-.<br/><br/>Would you consider a patch to either disable LCS or perhaps to allow switching it off via the command line? I'd happy to prepare it.<br/><br/>Thanks." ]]></description></item><item>	<title>Turn parallel_tests back on for CI</title>	<link>https://github.com/github/octocatalog-diff/issues/164</link>	<description><![CDATA[Recently the CI for octocatalog-diff has been pretty flaky due to random tests getting killed. From travis CI documents, I concluded that the individual tests may be exhausting resources of the container, and as such in https://github.com/github/octocatalog-diff/pull/161 I disabled the parallel_tests gem for CI. Since then, no problems. :crossed_fingers: But, unfortunately the CI build time per ruby version increased by about 5 minutes (20 to 25)
- as a result of this change.<br/><br/>I'm entering this issue to keep track turning this back on. Things that would probably need to be done here would be to evaluate whether the tests can be effectively parallelized (perhaps the spec tests)
- or if the number of simultaneous processes can be reduced to keep from bumping up against any limits that exist.<br/><br/>Right now nobody is actively working on this (there are higher priorities)
-. However if test parallelization is something that interests you and you'd like to have a go at making the CI faster, please comment in the issue! 😸 " ]]></description></item><item>	<title>How to use a different puppet configuration (e.g. strict_variables)
-</title>	<link>https://github.com/github/octocatalog-diff/issues/158</link>	<description><![CDATA[Hey, I have set `strict_variables` (https://puppet.com/docs/puppet/4.10/configuration.html#strictvariables)
- to true on the puppetmaster. Now I also want this setting to be there for the octocatalog-diff run. Unfortunately I couldn't figure out how I could do that. The only think I could think of would be to add a bootstrapping script which creates a puppet.conf with that setting. But this doesn't feel right :)
-<br/><br/>Does someone has an idea how I could do that?" ]]></description></item><item>	<title>Investigate semantic-rust macro tests</title>	<link>https://github.com/github/semantic/issues/553</link>	<description><![CDATA[@p-alik has graciously added the `semantic-rust` package but we've had to exclude some macro corpus tests due to parsing issues.<br/><br/>See https://github.com/github/semantic/pull/551 for details." ]]></description></item><item>	<title>R support</title>	<link>https://github.com/github/semantic/issues/382</link>	<description><![CDATA[R is a  <a href="https://stackoverflow.blog/2017/10/10/impressive-growth-r/">widely used</a> 
-
-, growing language often used in Data Science and Statistics.<br/><br/>While it does not have a published formal specification, there is a  <a href="https://cran.r-project.org/doc/manuals/r-release/R-lang.pdf">draft specification</a> 
-
- that describes lexing and parsing the language.<br/><br/>In the most  <a href="https://github.com/wch/r-source">widely used implementation</a> 
-
- the parsing is done with a bison parser defined in  <a href="https://github.com/wch/r-source/blob/ff1bca2f21aba271d428474f00494eece5c36dd3/src/main/gram.y">gram.y</a> 
-
-.<br/><br/>The lexing rules for R are somewhat complex, but the parsing is relatively straightforward, as generally everything is an expression.<br/><br/>It would very beneficial to the R community to have support for R in semantic!" ]]></description></item><item>	<title>Move from Travis CI and Appveyor to GitHub Actions</title>	<link>https://github.com/github/smimesign/issues/71</link>	<description><![CDATA[The following files are historical artifacts:<br/><br/>- Travis CI for macOS builds: https://github.com/github/smimesign/blob/main/.travis.yml<br/>- AppVeyor for Windows builds: https://github.com/github/smimesign/blob/main/.appveyor.yml<br/><br/>In fact, the macOS build doesn't upload releases anymore.<br/><br/>Both of these should be moved to GitHub Actions. I have a test branch for macOS at:<br/>https://github.com/github/smimesign/tree/macos-build<br/><br/>This is not a high priority for us, but if someone took the time to migrate and debug the CI files for GH Actions it would help us maintain this project!" ]]></description></item><item>	<title>Don't connect to kext when invoked with CLI args</title>	<link>https://github.com/github/SoftU2F/issues/39</link>	<description><![CDATA[We try to connect to the kext when the app starts ( <a href="https://github.com/github/SoftU2F/blob/45825a5bd6e6bad7ae9bd681c8584cbcb6e7fb7b/SoftU2FTool/U2FHID.swift#L24">code</a> 
-
-)
-. This also happens when the app is launched from the command line (Eg. for deleting/listing registrations)
-. If the app is already running in the background we'll get an error because the kext only allows one connection. This error is surfaced to the user, which is confusing. We should not connect to the kext unless we need to." ]]></description></item><item>	<title>Scala Support</title>	<link>https://github.com/github/super-linter/issues/392</link>	<description><![CDATA[Scala linter support.<br/><br/>Choices are<br/>-  <a href="https://github.com/scalacenter/scalafix">scalafix</a> 
-
-<br/>-  <a href="https://github.com/scalameta/scalafmt">scalafmt</a> 
-
-<br/>-  <a href="https://github.com/scalastyle/scalastyle">scalastyle</a> 
-
-<br/>-  <a href="https://github.com/wartremover/wartremover">wartremover</a> 
-
-" ]]></description></item><item>	<title>Make previews controller extensible </title>	<link>https://github.com/github/view_component/issues/434</link>	<description><![CDATA[## Feature request<br/><!-- Provide a summary of the behavior. --><br/>Make the previews controller to be extensible by allowing users to add authentication, authorization, before actions, or anything that the end user would need to meet their needs. <br/><br/>### Motivation<br/>It all started in discussion #412 <br/>@jonspalmer came up with a good suggestion, which is to copy Devise's \"parent class\" feature. It will enable devs to set up a parent class if needed. <br/><br/>https://github.com/github/view_component/discussions/412#discussioncomment-41084<br/><!-- What would you like to do with this feature? Can you provide<br/>context or references to similar behavior in other libraries? --><br/>" ]]></description></item><item>	<title>ActiveSupport::Notifications instrumentation</title>	<link>https://github.com/github/view_component/issues/427</link>	<description><![CDATA[## Feature request<br/>Have `ActiveSupport::Notifications` instrumentation.<br/><br/>### Motivation<br/><br/>It may be nice to have some information about time used to render the component. Like `ActionView` does in developer server logs.<br/><br/>Examples:<br/>- simple component rendering `Rendered ButtonComponent (Duration: 1.2ms | Allocations: 123)
-`<br/>- collection rendering `Rendered collection of ButtonComponent [10 times] (Duration: 1.2ms | Allocations: 123)
-`<br/><br/>```<br/>Started GET \"/posts/aa147930-7749-4d52-a44b-29548e093447/edit\" for 127.0.0.1 at 2020-07-29 01:09:19 +0200<br/>Processing by PostsController#edit as HTML<br/>  Parameters: {\"id\"=>\"aa147930-7749-4d52-a44b-29548e093447\"}<br/>  Post Load (2.0ms)
-  SELECT \"posts\".* FROM \"posts\" WHERE \"posts\".\"id\" = $1 LIMIT $2  [[\"id\", \"aa147930-7749-4d52-a44b-29548e093447\"], [\"LIMIT\", 1]]<br/>  ↳ app/controllers/posts_controller.rb:51:in `set_post'<br/>  Rendering posts/edit.html.slim within layouts/application<br/>  Rendered ButtonComponent (Duration: 1.2ms | Allocations: 123)
-<br/>  Rendered posts/_form.html.slim (Duration: 6.3ms | Allocations: 3331)
-<br/>  Rendered posts/edit.html.slim within layouts/application (Duration: 9.4ms | Allocations: 5561)
-<br/>Completed 200 OK in 46ms (Views: 26.1ms | ActiveRecord: 2.3ms | Allocations: 19197)
-<br/>```<br/>" ]]></description></item><item>	<title>Access request within SlotComponent instance</title>	<link>https://github.com/github/view_component/issues/409</link>	<description><![CDATA[## Feature request<br/>https://github.com/github/view_component/pull/59 added context and access to the request object within the component, however this does not seem to extend to SlotComponent.<br/>I would like to propose this change to SlotComponents also <br/><br/>### Motivation<br/><br/>I would like to use an active nav anchor tag in a NavItem slot within a NavBarComponent, by using the request to determine the `current_page?` Currently I having to work around this by wrapping the SlotComponent instance in a method in the parent Component and calling the method from the template.<br/>To me the SlotComponents should have access to the same helpers and view context that the parent components currently provide.<br/><br/>I will attempt a PR of this myself if there's acceptance and motivation to do so. " ]]></description></item><item>	<title>Add failing tests for rendering with layouts</title>	<link>https://github.com/github/view_component/pull/395</link>	<description><![CDATA[<!-- See https://github.com/github/view_component/blob/master/CONTRIBUTING.md#submitting-a-pull-request  --><br/><br/>### Summary<br/><br/><!-- Provide a general description of the code changes in your pull<br/>request... were there any bugs you had fixed? If so, mention them. If<br/>these bugs have open GitHub issues, be sure to tag them here as well,<br/>to keep the conversation linked together. --><br/>This is a merge request for discussing a possible API for implementing #391 <br/><br/>I would have liked to have layouts included by default with `render`. I would understand if that is deemed an API break and a alternative needs to be determined.<br/><br/>Additionally, I have added a test that checks the view context is shared between the layout and the component.<br/><br/>### Other Information<br/><br/><!-- If there's anything else that's important and relevant to your pull<br/>request, mention that information here. This could include<br/>benchmarks, or other information.<br/><br/>If you are updating any of the CHANGELOG files or are asked to update the<br/>CHANGELOG files by reviewers, please add the CHANGELOG entry at the top of the file. --><br/>" ]]></description></item><item>	<title>Support multiple views</title>	<link>https://github.com/github/view_component/issues/387</link>	<description><![CDATA[## Feature request<br/><!-- Provide a summary of the behavior. --><br/><br/>Allow refactoring small view parts into a separate view, and be able to `render` them into the template. These views should not be available outside the component.<br/><br/>```<br/>app/components/my_component/my_component.html.erb<br/>app/components/my_component/a_part.html.erb<br/>```<br/><br/>```erb<br/><%# my_component.html.erb %><br/><%= render 'a_part' %><br/>```<br/><br/>### Motivation<br/><br/><!-- What would you like to do with this feature? Can you provide<br/>context or references to similar behavior in other libraries? --><br/><br/>Sometimes it is useful to separate a sub-component from the component. For example, if I want to render a popover with extra info about a particular model, I would want to extract that popover into a separate view. <br/><br/>Alternative Solutions:<br/><br/>1. Extract a new component. Because the popover is not a generic one to be used in other parts of the application, it doesn't make much sense to create a (now public)
- component for it.<br/>2. Use `content_for`. This is not suitable if the partial needs to take arguments. In my example, it wouldn't work if I'm displaying a list of models and I want to show the popover for each model.<br/><br/>Prior art:<br/>ActionView does support partials, of course.<br/>Cells does allow multiple views per cell, and allows using `render view: 'a_part'`.<br/><br/>### Possible solutions I see<br/><br/>1. Provide a method that prefixes the component dir and then goes on to call `render template: ` with the full path. I would suspect this is relatively slow given that `render` is slow in ActionView. <br/>2. Precompile all the templates into methods with a reserved prefix, and allow calling them from the view. For example, using `extra_views_{view_name}`.<br/><br/>" ]]></description></item><item>	<title>Fix rendering of components that utilize `capture` in a parent view context</title>	<link>https://github.com/github/view_component/pull/240</link>	<description><![CDATA[In Rails, when you create a form it saves a reference to the current<br/>template object that is rendering the form. When you render a form<br/>builder helper method, like `form.label` inside of a child component the<br/>template object will be the original template object from where the form<br/>builder was instantiated.<br/><br/>This means in cases where we pass a block to a form builder helper the<br/>`@output_buffer` is the parent component's output buffer. So when that<br/>buffer is overridden via `.capture` it's setting the parent component's<br/>`@output_buffer` to a new, temporary buffer but it doesn't change the<br/>child component that is actually rendering's `@output_buffer`. This<br/>means the block is executed in the context of the child components<br/>actual `@output_buffer` and immediately writes to the buffer. Since<br/>`capture` had nothing written to the temporary buffer, it returns the<br/>value of the block call and then inserts that into the parent<br/>component's `@output_buffer`.<br/><br/>This resolves the issue by monkey patching `ActionView::Base` to support<br/>a new `child_component` attribute and overriding `output_buffer=` to set<br/>its `child_component`s output_buffer to whatever `output_buffer` is set<br/>to. With that in place, when `capture` is called, then #output_buffer=`<br/>is called which will update the child component's output buffer to the new <br/>temporary buffer correctly." ]]></description></item><item>	<title>depends option test regression</title>	<link>https://github.com/ubuntu/ubuntu-make/issues/613</link>	<description><![CDATA[There's a branch with the --depends option, that lists the needed (or installed)
- dependencies.<br/>This introduced a regression in the tests, so it will not be merged until it's fixed.<br/>If someone wants to have a go at finding the issue the branch is https://github.com/ubuntu/ubuntu-make/tree/list_depends<br/>Closes #610 " ]]></description></item><item>	<title>No CLI parameter to specify installation path directly from command line (unable to use ubuntu-make in chef)
-</title>	<link>https://github.com/ubuntu/ubuntu-make/issues/403</link>	<description><![CDATA[Does anyone have a reliable workaround to automatically accept the default installation path when prompted? Specifically for ide eclipse-jee.<br/><br/>I tried using \"yes\", but then it doesn't set the default installation path at all and installs it into the void. \"Expect\" also gets confused, what I need is to set the installation path directly:<br/><br/>umake ide eclipse-jee --path \"/home/vagrant/.local/share/umake/ide/eclipse-jee\"<br/><br/>This would make umake useful in automatic configuration management tools (e.g. chef)
-.<br/>" ]]></description></item><item>	<title>Add Racket support</title>	<link>https://github.com/ubuntu/ubuntu-make/issues/200</link>	<description><![CDATA[It would be nice if support for Racket and DrRacket would be added. Please consider it, thx :smile: <br/>http://racket-lang.org/<br/>" ]]></description></item><item>	<title>Umake should safely remove all the packages it installed</title>	<link>https://github.com/ubuntu/ubuntu-make/issues/192</link>	<description><![CDATA[When I use the \"-- remove\" argument it does not remove all the packages that were installed. It would be good if \"umake -r\" also removes the redundant packages that it installed.<br/>" ]]></description></item><item>	<title>Add: Lazarus IDE and FPC</title>	<link>https://github.com/ubuntu/ubuntu-make/issues/149</link>	<description><![CDATA[Please, add this great RAD solution. It can compile to different targets and architectures.<br/>The version provided in the USC it is old and conflicts with new versions.<br/>http://www.lazarus-ide.org/<br/>" ]]></description></item><item>	<title>Support for Mono and Mono Develop</title>	<link>https://github.com/ubuntu/ubuntu-make/issues/94</link>	<description><![CDATA[It would be nice if support for Mono and Mono Develop would be added. Please consider it :)
-<br/>" ]]></description></item><item>	<title>Add Perl support</title>	<link>https://github.com/ubuntu/ubuntu-make/issues/85</link>	<description><![CDATA[Please also add Perl support via perlbrew/plenv and Padre as IDE.<br/>" ]]></description></item><item>	<title>OSD level scale invisible</title>	<link>https://github.com/ubuntu/yaru/issues/2214</link>	<description><![CDATA[Hi there, first of all, thanks for this very nice theme.<br/><br/>I'm using Yaru 20.04 on openSUSE Tumbleweed and Leap 15.2 with Mate 1.24.0. There is a problem where the OSD horizontal fine-grained level/scale is invisible. Maybe some code could be borrowed from Numix, as it looks perfect under Numix.<br/><br/>--------------<br/><br/>Yaru (light and normal all behave the same)
-:<br/><br/>! <a href="https://user-images.githubusercontent.com/2692138/85305326-880c4b80-b472-11ea-8d15-98d63fb4b3c6.png">Screenshot at 2020-06-22 10-14-21</a> 
-
-<br/><br/>---------------------<br/><br/>Numix:<br/><br/>! <a href="https://user-images.githubusercontent.com/2692138/85305349-90fd1d00-b472-11ea-9db7-e0e1611c0b26.png">Screenshot at 2020-06-22 10-14-35</a> 
-
-<br/>" ]]></description></item><item>	<title>Make Yaru compatible with budgie-panel</title>	<link>https://github.com/ubuntu/yaru/issues/2078</link>	<description><![CDATA[At the current state, using Yaru in budgie panel is almost unreadable. Is it possible to make a budgie-panel theme for Yaru? <br/><br/>! <a href="https://user-images.githubusercontent.com/38846168/76770522-d7a8f000-677c-11ea-934d-6db9132a32c9.png">Screenshot from 2020-03-16 11-53-05</a> 
-
-<br/>" ]]></description></item><item>	<title>[Bionic] Check mark (✓)
- is invisible in Firefox context menu</title>	<link>https://github.com/ubuntu/yaru/issues/2064</link>	<description><![CDATA[### Steps to see the issue<br/>1. Open Firefox and go to a text field<br/>2. Right-click in a text field and select \"Check Spelling\"<br/>3. You should see a check mark (✓)
- beside \"Check Spelling\"<br/>4. The check mark is invisible<br/><br/>### Software that presents the issue<br/>- OS: Ubuntu 18.04<br/>- App: Firefox<br/>- Version: 74<br/><br/>### Yaru version<br/>$ snap info communitheme<br/>snap-id:      Yd6CISPIf6tEf3ZEJ0cqSoEg9rG2VkRi<br/>tracking:     latest/edge<br/>refresh-date: 11 days ago, at 19:12 CET<br/>channels:<br/>  stable:    0.1    2019-03-13 (1768)
- 16MB -<br/>  candidate: ↑                             <br/>  beta:      ↑                             <br/>  edge:      29.180 2020-03-03 (1970)
- 18MB -<br/>installed:   29.180            (1970)
- 18MB -<br/>" ]]></description></item></channel></rss>
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+<title>Help Wanted</title>
+<description>Help Wanted Issues</description>
+<link>https://lbonanomi.github.io/workspace/feed.xml</link>
+  
+<item>	<title>Null icons in Gnome 3.36.1 now show "missing icon" icons</title>
+	<link>https://github.com/ubuntu/gnome-shell-extension-appindicator/issues/225</link>
+	<description><![CDATA[ Tray applets that have rows without an icon previously showed no icon, but as of upgrading from 3.36.0 to 3.36.1, now display an alert icon to signify that an icon couldn't be loaded.rnrn![null-icons](https://user-images.githubusercontent.com/1149238/78172704-85c2c400-7424-11ea-8f83-f8805b7344c7.png)rn" ]]></description>
+</item>
+<item>	<title>[coredns] default to host configuration not google public</title>
+	<link>https://github.com/ubuntu/microk8s/issues/1606</link>
+	<description><![CDATA[ Deploying microk8s on an environment that does not allow access to public domain servers I discovered that the DNS add on is deploying coredns configured with google dns servers hard coded as the default forwarders. It would seem a better option would be to use the hosts DNS configuration rather than a public server that may or may not be allowed on the system.rnrnReferencing https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/#coredns this default is what I as a user had expected from coredns. While I can edit the configmap to make changes myself, for a better first time user experience consider using a configuration like this by default.rn" ]]></description>
+</item>
+<item>	<title>[coredns] default to host configuration not google public</title>
+	<link>https://github.com/ubuntu/microk8s/issues/1606</link>
+	<description><![CDATA[ Deploying microk8s on an environment that does not allow access to public domain servers I discovered that the DNS add on is deploying coredns configured with google dns servers hard coded as the default forwarders. It would seem a better option would be to use the hosts DNS configuration rather than a public server that may or may not be allowed on the system.rnrnReferencing https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/#coredns this default is what I as a user had expected from coredns. While I can edit the configmap to make changes myself, for a better first time user experience consider using a configuration like this by default.rn" ]]></description>
+</item>
+<item>	<title>Microk8s HA Cluster seems unstable</title>
+	<link>https://github.com/ubuntu/microk8s/issues/1602</link>
+	<description><![CDATA[ I'm trying to run a 4 x Pi4 cluster.rnrnWas previously running on 1.18, but I was using latest/stable and things started going wonky this week - issues with pods talking to those on different nodes. When I started looking into things, I noticed it had upgraded to 1.19 at some point. The two _may_ be related, but may not.rnrnIn the process of trying to work out what was going on, things got a whole lot worse:rn`microk8s status` said that microk8s wasn't running.rn`microk8s inspect` said everything was fine.rn`microk8s kubectl` said it couldn't connect.rnrnI didn't have a whole lot on my cluster at this point, and everything important is on PVs, so decided to rebuild my cluster, redeploy etc, so I snap removed microk8s from each node, re-installed, checked HA was enabled (because it seems to be a good idea!), re-added the nodes and things were still screwy, but in a different way.rnrnI use lens to manage my cluster and I noticed that lens kept getting disconnected about every 5-10 minutes. I tried deploying something and the deployment was created but no pods were every spun up... I tried looking at logs etc but couldn't find anything obvious so decided to start properly from scratch and reinstalled ubuntu 20.04 on the 4 sd cards.rnrnI've now reinstalled microk8s on each node, checked HA is enabled, added a few other features and added all the nodes... and it still doesn't seem happy.rnrnI'm regularly getting this (though not as often as before I reinstalled from scratch!):rn![image](https://user-images.githubusercontent.com/1851814/94368647-2ac10f80-00dd-11eb-8b5c-53d1d2badb52.png)rnrnplus one of my nodes, which initially showed as ready, has turned "unhappy" (the warnings are because the node has change to "unready"):rn![image](https://user-images.githubusercontent.com/1851814/94369027-45948380-00df-11eb-8604-9eb076b36a6c.png)rnrnI decided to get take a screenshot of just using kubectl and whilst writing this, the same has happened to node 3:rn![image](https://user-images.githubusercontent.com/1851814/94369075-7eccf380-00df-11eb-9cfc-239c377cf1d4.png)rnrninspection report from node 1:rn[inspection-report-20200927_143617.tar.gz](https://github.com/ubuntu/microk8s/files/5288567/inspection-report-20200927_143617.tar.gz)rnrninspect report from node 2:rn[inspection-report-20200927_143534.tar.gz](https://github.com/ubuntu/microk8s/files/5288568/inspection-report-20200927_143534.tar.gz)rn" ]]></description>
+</item>
+<item>	<title>microk8s crashes with "FAIL:  Service snap.microk8s.daemon-apiserver is not running"</title>
+	<link>https://github.com/ubuntu/microk8s/issues/1598</link>
+	<description><![CDATA[ Hello,rnI have installed microk8s 3 node cluster, all works great for a a couple of days but then it crashes for no evident reason to `apiserver FAILed`.rnrnBelow is `microk8s inspect` output and attached tarballrn[inspection-report-20200925_103006.tar.gz](https://github.com/ubuntu/microk8s/files/5282190/inspection-report-20200925_103006.tar.gz)rnrnrn```rnInspecting CertificatesrnInspecting servicesrn  Service snap.microk8s.daemon-cluster-agent is runningrn  Service snap.microk8s.daemon-containerd is runningrn **FAIL:  Service snap.microk8s.daemon-apiserver is not running**rnFor more details look at: sudo journalctl -u snap.microk8s.daemon-apiserverrn  Service snap.microk8s.daemon-apiserver-kicker is runningrn  Service snap.microk8s.daemon-control-plane-kicker is runningrn  Service snap.microk8s.daemon-proxy is runningrn  Service snap.microk8s.daemon-kubelet is runningrn  Service snap.microk8s.daemon-scheduler is runningrn  Service snap.microk8s.daemon-controller-manager is runningrn  Copy service arguments to the final report tarballrnInspecting AppArmor configurationrnGathering system informationrn  Copy processes list to the final report tarballrn  Copy snap list to the final report tarballrn  Copy VM name (or none) to the final report tarballrn  Copy disk usage information to the final report tarballrn  Copy memory usage information to the final report tarballrn  Copy server uptime to the final report tarballrn  Copy current linux distribution to the final report tarballrn  Copy openSSL information to the final report tarballrn  Copy network configuration to the final report tarballrnInspecting kubernetes clusterrn  Inspect kubernetes clusterrnrnBuilding the report tarballrn  Report tarball is at /var/snap/microk8s/1719/inspection-report-20200925_103006.tar.gzrn```rnThis is not first time it has happened. My attempt to deploy a small prod cluster based on microk8s is hindered because of this problem in test environment" ]]></description>
+</item>
+<item>	<title>Question regarding storage on multi-node install</title>
+	<link>https://github.com/ubuntu/microk8s/issues/1597</link>
+	<description><![CDATA[ I set up a multi-node install of microk8s 1.19, and enabled storage.rnrnHowever, when I try to deploy a statefulset with a volume template, I run into issues.rnrnThe server pod can be brought up on a different node from the one the PV is actually created on, causing the pod to fail to start, as the directory for the volume does not exist.  Is this expected?  How can I ensure the volume is provisioned on the correct node?rnrnHere's the relevant bit from my helm template with the volume claim:rn``` yamlrnapiVersion: apps/v1rnkind: StatefulSetrnmetadata:rn  name: {{ $namePrefix }}-postgresrn  labels:rn    {{ include "baseline-study.selectorLabels" . | nindent 4 }}rnspec:rn  replicas: 1rn  serviceName: {{ $namePrefix }}-studydbrn  updateStrategy:rn    type: RollingUpdatern  selector:rn    matchLabels:rn      app: postgresrn      tier: databasern      {{- include "baseline-study.selectorLabels" . | nindent 6 }}rn    rn  template:rn    metadata:rn      labels:rn        app: postgresrn        tier: databasern        {{- include "baseline-study.selectorLabels" . | nindent 8 }}rn    spec:rn      {{- if .Values.postgres.configFile }}rn      {{ $pgconf := .Values.postgres.configFile }}rn      {{- if (len (.Files.Get $pgconf)) }}rn      volumes:rn        - name: {{ .Release.Name }}-pgconfigrn          configMap:rn              name: {{ .Release.Name }}-pgconfigrn      {{ end -}}rn      {{ end -}}rn      terminationGracePeriodSeconds: 10rnrn      containers:rn        - name: postgresrn          image: postgres:12.4rn          rn          {{- if .Values.postgres.configFile }}rn          {{ $pgconf := .Values.postgres.configFile }}rn          {{- if (len (.Files.Get $pgconf)) }}rn          args: rn           - -crn           - config_file=/etc/postgres.confrn          {{ end -}}rn          {{ end -}}rn          rn          imagePullPolicy: IfNotPresentrnrn          ports:rn            - name: postgresrn              containerPort: 5432rn              protocol: TCPrnrn          resources:rn            requests:rn              cpu: 100m     # TODO: is this right???rn              memory: 512Mi # TODO: is this right???rnrn          env:rn            - name: POSTGRES_USERrn              valueFrom:rn                secretKeyRef:rn                  key: pg.usernamern                  name: {{ $pgCredSecretName }}rn            - name: PGUSERrn              valueFrom:rn                secretKeyRef:rn                  key: pg.usernamern                  name: {{ $pgCredSecretName }}rn            - name: POSTGRES_PASSWORDrn              valueFrom:rn                secretKeyRef:rn                  key: pg.passwordrn                  name: {{ $pgCredSecretName }}rn            - name: POSTGRES_DBrn              value: studydbrn            - name: PGDATArn              value: /var/lib/data/postgresql/data/pgdatarn            - name: POD_IPrn              valueFrom:rn                fieldRef:rn                  apiVersion: v1rn                  fieldPath: status.podIPrnrnrn          livenessProbe:rn            exec:rn              command: ["sh","-c","exec pg_isready --host $POD_IP"]rn            failureThreshold: 6rn            initialDelaySeconds: 60rn            periodSeconds: 10rn            successThreshold: 1rn            timeoutSeconds: 5rnrn          readinessProbe:rn            exec:rn              command: ["sh","-c","exec pg_isready --host $POD_IP"]rn            failureThreshold: 3rn            initialDelaySeconds: 5rn            periodSeconds: 5rn            successThreshold: 1rn            timeoutSeconds: 3rnrnrn          volumeMounts:rn            - mountPath: /var/lib/postgresql/data/pgdatarn              name: {{ $namePrefix }}-data-volrn              subPath: postgres-dbrn            {{- if .Values.postgres.configFile }}rn            {{ $pgconf := .Values.postgres.configFile }}rn            {{- if (len (.Files.Get $pgconf)) }}rn            - name: {{ .Release.Name }}-pgconfigrn              mountPath: /etc/postgres.confrn              subPath: postgres.confrn            {{ end -}}rn            {{ end -}}rnrn            {{ $files := .Files.initdb }}rn            {{ range $files }}rn            - name: {{ $namePrefix }}-initdbrn              mountPath: /docker-entrypoint-initdb.d/{{ . }}rn              subPath: {{ . }}rn            {{ end }}rn  volumeClaimTemplates:rn    - metadata:rn        name: {{ $namePrefix }}-data-volrn        labels: {{ include "baseline-study.selectorLabels" . | nindent 10 }}rn      spec:rn        accessModes:rn          - ReadWriteOncern        resources:rn          requests:rn            storage: 10Grn```" ]]></description>
+</item>
+<item>	<title>Microk8s - Error: failed to generate container XX spec: invalid environment variable "xec'</title>
+	<link>https://github.com/ubuntu/microk8s/issues/1592</link>
+	<description><![CDATA[ I am using microk8s (+ helmcharts and values) and one of my containers is failing to start with spec: invalid environment variable "xec". That is the only output I am getting. Interestingly, there are no env vars named "xec" that the container is expecting to have. The service that is failing with the err message "spec: invalid environment variable "xec" has a configmap.yaml, a deployment.yaml and a service.yaml files. The image itself is being pulled from a container registry so I have no control over it. I also tried a newer version of the image, but alas. It works for everyone else. Could it be that microk8s cached some values or there is some bad layer ?rnAny ideas ?rnThanks." ]]></description>
+</item>
+<item>	<title>Failed to disable prometheus: error: the path "/var/snap/microk8s/1668/kube-prometheus/manifests/" does not exist</title>
+	<link>https://github.com/ubuntu/microk8s/issues/1590</link>
+	<description><![CDATA[ after upgrading microk8s prometheus somehow is not possible to disable anymorernrn$ microk8s disable prometheusrnDisabling old PrometheusrnDisabling Prometheusrnerror: the path "/var/snap/microk8s/1668/kube-prometheus/manifests/" does not existrnFailed to disable prometheusrn" ]]></description>
+</item>
+<item>	<title>Failed to start ContainerManager</title>
+	<link>https://github.com/ubuntu/microk8s/issues/1587</link>
+	<description><![CDATA[ All my pods end up stuck to **Pending**rn```bashrnkubectl get -n kube-system pods                                                                   rnNAME                                         READY   STATUS    RESTARTS   AGErncalico-kube-controllers-847c8c99d-t4kqm      0/1     Pending   0          164mrncalico-node-rmc8z                            0/1     Pending   0          164mrncoredns-86f78bb79c-gr5bf                     0/1     Pending   0          138mrnhostpath-provisioner-5c65fbdb4f-bb698        0/1     Pending   0          137mrnmetrics-server-8bbfb4bdb-vnlcl               0/1     Pending   0          136mrnkubernetes-dashboard-7ffd448895-69nf7        0/1     Pending   0          136mrndashboard-metrics-scraper-6c4568dc68-xxh2c   0/1     Pending   0          136mrn```rnBecause the default node does not seem availablern```bashrnkubectl get events --all-namespaces | grep -i kubernetes-dashboard-7ffd448895-69nf7                                                rnkube-system   10s         Warning   FailedScheduling          pod/kubernetes-dashboard-7ffd448895-69nf7        0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn't tolerate.rn```rnIt seems stuck in a weird looprn```rnkubectl describe nodesrn.....rn  Normal   Starting                 37s    kubelet, bifrost  Starting kubelet.rn  Warning  InvalidDiskCapacity      37s    kubelet, bifrost  invalid capacity 0 on image filesystemrn  Normal   NodeHasSufficientMemory  37s    kubelet, bifrost  Node bifrost status is now: NodeHasSufficientMemoryrn  Normal   Starting                 30s    kubelet, bifrost  Starting kubelet.rn  Warning  InvalidDiskCapacity      30s    kubelet, bifrost  invalid capacity 0 on image filesystemrn  Normal   NodeHasSufficientPID     30s    kubelet, bifrost  Node bifrost status is now: NodeHasSufficientPIDrn  Normal   NodeHasNoDiskPressure    30s    kubelet, bifrost  Node bifrost status is now: NodeHasNoDiskPressurern  Normal   NodeHasSufficientMemory  30s    kubelet, bifrost  Node bifrost status is now: NodeHasSufficientMemoryrn  Normal   Starting                 24s    kubelet, bifrost  Starting kubelet.rn.....rn```rnAnd I wonder whether has something to do with what I found in `journalctl`rnrn```rnmicrok8s.daemon-kubelet[1001446]: E0922 12:22:28.089018 1001446 kubelet.go:1765] skipping pod synchronization - container runtime status check may not have completed yetrnmicrok8s.daemon-kubelet[1001446]: I0922 12:22:28.091302 1001446 kubelet_node_status.go:70] Attempting to register node bifrostrnmicrok8s.daemon-kubelet[1001446]: I0922 12:22:28.102758 1001446 kubelet_node_status.go:108] Node bifrost was previously registeredrnmicrok8s.daemon-kubelet[1001446]: I0922 12:22:28.102861 1001446 kubelet_node_status.go:73] Successfully registered node bifrostrnmicrok8s.daemon-kubelet[1001446]: I0922 12:22:28.103699 1001446 cpu_manager.go:184] [cpumanager] starting with none policyrnmicrok8s.daemon-kubelet[1001446]: I0922 12:22:28.103734 1001446 cpu_manager.go:185] [cpumanager] reconciling every 10srnmicrok8s.daemon-kubelet[1001446]: I0922 12:22:28.103766 1001446 state_mem.go:36] [cpumanager] initializing new in-memory state storernmicrok8s.daemon-kubelet[1001446]: I0922 12:22:28.103994 1001446 state_mem.go:88] [cpumanager] updated default cpuset: ""rnmicrok8s.daemon-kubelet[1001446]: I0922 12:22:28.104003 1001446 state_mem.go:96] [cpumanager] updated cpuset assignments: "map[]"rnmicrok8s.daemon-kubelet[1001446]: I0922 12:22:28.104012 1001446 policy_none.go:43] [cpumanager] none policy: Startrnmicrok8s.daemon-kubelet[1001446]: F0922 12:22:28.104037 1001446 kubelet.go:1296] Failed to start ContainerManager failed to get rootfs info: failed to get device for dir "/var/snap/microk8s/common/var/lib/kubelet": could not find device with major: 0, minor: 28 in cached partitions maprnmicrok8s.daemon-kubelet[1001446]: goroutine 337 [running]:rnmicrok8s.daemon-kubelet[1001446]: k8s.io/kubernetes/vendor/k8s.io/klog/v2.stacks(0xc000010001, 0xc00060d800, 0xfd, 0xfd)rnmicrok8s.daemon-kubelet[1001446]:         /build/microk8s/parts/k8s-binaries/build/go/src/github.com/kubernetes/kubernetes/_output/local/go/src/k8s.io/kubernetes/vendor/k8s.io/klog/v2/klog.go:996 +0xb9rnmicrok8s.daemon-kubelet[1001446]: k8s.io/kubernetes/vendor/k8s.io/klog/v2.(*loggingT).output(0x6ef8140, 0xc000000003, 0x0, 0x0, 0xc0005c0070, 0x6b48993, 0xa, 0x510, 0x0)rn.....rn``` rnHow could I fix this? (If that's the reason why it fails)rnrn[inspection-report-20200922_135021.tar.gz](https://github.com/ubuntu/microk8s/files/5261157/inspection-report-20200922_135021.tar.gz)rnrn" ]]></description>
+</item>
+<item>	<title>Design idea</title>
+	<link>https://github.com/ubuntu/yaru/issues/2373</link>
+	<description><![CDATA[ With the flat buttons the relatively strong shadow looks a bit too much in my opinion.rnAlso I've found that swapping selection fg and bg color reduces the jarring of the orange a lot and gives all three themes a "fresh" vibe?rnrnWhat do you think @clobrano @madsrh @ubuntujaggers @Jupiter007-43 ?rn:wastebasket: or :+1: ? rnrn![grafik](https://user-images.githubusercontent.com/15329494/94558884-badb9200-0260-11eb-966c-d6f5487fbd98.png)rnrn![grafik](https://user-images.githubusercontent.com/15329494/94558914-c929ae00-0260-11eb-8bac-6fa340e126b4.png)rnrn![grafik](https://user-images.githubusercontent.com/15329494/94558993-e199c880-0260-11eb-8e2c-e336c711a0fc.png)rn" ]]></description>
+</item>
+<item>	<title>Design idea</title>
+	<link>https://github.com/ubuntu/yaru/issues/2373</link>
+	<description><![CDATA[ With the flat buttons the relatively strong shadow looks a bit too much in my opinion.rnAlso I've found that swapping selection fg and bg color reduces the jarring of the orange a lot and gives all three themes a "fresh" vibe?rnrnWhat do you think @clobrano @madsrh @ubuntujaggers @Jupiter007-43 ?rn:wastebasket: or :+1: ? rnrn![grafik](https://user-images.githubusercontent.com/15329494/94558884-badb9200-0260-11eb-966c-d6f5487fbd98.png)rnrn![grafik](https://user-images.githubusercontent.com/15329494/94558914-c929ae00-0260-11eb-8bac-6fa340e126b4.png)rnrn![grafik](https://user-images.githubusercontent.com/15329494/94558993-e199c880-0260-11eb-8e2c-e336c711a0fc.png)rn" ]]></description>
+</item>
+<item>	<title>Design idea</title>
+	<link>https://github.com/ubuntu/yaru/issues/2373</link>
+	<description><![CDATA[ With the flat buttons the relatively strong shadow looks a bit too much in my opinion.rnAlso I've found that swapping selection fg and bg color reduces the jarring of the orange a lot and gives all three themes a "fresh" vibe?rnrnWhat do you think @clobrano @madsrh @ubuntujaggers @Jupiter007-43 ?rn:wastebasket: or :+1: ? rnrn![grafik](https://user-images.githubusercontent.com/15329494/94558884-badb9200-0260-11eb-966c-d6f5487fbd98.png)rnrn![grafik](https://user-images.githubusercontent.com/15329494/94558914-c929ae00-0260-11eb-8bac-6fa340e126b4.png)rnrn![grafik](https://user-images.githubusercontent.com/15329494/94558993-e199c880-0260-11eb-8e2c-e336c711a0fc.png)rn" ]]></description>
+</item>
+<item>	<title>Log mimetype 48px size border is too strong</title>
+	<link>https://github.com/ubuntu/yaru/issues/2372</link>
+	<description><![CDATA[ ![grafik](https://user-images.githubusercontent.com/15329494/94555735-51598480-025c-11eb-816c-b29718982a87.png)rnrnCompared to the other "document"-style mimetypes" ]]></description>
+</item>
+<item>	<title>Log mimetype 48px size border is too strong</title>
+	<link>https://github.com/ubuntu/yaru/issues/2372</link>
+	<description><![CDATA[ ![grafik](https://user-images.githubusercontent.com/15329494/94555735-51598480-025c-11eb-816c-b29718982a87.png)rnrnCompared to the other "document"-style mimetypes" ]]></description>
+</item>
+<item>	<title>Auto update new upstream snapshot for GNOME Shell</title>
+	<link>https://github.com/ubuntu/yaru/pull/2368</link>
+./REE: line 33: printf: `U': invalid format character
+	<description><![CDATA[ [New upstream GNOME Shell changes](https://github.com/ubuntu/yaru/actions?query=workflow0X0P+0<item>	<title>Auto update new upstream snapshot for GNOME Shell</title>
+	<link>https://github.com/ubuntu/yaru/pull/2368</link>
+./REE: line 33: printf: `U': invalid format character
+	<description><![CDATA[ [New upstream GNOME Shell changes](https://github.com/ubuntu/yaru/actions?query=workflow0X0P+0<item>	<title>gnome-web preferences page tabs are too close</title>
+	<link>https://github.com/ubuntu/yaru/issues/2364</link>
+	<description><![CDATA[ Hi,rnThe new GNOME-Web preferences page is not compatible with Yaru themernrn**GNOME-Web (3.38) on Yaru:**rn![yaru-web](https://user-images.githubusercontent.com/54065734/93791852-5f9f1380-fc52-11ea-8786-2c9f6c91c76f.png)rnrnrn**GNOME-Web (3.38) on Adwaita:**rn![adwaita-web](https://user-images.githubusercontent.com/54065734/93792044-9ffe9180-fc52-11ea-9331-fc4f7774ae43.png)rnrnThanks!rn" ]]></description>
+</item>
+<item>	<title>Default theme does not have the correct bg color for gnome disk analyser</title>
+	<link>https://github.com/ubuntu/yaru/issues/2358</link>
+	<description><![CDATA[ ![grafik](https://user-images.githubusercontent.com/15329494/93706763-04720180-fb2a-11ea-9c3e-7720d484f2ee.png)rnrnLight/dark worksrn![grafik](https://user-images.githubusercontent.com/15329494/93706777-181d6800-fb2a-11ea-9ecf-d17492384212.png)rn![grafik](https://user-images.githubusercontent.com/15329494/93706779-210e3980-fb2a-11ea-8dc5-dc6335d30923.png)rn" ]]></description>
+</item>
+<item>	<title>Some missing mimetype icons</title>
+	<link>https://github.com/ubuntu/yaru/issues/2334</link>
+	<description><![CDATA[ Here's a few more mimetype icons we can add if anyone want's something to work on :) Some of these are pretty rare or even legacy, so here's a list to pick from in no particular order.rnMost of these can be tested with [the files here.](https://github.com/freedesktop/xdg-shared-mime-info)rnrn- [x] translation template (text/x-gettext-translation-template) #2338rn- [ ] .patch files (text/x-patch) #2341rn- [ ] Modelica model (text/x-modelica)rn- [ ] Xournal note file (application/x-xoj) and also .xoz ([see this issue](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/issues/2142))rn- [ ] binary differences between files (application/x-bsdiff)rn- [x] G-code file (text/x.gcode) #2343rn- [x] text/x-iMelody type (text/x-iMelody) _perhaps just missing a symlink_ #2336 rn- [ ] iptables configuration file (text/x-iptables)rn- [ ] NewzBin usenet index (application/x-nzb)rn- [x] IT 8.7 color calibration file (application/x-it87) _just missing a symlink_ #2335rn- [ ] Gradle scripts (text/x-gradle)rn- [ ] network packet capture (application/vnd.tcpdump.pcap)rn- [ ] Metalink file (application/metalink4+xml)rn- [ ] Web application cache file (text/cache-manifest)rn- [ ] BibTeX document (text/x-bibtex)rn- [ ] XPInstall installer module (application/x-xpinstall)rn- [ ] MATLAB file (text/x-matlab)rn- [ ] MathML document (application/mathml+xml)rn- [ ] message catalog (text/vnd.qt.linguist)rn- [ ] TriG RDF document (application/trig)rn- [ ] TNEF message (application/vnd.ms-tnef)rn- [ ] Windows Registry extract (text/x-ms-regedit)rn- [ ] reStructuredText document (text/x-rst)rn- [ ] Gherkin document (text/x-gherkin)rn- [ ] GNUnet search file (application/gnunet-directory)rn- [ ] WinHelp help file (application/winhlp)" ]]></description>
+</item>
+<item>	<title>Mate flavour</title>
+	<link>https://github.com/ubuntu/yaru/pull/2331</link>
+	<description><![CDATA[ Initial proposal for a Yaru MATE gtk flavourrnrn![image](https://user-images.githubusercontent.com/2883614/91474546-a8092280-e89a-11ea-887e-9ddf16c8a477.png)rn" ]]></description>
+</item>
+<item>	<title>Guidelines for mimetype icons for packages, archives and more...</title>
+	<link>https://github.com/ubuntu/yaru/issues/2271</link>
+	<description><![CDATA[ **Hi**rnRelated to the discussion in #2251 rnrnThe outcome might just be to leave everything as it is, but if you have any thought please leave them below @ubuntujaggers @Feichtmeier @clobrano @Jupiter007-43 @avil25rnrnMy questions on the current icons:rn- The Flatpak pictogram is monochrome. Should they all be this way? Or should we add color to the Flatpak icon?rn- Is that a Windows logo? Why not change it like Eaglersdeveloper [suggested](https://github.com/snwh/suru-icon-theme/issues/65#issuecomment-399678431)?rn- Because the Window files are binary, should they have a solid background too or...?rn- Should all of these icons really be packages?rn- Or just leave everything as it is 👌 rnrnI have to admit that I'm in a bit over my head here with all the file types, so please be patient 😅 rnrnrn![image](https://user-images.githubusercontent.com/3986894/88183034-3ac9f800-cc31-11ea-9c27-a088a7166b05.png)rnrnrnThis looks pretty good, but didn't we already add text for zip, rar, 7z? 🤔 rn(doh, a package icon got included here) 😄 rn![image](https://user-images.githubusercontent.com/3986894/88183082-4e755e80-cc31-11ea-939c-6aec7ccc2809.png)rnrnImages files. Should these have a background color? rn![image](https://user-images.githubusercontent.com/3986894/88183168-6947d300-cc31-11ea-9f8d-bee4bcf34480.png)rnrnThere's a few more files we don't have yet which is for VirtualBox. Here are the icons from Suru++rn![image](https://user-images.githubusercontent.com/3986894/88185447-3bb05900-cc34-11ea-98e9-adb560552c88.png)rnrn" ]]></description>
+</item>
+<item>	<title>Enhance the current curl or add a paper fold on file icons</title>
+	<link>https://github.com/ubuntu/yaru/issues/2268</link>
+	<description><![CDATA[  **This issue is for discussing enhancing curl at the bottom of the mimetype icons or adding a paper fold at the top!**rnrnrn![image](https://user-images.githubusercontent.com/3986894/88099319-4e2a8400-cb9b-11ea-845a-317a02830904.png)rn_Enhanced, Fold and current_ 👆 rnrnFor a long time now, I've found the paper curl at the bottom of the mimetype icons to be too subtle. At the moment, the current curl is only present at 256 px (and above ofc). rnThe fold would be a clear distinction between the application and file icons.rnrnAdding the top fold, is a very controversial suggestion and it's also a massive amount of work to adapt the current 54 icons. A less intrusive suggestion is to increase the current curl.rnrnIn no particular order, here's document icons from OSX, Windows, Humanity, Adwaita, Papirus and Yaru 📄 rnrn![image](https://user-images.githubusercontent.com/3986894/88096590-2fc28980-cb97-11ea-8a0e-db49ec71dabd.png)rn" ]]></description>
+</item>
+<item>	<title>Enhance the current curl or add a paper fold on file icons</title>
+	<link>https://github.com/ubuntu/yaru/issues/2268</link>
+	<description><![CDATA[  **This issue is for discussing enhancing curl at the bottom of the mimetype icons or adding a paper fold at the top!**rnrnrn![image](https://user-images.githubusercontent.com/3986894/88099319-4e2a8400-cb9b-11ea-845a-317a02830904.png)rn_Enhanced, Fold and current_ 👆 rnrnFor a long time now, I've found the paper curl at the bottom of the mimetype icons to be too subtle. At the moment, the current curl is only present at 256 px (and above ofc). rnThe fold would be a clear distinction between the application and file icons.rnrnAdding the top fold, is a very controversial suggestion and it's also a massive amount of work to adapt the current 54 icons. A less intrusive suggestion is to increase the current curl.rnrnIn no particular order, here's document icons from OSX, Windows, Humanity, Adwaita, Papirus and Yaru 📄 rnrn![image](https://user-images.githubusercontent.com/3986894/88096590-2fc28980-cb97-11ea-8a0e-db49ec71dabd.png)rn" ]]></description>
+</item>
+<item>	<title>Gtk3: Different font colors in backdrop</title>
+	<link>https://github.com/ubuntu/yaru/issues/2227</link>
+	<description><![CDATA[ White text should be "dimmed" equally in backdrop:rnrn![gif](https://user-images.githubusercontent.com/3986894/86543789-f85ea680-bf21-11ea-9ffb-4e0466722a00.gif)rnrnThe combobox text almost looks disabled in backdrop 🤷‍♂️ " ]]></description>
+</item>
+<item>	<title>Gtk3: Different font colors in backdrop</title>
+	<link>https://github.com/ubuntu/yaru/issues/2227</link>
+	<description><![CDATA[ White text should be "dimmed" equally in backdrop:rnrn![gif](https://user-images.githubusercontent.com/3986894/86543789-f85ea680-bf21-11ea-9ffb-4e0466722a00.gif)rnrnThe combobox text almost looks disabled in backdrop 🤷‍♂️ " ]]></description>
+</item>
+<item>	<title>OSD level scale invisible</title>
+	<link>https://github.com/ubuntu/yaru/issues/2214</link>
+	<description><![CDATA[ Hi there, first of all, thanks for this very nice theme.rnrnI'm using Yaru 20.04 on openSUSE Tumbleweed and Leap 15.2 with Mate 1.24.0. There is a problem where the OSD horizontal fine-grained level/scale is invisible. Maybe some code could be borrowed from Numix, as it looks perfect under Numix.rnrn--------------rnrnYaru (light and normal all behave the same):rnrn![Screenshot at 2020-06-22 10-14-21](https://user-images.githubusercontent.com/2692138/85305326-880c4b80-b472-11ea-8d15-98d63fb4b3c6.png)rnrn---------------------rnrnNumix:rnrn![Screenshot at 2020-06-22 10-14-35](https://user-images.githubusercontent.com/2692138/85305349-90fd1d00-b472-11ea-9db7-e0e1611c0b26.png)rn" ]]></description>
+</item>
+<item>	<title>OSD level scale invisible</title>
+	<link>https://github.com/ubuntu/yaru/issues/2214</link>
+	<description><![CDATA[ Hi there, first of all, thanks for this very nice theme.rnrnI'm using Yaru 20.04 on openSUSE Tumbleweed and Leap 15.2 with Mate 1.24.0. There is a problem where the OSD horizontal fine-grained level/scale is invisible. Maybe some code could be borrowed from Numix, as it looks perfect under Numix.rnrn--------------rnrnYaru (light and normal all behave the same):rnrn![Screenshot at 2020-06-22 10-14-21](https://user-images.githubusercontent.com/2692138/85305326-880c4b80-b472-11ea-8d15-98d63fb4b3c6.png)rnrn---------------------rnrnNumix:rnrn![Screenshot at 2020-06-22 10-14-35](https://user-images.githubusercontent.com/2692138/85305349-90fd1d00-b472-11ea-9db7-e0e1611c0b26.png)rn" ]]></description>
+</item>
+<item>	<title>OSD level scale invisible</title>
+	<link>https://github.com/ubuntu/yaru/issues/2214</link>
+	<description><![CDATA[ Hi there, first of all, thanks for this very nice theme.rnrnI'm using Yaru 20.04 on openSUSE Tumbleweed and Leap 15.2 with Mate 1.24.0. There is a problem where the OSD horizontal fine-grained level/scale is invisible. Maybe some code could be borrowed from Numix, as it looks perfect under Numix.rnrn--------------rnrnYaru (light and normal all behave the same):rnrn![Screenshot at 2020-06-22 10-14-21](https://user-images.githubusercontent.com/2692138/85305326-880c4b80-b472-11ea-8d15-98d63fb4b3c6.png)rnrn---------------------rnrnNumix:rnrn![Screenshot at 2020-06-22 10-14-35](https://user-images.githubusercontent.com/2692138/85305349-90fd1d00-b472-11ea-9db7-e0e1611c0b26.png)rn" ]]></description>
+</item>
+<item>	<title>Render Script</title>
+	<link>https://github.com/ubuntu/yaru/issues/2212</link>
+	<description><![CDATA[ rn## To render the custom iconrnrn(What you were trying to do)rnI was trying to render a costume icon made with the blank template.rnI have the latest version of Inkscape and OptiPng.rnrn## Actual Behaviorrnrn(What happened instead)rnThere was no output. No text output and no final image output.rnrn## Steps to Reproduce the Problemrnrn  1. Try to render a costume icon using the render service" ]]></description>
+</item>
+<item>	<title>Auto update new upstream snapshot for GTK</title>
+	<link>https://github.com/ubuntu/yaru/pull/2197</link>
+./REE: line 33: printf: `U': invalid format character
+	<description><![CDATA[ [New upstream GTK changes](https://github.com/ubuntu/yaru/actions?query=workflow0X0P+0<item>	<title>Auto update new upstream snapshot for GTK</title>
+	<link>https://github.com/ubuntu/yaru/pull/2197</link>
+./REE: line 33: printf: `U': invalid format character
+	<description><![CDATA[ [New upstream GTK changes](https://github.com/ubuntu/yaru/actions?query=workflow0X0P+0<item>	<title>nemo: bookmark icons have inconsistent color</title>
+	<link>https://github.com/ubuntu/yaru/issues/2191</link>
+	<description><![CDATA[ ## Expected BehaviorrnAll Bookmarks should have the same icon colorrnrn## Actual BehaviorrnrnSome Bookmarks are dark while others are white.rn![Selection_002](https://user-images.githubusercontent.com/1280530/82285888-5115b800-9951-11ea-9a7f-a97026d1fc40.png)rnrnrn## Steps to Reproduce the Problemrnrn  1. Open nemo. Make sure there are bookmarks.rn  2. All icons should start as white. Click on a bookmark.rn  3. Click away from the previous bookmark to see the change in color. The clicked bookmark in step 2 is now dark.rn rnNote: nemo will remember the color of the icons until it has been restarted. `nemo -q` will reset the icons all back to white.rnrn## Software that presents the issuernrn- Name: nemorn- Version: 4.4.2rnrn## Yaru versionrnrnOfficial version from Ubuntu repositories: v20.04.6rn" ]]></description>
+</item>
+<item>	<title>nemo: bookmark icons have inconsistent color</title>
+	<link>https://github.com/ubuntu/yaru/issues/2191</link>
+	<description><![CDATA[ ## Expected BehaviorrnAll Bookmarks should have the same icon colorrnrn## Actual BehaviorrnrnSome Bookmarks are dark while others are white.rn![Selection_002](https://user-images.githubusercontent.com/1280530/82285888-5115b800-9951-11ea-9a7f-a97026d1fc40.png)rnrnrn## Steps to Reproduce the Problemrnrn  1. Open nemo. Make sure there are bookmarks.rn  2. All icons should start as white. Click on a bookmark.rn  3. Click away from the previous bookmark to see the change in color. The clicked bookmark in step 2 is now dark.rn rnNote: nemo will remember the color of the icons until it has been restarted. `nemo -q` will reset the icons all back to white.rnrn## Software that presents the issuernrn- Name: nemorn- Version: 4.4.2rnrn## Yaru versionrnrnOfficial version from Ubuntu repositories: v20.04.6rn" ]]></description>
+</item>
+<item>	<title>PSPP icon with yaru theme.</title>
+	<link>https://github.com/ubuntu/yaru/issues/2181</link>
+	<description><![CDATA[ its all dark cannot see.rnrn![image](https://user-images.githubusercontent.com/12841320/81031669-bc20b280-8eac-11ea-8a94-1e99ae13ab49.png)rn" ]]></description>
+</item>
+<item>	<title>Evolution folder list looks strange in Ubuntu 20.04 - some icons missing?</title>
+	<link>https://github.com/ubuntu/yaru/issues/2180</link>
+	<description><![CDATA[ ## Actual Behaviorrnrn(What happened instead)rn![Снимок экрана от 2020-05-04 11-22-05](https://user-images.githubusercontent.com/5177608/80948044-0301a000-8dfa-11ea-9000-b30f87830582.png)rnrnrn## Steps to Reproduce the Problemrnrn  1. Install Evolution mail client with sudo apt install evolutionrn  1. Set up some email account to sync withrn  1. Look at the folder iconsrnrn## Software that presents the issuernrn- Name: Evolutionrn- Version: 3.36.1-2rnrnrn## Yaru versionrn```apt-cache policy yaru-theme-iconrnyaru-theme-icon:rn  Installed: 20.04.6rn  Candidate: 20.04.6rn  Version table:rn *** 20.04.6 500rn        500 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 Packagesrn        500 http://ru.archive.ubuntu.com/ubuntu focal/main i386 Packagesrn        100 /var/lib/dpkg/statusrn```" ]]></description>
+</item>
+<item>	<title>lockscreen: "autosuspend" message has low visibility</title>
+	<link>https://github.com/ubuntu/yaru/issues/2165</link>
+	<description><![CDATA[ I cannot take a screenshot, but the lockscreen shows sometimes a bubble at the bottom of the screen with a message, about autosuspend, black on a dark grey background which makes it hard to read" ]]></description>
+</item>
+<item>	<title>In the gnome-shell calendar, days of a different month with events are colored differently from those without</title>
+	<link>https://github.com/ubuntu/yaru/issues/2164</link>
+	<description><![CDATA[ ![image](https://user-images.githubusercontent.com/10762082/80280572-24310500-8705-11ea-9627-3eaee8fd0383.png)rnrn##  Expected BehaviorrnAny day of a different month should be colored differently from the days of the current month. rnrn## Actual BehaviorrnDays of a different month that have events are colored the same as days of the current (selected) month (January 1. and 8. in the image above have the wrong color).rnrn## Steps to Reproduce the Problemrnrn  1. Add events to the calendar in the beginning or end of a monthrn  2. Open the calendar and look at the colors of the datesrnrn## Software that presents the issuernrn- Name: gnome-shellrn- Version: 3.36.1-5ubuntu1rnrn## Yaru versionrnrn```rn$ apt show yaru-theme-gnome-shell rnPackage: yaru-theme-gnome-shellrnVersion: 20.04.6rn```rnrn" ]]></description>
+</item>
+<item>	<title>In the gnome-shell calendar, days of a different month with events are colored differently from those without</title>
+	<link>https://github.com/ubuntu/yaru/issues/2164</link>
+	<description><![CDATA[ ![image](https://user-images.githubusercontent.com/10762082/80280572-24310500-8705-11ea-9627-3eaee8fd0383.png)rnrn##  Expected BehaviorrnAny day of a different month should be colored differently from the days of the current month. rnrn## Actual BehaviorrnDays of a different month that have events are colored the same as days of the current (selected) month (January 1. and 8. in the image above have the wrong color).rnrn## Steps to Reproduce the Problemrnrn  1. Add events to the calendar in the beginning or end of a monthrn  2. Open the calendar and look at the colors of the datesrnrn## Software that presents the issuernrn- Name: gnome-shellrn- Version: 3.36.1-5ubuntu1rnrn## Yaru versionrnrn```rn$ apt show yaru-theme-gnome-shell rnPackage: yaru-theme-gnome-shellrnVersion: 20.04.6rn```rnrn" ]]></description>
+</item>
+<item>	<title>Date and day of the week in the right of the GNOME Shell message tray are missing the lower part</title>
+	<link>https://github.com/ubuntu/yaru/issues/2146</link>
+	<description><![CDATA[ ## Infornrn- Yaru version: 20.04.4rn- Ubuntu version: Ubuntu Focal Fossa (development branch)rn- Language: Japanesernrn## Screenshotrnrn![Screenshot_01](https://user-images.githubusercontent.com/63552361/79073456-b4447700-7d21-11ea-8ffd-6a35f9fca039.png)rn" ]]></description>
+</item>
+<item>	<title>[Bionic] Check mark (✓) is invisible in Firefox context menu</title>
+	<link>https://github.com/ubuntu/yaru/issues/2064</link>
+	<description><![CDATA[ ### Steps to see the issuern1. Open Firefox and go to a text fieldrn2. Right-click in a text field and select "Check Spelling"rn3. You should see a check mark (✓) beside "Check Spelling"rn4. The check mark is invisiblernrn### Software that presents the issuern- OS: Ubuntu 18.04rn- App: Firefoxrn- Version: 74rnrn### Yaru versionrn$ snap info communithemernsnap-id:      Yd6CISPIf6tEf3ZEJ0cqSoEg9rG2VkRirntracking:     latest/edgernrefresh-date: 11 days ago, at 19:12 CETrnchannels:rn  stable:    0.1    2019-03-13 (1768) 16MB -rn  candidate: ↑                             rn  beta:      ↑                             rn  edge:      29.180 2020-03-03 (1970) 18MB -rninstalled:   29.180            (1970) 18MB -rn" ]]></description>
+</item>
+<item>	<title>[Bionic] Check mark (✓) is invisible in Firefox context menu</title>
+	<link>https://github.com/ubuntu/yaru/issues/2064</link>
+	<description><![CDATA[ ### Steps to see the issuern1. Open Firefox and go to a text fieldrn2. Right-click in a text field and select "Check Spelling"rn3. You should see a check mark (✓) beside "Check Spelling"rn4. The check mark is invisiblernrn### Software that presents the issuern- OS: Ubuntu 18.04rn- App: Firefoxrn- Version: 74rnrn### Yaru versionrn$ snap info communithemernsnap-id:      Yd6CISPIf6tEf3ZEJ0cqSoEg9rG2VkRirntracking:     latest/edgernrefresh-date: 11 days ago, at 19:12 CETrnchannels:rn  stable:    0.1    2019-03-13 (1768) 16MB -rn  candidate: ↑                             rn  beta:      ↑                             rn  edge:      29.180 2020-03-03 (1970) 18MB -rninstalled:   29.180            (1970) 18MB -rn" ]]></description>
+</item>
+<item>	<title>Default theme: Gnome clocks "hdysqueezer" buttons have wrong styling</title>
+	<link>https://github.com/ubuntu/yaru/issues/2060</link>
+	<description><![CDATA[ ![Bildschirmfoto von 2020-03-11 12-28-54](https://user-images.githubusercontent.com/15329494/76412485-faf62880-6393-11ea-859f-355c0776c88a.png)rnrnProbably because they are not included in our _headerbar.scss stylingrnIssues so far:rnrn- [ ] wrong hover/active/backdrop styling for those squeezer buttonsrn- [x] our compact mode is not working there, and the squeezer buttons stretch the whole headerbar including the buttonsrn- [x] circular buttons are stretched in the "add new" dialogue" ]]></description>
+</item>
+<item>	<title>Default theme: Gnome clocks "hdysqueezer" buttons have wrong styling</title>
+	<link>https://github.com/ubuntu/yaru/issues/2060</link>
+	<description><![CDATA[ ![Bildschirmfoto von 2020-03-11 12-28-54](https://user-images.githubusercontent.com/15329494/76412485-faf62880-6393-11ea-859f-355c0776c88a.png)rnrnProbably because they are not included in our _headerbar.scss stylingrnIssues so far:rnrn- [ ] wrong hover/active/backdrop styling for those squeezer buttonsrn- [x] our compact mode is not working there, and the squeezer buttons stretch the whole headerbar including the buttonsrn- [x] circular buttons are stretched in the "add new" dialogue" ]]></description>
+</item>
+<item>	<title>Progress cursor revert to Adwaita on Virtualbox</title>
+	<link>https://github.com/ubuntu/yaru/issues/1996</link>
+	<description><![CDATA[ ## Actual Behaviorrnrn![Capture d’écran du 2020-02-26 19-30-30](https://user-images.githubusercontent.com/36476595/75375572-a308ed80-58ce-11ea-8ea0-2ec0b5392b78.png)rnrnThe spinner is the Adwaita one.rnDMZ cursor not affected.rnrnTested on 19.10.rnI can't test on master (my test machine is already a VM)." ]]></description>
+</item>
+<item>	<title>Add symlinks from our emblems for insync emblems</title>
+	<link>https://github.com/ubuntu/yaru/issues/1973</link>
+	<description><![CDATA[ ![image](https://user-images.githubusercontent.com/15329494/75113391-e99be500-564d-11ea-8f33-da14f8130d3d.png)rnrnMaybe a "low hanging fruit" :kiwi_fruit: :banana: :cherries: ?rnrnWill check if insync is okay with this, similar how I've checked that they are okay with the folder icon we have: https://github.com/ubuntu/yaru/issues/759#issuecomment-439012243" ]]></description>
+</item>
+<item>	<title>Add symlinks from our emblems for insync emblems</title>
+	<link>https://github.com/ubuntu/yaru/issues/1973</link>
+	<description><![CDATA[ ![image](https://user-images.githubusercontent.com/15329494/75113391-e99be500-564d-11ea-8f33-da14f8130d3d.png)rnrnMaybe a "low hanging fruit" :kiwi_fruit: :banana: :cherries: ?rnrnWill check if insync is okay with this, similar how I've checked that they are okay with the folder icon we have: https://github.com/ubuntu/yaru/issues/759#issuecomment-439012243" ]]></description>
+</item>
+<item>	<title>Migrate existing user dir to zsys</title>
+	<link>https://github.com/ubuntu/zsys/issues/167</link>
+	<description><![CDATA[ **Describe the bug**rnHow can i migrate existing user dir to zsys?rnrnI have a dpool/home/hcw home folder migrated into a fresh ubuntu 20.04 installrnby putting that data under rpool/USERDATA/home/hcw.rnHowever, userdata does not seem to work for that new dataset.rnrnzsysctrl show does only show the ubuntu-created users (there i had created a user hcw, but renamed / moved the dataset).rnrnrnrn**To Reproduce**rnSteps to reproduce the behavior:rn1. Install ubuntu 20.04 via "zfs root install" expert / experimental optionrn2. Create a user "hcw" during  install.rn3. After install move the rpool/USERDATA/hcw_9y5x50 away by changing the mountpoint.rn3. After install copy the other pools dpool/home/hcw to rpool/USERDATA/home/hcw (also create rpool/USERDATA/home).rnrn**Expected behavior**rnA documentation should exist how zsys detects user data and how to set up to migrate existing user datasets.rnrn" ]]></description>
+</item>
+<item>	<title>Migrate existing user dir to zsys</title>
+	<link>https://github.com/ubuntu/zsys/issues/167</link>
+	<description><![CDATA[ **Describe the bug**rnHow can i migrate existing user dir to zsys?rnrnI have a dpool/home/hcw home folder migrated into a fresh ubuntu 20.04 installrnby putting that data under rpool/USERDATA/home/hcw.rnHowever, userdata does not seem to work for that new dataset.rnrnzsysctrl show does only show the ubuntu-created users (there i had created a user hcw, but renamed / moved the dataset).rnrnrnrn**To Reproduce**rnSteps to reproduce the behavior:rn1. Install ubuntu 20.04 via "zfs root install" expert / experimental optionrn2. Create a user "hcw" during  install.rn3. After install move the rpool/USERDATA/hcw_9y5x50 away by changing the mountpoint.rn3. After install copy the other pools dpool/home/hcw to rpool/USERDATA/home/hcw (also create rpool/USERDATA/home).rnrn**Expected behavior**rnA documentation should exist how zsys detects user data and how to set up to migrate existing user datasets.rnrn" ]]></description>
+</item>
+<item>	<title>Feature Request: persistent configurable loglevel</title>
+	<link>https://github.com/ubuntu/zsys/issues/153</link>
+	<description><![CDATA[ **Describe the bug**rnloglevel changes via `zsysctl service loglevel` only affect the currently running daemon.  This is helpful for debugging problems with manually triggered calls.  Unfortunately, since zsysd is socket activated, it goes away fairly quickly, which resets the loglevel back to the 0 (warning).   rnrnIdeally I would like the loglevel to be configurable persistently, perhaps via /etc/zsys.confrnThis would greatly facilitate the debugging of timer triggered calls.  It would also enable an administrator to search logs for details on actions taken by zsys easily, without having to inspect the `zpool history` or inspecting the current state and comparing creation times.rnrn**To Reproduce**rnSteps to reproduce the behavior:rn1. Run `zsysctl service loglevel 1`rn2. Wait for next timer to trigger:  zsys-gc.timer or zsys-user-savestate.timerrn3. Check logs: `journalctl -u zsysd`rn4. No interesting log entries found for that triggerrnrn**Expected behavior**rnI would have liked to see the loglevel persist at least a little longer than a minute or so.  rnrn**For ubuntu users, please run and  copy the following:**rn1. `ubuntu-bug zsys --save=/tmp/report`rn2. Copy paste below `/tmp/report` content:rnReport is too large to include inline here.rn[report.txt](https://github.com/ubuntu/zsys/files/4838198/report.txt)rnrn**Installed versions:**rn - OS: Ubuntu 20.04 LTSrn- Zsysd running version: 0.4.5rnrn**Additional context**rnLong time zfs admin, just now trying out zsys on a workstation. rnrnrn" ]]></description>
+</item>
+<item>	<title>Mount an entire state somewhere</title>
+	<link>https://github.com/ubuntu/zsys/issues/151</link>
+	<description><![CDATA[ It can be very useful to browse the data in zfs snapshots. Snapshots can be browsed from the .zfs directory in the root of any dataset (where zfs will automount them for you on access), and you can mount them manually as well.rnrnThe typical Ubuntu zfs installation has a lot of datasets though, which quite fragments things. These exist for good reasons, but it becomes difficult to (for example) browse a coherent view of a specific state, as the state is spread over many datasets.rnrnIt would be useful if zsys can be asked to mount an entire state under some directory. This would mount the correct snapshot of each dataset involved in the state at the correct location, reproducing the entire file system (or at least that which is under zsys control) in the target directory. Zfs itself can't do this as it does not have a coherent view of what snapshots belong together, but zsys knows exactly which snapshots make up a state.rnrnOne interesting use case for this feature is to make a system state save, mount it somewhere, and then have any regular backup utility (which knows nothing about zfs) back it up. This ensures that the backup is atomic, and asking zsysctl to make and then mount a state save can easily be done from a pre-backup hook or with a script (and the post-backup hook would unmount and then delete the save, of course)." ]]></description>
+</item>
+<item>	<title>Demote and promote snapshots</title>
+	<link>https://github.com/ubuntu/zsys/issues/150</link>
+	<description><![CDATA[ Add a "demote" command to convert a manual state save into an automatic state save.rnrnThe use case is that manual saves are taken into account when satisfying the garbage collection policies, and so deleting a manual save may cause unwanted gaps in the time line. But the user should not have to think about that sort of thing when cleaning up. So, it is better to just ask zsys to convert it to an automatic save. From that point zsys can delete it if it's superfluous, or keep it around if needed to satisfy the GC policy.rnrnFor example, suppose this time line, where the GC policy says to keep three saves, and currently there are two automatic saves (a) and one manual save (m):rn-----------a---------------a-----------------------------m------------------------> (time)rnI may decide I don't need that manual save anymore for whatever purpose I made it originally. However, deleting it would lead to this time line:rn-----------a---------------a------------------------------------------------------> (time)rnThis no longer satisfies the policy and leaves a pretty big gap. So, it is not what I actually want.rnrnIf the manual save is simply demoted instead, it would lead to this time line:rn-----------a---------------a-----------------------------a------------------------> (time)rnAnd all is still well. For now it is kept, and zsys will eventually delete it when it becomes too old.rnrnrnrnThere should also be a "promote" command, to turn an automatic save into a manual save, preventing it from being garbage collected.rnrnThe use case for this is when the user notices something has gone wrong but needs time to investigate and decide what to do.rnrnFor example, suppose I notice late in the day that some files I was working on got corrupted. And the snapshot made automatically two hours ago is fine, although of course older.rnrnAt this point I would not want to revert the entire system, as it's running fine and lots of other things happened (I do not want to revert the state of my browser or rss client for example, if that isn't necessary). I also don't want to just replace the project folder with the snapshot, as then two hours of work are definitely lost.rnrnInstead, I want to compare the snapshot with the current situation (for example with a diff tool) and see what can be salvaged. But it's late in the day and so I leave that for later.rnrnBut the next day rolls around and zsys garbage collects, and instead of hourly snapshots I now have three snapshots for yesterday. There is a good chance I now have to work with an older snapshot. This might get even worse if I have to leave it longer (friday to monday for example) as now there's just one snapshot for that day left.rnrnSo, I want to be able to "promote" the latest known good snapshot the moment I realize I am going to need it. This makes sure it won't be garbage collected, and names it so I can easily find it later." ]]></description>
+</item>
+<item>	<title>Implement zsysctl state reclaim command</title>
+	<link>https://github.com/ubuntu/zsys/issues/121</link>
+	<description><![CDATA[ Unfortunately, as the history is non linear, there is no easy way to include real snapshot disk usage by snapshots (even upstream ZFS doesn’t have any facilities to that because it’s complex): the real take is "you should combine snapshots to free space, not only one". If you look at the USE size of a snapshots, you will indeed see very little space that can be taken by only removing on snapshot, as most of the space is common between multiple of them.rnSo, it’s not an individual snapshots that need to take into account, but a range (including its dependencies).rnrnThis command should analyze the best strategy to reclaim spaces by deleting states:rn- it should analyzes multiple sets and combination of snapshots and their dependenciesrn- it should start from the bigger space winner (writing area difference from current filesystem dataset) by looking at what was allocated when and what is out of date to currentrn- it should give easy `zsysctl state remove` command line for people to reclaim the state. This should be done by borning with times (and include any dependencies, even if outside of this time range)." ]]></description>
+</item>
+<item>	<title>Support split ROOT</title>
+	<link>https://github.com/ubuntu/zsys/issues/101</link>
+	<description><![CDATA[ **Describe the bug**rnOn some systems, it is beneficial to have some of the root filesystem datasets split between different pools. For example having most of the root residing on a pool using NVME devices while having /srv and /var on a pool backed by HDDs.rnrn**To Reproduce**rnSteps to reproduce the behavior:rn1. Create ZFS layout with 3 pools: rpool, bpool, dpoolrn```rn# sudo zfs listrnNAME                                    USED  AVAIL     REFER  MOUNTPOINTrnbpool                                  90.7M   261M       96K  /bootrnbpool/BOOT                             89.9M   261M       96K  nonernbpool/BOOT/ubuntu_6pt3c8               89.8M   261M     89.7M  /bootrndpool                                   167M   142G      170K  /srvrndpool/ROOT                              161M   142G      170K  nonerndpool/ROOT/ubuntu_6pt3c8                161M   142G      170K  /rndpool/ROOT/ubuntu_6pt3c8/opt            170K   142G      170K  /optrndpool/ROOT/ubuntu_6pt3c8/srv            170K   142G      170K  /srvrndpool/ROOT/ubuntu_6pt3c8/var            161M   142G      170K  /varrndpool/ROOT/ubuntu_6pt3c8/var/cache      105M   142G      105M  /var/cacherndpool/ROOT/ubuntu_6pt3c8/var/lib       49.6M   142G      618K  /var/librndpool/ROOT/ubuntu_6pt3c8/var/lib/apt   35.9M   142G     35.9M  /var/lib/aptrndpool/ROOT/ubuntu_6pt3c8/var/lib/dpkg  13.0M   142G     13.0M  /var/lib/dpkgrndpool/ROOT/ubuntu_6pt3c8/var/lib/nfs    170K   142G      170K  /var/lib/nfsrndpool/ROOT/ubuntu_6pt3c8/var/log       5.17M   142G     5.17M  /var/logrndpool/ROOT/ubuntu_6pt3c8/var/mail       170K   142G      170K  /var/mailrndpool/ROOT/ubuntu_6pt3c8/var/snap       170K   142G      170K  /var/snaprndpool/ROOT/ubuntu_6pt3c8/var/spool      185K   142G      185K  /var/spoolrndpool/ROOT/ubuntu_6pt3c8/var/tmp        213K   142G      213K  /var/tmprndpool/ROOT/ubuntu_6pt3c8/var/www        170K   142G      170K  /var/wwwrndpool/USERDATA                          398K   142G      170K  /rndpool/USERDATA/rejsmont_ch3gdz          227K   142G      227K  /home/rejsmontrnrpool                                   659M  7.11G       96K  /rnrpool/ROOT                              658M  7.11G       96K  nonernrpool/ROOT/ubuntu_6pt3c8                658M  7.11G      658M  /rnrpool/ROOT/ubuntu_6pt3c8/usr            208K  7.11G       96K  /usrrnrpool/ROOT/ubuntu_6pt3c8/usr/local      112K  7.11G      112K  /usr/localrn```rnrn**Expected behavior**rn`zsysctl save -s` should create snapshots for datasets from both `rpool/ROOT/ubuntu_6pt3c8` and `dpool/ROOT/ubuntu_6pt3c8`. I tried associating `dpool/ROOT/ubuntu_6pt3c8` with `rpool/ROOT/ubuntu_6pt3c8` using `com.ubuntu.zsys:bootfs-datasets` property, but it did not result in snapshots being taken as expected.rnrn`adduser` should create user home under `dpool/USERDATA`. Snapshots for `dpool/USERDATA/rejsmont_ch3gdz` are taken as expected though (thanks to `com.ubuntu.zsys:bootfs-datasets` property).rnrnrn**Installed versions:**rn - OS: 20.04 LTS (Focal Fossa)rn- Zsysd running version: 0.4.5" ]]></description>
+</item>
+<item>	<title>Strategy to enroll existing manually created user datasets (like encrypted ones)</title>
+	<link>https://github.com/ubuntu/zsys/issues/81</link>
+	<description><![CDATA[ I created a new dataset for a user, so that I can use zfs native encryption for the home. When I did zsysctl save it told me that there is no association for that user and did some autosave of the old filesystem. Now I destroyed the old file system and now zsysctl errors out because the file system does not exist.rnBut there is the encrypted file system and its mount point is the home of the user.rnHow do I associate a zfs with a user, so that zsysctl knows what to do?rnrnEven more fun - and I did not try it yet: ubuntu does not create new zfs for new users but just creates new home-directories under /home which is in rpool/USERDATA thus they will not be able to save their homes. But that is a problem of ubuntu." ]]></description>
+</item>
+
+
+</channel></rss>
