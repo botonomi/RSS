@@ -1,10 +1,9 @@
 #FROM alpine:3.10
-FROM alpine:edge
+FROM conoria/alpine-pandoc
+
 
 RUN apk update \
  && apk add jq curl gettext perl 
-
-RUN apk add --upgrade pandoc
 
 COPY entrypoint.sh /entrypoint.sh
 
