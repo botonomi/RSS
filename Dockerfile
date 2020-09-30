@@ -1,5 +1,4 @@
-#FROM alpine:3.10
-FROM skyzyx/alpine-pandoc:1.2.0
+FROM alpine:3.10
 
 RUN apk update \
  && apk add jq curl gettext perl pandoc
