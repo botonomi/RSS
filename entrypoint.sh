@@ -42,6 +42,7 @@ do
                 do
                     #echo "$RAW"
                         THEN=$(date -d $(echo "$RAW" | awk -F"¡" '{ gsub(/"/, ""); print $1 }') +%s )
+                        echo "THEN: $THEN"
                         DIFF=$(($(date +%s)-$THEN))
 
                         if [[ $DIFF -ge $CUTOFFDATE ]]
