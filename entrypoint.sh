@@ -3,7 +3,7 @@
 [[ -n "$TOKEN" ]] || printf '\e[1;31m%-6s\e[m' "Create a secret called \"TOKEN\" with write permission to $GITHUB_REPOSITORY\n"
 [[ -n "$TOKEN" ]] || exit 1
 
-export ORGS=$(echo "$1" | tr -d ' ' | tr ' ' '|') #FIXME
+export ORGS=$(echo "$1" | tr ',' ' ' | tr ' ' '|') #FIXME
 export LANGUAGES=$(echo "$2" | tr ',' '|')
 export LABELS=$(echo "$3" | tr ',' '|')
 
