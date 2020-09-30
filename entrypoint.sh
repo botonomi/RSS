@@ -35,6 +35,8 @@ do
 
     for PAGE in $(seq 1 $STOP)
     do
+    
+        echo "TICKLE: https://api.github.com/users/$ORG/repos?page=$PAGE"
 
         curl -s -u :$TOKEN "https://api.github.com/users/$ORG/repos?page=$PAGE" | jq .[]
 
