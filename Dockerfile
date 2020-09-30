@@ -2,8 +2,9 @@
 FROM conoria/alpine-pandoc
 
 
-RUN apk update \
- && apk add jq curl gettext perl 
+RUN apk --update add jq curl gettext perl 
+
+RUN jq --version
 
 COPY entrypoint.sh /entrypoint.sh
 
