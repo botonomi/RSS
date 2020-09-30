@@ -60,7 +60,7 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
                                 LABELS=$(echo   "$RAW" | awk -F"¡" '{ print $2 }')
                                 TITLE=$(echo    "$RAW" | awk -F"¡" '{ print $3 }')
                                 URL=$(echo      "$RAW" | awk -F"¡" '{ print $4 }')
-                                BODY=$(echo     "$RAW" | awk -F"¡" '{ print $5 }' | pandoc | sed -e 's/rn/<br>/g')
+                                BODY=$(echo     "$RAW" | awk -F"¡" '{ print $5 }' | pandoc) # | sed -e 's/rn/<br>/g')
                                 printf "<item>\t<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ $BODY ]]></description>\n</item>\n"
                             fi
                     done
