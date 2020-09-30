@@ -28,13 +28,6 @@ REPO_OWNER=$GITHUB_ACTOR
 REPO_NAME=$(basename $(pwd))
 RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
 
-(
-    # RSS Boilerplate
-    #
-
-    echo '<?xml version="1.0" encoding="UTF-8" ?>'
-    echo '<rss version="2.0">'
-    printf "<channel>\n<title>Help Wanted</title>\n<description>Help Wanted Issues</description>\n<link>$RSS_FEED_URL</link>\n"
 
 for ORG in $ORGS
 do
