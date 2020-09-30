@@ -42,7 +42,7 @@ do
                 do
                     #echo "$RAW"
                         THEN=$(date -d $(echo "$RAW" | awk -F"¡" '{ gsub(/"/, ""); print $1 }') +%s )
-                        echo "STARTWITH: $(echo "$RAW" | awk -F"¡" '{ gsub(/"/, ""); print $1 }')"
+                        echo "STARTWITH: $(echo "$RAW" | awk -F"¡" '{ gsub(/"/, ""); print $1 }' | awk -F"T" '{ print $1 }')"
                         DIFF=$(($(date +%s)-$THEN))
 
                         if [[ $DIFF -ge $CUTOFFDATE ]]
