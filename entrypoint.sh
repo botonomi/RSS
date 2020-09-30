@@ -28,36 +28,55 @@ REPO_OWNER=$GITHUB_ACTOR
 REPO_NAME=$(basename $(pwd))
 RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
 
+(
 
-for ORG in $ORGS
-do
-    STOP=$(curl -v -u :$TOKEN "https://api.github.com/users/$ORG/repos" -o /dev/null 2>&1 | tr [:punct:] ' ' | awk '/next/ { print $21 }')
+    # RSS Boilerplate
+    #
 
-    for PAGE in $(seq 1 $STOP)
+    echo '<?xml version="1.0" encoding="UTF-8" ?>'
+    echo '<rss version="2.0">'
+    printf "<channel>\n<title>Help Wanted</title>\n<description>Help Wanted Issues</description>\n<link>$RSS_FEED_URL</link>\n"
+
+    for ORG in $ORGS
     do
-        curl -s -u :$TOKEN "https://api.github.com/users/$ORG/repos?page=$PAGE" | jq '.[] | "\(.open_issues) \(.full_name)"' | awk '$1 != "\"0" { gsub(/"/, ""); print $NF }' | while read I
+        STOP=$(curl -v -u :$TOKEN "https://api.github.com/users/$ORG/repos" -o /dev/null 2>&1 | tr [:punct:] ' ' | awk '/next/ { print $21 }')
+
+        for PAGE in $(seq 1 $STOP)
         do
-            curl -s -u :$TOKEN "https://api.github.com/repos/$I/languages" | jq . | egrep -qi "$LANGUAGES" && (
-                curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues" | jq '.[] | "\(.updated_at)¡\(.labels[].name)¡\(.title)¡\(.html_url)¡\(.body)"' | egrep -i "$LABELS" | while read RAW
-                do
-                    #echo "$RAW"
-                        THEN=$(date -d $(echo "$RAW" | awk -F"¡" '{ gsub(/"/, ""); print $1 }'| awk -F"T" '{ print $1 }') +%s )
-                        #echo "STARTWITH: $(echo "$RAW" | awk -F"¡" '{ gsub(/"/, ""); print $1 }' | awk -F"T" '{ print $1 }')"
-                        DIFF=$(($(date +%s)-$THEN))
+            curl -s -u :$TOKEN "https://api.github.com/users/$ORG/repos?page=$PAGE" | jq '.[] | "\(.open_issues) \(.full_name)"' | awk '$1 != "\"0" { gsub(/"/, ""); print $NF }' | while read I
+            do
+                curl -s -u :$TOKEN "https://api.github.com/repos/$I/languages" | jq . | egrep -qi "$LANGUAGES" && (
+                    curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues" | jq '.[] | "\(.updated_at)¡\(.labels[].name)¡\(.title)¡\(.html_url)¡\(.body)"' | egrep -i "$LABELS" | while read RAW
+                    do
+                        #echo "$RAW"
+                            THEN=$(date -d $(echo "$RAW" | awk -F"¡" '{ gsub(/"/, ""); print $1 }'| awk -F"T" '{ print $1 }') +%s )
+                            #echo "STARTWITH: $(echo "$RAW" | awk -F"¡" '{ gsub(/"/, ""); print $1 }' | awk -F"T" '{ print $1 }')"
+                            DIFF=$(($(date +%s)-$THEN))
 
-                        if [[ $DIFF -ge $CUTOFFDATE ]]
-                        then
-                            true
-                        else
-                            LABELS=$(echo   "$RAW" | awk -F"¡" '{ print $2 }')
-                            TITLE=$(echo    "$RAW" | awk -F"¡" '{ print $3 }')
-                            URL=$(echo      "$RAW" | awk -F"¡" '{ print $4 }')
-                            BODY=$(echo     "$RAW" | awk -F"¡" '{ print $5 }' | pandoc | sed -e 's/rn/<br>/g')
-                            printf "<item>\t<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ $BODY ]]></description>\n</item>\n"
-                        fi
+                            if [[ $DIFF -ge $CUTOFFDATE ]]
+                            then
+                                true
+                            else
+                                LABELS=$(echo   "$RAW" | awk -F"¡" '{ print $2 }')
+                                TITLE=$(echo    "$RAW" | awk -F"¡" '{ print $3 }')
+                                URL=$(echo      "$RAW" | awk -F"¡" '{ print $4 }')
+                                BODY=$(echo     "$RAW" | awk -F"¡" '{ print $5 }' | pandoc | sed -e 's/rn/<br>/g')
+                                printf "<item>\t<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ $BODY ]]></description>\n</item>\n"
+                            fi
+                    done
+                )
                 done
-            )
             done
+        done
+printf "\n</channel>\n</rss>\n"
+) | base64 | tr -d "\n" > feed.xml
 
-    done
-done
+# Harvest current SHA of feed.xml
+CURRENT_SHA=$(curl -L -s -u :$TOKEN https://api.github.com/repos/$GITHUB_REPOSITORY/contents/feed.xml | jq .sha | tr -d '"' | head -1)
+
+# Publish new feed.xml
+curl -s -u :$TOKEN -X PUT -d '{ "message":"RSS Refresh Activity", "sha":"'$CURRENT_SHA'", "content":"'$(cat feed.xml)'" }' https://api.github.com/repos/$GITHUB_REPOSITORY/contents/feed.xml | jq .content.html_url
+
+# Push page
+curl -s -u :$TOKEN https://api.github.com/repos/$GITHUB_REPOSITORY/pages | jq .html_url | grep -q "$GITHUB_REPOSITORY" || curl -s -u :$TOKEN -X POST -H "Accept: application/vnd.github.switcheroo-preview+json" https://api.github.com/repos/$GITHUB_REPOSITORY/pages
+        
