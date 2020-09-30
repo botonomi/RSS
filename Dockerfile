@@ -2,7 +2,9 @@
 FROM alpine:edge
 
 RUN apk update \
- && apk add jq curl gettext perl pandoc
+ && apk add jq curl gettext perl 
+
+RUN apk add --upgrade pandoc
 
 COPY entrypoint.sh /entrypoint.sh
 
