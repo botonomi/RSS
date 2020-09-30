@@ -46,15 +46,4 @@ do
         curl -s -u :$TOKEN "https://api.github.com/users/$ORG/repos?page=$PAGE" | jq .[]
 
     done
-
-    printf "\n</channel>\n</rss>\n"
-) | base64 | tr -d "\n" > feed.xml
-
-# Harvest current SHA of feed.xml
-CURRENT_SHA=$(curl -L -s -u :$TOKEN https://api.github.com/repos/$GITHUB_REPOSITORY/contents/feed.xml | jq .sha | tr -d '"' | head -1)
-
-# Publish new feed.xml
-curl -s -u :$TOKEN -X PUT -d '{ "message":"RSS Refresh Activity", "sha":"'$CURRENT_SHA'", "content":"'$(cat feed.xml)'" }' https://api.github.com/repos/$GITHUB_REPOSITORY/contents/feed.xml | jq .content.html_url
-
-# Push page
-curl -s -u :$TOKEN https://api.github.com/repos/$GITHUB_REPOSITORY/pages | jq .html_url | grep -q "$GITHUB_REPOSITORY" || curl -s -u :$TOKEN -X POST -H "Accept: application/vnd.github.switcheroo-preview+json" https://api.github.com/repos/$GITHUB_REPOSITORY/pages
+done
