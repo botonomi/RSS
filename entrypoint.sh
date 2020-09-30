@@ -41,8 +41,8 @@ do
                 curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues" | jq '.[] | "\(.updated_at)¡\(.labels[].name)¡\(.title)¡\(.html_url)¡\(.body)"' | egrep -i "$LABELS" | while read RAW
                 do
                     #echo "$RAW"
-                        THEN=$(date -d $(echo "$RAW" | awk -F"¡" '{ gsub(/"/, ""); print $1 }') +%s )
-                        echo "STARTWITH: $(echo "$RAW" | awk -F"¡" '{ gsub(/"/, ""); print $1 }' | awk -F"T" '{ print $1 }')"
+                        THEN=$(date -d $(echo "$RAW" | awk -F"¡" '{ gsub(/"/, ""); print $1 }'| awk -F"T" '{ print $1 }') +%s )
+                        #echo "STARTWITH: $(echo "$RAW" | awk -F"¡" '{ gsub(/"/, ""); print $1 }' | awk -F"T" '{ print $1 }')"
                         DIFF=$(($(date +%s)-$THEN))
 
                         if [[ $DIFF -ge $CUTOFFDATE ]]
