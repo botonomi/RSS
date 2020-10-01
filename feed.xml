@@ -4,12 +4,6 @@
 <title>Help Wanted</title>
 <description>Help Wanted Issues</description>
 <link>https://lbonanomi.github.io/workspace/feed.xml</link>
-<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
-<channel>
-<title>Help Wanted</title>
-<description>Help Wanted Issues</description>
-<link>https://lbonanomi.github.io/workspace/feed.xml</link>
 <item>	<title>Can't load  pxrUSD.mll and AL_USDMayaTestPlugin</title>
 	<link>https://github.com/Autodesk/maya-usd/issues/747</link>
 	<description><![CDATA[ <p><strong>Describe the issue</strong></p>
@@ -118,9 +112,6 @@ Sue</p> ]]></description>
 Any help would be appreciated.
 Sue</p> ]]></description>
 </item>
-
-</channel>
-</rss>
 
 </channel>
 </rss>
