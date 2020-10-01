@@ -68,7 +68,7 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
         done
     done
     printf "\n</channel>\n</rss>\n"
-) | tee - | base64 | tr -d "\n" > feed.xml
+) | base64 | tr -d "\n" > feed.xml
 
 # Harvest current SHA of feed.xml
 CURRENT_SHA=$(curl -L -s -u :$TOKEN https://api.github.com/repos/$GITHUB_REPOSITORY/contents/feed.xml | jq .sha | tr -d '"' | head -1)
