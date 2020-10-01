@@ -10,4 +10,4 @@ The human behind this repo uses [Slick RSS](https://github.com/hecktarzuli/slick
 
 ## What's New:
 
-2020-10-01 finally got Pandoc into the mix, articles now look like their issues. Hat-tip to [conoria|https://hub.docker.com/u/conoria] for the docker image!
+2020-10-01 finally got Pandoc into the mix, articles now look like their issues. Hat-tip to [conoria](https://hub.docker.com/u/conoria) for the docker image!
