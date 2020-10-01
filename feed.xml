@@ -319,10 +319,6 @@ https://guides.github.com/activities/citable-code/</p> ]]></description>
 <p>However, this has lead to the CI code being very specific to the project, and kind of a source of frustration for non employees trying to send patches and get involved in the project ; specifically because some of the CI parts were “hand-crafted” and triggering builds and tests requires being a “collaborator” on the Github project, which has other implications making it complicated to enable it easily to anyone. In the end, this creates an artificial barrier to contributing to this project, even though we happily run PRs manually, it is still frustrating for everyone. The issue https://github.com/mozilla/DeepSpeech/issues/3228 was an attempt to fix that, but we came to the conclusion it would be more beneficial for everyone to switch to some well known CI service and setup that is less intimidating. While TaskCluster is a great tool and has helped us a lot, we feel its limitations now makes it inappropriate for the project to stimulate and enable external contributions.</p>
 <p>We would like to take this opportunity to also enable more contributors to hack and own the code related to CI, so discussion is open.</p> ]]></description>
 </item>
-<item>	<title>Debug builds on CI</title>
-	<link>https://github.com/mozilla/DeepSpeech/issues/3292</link>
-	<description><![CDATA[  ]]></description>
-</item>
 <item>	<title>.Net Standard lib in the nuget package</title>
 	<link>https://github.com/mozilla/DeepSpeech/issues/3285</link>
 	<description><![CDATA[ <p>Will you add the .Net Standard library into nuget package?</p> ]]></description>
