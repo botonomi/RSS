@@ -60,6 +60,7 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
                         URL=$(echo      "$RAW" | awk -F"¡" '{ print $4 }')
                         ID=$(echo       "$RAW" | awk -F"¡" '{ print $5 }')                        
                         BODY=$(curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues/$ID" | jq .body| sed -e 's/^"//' | sed -e 's/"$//'| xargs -0 printf | pandoc --wrap=preserve)
+                        printf "<item>\t<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ $BODY ]]></description>\n</item>\n"
                     fi
                 done
                 )
