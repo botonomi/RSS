@@ -4,23 +4,7 @@
 <title>Help Wanted</title>
 <description>Help Wanted Issues</description>
 <link>https://lbonanomi.github.io/workspace/feed.xml</link>
-<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
-<channel>
-<title>Help Wanted</title>
-<description>Help Wanted Issues</description>
-<link>https://lbonanomi.github.io/workspace/feed.xml</link>
 <item>	<title>Can't load  pxrUSD.mll and AL_USDMayaTestPlugin</title>
-	<link>https://github.com/Autodesk/maya-usd/issues/747</link>
-	<description><![CDATA[ <p><strong>Describe the issue</strong></p>
-<p>After I finish the maya-usd instalation, I add as enviroment variables MAYA_MODULE_PATH: D:-usdand Tried to load all plugins from Plugin Manager and I get the following errors</p>
-<p>** Script Editor**
-"# Error: file: C:/Program Files/Autodesk/Maya2020/scripts/others/pluginWin.mel line 317: ImportError: file <maya console> line 1: No module named UsdMaya #
-// Error: file: C:/Program Files/Autodesk/Maya2020/scripts/others/pluginWin.mel line 317: initializePlugin function failed (pxrUsd) // "</p>
-<p>// Error: file: C:/Program Files/Autodesk/Maya2020/scripts/others/pluginWin.mel line 317: Unable to dynamically load : D:/USD/maya-usd/install/RelWithDebInfo/plugin/al/plugin/AL_USDMayaTestPlugin.mll
-Error en una rutina de inicialización de biblioteca de vínculos dinámicos (DLL).
-//
-// Error: file: C:/Program Files<item>	<title>Can't load  pxrUSD.mll and AL_USDMayaTestPlugin</title>
 	<link>https://github.com/Autodesk/maya-usd/issues/747</link>
 	<description><![CDATA[ <p><strong>Describe the issue</strong></p>
 <p>After I finish the maya-usd instalation, I add as enviroment variables MAYA_MODULE_PATH: D:-usdand Tried to load all plugins from Plugin Manager and I get the following errors</p>
@@ -42,33 +26,7 @@ Coding Error: in Define at line 150 of D:.cpp – Multiple definitions of TfEnvS
 <dd>(kFailure): Unexpected Internal Failure
 </dd>
 </dl>
-<p>// Error: file: C:/Program Files/Autodesk/Maya2020/scripts/others/pluginWin.mel line 317: initializePlugin function failed (AL/Autodesk/Maya2020/scripts/others/pluginWin.mel line 317: Error en una rutina de inicialización de biblioteca de vínculos dinámicos (DLL).
-(AL_USDMayaTestPlugin) //</p>
-<p><strong>Output Widnow</strong>
-error detected in .....cpp at line 132
-: (kFailure): Unexpected Internal Failure
-Coding Error: in Define at line 150 of D:.cpp – Multiple definitions of TfEnvSetting variable detected. This is usually due to software misconfiguration. Contact the build team for assistance. (duplicate ‘PIXMAYA_ENABLE_BOUNDING_BOX_MODE’)
-Coding Error: in Define at line 150 of D:.cpp – Multiple definitions of TfEnvSetting variable detected. This is usually due to software misconfiguration. Contact the build team for assistance. (duplicate ‘PIXMAYA_USE_USD_ASSEM_NAMESPACE’)</p>
-<dl>
-<dt>API error detected in .....cpp at line 132</dt>
-<dd>(kFailure): Unexpected Internal Failure
-</dd>
-</dl>
 <p>// Error: file: C:/Program Files/Autodesk/Maya2020/scripts/others/pluginWin.mel line 317: initializePlugin function failed (AL_USDMayaTestPlugin)</p>
-<dl>
-<dt>API error detected in .....cpp at line 132</dt>
-<dd>(kFailure): Unexpected Internal Failure
-</dd>
-</dl>
-<p><strong>Build log</strong></p>
-<p><strong>Specs:</strong>
-- OS &amp; version Windows 10
-- Compiler &amp; version [e.g. gcc 6.3.1]
-- Maya version Maya 2020</p>
-<p><strong>Additional context</strong>
-Add any other context about the problem here.</p> ]]></description>
-</item>
-_USDMayaTestPlugin)</p>
 <dl>
 <dt>API error detected in .....cpp at line 132</dt>
 <dd>(kFailure): Unexpected Internal Failure
@@ -97,30 +55,9 @@ alas it doesn’t do the test, looks pretty unhappy. Not sure whats up.</p>
 - Maya USD commit SHA [ dev at 6210a2a]
 - Pixar USD commit SHA [20.08]</p>
 <p><strong>Additional context</strong>
-First time trying this in awhile has never worked for me before. <item>	<title>Not sure im going the stage test correctly</title>
-	<link>https://github.com/Autodesk/maya-usd/issues/705</link>
-	<description><![CDATA[ <p><strong>Describe the bug</strong>
-Please See attatched txt file. I am trying to run my build with –stage=test like this:
-<code>python build.py --maya-location /usr/autodesk/maya2021 --pxrusd-location $SCRIPT_DIR/USD --devkit-location $SCRIPT_DIR/maya_devkit/devkitBase --stages=test  $SCRIPT_DIR/WorkspaceRefractor</code>
-alas it doesn’t do the test, looks pretty unhappy. Not sure whats up.</p>
-<p><strong>Attachments</strong>
-<a href="https://github.com/Autodesk/maya-usd/files/5057146/build_log.txt">build_log.txt</a></p>
-<p><strong>Specs (if applicable):</strong>
-- OS &amp; version [Linux centos 7.7]
-- Compiler &amp; version [ gcc 6.3.1]
-- Maya version [Maya 2021/Maya beta PR117]
-- Maya USD commit SHA [ dev at 6210a2a]
-- Pixar USD commit SHA [20.08]</p>
-<p><strong>Additional context</strong>
 First time trying this in awhile has never worked for me before. Any help would be appreciated.
 Sue</p> ]]></description>
 </item>
-Any help would be appreciated.
-Sue</p> ]]></description>
-</item>
-
-</channel>
-</rss>
 
 </channel>
 </rss>
