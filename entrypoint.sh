@@ -46,7 +46,7 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
             curl -s -u :$TOKEN "https://api.github.com/users/$ORG/repos?page=$PAGE" | jq '.[] | "\(.open_issues) \(.full_name)"' | awk '$1 != "\"0" { gsub(/"/, ""); print $NF }' | while read I
             do
                 curl -s -u :$TOKEN "https://api.github.com/repos/$I/languages" | jq . | egrep -qi "$LANGUAGES" && (
-                curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues" | jq '.[] | "\(.updated_at)¡\(.labels[].name)¡\(.title)¡\(.html_url)¡\(.body)"' | egrep -i "$LABELS" | tee pork | while read RAW
+                curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues" | jq '.[] | "\(.updated_at)¡\(.labels[].name)¡\(.title)¡\(.html_url)¡\(.number)"' | egrep -i "$LABELS" | while read RAW
                 do
                     THEN=$(date -d $(echo "$RAW" | awk -F"¡" '{ gsub(/"/, ""); print $1 }'| awk -F"T" '{ print $1 }') +%s )
                     DIFF=$(($(date +%s)-$THEN))
@@ -55,15 +55,11 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
                     then
                         true
                     else
-                        echo "<PORK>"
-                        cat pork
-                        echo "</PORK>"
-
                         LABELS=$(echo   "$RAW" | awk -F"¡" '{ print $2 }')
                         TITLE=$(echo    "$RAW" | awk -F"¡" '{ print $3 }')
                         URL=$(echo      "$RAW" | awk -F"¡" '{ print $4 }')
-                        BODY=$(printf   "$RAW" | awk -F"¡" '{ print $5 }' | pandoc) # | sed -e 's/rn/<br>/g')
-                        #printf "<item>\t<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ $BODY ]]></description>\n</item>\n"
+                        ID=$(echo       "$RAW" | awk -F"¡" '{ print $5 }')                        
+                        BODY=$(curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues/$ID" | jq .body| sed -e 's/^"//' | sed -e 's/"$//'| xargs -0 printf | pandoc --wrap=preserve)
                     fi
                 done
                 )
