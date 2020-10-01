@@ -385,6 +385,10 @@ https://guides.github.com/activities/citable-code/</p> ]]></description>
 	<link>https://github.com/mozilla/DeepSpeech/issues/2977</link>
 	<description><![CDATA[  ]]></description>
 </item>
+<item>	<title>Handle control-C cleanly in feeding threads</title>
+	<link>https://github.com/mozilla/DeepSpeech/issues/2914</link>
+	<description><![CDATA[ <p>Currently you have to hold Control-C for several seconds until all the threads are killed.</p> ]]></description>
+</item>
 <item>	<title>getting very bad transcript while live streaming on r0.6 version node js socket api</title>
 	<link>https://github.com/mozilla/DeepSpeech-examples/issues/66</link>
 	<description><![CDATA[ <p>Hi,
