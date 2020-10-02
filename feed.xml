@@ -136,6 +136,31 @@ N/A</p>
 <p><strong>Note</strong>
 If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p> ]]></description>
 </item>
+<item>	<title>Bazel Support</title>
+	<link>https://github.com/github/super-linter/issues/393</link>
+	<description><![CDATA[ <p>bazel linter</p>
+<ul>
+<li><a href="https://github.com/bazelbuild/buildtools/blob/master/buildifier/README.md">buildifier</a></li>
+</ul> ]]></description>
+</item>
+<item>	<title>Scala Support</title>
+	<link>https://github.com/github/super-linter/issues/392</link>
+	<description><![CDATA[ <p>Scala linter support.</p>
+<p>Choices are
+- <a href="https://github.com/scalacenter/scalafix">scalafix</a>
+- <a href="https://github.com/scalameta/scalafmt">scalafmt</a>
+- <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
+- <a href="https://github.com/wartremover/wartremover">wartremover</a></p> ]]></description>
+</item>
+<item>	<title>Scala Support</title>
+	<link>https://github.com/github/super-linter/issues/392</link>
+	<description><![CDATA[ <p>Scala linter support.</p>
+<p>Choices are
+- <a href="https://github.com/scalacenter/scalafix">scalafix</a>
+- <a href="https://github.com/scalameta/scalafmt">scalafmt</a>
+- <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
+- <a href="https://github.com/wartremover/wartremover">wartremover</a></p> ]]></description>
+</item>
 <item>	<title>Make previews controller extensible </title>
 	<link>https://github.com/github/view_component/issues/434</link>
 	<description><![CDATA[ <h2 id="feature-request">Feature request</h2>
@@ -245,6 +270,33 @@ temporary buffer correctly.</p> ]]></description>
 <figure>
 <img src="https://user-images.githubusercontent.com/2692138/85305349-90fd1d00-b472-11ea-9db7-e0e1611c0b26.png" alt="" /><figcaption>Screenshot at 2020-06-22 10-14-35</figcaption>
 </figure> ]]></description>
+</item>
+<item>	<title>[Bionic] Check mark (✓) is invisible in Firefox context menu</title>
+	<link>https://github.com/ubuntu/yaru/issues/2064</link>
+	<description><![CDATA[ <h3 id="steps-to-see-the-issue">Steps to see the issue</h3>
+<ol type="1">
+<li>Open Firefox and go to a text field</li>
+<li>Right-click in a text field and select "Check Spelling"</li>
+<li>You should see a check mark (✓) beside "Check Spelling"</li>
+<li>The check mark is invisible</li>
+</ol>
+<h3 id="software-that-presents-the-issue">Software that presents the issue</h3>
+<ul>
+<li>OS: Ubuntu 18.04</li>
+<li>App: Firefox</li>
+<li>Version: 74</li>
+</ul>
+<h3 id="yaru-version">Yaru version</h3>
+<p>$ snap info communitheme
+snap-id: Yd6CISPIf6tEf3ZEJ0cqSoEg9rG2VkRi
+tracking: latest/edge
+refresh-date: 11 days ago, at 19:12 CET
+channels:
+stable: 0.1 2019-03-13 (1768) 16MB -
+candidate: ↑<br />
+beta: ↑<br />
+edge: 29.180 2020-03-03 (1970) 18MB -
+installed: 29.180 (1970) 18MB -</p> ]]></description>
 </item>
 <item>	<title>Expose Hot Words into binaries</title>
 	<link>https://github.com/mozilla/DeepSpeech/issues/3336</link>
@@ -356,6 +408,12 @@ INFO:root:ARGS.scorer: deepspeech-0.7.3-models.scorer</p>
 After I run node start.js , nothing happened.
 Do i need to specify to specific port first?
 If so, can I use socketio protocol, to send the transcribed text over to client?</p> ]]></description>
+</item>
+<item>	<title>Make the set of syncable roots configurable</title>
+	<link>https://github.com/mozilla/dogear/issues/51</link>
+	<description><![CDATA[ <p>We currently hard-code syncable to mean "everything under the five built-in roots". This works for <span class="citation" data-cites="eoger">@eoger</span>’s use case (filtering out <code>readinglist</code> and <code>pinned</code> when importing bookmarks from Fennec), and it wouldn’t be much more work to make them customizable.</p>
+<p>I imagine we’d add a method like <code>Builder::syncable(vec![MENU_GUID, MOBILE_GUID, TOOLBAR_GUID, UNFILED_GUID])</code>, store the list of syncable roots on the tree, and check them in <code>Node::is_syncable</code>.</p>
+<p>While we’re at it, we could also generalize our special handling for tags on Desktop—they’re part of the merged tree (so not deleted), but never uploaded. Or we can leave it and wait for tags to move to a separate table, which we already do in Rust Places. 😁</p> ]]></description>
 </item>
 <item>	<title>Add support for Azure tests</title>
 	<link>https://github.com/mozilla/frost/issues/312</link>
