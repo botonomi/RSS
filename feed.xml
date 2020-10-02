@@ -52,6 +52,24 @@ In other formats, it would be</p>
 <p><span class="citation" data-cites="parkr">@parkr</span> any interest?
 <span class="citation" data-cites="dhcole">@dhcole</span> any insight / words of wisdom?</p> ]]></description>
 </item>
+<item>	<title>Support for locally present bundles</title>
+	<link>https://github.com/github/codeql-action/issues/154</link>
+	<description><![CDATA[ <p>I would like to run code-scanning with a custom code-scanning bundle
+that already is present on my local disk. I can currently do that by
+making the following hack:</p>
+<h3 id="install-bundle-in-tool-cache">1 Install bundle in tool cache:</h3>
+<p>Use <code>toolCache.cacheDir</code> to install the bundle with a specially crafted ID:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1"></a>tc<span class="op">.</span><span class="fu">cacheDir</span>(localBundlePath<span class="op">,</span> <span class="st">&#39;CodeQL&#39;</span><span class="op">,</span> \<span class="st">&quot;0.0.0-XXX-DUMMY-BUNDLE-ID</span><span class="sc">\&quot;</span><span class="st">);</span></span></code></pre></div>
+<h3 id="convince-codeql-to-look-in-the-tool-cache">2 Convince codeql to look in the tool cache:</h3>
+<p>The codeql action is then invoked with a dummy URL that will make codeql.ts lookup the bundle with the specially crafted ID:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1"></a><span class="at">        ...</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="at">        </span><span class="fu">tools</span><span class="kw">:</span><span class="at"> dummy://codeql-bundle-XXX-DUMMY-BUNDLE-ID/dummy</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="at">        ...</span></span></code></pre></div>
+<hr />
+<p>This works, but I would like a more reliable solution. I am not sure
+what the best approach is for supporting my use case, but I am happy
+to look into implementing a suggestion.</p> ]]></description>
+</item>
 <item>	<title>TODO: Configure caching for fast building on CI</title>
 	<link>https://github.com/github/government.github.com/issues/750</link>
 	<description><![CDATA[ <p>Description and details here: https://github.com/gjtorikian/html-proofer#configuring-caching and https://github.com/gjtorikian/html-proofer#caching-with-travis</p> ]]></description>
