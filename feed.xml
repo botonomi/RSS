@@ -52,24 +52,6 @@ In other formats, it would be</p>
 <p><span class="citation" data-cites="parkr">@parkr</span> any interest?
 <span class="citation" data-cites="dhcole">@dhcole</span> any insight / words of wisdom?</p> ]]></description>
 </item>
-<item>	<title>Support for locally present bundles</title>
-	<link>https://github.com/github/codeql-action/issues/154</link>
-	<description><![CDATA[ <p>I would like to run code-scanning with a custom code-scanning bundle
-that already is present on my local disk. I can currently do that by
-making the following hack:</p>
-<h3 id="install-bundle-in-tool-cache">1 Install bundle in tool cache:</h3>
-<p>Use <code>toolCache.cacheDir</code> to install the bundle with a specially crafted ID:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1"></a>tc<span class="op">.</span><span class="fu">cacheDir</span>(localBundlePath<span class="op">,</span> <span class="st">&#39;CodeQL&#39;</span><span class="op">,</span> \<span class="st">&quot;0.0.0-XXX-DUMMY-BUNDLE-ID</span><span class="sc">\&quot;</span><span class="st">);</span></span></code></pre></div>
-<h3 id="convince-codeql-to-look-in-the-tool-cache">2 Convince codeql to look in the tool cache:</h3>
-<p>The codeql action is then invoked with a dummy URL that will make codeql.ts lookup the bundle with the specially crafted ID:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1"></a><span class="at">        ...</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="at">        </span><span class="fu">tools</span><span class="kw">:</span><span class="at"> dummy://codeql-bundle-XXX-DUMMY-BUNDLE-ID/dummy</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="at">        ...</span></span></code></pre></div>
-<hr />
-<p>This works, but I would like a more reliable solution. I am not sure
-what the best approach is for supporting my use case, but I am happy
-to look into implementing a suggestion.</p> ]]></description>
-</item>
 <item>	<title>TODO: Configure caching for fast building on CI</title>
 	<link>https://github.com/github/government.github.com/issues/750</link>
 	<description><![CDATA[ <p>Description and details here: https://github.com/gjtorikian/html-proofer#configuring-caching and https://github.com/gjtorikian/html-proofer#caching-with-travis</p> ]]></description>
@@ -135,52 +117,6 @@ N/A</p>
 N/A</p>
 <p><strong>Note</strong>
 If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p> ]]></description>
-</item>
-<item>	<title>Bazel Support</title>
-	<link>https://github.com/github/super-linter/issues/393</link>
-	<description><![CDATA[ <p>bazel linter</p>
-<ul>
-<li><a href="https://github.com/bazelbuild/buildtools/blob/master/buildifier/README.md">buildifier</a></li>
-</ul> ]]></description>
-</item>
-<item>	<title>Scala Support</title>
-	<link>https://github.com/github/super-linter/issues/392</link>
-	<description><![CDATA[ <p>Scala linter support.</p>
-<p>Choices are
-- <a href="https://github.com/scalacenter/scalafix">scalafix</a>
-- <a href="https://github.com/scalameta/scalafmt">scalafmt</a>
-- <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
-- <a href="https://github.com/wartremover/wartremover">wartremover</a></p> ]]></description>
-</item>
-<item>	<title>Scala Support</title>
-	<link>https://github.com/github/super-linter/issues/392</link>
-	<description><![CDATA[ <p>Scala linter support.</p>
-<p>Choices are
-- <a href="https://github.com/scalacenter/scalafix">scalafix</a>
-- <a href="https://github.com/scalameta/scalafmt">scalafmt</a>
-- <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
-- <a href="https://github.com/wartremover/wartremover">wartremover</a></p> ]]></description>
-</item>
-<item>	<title>Prettier for JavaScript and TypeScript</title>
-	<link>https://github.com/github/super-linter/issues/175</link>
-	<description><![CDATA[ <p>IIUC, super-linter uses ESLint and Standard to format JavaScript and TypeScript code rather than Prettier. I think many developers will have an issue with this. Despite the name, Standard is not a standard. It’s developers just gave it that name. For the past few years the trend has been to use ESLint only to check for issues and to use Prettier for formatting.</p>
-<p>Most developers will be fine with most of the formatting that Standard performs. However, there is one controversial thing that it does. It enforces a space after function names in their definition. For example:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">function</span> <span class="fu">myName</span> (param1<span class="op">,</span> param2) {</span>
-<span id="cb1-2"><a href="#cb1-2"></a>  <span class="op">...</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>)</span></code></pre></div>
-<p>I think you will find that almost no JavaScript developer does this. So using Standard will make this change across their code bases and they will not like it.</p>
-<p>Please reconsider the use of Standard for JavaScript formatting and instead use Prettier, which is by far the more popular option.</p> ]]></description>
-</item>
-<item>	<title>Support the GitHub Checks Run UI</title>
-	<link>https://github.com/github/super-linter/issues/151</link>
-	<description><![CDATA[ <p><strong>Is your feature request related to a problem? Please describe.</strong>
-After the super-linters runs, you have to go to the workflow logs, and then the step, and look at the logs, to see the errors that were found. This is not ideal and error-prone.</p>
-<p><strong>Describe the solution you’d like</strong>
-A better approach would be to use the <a href="https://developer.github.com/v3/checks/runs/#create-a-check-run">Checks Run UI</a> to report the errors directly into the PR/code lines, to better visibility.</p>
-<p><strong>Describe alternatives you’ve considered</strong>
-Other linters already do this like https://github.com/andrewmcodes/rubocop-linter-action and https://github.com/devmasx/brakeman-linter-action</p>
-<p><strong>Additional context</strong>
-I think this is a really big feature, but it will also improve a lot the super-linter, and we could leverage how others already do it.</p> ]]></description>
 </item>
 <item>	<title>Make previews controller extensible </title>
 	<link>https://github.com/github/view_component/issues/434</link>
