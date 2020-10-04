@@ -36,14 +36,6 @@ In other formats, it would be</p>
 <p>or</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb6-1"><a href="#cb6-1"></a>using<span class="op">:</span> <span class="dt">Option</span><span class="op">&lt;</span><span class="dt">Vec</span><span class="op">&lt;</span>SomeStruct<span class="op">&gt;&gt;,</span></span></code></pre></div> ]]></description>
 </item>
-<item>	<title>Test that license texts match SPDX plain license texts</title>
-	<link>https://github.com/github/choosealicense.com/issues/636</link>
-	<description><![CDATA[ <p>We should have a test that each license text in <code>_licenses</code> is the same as the plain text license in the SPDX collection to automate the requirement described at https://github.com/github/choosealicense.com/blob/gh-pages/CONTRIBUTING.md#adding-a-license</p>
-<blockquote>
-<p>The text of the license should match the corresponding text found in <a href="https://github.com/spdx/license-list-data/blob/master/text/">spdx/license-list-data</a>. If there are errors there, please fix them in <a href="https://github.com/spdx/license-list-XML">spdx/license-list-XML</a> (from which the plain text version is generated) so as to minimize license text variation and make it easier for choosealicense.com to eventually consume license texts directly from SPDX.</p>
-</blockquote>
-<p>The test could clone spdx/license-list-data and compare each license we have cataloged in this project. Many existing licenses would probably have to be marked as expected failures due to bugs in SPDX output and discrepancies in how this project has cataloged some licenses. But we should address upfront for any new license cataloged here, and continue to chip away at the existing inconsistencies.</p> ]]></description>
-</item>
 <item>	<title>I18N</title>
 	<link>https://github.com/github/choosealicense.com/issues/68</link>
 	<description><![CDATA[ <p>Would love to see about baking in I18N support to choosealicense.com proper. See #67 and #62</p>
