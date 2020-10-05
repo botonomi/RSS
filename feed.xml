@@ -447,6 +447,13 @@ training a model with all the available datasets.</li>
 	<link>https://github.com/mozilla/TTS/issues/506</link>
 	<description><![CDATA[  ]]></description>
 </item>
+<item>	<title>[Poll] Should we include WaveRNN in Mozilla TTS ?</title>
+	<link>https://github.com/mozilla/TTS/issues/458</link>
+	<description><![CDATA[ <p>I see a lot of people still use WaveRNN although we released new faster vocoders.</p>
+<p>I am not willing to invest time in it given the way faster alternatives but you can let us know if you like to see WaveRNN as a part of Mozilla TTS repo.</p>
+<p>Please give <strong>thumps up</strong> or <strong>down</strong> to this post to have a poll.</p>
+<p>You can also state your comment or reason to have WaveRNN below.</p> ]]></description>
+</item>
 <item>	<title>[HELP] Share your trained TTS models?</title>
 	<link>https://github.com/mozilla/TTS/issues/395</link>
 	<description><![CDATA[ <p>Please consider sharing your pre-trained models in any language (If the licenses allow that). We can include them in our model catalog for public use by referencing your name (website, company etc.).</p>
