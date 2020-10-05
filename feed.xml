@@ -8,34 +8,6 @@
 	<link>https://github.com/github/certstore/issues/19</link>
 	<description><![CDATA[ <p>This file should be migrated to GitHub Actions: https://github.com/github/certstore/blob/main/.appveyor.yml</p> ]]></description>
 </item>
-<item>	<title>license yaml format issue</title>
-	<link>https://github.com/github/choosealicense.com/issues/758</link>
-	<description><![CDATA[ <p>The <code>using</code> part of the license.txt looks weird to me. It’s an array of single-element map like this</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">using</span><span class="kw">:</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">youtube-dl</span><span class="kw">:</span><span class="at"> https://github.com/rg3/youtube-dl/blob/master/LICENSE</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">kakoune</span><span class="kw">:</span><span class="at"> https://github.com/mawww/kakoune/blob/master/UNLICENSE</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">RDF.rb</span><span class="kw">:</span><span class="at"> https://github.com/ruby-rdf/rdf/blob/master/UNLICENSE</span></span></code></pre></div>
-<p>why not just use a single map like this</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">using</span><span class="kw">:</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="at">  </span><span class="fu">youtube-dl</span><span class="kw">:</span><span class="at"> https://github.com/rg3/youtube-dl/blob/master/LICENSE</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="at">  </span><span class="fu">kakoune</span><span class="kw">:</span><span class="at"> https://github.com/mawww/kakoune/blob/master/UNLICENSE</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="at">  </span><span class="fu">RDF.rb</span><span class="kw">:</span><span class="at"> https://github.com/ruby-rdf/rdf/blob/master/UNLICENSE</span></span></code></pre></div>
-<p>or an array of structered map</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">using</span><span class="kw">:</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> youtube-dl</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="at">    </span><span class="fu">url</span><span class="kw">:</span><span class="at"> https://github.com/rg3/youtube-dl/blob/master/LICENSE</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> kakoune</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="at">    </span><span class="fu">url</span><span class="kw">:</span><span class="at"> https://github.com/mawww/kakoune/blob/master/UNLICENSE</span></span>
-<span id="cb3-6"><a href="#cb3-6"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> RDF.rb</span></span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="at">    </span><span class="fu">url</span><span class="kw">:</span><span class="at"> https://github.com/ruby-rdf/rdf/blob/master/UNLICENSE</span></span></code></pre></div>
-<p>It makes the deserialise code boilerplate, for e.g in Rust I have to declare this field like</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb4-1"><a href="#cb4-1"></a>using<span class="op">:</span> <span class="dt">Option</span><span class="op">&lt;</span><span class="dt">Vec</span><span class="op">&lt;</span>HashMap<span class="op">&lt;</span><span class="dt">String</span><span class="op">,</span> <span class="dt">String</span><span class="op">&gt;&gt;&gt;,</span></span></code></pre></div>
-<p>When using this <code>using</code> field, I have to iterate the vector, during which I have to iterate the single-element map!
-In other formats, it would be</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb5-1"><a href="#cb5-1"></a>using<span class="op">:</span> <span class="dt">Option</span><span class="op">&lt;</span>HashMap<span class="op">&lt;</span><span class="dt">String</span><span class="op">,</span> <span class="dt">String</span><span class="op">&gt;&gt;,</span></span></code></pre></div>
-<p>or</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb6-1"><a href="#cb6-1"></a>using<span class="op">:</span> <span class="dt">Option</span><span class="op">&lt;</span><span class="dt">Vec</span><span class="op">&lt;</span>SomeStruct<span class="op">&gt;&gt;,</span></span></code></pre></div> ]]></description>
-</item>
 <item>	<title>I18N</title>
 	<link>https://github.com/github/choosealicense.com/issues/68</link>
 	<description><![CDATA[ <p>Would love to see about baking in I18N support to choosealicense.com proper. See #67 and #62</p>
