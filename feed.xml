@@ -254,6 +254,14 @@ beta: ↑<br />
 edge: 29.180 2020-03-03 (1970) 18MB -
 installed: 29.180 (1970) 18MB -</p> ]]></description>
 </item>
+<item>	<title>Debug builds for Windows</title>
+	<link>https://github.com/mozilla/DeepSpeech/issues/3359</link>
+	<description><![CDATA[ <p>Followup of #3353: we would welcome debug builds on Windows</p> ]]></description>
+</item>
+<item>	<title>Debug builds for macOS</title>
+	<link>https://github.com/mozilla/DeepSpeech/issues/3358</link>
+	<description><![CDATA[ <p>Followup of #3353: we would welcome debug builds on macOS</p> ]]></description>
+</item>
 <item>	<title>Expose Hot Words into binaries</title>
 	<link>https://github.com/mozilla/DeepSpeech/issues/3336</link>
 	<description><![CDATA[ <p>This is a follow-up of #3297: new API entry points have been added and exposed in all bindings.</p>
@@ -320,10 +328,6 @@ https://guides.github.com/activities/citable-code/</p> ]]></description>
 	<link>https://github.com/mozilla/DeepSpeech/issues/2977</link>
 	<description><![CDATA[  ]]></description>
 </item>
-<item>	<title>Handle control-C cleanly in feeding threads</title>
-	<link>https://github.com/mozilla/DeepSpeech/issues/2914</link>
-	<description><![CDATA[ <p>Currently you have to hold Control-C for several seconds until all the threads are killed.</p> ]]></description>
-</item>
 <item>	<title>getting very bad transcript while live streaming on r0.6 version node js socket api</title>
 	<link>https://github.com/mozilla/DeepSpeech-examples/issues/66</link>
 	<description><![CDATA[ <p>Hi,
@@ -379,6 +383,10 @@ If so, can I use socketio protocol, to send the transcribed text over to client?
 <item>	<title>Command table should contain short command names</title>
 	<link>https://github.com/mozilla/OpenWPM/issues/684</link>
 	<description><![CDATA[ <p>It shouldn’t be the full type name in the table but so instead of automation.commands…GetCommand</p> ]]></description>
+</item>
+<item>	<title>Use a stack approach for cognitive complexity</title>
+	<link>https://github.com/mozilla/rust-code-analysis/issues/289</link>
+	<description><![CDATA[ <p>Currently the cognitive complexity metric analyzes the nodes using ancestors. It would be helpful to analyze the nodes using a stack approach</p> ]]></description>
 </item>
 <item>	<title>Multi-Speaker TTS with Attentron</title>
 	<link>https://github.com/mozilla/TTS/issues/516</link>
