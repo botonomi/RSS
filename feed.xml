@@ -38,18 +38,9 @@ to look into implementing a suggestion.</p> ]]></description>
 	<link>https://github.com/github/government.github.com/issues/750</link>
 	<description><![CDATA[ <p>Description and details here: https://github.com/gjtorikian/html-proofer#configuring-caching and https://github.com/gjtorikian/html-proofer#caching-with-travis</p> ]]></description>
 </item>
-<item>	<title>Dockerfile support</title>
-	<link>https://github.com/github/licensed/issues/272</link>
-	<description><![CDATA[ <p>Would be great if <code>licensed</code> supported analyzing <code>Dockerfile</code>s and what is installed there to track all dependencies of a project!</p> ]]></description>
-</item>
 <item>	<title>List of languages without a colour</title>
 	<link>https://github.com/github/linguist/issues/5003</link>
 	<description><![CDATA[ <p>Continuing from #4506. 49</p> ]]></description>
-</item>
-<item>	<title>Investigate semantic-rust macro tests</title>
-	<link>https://github.com/github/semantic/issues/553</link>
-	<description><![CDATA[ <p><span class="citation" data-cites="p-alik">@p-alik</span> has graciously added the <code>semantic-rust</code> package but we’ve had to exclude some macro corpus tests due to parsing issues.</p>
-<p>See https://github.com/github/semantic/pull/551 for details.</p> ]]></description>
 </item>
 <item>	<title>Move from Travis CI and Appveyor to GitHub Actions</title>
 	<link>https://github.com/github/smimesign/issues/71</link>
