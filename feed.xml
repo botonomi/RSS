@@ -91,13 +91,6 @@ N/A</p>
 <p><strong>Note</strong>
 If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p> ]]></description>
 </item>
-<item>	<title>Bazel Support</title>
-	<link>https://github.com/github/super-linter/issues/393</link>
-	<description><![CDATA[ <p>bazel linter</p>
-<ul>
-<li><a href="https://github.com/bazelbuild/buildtools/blob/master/buildifier/README.md">buildifier</a></li>
-</ul> ]]></description>
-</item>
 <item>	<title>ActiveSupport::Notifications instrumentation</title>
 	<link>https://github.com/github/view_component/issues/427</link>
 	<description><![CDATA[ <h2 id="feature-request">Feature request</h2>
