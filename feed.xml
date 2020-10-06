@@ -73,6 +73,31 @@ N/A</p>
 <p><strong>Note</strong>
 If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p> ]]></description>
 </item>
+<item>	<title>Bazel Support</title>
+	<link>https://github.com/github/super-linter/issues/393</link>
+	<description><![CDATA[ <p>bazel linter</p>
+<ul>
+<li><a href="https://github.com/bazelbuild/buildtools/blob/master/buildifier/README.md">buildifier</a></li>
+</ul> ]]></description>
+</item>
+<item>	<title>Scala Support</title>
+	<link>https://github.com/github/super-linter/issues/392</link>
+	<description><![CDATA[ <p>Scala linter support.</p>
+<p>Choices are
+- <a href="https://github.com/scalacenter/scalafix">scalafix</a>
+- <a href="https://github.com/scalameta/scalafmt">scalafmt</a>
+- <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
+- <a href="https://github.com/wartremover/wartremover">wartremover</a></p> ]]></description>
+</item>
+<item>	<title>Scala Support</title>
+	<link>https://github.com/github/super-linter/issues/392</link>
+	<description><![CDATA[ <p>Scala linter support.</p>
+<p>Choices are
+- <a href="https://github.com/scalacenter/scalafix">scalafix</a>
+- <a href="https://github.com/scalameta/scalafmt">scalafmt</a>
+- <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
+- <a href="https://github.com/wartremover/wartremover">wartremover</a></p> ]]></description>
+</item>
 <item>	<title>ActiveSupport::Notifications instrumentation</title>
 	<link>https://github.com/github/view_component/issues/427</link>
 	<description><![CDATA[ <h2 id="feature-request">Feature request</h2>
@@ -424,6 +449,13 @@ alas it doesn’t do the test, looks pretty unhappy. Not sure whats up.</p>
 <p><strong>Additional context</strong>
 First time trying this in awhile has never worked for me before. Any help would be appreciated.
 Sue</p> ]]></description>
+</item>
+<item>	<title>WANT_UFE_BUILD scattered throughout build process</title>
+	<link>https://github.com/Autodesk/maya-usd/issues/589</link>
+	<description><![CDATA[ <p><strong>Describe the issue</strong>
+<strong>WANT_UFE_BUILD</strong> can wind up controlling vtable layout and availability of functions.
+Currently it’s usage is scattered throughout CMake and headers in mayaUsd, hdMaya, mayaToHydra, AL-usdmaya. Usually as <strong>PRIVATE</strong> sometimes as <strong>PUBLIC</strong> (#583).</p>
+<p>Seems better to be held in a spot where all sub-projects consume the value, and anyone building against a distribution can ingest the MACRO properly (i.e. in an installed CMake target).</p> ]]></description>
 </item>
 
 </channel>
