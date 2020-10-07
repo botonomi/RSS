@@ -492,7 +492,7 @@ Sue</p> ]]></description>
 	<description><![CDATA[ <p><strong>Describe the issue</strong>
 <strong>WANT_UFE_BUILD</strong> can wind up controlling vtable layout and availability of functions.
 Currently it’s usage is scattered throughout CMake and headers in mayaUsd, hdMaya, mayaToHydra, AL-usdmaya. Usually as <strong>PRIVATE</strong> sometimes as <strong>PUBLIC</strong> (#583).</p>
-<p>Seems better to be held in a spot where all sub-projects consume the value, and anyone building against a distribution can ingest the MACRO properly (i.e. in an installed CMake target).</p> ]]></description>
+<p>Seems better to be held in a spot where all sub-projects consume the value, and anyone building against a distribution can ingest the MACRO properly (i.e. in an installed CMake target).</p> ]]></description>
 </item>
 
 </channel>
