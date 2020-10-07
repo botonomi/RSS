@@ -4,9 +4,408 @@
 <title>Help Wanted</title>
 <description>Help Wanted Issues</description>
 <link>https://lbonanomi.github.io/workspace/feed.xml</link>
+<item>	<title>Move from AppVeyor to GitHub Actions</title>
+	<link>https://github.com/github/certstore/issues/19</link>
+	<description><![CDATA[ <pre><p>This file should be migrated to GitHub Actions: https://github.com/github/certstore/blob/main/.appveyor.yml</p></pre> ]]></description>
+</item>
+<item>	<title>I18N</title>
+	<link>https://github.com/github/choosealicense.com/issues/68</link>
+	<description><![CDATA[ <pre><p>Would love to see about baking in I18N support to choosealicense.com proper. See #67 and #62</p>
+<p>We already have the bulk of the strings in a single file (<code>_config.yml</code>), so it should just be a matter of abstracting out some of our variables, as far as I can tell.</p>
+<p>Would love to take this on starting in August if there’s interest. Would be a great exercise to set a standard for Jekyll L10N, and can iterate on some of the lessons learned form https://github.com/CMSgov/healthcare.gov.</p>
+<p><span class="citation" data-cites="parkr">@parkr</span> any interest?
+<span class="citation" data-cites="dhcole">@dhcole</span> any insight / words of wisdom?</p></pre> ]]></description>
+</item>
+<item>	<title>TODO: Configure caching for fast building on CI</title>
+	<link>https://github.com/github/government.github.com/issues/750</link>
+	<description><![CDATA[ <pre><p>Description and details here: https://github.com/gjtorikian/html-proofer#configuring-caching and https://github.com/gjtorikian/html-proofer#caching-with-travis</p></pre> ]]></description>
+</item>
+<item>	<title>List of languages without a colour</title>
+	<link>https://github.com/github/linguist/issues/5003</link>
+	<description><![CDATA[ <pre><p>Continuing from #4506. 49</p></pre> ]]></description>
+</item>
+<item>	<title>Move from Travis CI and Appveyor to GitHub Actions</title>
+	<link>https://github.com/github/smimesign/issues/71</link>
+	<description><![CDATA[ <pre><p>The following files are historical artifacts:</p>
+<ul>
+<li>Travis CI for macOS builds: https://github.com/github/smimesign/blob/main/.travis.yml</li>
+<li>AppVeyor for Windows builds: https://github.com/github/smimesign/blob/main/.appveyor.yml</li>
+</ul>
+<p>In fact, the macOS build doesn’t upload releases anymore.</p>
+<p>Both of these should be moved to GitHub Actions. I have a test branch for macOS at:
+https://github.com/github/smimesign/tree/macos-build</p>
+<p>This is not a high priority for us, but if someone took the time to migrate and debug the CI files for GH Actions it would help us maintain this project!</p></pre> ]]></description>
+</item>
+<item>	<title>Don't connect to kext when invoked with CLI args</title>
+	<link>https://github.com/github/SoftU2F/issues/39</link>
+	<description><![CDATA[ <pre><p>We try to connect to the kext when the app starts (<a href="https://github.com/github/SoftU2F/blob/45825a5bd6e6bad7ae9bd681c8584cbcb6e7fb7b/SoftU2FTool/U2FHID.swift#L24">code</a>). This also happens when the app is launched from the command line (Eg. for deleting/listing registrations). If the app is already running in the background we’ll get an error because the kext only allows one connection. This error is surfaced to the user, which is confusing. We should not connect to the kext unless we need to.</p></pre> ]]></description>
+</item>
+<item>	<title>Default to main and then master</title>
+	<link>https://github.com/github/super-linter/issues/698</link>
+	<description><![CDATA[ <pre><p><strong>Is your feature request related to a problem? Please describe.</strong></p>
+<p>Following the guidance of github, many developers are moving to <code>main</code> as their default branch. Saving developers from the very small hindrance of using <code>DEFAULT_BRANCH: main</code> would contribute to smoothing the transition.</p>
+<p><strong>Describe the solution you’d like</strong></p>
+<p>The default branch should be <code>main</code>. If it does not exist, use <code>master</code>, given that many repositories will continue using this name.</p></pre> ]]></description>
+</item>
+<item>	<title>Support linting infrastructure-as-code descriptors with Checkov</title>
+	<link>https://github.com/github/super-linter/issues/694</link>
+	<description><![CDATA[ <pre><p><strong>Is your feature request related to a problem? Please describe.</strong>
+https://github.com/bridgecrewio/checkov is a tool to check infrastructure-as-code descriptors. <code>It scans cloud infrastructure provisioned using Terraform, Cloudformation, Kubernetes, Serverless or ARM Templates and detects security and compliance misconfigurations.</code></p>
+<p><strong>Describe the solution you’d like</strong>
+Support <code>checkov</code>.</p>
+<p><strong>Describe alternatives you’ve considered</strong>
+N/A</p>
+<p><strong>Additional context</strong>
+N/A</p>
+<p><strong>Note</strong>
+If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p></pre> ]]></description>
+</item>
+<item>	<title>Support scanning Terraform with tfsec</title>
+	<link>https://github.com/github/super-linter/issues/693</link>
+	<description><![CDATA[ <pre><p><strong>Is your feature request related to a problem? Please describe.</strong>
+https://github.com/liamg/tfsec is a popular (more than TerraScan at least!) security-oriented linter for Terraform.</p>
+<p><strong>Describe the solution you’d like</strong>
+Support tfsec as one of the linters that super-linter ships.</p>
+<p><strong>Describe alternatives you’ve considered</strong>
+N/A</p>
+<p><strong>Additional context</strong>
+N/A</p>
+<p><strong>Note</strong>
+If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p></pre> ]]></description>
+</item>
+<item>	<title>Bazel Support</title>
+	<link>https://github.com/github/super-linter/issues/393</link>
+	<description><![CDATA[ <pre><p>bazel linter</p>
+<ul>
+<li><a href="https://github.com/bazelbuild/buildtools/blob/master/buildifier/README.md">buildifier</a></li>
+</ul></pre> ]]></description>
+</item>
+<item>	<title>Scala Support</title>
+	<link>https://github.com/github/super-linter/issues/392</link>
+	<description><![CDATA[ <pre><p>Scala linter support.</p>
+<p>Choices are
+- <a href="https://github.com/scalacenter/scalafix">scalafix</a>
+- <a href="https://github.com/scalameta/scalafmt">scalafmt</a>
+- <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
+- <a href="https://github.com/wartremover/wartremover">wartremover</a></p></pre> ]]></description>
+</item>
+<item>	<title>Scala Support</title>
+	<link>https://github.com/github/super-linter/issues/392</link>
+	<description><![CDATA[ <pre><p>Scala linter support.</p>
+<p>Choices are
+- <a href="https://github.com/scalacenter/scalafix">scalafix</a>
+- <a href="https://github.com/scalameta/scalafmt">scalafmt</a>
+- <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
+- <a href="https://github.com/wartremover/wartremover">wartremover</a></p></pre> ]]></description>
+</item>
+<item>	<title>ActiveSupport::Notifications instrumentation</title>
+	<link>https://github.com/github/view_component/issues/427</link>
+	<description><![CDATA[ <pre><h2 id="feature-request">Feature request</h2>
+<p>Have <code>ActiveSupport::Notifications</code> instrumentation.</p>
+<h3 id="motivation">Motivation</h3>
+<p>It may be nice to have some information about time used to render the component. Like <code>ActionView</code> does in developer server logs.</p>
+<p>Examples:
+- simple component rendering <code>Rendered ButtonComponent (Duration: 1.2ms | Allocations: 123)</code>
+- collection rendering <code>Rendered collection of ButtonComponent [10 times] (Duration: 1.2ms | Allocations: 123)</code></p>
+<pre><code>Started GET \&quot;/posts/aa147930-7749-4d52-a44b-29548e093447/edit\&quot; for 127.0.0.1 at 2020-07-29 01:09:19 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {\&quot;id\&quot;=&gt;\&quot;aa147930-7749-4d52-a44b-29548e093447\&quot;}
+  Post Load (2.0ms)  SELECT \&quot;posts\&quot;.* FROM \&quot;posts\&quot; WHERE \&quot;posts\&quot;.\&quot;id\&quot; = $1 LIMIT $2  [[\&quot;id\&quot;, \&quot;aa147930-7749-4d52-a44b-29548e093447\&quot;], [\&quot;LIMIT\&quot;, 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post&#39;
+  Rendering posts/edit.html.slim within layouts/application
+  Rendered ButtonComponent (Duration: 1.2ms | Allocations: 123)
+  Rendered posts/_form.html.slim (Duration: 6.3ms | Allocations: 3331)
+  Rendered posts/edit.html.slim within layouts/application (Duration: 9.4ms | Allocations: 5561)
+Completed 200 OK in 46ms (Views: 26.1ms | ActiveRecord: 2.3ms | Allocations: 19197)</code></pre></pre> ]]></description>
+</item>
+<item>	<title>Access request within SlotComponent instance</title>
+	<link>https://github.com/github/view_component/issues/409</link>
+	<description><![CDATA[ <pre><h2 id="feature-request">Feature request</h2>
+<p>https://github.com/github/view_component/pull/59 added context and access to the request object within the component, however this does not seem to extend to SlotComponent.
+I would like to propose this change to SlotComponents also</p>
+<h3 id="motivation">Motivation</h3>
+<p>I would like to use an active nav anchor tag in a NavItem slot within a NavBarComponent, by using the request to determine the <code>current_page?</code> Currently I having to work around this by wrapping the SlotComponent instance in a method in the parent Component and calling the method from the template.
+To me the SlotComponents should have access to the same helpers and view context that the parent components currently provide.</p>
+<p>I will attempt a PR of this myself if there’s acceptance and motivation to do so.</p></pre> ]]></description>
+</item>
+<item>	<title>Add failing tests for rendering with layouts</title>
+	<link>https://github.com/github/view_component/pull/395</link>
+	<description><![CDATA[ <pre><!-- See https://github.com/github/view_component/blob/master/CONTRIBUTING.md#submitting-a-pull-request  -->
+<h3 id="summary">Summary</h3>
+<!-- Provide a general description of the code changes in your pull
+request... were there any bugs you had fixed? If so, mention them. If
+these bugs have open GitHub issues, be sure to tag them here as well,
+to keep the conversation linked together. -->
+<p>This is a merge request for discussing a possible API for implementing #391</p>
+<p>I would have liked to have layouts included by default with <code>render</code>. I would understand if that is deemed an API break and a alternative needs to be determined.</p>
+<p>Additionally, I have added a test that checks the view context is shared between the layout and the component.</p>
+<h3 id="other-information">Other Information</h3>
+<!-- If there's anything else that's important and relevant to your pull
+request, mention that information here. This could include
+benchmarks, or other information.
+
+If you are updating any of the CHANGELOG files or are asked to update the
+CHANGELOG files by reviewers, please add the CHANGELOG entry at the top of the file. --></pre> ]]></description>
+</item>
+<item>	<title>Support multiple views</title>
+	<link>https://github.com/github/view_component/issues/387</link>
+	<description><![CDATA[ <pre><h2 id="feature-request">Feature request</h2>
+<!-- Provide a summary of the behavior. -->
+<p>Allow refactoring small view parts into a separate view, and be able to <code>render</code> them into the template. These views should not be available outside the component.</p>
+<pre><code>app/components/my_component/my_component.html.erb
+app/components/my_component/a_part.html.erb</code></pre>
+<p>```erb
+&lt;</p></pre> ]]></description>
+</item>
+<item>	<title>Fix rendering of components that utilize `capture` in a parent view context</title>
+	<link>https://github.com/github/view_component/pull/240</link>
+	<description><![CDATA[ <pre><p>In Rails, when you create a form it saves a reference to the current
+template object that is rendering the form. When you render a form
+builder helper method, like <code>form.label</code> inside of a child component the
+template object will be the original template object from where the form
+builder was instantiated.</p>
+<p>This means in cases where we pass a block to a form builder helper the
+<code>@output_buffer</code> is the parent component’s output buffer. So when that
+buffer is overridden via <code>.capture</code> it’s setting the parent component’s
+<code>@output_buffer</code> to a new, temporary buffer but it doesn’t change the
+child component that is actually rendering’s <code>@output_buffer</code>. This
+means the block is executed in the context of the child components
+actual <code>@output_buffer</code> and immediately writes to the buffer. Since
+<code>capture</code> had nothing written to the temporary buffer, it returns the
+value of the block call and then inserts that into the parent
+component’s <code>@output_buffer</code>.</p>
+<p>This resolves the issue by monkey patching <code>ActionView::Base</code> to support
+a new <code>child_component</code> attribute and overriding <code>output_buffer=</code> to set
+its <code>child_component</code>s output_buffer to whatever <code>output_buffer</code> is set
+to. With that in place, when <code>capture</code> is called, then #output_buffer=`
+is called which will update the child component’s output buffer to the new
+temporary buffer correctly.</p></pre> ]]></description>
+</item>
+<item>	<title>Microk8s 1.19.0 never ready, not working.</title>
+	<link>https://github.com/ubuntu/microk8s/issues/1570</link>
+	<description><![CDATA[ <pre><p>Installing microk8s with <em>sudo snap install microk8s –classic</em> appears to go fine, but <em>microk8s status</em> always reports as microk8s not running. <em>microk8s kubectl get all –all-namespaces</em> shows everything as not ready and pending.</p>
+<p>Ubuntu 20.04.1 Desktop, network-interfaces are ens33, lo, virbr0 and virbr0-nic, so nothing particularly exciting there. The flannel - interface you’d get with an earlier microk8s - version is a no-show here.</p>
+<p>Already tried the solution mentioned in #1554 but that doesn’t work.
+<a href="https://github.com/ubuntu/microk8s/files/5228818/inspection-report-20200916_031614.tar.gz">inspection-report-20200916_031614.tar.gz</a></p></pre> ]]></description>
+</item>
+<item>	<title>OSD level scale invisible</title>
+	<link>https://github.com/ubuntu/yaru/issues/2214</link>
+	<description><![CDATA[ <pre><p>Hi there, first of all, thanks for this very nice theme.</p>
+<p>I’m using Yaru 20.04 on openSUSE Tumbleweed and Leap 15.2 with Mate 1.24.0. There is a problem where the OSD horizontal fine-grained level/scale is invisible. Maybe some code could be borrowed from Numix, as it looks perfect under Numix.</p>
+<hr />
+<p>Yaru (light and normal all behave the same):</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/2692138/85305326-880c4b80-b472-11ea-8d15-98d63fb4b3c6.png" alt="" /><figcaption>Screenshot at 2020-06-22 10-14-21</figcaption>
+</figure>
+<hr />
+<p>Numix:</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/2692138/85305349-90fd1d00-b472-11ea-9db7-e0e1611c0b26.png" alt="" /><figcaption>Screenshot at 2020-06-22 10-14-35</figcaption>
+</figure></pre> ]]></description>
+</item>
+<item>	<title>[Bionic] Check mark (✓) is invisible in Firefox context menu</title>
+	<link>https://github.com/ubuntu/yaru/issues/2064</link>
+	<description><![CDATA[ <pre><h3 id="steps-to-see-the-issue">Steps to see the issue</h3>
+<ol type="1">
+<li>Open Firefox and go to a text field</li>
+<li>Right-click in a text field and select "Check Spelling"</li>
+<li>You should see a check mark (✓) beside "Check Spelling"</li>
+<li>The check mark is invisible</li>
+</ol>
+<h3 id="software-that-presents-the-issue">Software that presents the issue</h3>
+<ul>
+<li>OS: Ubuntu 18.04</li>
+<li>App: Firefox</li>
+<li>Version: 74</li>
+</ul>
+<h3 id="yaru-version">Yaru version</h3>
+<p>$ snap info communitheme
+snap-id: Yd6CISPIf6tEf3ZEJ0cqSoEg9rG2VkRi
+tracking: latest/edge
+refresh-date: 11 days ago, at 19:12 CET
+channels:
+stable: 0.1 2019-03-13 (1768) 16MB -
+candidate: ↑<br />
+beta: ↑<br />
+edge: 29.180 2020-03-03 (1970) 18MB -
+installed: 29.180 (1970) 18MB -</p></pre> ]]></description>
+</item>
+<item>	<title>Debug builds for Windows</title>
+	<link>https://github.com/mozilla/DeepSpeech/issues/3359</link>
+	<description><![CDATA[ <pre><p>Followup of #3353: we would welcome debug builds on Windows</p></pre> ]]></description>
+</item>
+<item>	<title>Debug builds for macOS</title>
+	<link>https://github.com/mozilla/DeepSpeech/issues/3358</link>
+	<description><![CDATA[ <pre><p>Followup of #3353: we would welcome debug builds on macOS</p></pre> ]]></description>
+</item>
+<item>	<title>Expose Hot Words into binaries</title>
+	<link>https://github.com/mozilla/DeepSpeech/issues/3336</link>
+	<description><![CDATA[ <pre><p>This is a follow-up of #3297: new API entry points have been added and exposed in all bindings.</p>
+<p>This bug is about replicating what has been done in #3297 for using this new API in the Python binary and do that in all our other binaries, as well as add CI testing:
+- JavaScript (NodeJS, ElectronJS)
+- Java (APK app)
+- .Net</p>
+<p>Anyone willing to take care of that is welcome to ask more details, here or on Matrix. This is a good way to get into the project: it’s technically easy but it touches several places as well as CI testing, so you get a nice overview of the surface.</p></pre> ]]></description>
+</item>
+<item>	<title>Please add citation information</title>
+	<link>https://github.com/mozilla/DeepSpeech/issues/3323</link>
+	<description><![CDATA[ <pre><p>A <code>CITATION.txt</code> with a BibTeX (ideally a DOI) would be much appreciated :)</p>
+<p>See here for a guideline on how to make code citable:
+https://guides.github.com/activities/citable-code/</p></pre> ]]></description>
+</item>
+<item>	<title>Moving away from TaskCluster</title>
+	<link>https://github.com/mozilla/DeepSpeech/issues/3317</link>
+	<description><![CDATA[ <pre><p>TaskCluster is a CI service provided by Mozilla, and available to both Firefox development (Firefox-CI instance) and Community on Github (Community TaskCluster). It’s being widely used across some Mozilla projects, and it has its own advantages. In our case, the control over tasks, over workers for specific needs and long build time was easier to achieve working with the TaskCluster team rather than relying on other CI services.</p>
+<p>However, this has lead to the CI code being very specific to the project, and kind of a source of frustration for non employees trying to send patches and get involved in the project ; specifically because some of the CI parts were “hand-crafted” and triggering builds and tests requires being a “collaborator” on the Github project, which has other implications making it complicated to enable it easily to anyone. In the end, this creates an artificial barrier to contributing to this project, even though we happily run PRs manually, it is still frustrating for everyone. The issue https://github.com/mozilla/DeepSpeech/issues/3228 was an attempt to fix that, but we came to the conclusion it would be more beneficial for everyone to switch to some well known CI service and setup that is less intimidating. While TaskCluster is a great tool and has helped us a lot, we feel its limitations now makes it inappropriate for the project to stimulate and enable external contributions.</p>
+<p>We would like to take this opportunity to also enable more contributors to hack and own the code related to CI, so discussion is open.</p></pre> ]]></description>
+</item>
+<item>	<title>.Net Standard lib in the nuget package</title>
+	<link>https://github.com/mozilla/DeepSpeech/issues/3285</link>
+	<description><![CDATA[ <pre><p>Will you add the .Net Standard library into nuget package?</p></pre> ]]></description>
+</item>
+<item>	<title>Memory Leak using Java Native Client</title>
+	<link>https://github.com/mozilla/DeepSpeech/issues/3271</link>
+	<description><![CDATA[ <pre><p>For support and discussions, please use our <a href="https://discourse.mozilla.org/c/mozilla-voice-stt">Discourse forums</a>.</p>
+<p>If you’ve found a bug, or have a feature request, then please create an issue with the following information:</p>
+<ul>
+<li><strong>Have I written custom code (as opposed to running examples on an unmodified clone of the repository)</strong>:</li>
+<li><strong>OS Platform and Distribution (e.g., Linux Ubuntu 16.04)</strong>: Android R (API 30)</li>
+<li><strong>Exact command to reproduce</strong>:</li>
+</ul>
+<p>I modified the STT-example in Kotlin for use in a Mozilla-STT React Native module I’m building. However, running streaming transcription uses more and more memory until the app crashes. See a fully working example by cloning <a href="https://github.com/zaptrem/react-native-transcription">this repo</a>, running <code>yarn bootstrap</code>, then <code>yarn example android</code>. Attach to it using the Android Studio profiler to watch the memory usage creep upwards.</p>
+<p>Implementation: https://github.com/zaptrem/react-native-transcription/blob/master/android/src/main/java/com/reactnativetranscription/TranscriptionModule.kt</p>
+<p>Please describe the problem clearly. Be sure to convey here why it’s a bug or a feature request.</p>
+<p>Include any logs or source code that would be helpful to diagnose the problem. For larger logs, link to a Gist, not a screenshot. If including tracebacks, please include the full traceback. Try to provide a reproducible test case.</p></pre> ]]></description>
+</item>
+<item>	<title>Change Alphabet::EncodeSingle and Alphabet::DecodeSingle to use an outparam and return an error code instead of calling `abort`</title>
+	<link>https://github.com/mozilla/DeepSpeech/issues/3175</link>
+	<description><![CDATA[ <pre><p>I run into the error "Invalid label 0". I assume it is from the function <code>Alphabet::DecodeSingle()</code> in the file <code>native_client/alphabet.cc</code>.</p>
+<p>I don’t know why I am running into this error and it is not important for now. What is important is the fact that the code calls <code>abort()</code> just after printing this error.</p>
+<p>I don’t know your guidelines. But I can tell that aborting the whole process, including the python interpreter which might be interactive, is a terrible way of handling errors, especially in such a trivial function, and I call it a bug.</p></pre> ]]></description>
+</item>
+<item>	<title>No working download links found for ds_ctcdecoder==training/deepspeech_training/VERSION</title>
+	<link>https://github.com/mozilla/DeepSpeech/issues/3099</link>
+	<description><![CDATA[ <pre><p>Hello,</p>
+<p>when I trie to use the <code>setup.py</code> on from <code>version 0.7.4</code> it always calls this error:</p>
+<p><code>No local packages or working download links found for ds_ctcdecoder==training/deepspeech_training/VERSION error:  Could not find suitable distribution for Requirement.parse('ds_ctcdecoder==training/deepspeech_training/VERSION')</code></p>
+<p>With the <code>version 0.7.3</code> and older it finds the ds_ctcdecoder but always calls that I need <code>numpy</code> in <code>version 1.16</code>, when I install 1.16 it calls me that I need <code>numpy 1.13.3</code> because of other modules and so on. That’s why I think my only chance to use DeepSpeech is with the newest version.</p>
+<p>I’m on windwos 10 with python 3.6.</p>
+<p>Thanks in advance!</p></pre> ]]></description>
+</item>
+<item>	<title>Add progress bars to transcribe.py</title>
+	<link>https://github.com/mozilla/DeepSpeech/issues/2985</link>
+	<description><![CDATA[ <pre><p>it would be nice to have 2 progress bars</p>
+<ol type="1">
+<li>transcribing individual files in a dir</li>
+<li>transcribing long audio file after VAD split</li>
+</ol></pre> ]]></description>
+</item>
+<item>	<title>getting very bad transcript while live streaming on r0.6 version node js socket api</title>
+	<link>https://github.com/mozilla/DeepSpeech-examples/issues/66</link>
+	<description><![CDATA[ <pre><p>Hi,
+I have trained my custom model DeepSpeech 0.6.1 on my own data from scratch.</p>
+<p>I have getting good accuracy while inference using deepspeech binary (testing wer: 0.18).</p>
+<p>When i try r0.6 node js socket api and also mic vad streaming using my own data and lm, I am getting very bad transcript.</p>
+<p>It does not capture any word, it just give me an output of same garbage word for each and every spoken word.</p>
+<p>My predicted transcripts:</p>
+<p>haan
+haan haan
+haan haan haan …</p>
+<p>I saved recorded audio and listen it was of very good quality and when i infer trans from deepspeech binary using the command:
+deepspeech –model model_path –lm lm_path –trie trie_path –audio audio_path</p>
+<p>It gives me very good transcripts.</p>
+<p>So I am not able to understand why this happens with r0.6.
+when I test with 0.5.1 model example of mic vad streaming, then I am getting good accuracy.</p>
+<p>Can anyone help me to resolve this.
+Why I am getting bad transcript on r0.6 node js socket api as well as mic vad streaming.</p>
+<p>Thanks</p></pre> ]]></description>
+</item>
+<item>	<title>Windows 10:- mic_vad_streaming.py exited without error and without expected output</title>
+	<link>https://github.com/mozilla/DeepSpeech-examples/issues/59</link>
+	<description><![CDATA[ <pre><p>Even though, I have all the dependencies mentioned in requirements, mic_vad_streaming.py didn’t executed properly. Not sure why this happened, I am a beginner please help. Thanks.
+<strong>I used this command:-</strong>
+python mic_vad_streaming.py -m deepspeech-0.7.3-models.pbmm -s deepspeech-0.7.3-models.scorer
+<strong>Got this output on command line without any errors:-</strong>
+Initializing model…
+INFO:root:ARGS.model: deepspeech-0.7.3-models.pbmm
+TensorFlow: v1.15.0-24-gceb46aae58
+DeepSpeech: v0.7.3-0-g88584941
+2020-06-14 15:59:26.545446: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+INFO:root:ARGS.scorer: deepspeech-0.7.3-models.scorer</p>
+<p>(newdsvenv) C:_vad_streaming&gt;</p></pre> ]]></description>
+</item>
+<item>	<title>NodeJS Microphone VAD Streaming - cannot start server</title>
+	<link>https://github.com/mozilla/DeepSpeech-examples/issues/30</link>
+	<description><![CDATA[ <pre><p>Hi.
+After I run node start.js , nothing happened.
+Do i need to specify to specific port first?
+If so, can I use socketio protocol, to send the transcribed text over to client?</p></pre> ]]></description>
+</item>
+<item>	<title>Make the set of syncable roots configurable</title>
+	<link>https://github.com/mozilla/dogear/issues/51</link>
+	<description><![CDATA[ <pre><p>We currently hard-code syncable to mean "everything under the five built-in roots". This works for <span class="citation" data-cites="eoger">@eoger</span>’s use case (filtering out <code>readinglist</code> and <code>pinned</code> when importing bookmarks from Fennec), and it wouldn’t be much more work to make them customizable.</p>
+<p>I imagine we’d add a method like <code>Builder::syncable(vec![MENU_GUID, MOBILE_GUID, TOOLBAR_GUID, UNFILED_GUID])</code>, store the list of syncable roots on the tree, and check them in <code>Node::is_syncable</code>.</p>
+<p>While we’re at it, we could also generalize our special handling for tags on Desktop—they’re part of the merged tree (so not deleted), but never uploaded. Or we can leave it and wait for tags to move to a separate table, which we already do in Rust Places. 😁</p></pre> ]]></description>
+</item>
+<item>	<title>Add support for Azure tests</title>
+	<link>https://github.com/mozilla/frost/issues/312</link>
+	<description><![CDATA[ <pre><p>It would be nice to have Azure tests available as we make further use of it.</p>
+<p>Can refer to the <a href="https://www.cisecurity.org/benchmark/azure/">CIS Benchmark for Azure</a>, our internal review, and <a href="https://github.com/nccgroup/ScoutSuite/tree/master/ScoutSuite/providers/azure/rules/findings">ScoutSuite’s rules</a> to determine an initial list of tests to add.</p></pre> ]]></description>
+</item>
+<item>	<title>Command table should contain short command names</title>
+	<link>https://github.com/mozilla/OpenWPM/issues/684</link>
+	<description><![CDATA[ <pre><p>It shouldn’t be the full type name in the table but so instead of automation.commands…GetCommand</p></pre> ]]></description>
+</item>
+<item>	<title>Use a stack approach for cognitive complexity</title>
+	<link>https://github.com/mozilla/rust-code-analysis/issues/289</link>
+	<description><![CDATA[ <pre><p>Currently the cognitive complexity metric analyzes the nodes using ancestors. It would be helpful to analyze the nodes using a stack approach</p></pre> ]]></description>
+</item>
+<item>	<title>Multi-Speaker TTS with Attentron</title>
+	<link>https://github.com/mozilla/TTS/issues/516</link>
+	<description><![CDATA[ <pre><p>Attentron is a new method proposed recently and looks like an easy alternation over our current Tacotron2 to enable easier multi-speaker TTS.</p>
+<p>paper: https://arxiv.org/pdf/2005.08484.pdf
+samples: https://hyperconnect.github.io/Attentron/</p>
+<p>Raise hands if you are willing to take this.</p></pre> ]]></description>
+</item>
+<item>	<title>Train a better Speaker Encoder</title>
+	<link>https://github.com/mozilla/TTS/issues/512</link>
+	<description><![CDATA[ <pre><p>Our current <strong>speaker encoder</strong> is trained with only LibriTTS (100, 360) datasets. However, we can improve its performance using other available datasets (VoxCeleb, LibriTTS-500, Common Voice etc.). It will also increase the performance of<a href="https://colab.research.google.com/drive/1OX2jtyxmeFt7kRO65QgPy65ku6HWUrFK?usp=sharing">our multi-speaker model</a> and makes it easier to adapt to new voices.</p>
+<p>I can’t really work on this alone due to the recent changes and the amount of work needed therefore <strong>I need some hand</strong> here to work together.</p>
+<p>So I can list the TODO as follows and feel free to contribute to any part of it or suggest changes;</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+decide target datasets</li>
+<li><input type="checkbox" disabled="" checked="" />
+download and preprocess the datasets</li>
+<li><input type="checkbox" disabled="" checked="" />
+write preprocessors for new datasets</li>
+<li><input type="checkbox" disabled="" checked="" />
+increase the efficiency of the speaker encoder data-loader.</li>
+<li><input type="checkbox" disabled="" checked="" />
+training a model only using Eng datasets.</li>
+<li><input type="checkbox" disabled="" />
+training a model with all the available datasets.</li>
+</ul></pre> ]]></description>
+</item>
+<item>	<title>[Feature Request]Android app</title>
+	<link>https://github.com/mozilla/TTS/issues/506</link>
+	<description><![CDATA[ <pre></pre> ]]></description>
+</item>
+<item>	<title>[Poll] Should we include WaveRNN in Mozilla TTS ?</title>
+	<link>https://github.com/mozilla/TTS/issues/458</link>
+	<description><![CDATA[ <pre><p>I see a lot of people still use WaveRNN although we released new faster vocoders.</p>
+<p>I am not willing to invest time in it given the way faster alternatives but you can let us know if you like to see WaveRNN as a part of Mozilla TTS repo.</p>
+<p>Please give <strong>thumps up</strong> or <strong>down</strong> to this post to have a poll.</p>
+<p>You can also state your comment or reason to have WaveRNN below.</p></pre> ]]></description>
+</item>
+<item>	<title>[HELP] Share your trained TTS models?</title>
+	<link>https://github.com/mozilla/TTS/issues/395</link>
+	<description><![CDATA[ <pre><p>Please consider sharing your pre-trained models in any language (If the licenses allow that). We can include them in our model catalog for public use by referencing your name (website, company etc.).</p>
+<p>That would enable more people experiment together and coordinate, instead of individual efforts to achieve similar goals. That is also a good chance to make your work more visible.</p></pre> ]]></description>
+</item>
 <item>	<title>Error building on Windows 10</title>
 	<link>https://github.com/Autodesk/maya-usd/issues/820</link>
-	<description><![CDATA[ <p><strong>Describe the issue</strong>
+	<description><![CDATA[ <pre><p><strong>Describe the issue</strong>
 I am attempting to build this plugin on windows. Following the instructions on the build page, I have cloned the repo and on attempting to run the build.py file, it errors with the following.</p>
 <pre><code>E:\files\USD\maya-usd&gt;python build.py --maya-location \&quot;C:\Program Files\Autodesk\Maya2020\&quot; --pxrusd-location E:\downloads\usd-20-08-win64_py27_release --devkit-location E:\downloads\Autodesk_Maya_2020_2_Update_DEVKIT_Windows E:\files\USD\maya-usd\workspace
 
@@ -68,11 +467,11 @@ master d9f5bd5</p>
 binaries downloaded from https://developer.nvidia.com/usd</li>
 </ul>
 <p><strong>Additional context</strong>
-I have USD up and running using the binaries from nvidia. However I am not sure if that works with building this plugin for maya? Do I need to have the source for USD cloned and build to be able to use this plugin, or is there a way that I can use it in conjunction with the binaries from nvidia? I like to avoid having to go down the route of fully building USD on windows if I can. I have heard it is quite to journey!</p> ]]></description>
+I have USD up and running using the binaries from nvidia. However I am not sure if that works with building this plugin for maya? Do I need to have the source for USD cloned and build to be able to use this plugin, or is there a way that I can use it in conjunction with the binaries from nvidia? I like to avoid having to go down the route of fully building USD on windows if I can. I have heard it is quite to journey!</p></pre> ]]></description>
 </item>
 <item>	<title>Not sure im going the stage test correctly</title>
 	<link>https://github.com/Autodesk/maya-usd/issues/705</link>
-	<description><![CDATA[ <p><strong>Describe the bug</strong>
+	<description><![CDATA[ <pre><p><strong>Describe the bug</strong>
 Please See attatched txt file. I am trying to run my build with –stage=test like this:
 <code>python build.py --maya-location /usr/autodesk/maya2021 --pxrusd-location $SCRIPT_DIR/USD --devkit-location $SCRIPT_DIR/maya_devkit/devkitBase --stages=test  $SCRIPT_DIR/WorkspaceRefractor</code>
 alas it doesn’t do the test, looks pretty unhappy. Not sure whats up.</p>
@@ -86,14 +485,14 @@ alas it doesn’t do the test, looks pretty unhappy. Not sure whats up.</p>
 - Pixar USD commit SHA [20.08]</p>
 <p><strong>Additional context</strong>
 First time trying this in awhile has never worked for me before. Any help would be appreciated.
-Sue</p> ]]></description>
+Sue</p></pre> ]]></description>
 </item>
 <item>	<title>WANT_UFE_BUILD scattered throughout build process</title>
 	<link>https://github.com/Autodesk/maya-usd/issues/589</link>
-	<description><![CDATA[ <p><strong>Describe the issue</strong>
+	<description><![CDATA[ <pre><p><strong>Describe the issue</strong>
 <strong>WANT_UFE_BUILD</strong> can wind up controlling vtable layout and availability of functions.
 Currently it’s usage is scattered throughout CMake and headers in mayaUsd, hdMaya, mayaToHydra, AL-usdmaya. Usually as <strong>PRIVATE</strong> sometimes as <strong>PUBLIC</strong> (#583).</p>
-<p>Seems better to be held in a spot where all sub-projects consume the value, and anyone building against a distribution can ingest the MACRO properly (i.e. in an installed CMake target).</p> ]]></description>
+<p>Seems better to be held in a spot where all sub-projects consume the value, and anyone building against a distribution can ingest the MACRO properly (i.e. in an installed CMake target).</p></pre> ]]></description>
 </item>
 
 </channel>
