@@ -42,35 +42,35 @@ https://github.com/github/smimesign/tree/macos-build</p>
 </item>
 <item>	<title>Default to main and then master</title>
 	<link>https://github.com/github/super-linter/issues/698</link>
-	<description><![CDATA[ <p><strong>Is your feature request related to a problem? Please describe.</strong></p>
+	<description><![CDATA[ <p><b>Is your feature request related to a problem? Please describe.</b></p>
 <p>Following the guidance of github, many developers are moving to <code>main</code> as their default branch. Saving developers from the very small hindrance of using <code>DEFAULT_BRANCH: main</code> would contribute to smoothing the transition.</p>
-<p><strong>Describe the solution you’d like</strong></p>
+<p><b>Describe the solution you’d like</b></p>
 <p>The default branch should be <code>main</code>. If it does not exist, use <code>master</code>, given that many repositories will continue using this name.</p> ]]></description>
 </item>
 <item>	<title>Support linting infrastructure-as-code descriptors with Checkov</title>
 	<link>https://github.com/github/super-linter/issues/694</link>
-	<description><![CDATA[ <p><strong>Is your feature request related to a problem? Please describe.</strong>
+	<description><![CDATA[ <p>< b>Is your feature request related to a problem? Please describe.</ b>
 https://github.com/bridgecrewio/checkov is a tool to check infrastructure-as-code descriptors. <code>It scans cloud infrastructure provisioned using Terraform, Cloudformation, Kubernetes, Serverless or ARM Templates and detects security and compliance misconfigurations.</code></p>
-<p><strong>Describe the solution you’d like</strong>
+<p>< b>Describe the solution you’d like</ b>
 Support <code>checkov</code>.</p>
-<p><strong>Describe alternatives you’ve considered</strong>
+<p>< b>Describe alternatives you’ve considered</ b>
 N/A</p>
-<p><strong>Additional context</strong>
+<p>< b>Additional context</ b>
 N/A</p>
-<p><strong>Note</strong>
+<p>< b>Note</ b>
 If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p> ]]></description>
 </item>
 <item>	<title>Support scanning Terraform with tfsec</title>
 	<link>https://github.com/github/super-linter/issues/693</link>
-	<description><![CDATA[ <p><strong>Is your feature request related to a problem? Please describe.</strong>
+	<description><![CDATA[ <p>< b>Is your feature request related to a problem? Please describe.</ b>
 https://github.com/liamg/tfsec is a popular (more than TerraScan at least!) security-oriented linter for Terraform.</p>
-<p><strong>Describe the solution you’d like</strong>
+<p>< b>Describe the solution you’d like</ b>
 Support tfsec as one of the linters that super-linter ships.</p>
-<p><strong>Describe alternatives you’ve considered</strong>
+<p>< b>Describe alternatives you’ve considered</ b>
 N/A</p>
-<p><strong>Additional context</strong>
+<p>< b>Additional context</ b>
 N/A</p>
-<p><strong>Note</strong>
+<p>< b>Note</ b>
 If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p> ]]></description>
 </item>
 <item>	<title>ActiveSupport::Notifications instrumentation</title>
@@ -236,9 +236,9 @@ https://guides.github.com/activities/citable-code/</p> ]]></description>
 	<description><![CDATA[ <p>For support and discussions, please use our <a href="https://discourse.mozilla.org/c/mozilla-voice-stt">Discourse forums</a>.</p>
 <p>If you’ve found a bug, or have a feature request, then please create an issue with the following information:</p>
 <ul>
-<li><strong>Have I written custom code (as opposed to running examples on an unmodified clone of the repository)</strong>:</li>
-<li><strong>OS Platform and Distribution (e.g., Linux Ubuntu 16.04)</strong>: Android R (API 30)</li>
-<li><strong>Exact command to reproduce</strong>:</li>
+<li>< b>Have I written custom code (as opposed to running examples on an unmodified clone of the repository)</ b>:</li>
+<li>< b>OS Platform and Distribution (e.g., Linux Ubuntu 16.04)</ b>: Android R (API 30)</li>
+<li>< b>Exact command to reproduce</ b>:</li>
 </ul>
 <p>I modified the STT-example in Kotlin for use in a Mozilla-STT React Native module I’m building. However, running streaming transcription uses more and more memory until the app crashes. See a fully working example by cloning <a href="https://github.com/zaptrem/react-native-transcription">this repo</a>, running <code>yarn bootstrap</code>, then <code>yarn example android</code>. Attach to it using the Android Studio profiler to watch the memory usage creep upwards.</p>
 <p>Implementation: https://github.com/zaptrem/react-native-transcription/blob/master/android/src/main/java/com/reactnativetranscription/TranscriptionModule.kt</p>
@@ -295,9 +295,9 @@ Why I am getting bad transcript on r0.6 node js socket api as well as mic vad st
 <item>	<title>Windows 10:- mic_vad_streaming.py exited without error and without expected output</title>
 	<link>https://github.com/mozilla/DeepSpeech-examples/issues/59</link>
 	<description><![CDATA[ <p>Even though, I have all the dependencies mentioned in requirements, mic_vad_streaming.py didn’t executed properly. Not sure why this happened, I am a beginner please help. Thanks.
-<strong>I used this command:-</strong>
+< b>I used this command:-</ b>
 python mic_vad_streaming.py -m deepspeech-0.7.3-models.pbmm -s deepspeech-0.7.3-models.scorer
-<strong>Got this output on command line without any errors:-</strong>
+< b>Got this output on command line without any errors:-</ b>
 Initializing model…
 INFO:root:ARGS.model: deepspeech-0.7.3-models.pbmm
 TensorFlow: v1.15.0-24-gceb46aae58
@@ -341,8 +341,8 @@ samples: https://hyperconnect.github.io/Attentron/</p>
 </item>
 <item>	<title>Train a better Speaker Encoder</title>
 	<link>https://github.com/mozilla/TTS/issues/512</link>
-	<description><![CDATA[ <p>Our current <strong>speaker encoder</strong> is trained with only LibriTTS (100, 360) datasets. However, we can improve its performance using other available datasets (VoxCeleb, LibriTTS-500, Common Voice etc.). It will also increase the performance of<a href="https://colab.research.google.com/drive/1OX2jtyxmeFt7kRO65QgPy65ku6HWUrFK?usp=sharing">our multi-speaker model</a> and makes it easier to adapt to new voices.</p>
-<p>I can’t really work on this alone due to the recent changes and the amount of work needed therefore <strong>I need some hand</strong> here to work together.</p>
+	<description><![CDATA[ <p>Our current < b>speaker encoder</ b> is trained with only LibriTTS (100, 360) datasets. However, we can improve its performance using other available datasets (VoxCeleb, LibriTTS-500, Common Voice etc.). It will also increase the performance of<a href="https://colab.research.google.com/drive/1OX2jtyxmeFt7kRO65QgPy65ku6HWUrFK?usp=sharing">our multi-speaker model</a> and makes it easier to adapt to new voices.</p>
+<p>I can’t really work on this alone due to the recent changes and the amount of work needed therefore < b>I need some hand</ b> here to work together.</p>
 <p>So I can list the TODO as follows and feel free to contribute to any part of it or suggest changes;</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" checked="" />
@@ -367,7 +367,7 @@ training a model with all the available datasets.</li>
 	<link>https://github.com/mozilla/TTS/issues/458</link>
 	<description><![CDATA[ <p>I see a lot of people still use WaveRNN although we released new faster vocoders.</p>
 <p>I am not willing to invest time in it given the way faster alternatives but you can let us know if you like to see WaveRNN as a part of Mozilla TTS repo.</p>
-<p>Please give <strong>thumps up</strong> or <strong>down</strong> to this post to have a poll.</p>
+<p>Please give < b>thumps up</ b> or < b>down</ b> to this post to have a poll.</p>
 <p>You can also state your comment or reason to have WaveRNN below.</p> ]]></description>
 </item>
 <item>	<title>[HELP] Share your trained TTS models?</title>
@@ -377,7 +377,7 @@ training a model with all the available datasets.</li>
 </item>
 <item>	<title>Error building on Windows 10</title>
 	<link>https://github.com/Autodesk/maya-usd/issues/820</link>
-	<description><![CDATA[ <p><strong>Describe the issue</strong>
+	<description><![CDATA[ <p>< b>Describe the issue</ b>
 I am attempting to build this plugin on windows. Following the instructions on the build page, I have cloned the repo and on attempting to run the build.py file, it errors with the following.</p>
 <pre><code>E:iles\USD\maya-usd&gt;python build.py --maya-location \&quot;C:\Program Files\Autodesk\Maya2020\&quot; --pxrusd-location E:\downloads\usd-20-08-win64_py27_release --devkit-location E:\downloads\Autodesk_Maya_2020_2_Update_DEVKIT_Windows E:iles\USD\maya-usd\workspace
 
@@ -424,11 +424,11 @@ Traceback (most recent call last):
     .format(cmd=cmd, log=os.path.abspath(context.logFileLocation)))
 RuntimeError: Failed to run &#39;cmake -DCMAKE_INSTALL_PREFIX=\&quot;E:iles\USD\maya-usd\workspace\install\RelWithDebInfo\&quot; -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G \&quot;Visual Studio 14 2015 Win64\&quot; -DMAYA_LOCATION=\&quot;C:\Program Files\Autodesk\Maya2020\&quot; -DPXR_USD_LOCATION=\&quot;E:\downloads\usd-20-08-win64_py27_release\&quot; -DMAYA_DEVKIT_LOCATION=\&quot;E:\downloads\Autodesk_Maya_2020_2_Update_DEVKIT_Windows\&quot; -DMAYAUSD_DEFINE_BOOST_DEBUG_PYTHON_FLAG=OFF \&quot;E:iles\USD\maya-usd\&quot;&#39;
 See E:iles\USD\maya-usd\workspaceuild\RelWithDebInfouild_log.txt for more details.</code></pre>
-<p><strong>Build log</strong>
+<p>< b>Build log</ b>
 Build log and cmake output attached.<br />
 <a href="https://github.com/Autodesk/maya-usd/files/5338267/build_log.txt">build_log.txt</a>
 <a href="https://github.com/Autodesk/maya-usd/files/5338268/CMakeOutput.log">CMakeOutput.log</a></p>
-<p><strong>Specs:</strong>
+<p>< b>Specs:</ b>
 - Windows 10
 - VS 2019
 - Maya 2020
@@ -438,12 +438,12 @@ master d9f5bd5</p>
 <li>Pixar USD commit SHA
 binaries downloaded from https://developer.nvidia.com/usd</li>
 </ul>
-<p><strong>Additional context</strong>
+<p>< b>Additional context</ b>
 I have USD up and running using the binaries from nvidia. However I am not sure if that works with building this plugin for maya? Do I need to have the source for USD cloned and build to be able to use this plugin, or is there a way that I can use it in conjunction with the binaries from nvidia? I like to avoid having to go down the route of fully building USD on windows if I can. I have heard it is quite to journey!</p> ]]></description>
 </item>
 <item>	<title>Can't load  pxrUSD.mll and AL_USDMayaTestPlugin</title>
 	<link>https://github.com/Autodesk/maya-usd/issues/747</link>
-	<description><![CDATA[ <p><strong>Describe the issue</strong></p>
+	<description><![CDATA[ <p>< b>Describe the issue</ b></p>
 <p>After I finish the maya-usd instalation, I add as enviroment variables MAYA_MODULE_PATH: D:-usdand Tried to load all plugins from Plugin Manager and I get the following errors</p>
 <p>** Script Editor**
 "# Error: file: C:/Program Files/Autodesk/Maya2020/scripts/others/pluginWin.mel line 317: ImportError: file <maya console> line 1: No module named UsdMaya #
@@ -453,7 +453,7 @@ Error en una rutina de inicialización de biblioteca de vínculos dinámicos (DL
 //
 // Error: file: C:/Program Files/Autodesk/Maya2020/scripts/others/pluginWin.mel line 317: Error en una rutina de inicialización de biblioteca de vínculos dinámicos (DLL).
 (AL_USDMayaTestPlugin) //</p>
-<p><strong>Output Widnow</strong>
+<p>< b>Output Widnow</ b>
 error detected in .....cpp at line 132
 : (kFailure): Unexpected Internal Failure
 Coding Error: in Define at line 150 of D:.cpp – Multiple definitions of TfEnvSetting variable detected. This is usually due to software misconfiguration. Contact the build team for assistance. (duplicate ‘PIXMAYA_ENABLE_BOUNDING_BOX_MODE’)
@@ -469,37 +469,37 @@ Coding Error: in Define at line 150 of D:.cpp – Multiple definitions of TfEnvS
 <dd>(kFailure): Unexpected Internal Failure
 </dd>
 </dl>
-<p><strong>Build log</strong></p>
-<p><strong>Specs:</strong>
+<p>< b>Build log</ b></p>
+<p>< b>Specs:</ b>
 - OS &amp; version Windows 10
 - Compiler &amp; version [e.g. gcc 6.3.1]
 - Maya version Maya 2020</p>
-<p><strong>Additional context</strong>
+<p>< b>Additional context</ b>
 Add any other context about the problem here.</p> ]]></description>
 </item>
 <item>	<title>Not sure im going the stage test correctly</title>
 	<link>https://github.com/Autodesk/maya-usd/issues/705</link>
-	<description><![CDATA[ <p><strong>Describe the bug</strong>
+	<description><![CDATA[ <p>< b>Describe the bug</ b>
 Please See attatched txt file. I am trying to run my build with –stage=test like this:
 <code>python build.py --maya-location /usr/autodesk/maya2021 --pxrusd-location $SCRIPT_DIR/USD --devkit-location $SCRIPT_DIR/maya_devkit/devkitBase --stages=test  $SCRIPT_DIR/WorkspaceRefractor</code>
 alas it doesn’t do the test, looks pretty unhappy. Not sure whats up.</p>
-<p><strong>Attachments</strong>
+<p>< b>Attachments</ b>
 <a href="https://github.com/Autodesk/maya-usd/files/5057146/build_log.txt">build_log.txt</a></p>
-<p><strong>Specs (if applicable):</strong>
+<p>< b>Specs (if applicable):</ b>
 - OS &amp; version [Linux centos 7.7]
 - Compiler &amp; version [ gcc 6.3.1]
 - Maya version [Maya 2021/Maya beta PR117]
 - Maya USD commit SHA [ dev at 6210a2a]
 - Pixar USD commit SHA [20.08]</p>
-<p><strong>Additional context</strong>
+<p>< b>Additional context</ b>
 First time trying this in awhile has never worked for me before. Any help would be appreciated.
 Sue</p> ]]></description>
 </item>
 <item>	<title>WANT_UFE_BUILD scattered throughout build process</title>
 	<link>https://github.com/Autodesk/maya-usd/issues/589</link>
-	<description><![CDATA[ <p><strong>Describe the issue</strong>
-<strong>WANT_UFE_BUILD</strong> can wind up controlling vtable layout and availability of functions.
-Currently it’s usage is scattered throughout CMake and headers in mayaUsd, hdMaya, mayaToHydra, AL-usdmaya. Usually as <strong>PRIVATE</strong> sometimes as <strong>PUBLIC</strong> (#583).</p>
+	<description><![CDATA[ <p>< b>Describe the issue</ b>
+< b>WANT_UFE_BUILD</ b> can wind up controlling vtable layout and availability of functions.
+Currently it’s usage is scattered throughout CMake and headers in mayaUsd, hdMaya, mayaToHydra, AL-usdmaya. Usually as < b>PRIVATE</ b> sometimes as < b>PUBLIC</ b> (#583).</p>
 <p>Seems better to be held in a spot where all sub-projects consume the value, and anyone building against a distribution can ingest the MACRO properly (i.e. in an installed CMake target).</p> ]]></description>
 </item>
 
