@@ -73,6 +73,31 @@ N/A</p>
 <p><strong>Note</strong>
 If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p> ]]></description>
 </item>
+<item>	<title>Bazel Support</title>
+	<link>https://github.com/github/super-linter/issues/393</link>
+	<description><![CDATA[ <p>bazel linter</p>
+<ul>
+<li><a href="https://github.com/bazelbuild/buildtools/blob/master/buildifier/README.md">buildifier</a></li>
+</ul> ]]></description>
+</item>
+<item>	<title>Scala Support</title>
+	<link>https://github.com/github/super-linter/issues/392</link>
+	<description><![CDATA[ <p>Scala linter support.</p>
+<p>Choices are
+- <a href="https://github.com/scalacenter/scalafix">scalafix</a>
+- <a href="https://github.com/scalameta/scalafmt">scalafmt</a>
+- <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
+- <a href="https://github.com/wartremover/wartremover">wartremover</a></p> ]]></description>
+</item>
+<item>	<title>Scala Support</title>
+	<link>https://github.com/github/super-linter/issues/392</link>
+	<description><![CDATA[ <p>Scala linter support.</p>
+<p>Choices are
+- <a href="https://github.com/scalacenter/scalafix">scalafix</a>
+- <a href="https://github.com/scalameta/scalafmt">scalafmt</a>
+- <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
+- <a href="https://github.com/wartremover/wartremover">wartremover</a></p> ]]></description>
+</item>
 <item>	<title>ActiveSupport::Notifications instrumentation</title>
 	<link>https://github.com/github/view_component/issues/427</link>
 	<description><![CDATA[ <h2 id="feature-request">Feature request</h2>
@@ -155,6 +180,13 @@ its <code>child_component</code>s output_buffer to whatever <code>output_buffer<
 to. With that in place, when <code>capture</code> is called, then #output_buffer=`
 is called which will update the child component’s output buffer to the new
 temporary buffer correctly.</p> ]]></description>
+</item>
+<item>	<title>Microk8s 1.19.0 never ready, not working.</title>
+	<link>https://github.com/ubuntu/microk8s/issues/1570</link>
+	<description><![CDATA[ <p>Installing microk8s with <em>sudo snap install microk8s –classic</em> appears to go fine, but <em>microk8s status</em> always reports as microk8s not running. <em>microk8s kubectl get all –all-namespaces</em> shows everything as not ready and pending.</p>
+<p>Ubuntu 20.04.1 Desktop, network-interfaces are ens33, lo, virbr0 and virbr0-nic, so nothing particularly exciting there. The flannel - interface you’d get with an earlier microk8s - version is a no-show here.</p>
+<p>Already tried the solution mentioned in #1554 but that doesn’t work.
+<a href="https://github.com/ubuntu/microk8s/files/5228818/inspection-report-20200916_031614.tar.gz">inspection-report-20200916_031614.tar.gz</a></p> ]]></description>
 </item>
 <item>	<title>OSD level scale invisible</title>
 	<link>https://github.com/ubuntu/yaru/issues/2214</link>
@@ -267,10 +299,6 @@ https://guides.github.com/activities/citable-code/</p> ]]></description>
 <li>transcribing individual files in a dir</li>
 <li>transcribing long audio file after VAD split</li>
 </ol> ]]></description>
-</item>
-<item>	<title>Add code coverage report to CI</title>
-	<link>https://github.com/mozilla/DeepSpeech/issues/2977</link>
-	<description><![CDATA[  ]]></description>
 </item>
 <item>	<title>getting very bad transcript while live streaming on r0.6 version node js socket api</title>
 	<link>https://github.com/mozilla/DeepSpeech-examples/issues/66</link>
