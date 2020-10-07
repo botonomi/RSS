@@ -8,17 +8,17 @@
 	<link>https://github.com/Autodesk/maya-usd/issues/820</link>
 	<description><![CDATA[ <p><strong>Describe the issue</strong>
 I am attempting to build this plugin on windows. Following the instructions on the build page, I have cloned the repo and on attempting to run the build.py file, it errors with the following.</p>
-<pre><code>E:iles\USD\maya-usd&gt;python build.py --maya-location \&quot;C:\Program Files\Autodesk\Maya2020\&quot; --pxrusd-location E:\downloads\usd-20-08-win64_py27_release --devkit-location E:\downloads\Autodesk_Maya_2020_2_Update_DEVKIT_Windows E:iles\USD\maya-usd\workspace
+<pre><code>E:\files\USD\maya-usd&gt;python build.py --maya-location \&quot;C:\Program Files\Autodesk\Maya2020\&quot; --pxrusd-location E:\downloads\usd-20-08-win64_py27_release --devkit-location E:\downloads\Autodesk_Maya_2020_2_Update_DEVKIT_Windows E:\files\USD\maya-usd\workspace
 
     Building with settings:
-      Source directory          E:iles\USD\maya-usd
-      Workspace directory       E:iles\USD\maya-usd\workspace
-      Build directory           E:iles\USD\maya-usd\workspaceuild\RelWithDebInfo
-      Install directory         E:iles\USD\maya-usd\workspace\install\RelWithDebInfo
+      Source directory          E:\files\USD\maya-usd
+      Workspace directory       E:\files\USD\maya-usd\workspace
+      Build directory           E:\files\USD\maya-usd\workspace\build\RelWithDebInfo
+      Install directory         E:\files\USD\maya-usd\workspace\install\RelWithDebInfo
       Variant                   RelWithDebInfo
       Python Debug              Off
       CMake generator           Default
-      Build Log                 E:iles\USD\maya-usd\workspaceuild\RelWithDebInfouild_log.txt
+      Build Log                 E:\files\USD\maya-usd\workspace\build\RelWithDebInfo\build_log.txt
       Stages arguments          [&#39;clean&#39;, &#39;configure&#39;, &#39;build&#39;, &#39;install&#39;]
 #####################################################################################
 log date: 2020-10-06 21:16
@@ -26,7 +26,7 @@ commit sha: f94bcfaa2884b5955169b379a24e6979fc38ee2e
 commit date: Wed Sep 30 15:30:26 2020 -0400
 #####################################################################################
 
-cmake -DCMAKE_INSTALL_PREFIX=\&quot;E:iles\USD\maya-usd\workspace\install\RelWithDebInfo\&quot; -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G \&quot;Visual Studio 14 2015 Win64\&quot; -DMAYA_LOCATION=\&quot;C:\Program Files\Autodesk\Maya2020\&quot; -DPXR_USD_LOCATION=\&quot;E:\downloads\usd-20-08-win64_py27_release\&quot; -DMAYA_DEVKIT_LOCATION=\&quot;E:\downloads\Autodesk_Maya_2020_2_Update_DEVKIT_Windows\&quot; -DMAYAUSD_DEFINE_BOOST_DEBUG_PYTHON_FLAG=OFF \&quot;E:iles\USD\maya-usd\&quot;
+cmake -DCMAKE_INSTALL_PREFIX=\&quot;E:\files\USD\maya-usd\workspace\install\RelWithDebInfo\&quot; -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G \&quot;Visual Studio 14 2015 Win64\&quot; -DMAYA_LOCATION=\&quot;C:\Program Files\Autodesk\Maya2020\&quot; -DPXR_USD_LOCATION=\&quot;E:\downloads\usd-20-08-win64_py27_release\&quot; -DMAYA_DEVKIT_LOCATION=\&quot;E:\downloads\Autodesk_Maya_2020_2_Update_DEVKIT_Windows\&quot; -DMAYAUSD_DEFINE_BOOST_DEBUG_PYTHON_FLAG=OFF \&quot;E:\files\USD\maya-usd\&quot;
 -- Selecting Windows SDK version  to target Windows 10.0.19041.
 CMake Error at CMakeLists.txt:18 (project):
   Failed to run MSBuild command:
@@ -51,8 +51,8 @@ Traceback (most recent call last):
     extraArgs=(\&quot; \&quot;.join(extraArgs) if extraArgs else \&quot;\&quot;)))
   File \&quot;build.py\&quot;, line 165, in Run
     .format(cmd=cmd, log=os.path.abspath(context.logFileLocation)))
-RuntimeError: Failed to run &#39;cmake -DCMAKE_INSTALL_PREFIX=\&quot;E:iles\USD\maya-usd\workspace\install\RelWithDebInfo\&quot; -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G \&quot;Visual Studio 14 2015 Win64\&quot; -DMAYA_LOCATION=\&quot;C:\Program Files\Autodesk\Maya2020\&quot; -DPXR_USD_LOCATION=\&quot;E:\downloads\usd-20-08-win64_py27_release\&quot; -DMAYA_DEVKIT_LOCATION=\&quot;E:\downloads\Autodesk_Maya_2020_2_Update_DEVKIT_Windows\&quot; -DMAYAUSD_DEFINE_BOOST_DEBUG_PYTHON_FLAG=OFF \&quot;E:iles\USD\maya-usd\&quot;&#39;
-See E:iles\USD\maya-usd\workspaceuild\RelWithDebInfouild_log.txt for more details.</code></pre>
+RuntimeError: Failed to run &#39;cmake -DCMAKE_INSTALL_PREFIX=\&quot;E:\files\USD\maya-usd\workspace\install\RelWithDebInfo\&quot; -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G \&quot;Visual Studio 14 2015 Win64\&quot; -DMAYA_LOCATION=\&quot;C:\Program Files\Autodesk\Maya2020\&quot; -DPXR_USD_LOCATION=\&quot;E:\downloads\usd-20-08-win64_py27_release\&quot; -DMAYA_DEVKIT_LOCATION=\&quot;E:\downloads\Autodesk_Maya_2020_2_Update_DEVKIT_Windows\&quot; -DMAYAUSD_DEFINE_BOOST_DEBUG_PYTHON_FLAG=OFF \&quot;E:\files\USD\maya-usd\&quot;&#39;
+See E:\files\USD\maya-usd\workspace\build\RelWithDebInfo\build_log.txt for more details.</code></pre>
 <p><strong>Build log</strong>
 Build log and cmake output attached.<br />
 <a href="https://github.com/Autodesk/maya-usd/files/5338267/build_log.txt">build_log.txt</a>
