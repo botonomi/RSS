@@ -73,31 +73,6 @@ N/A</p>
 <p><strong>Note</strong>
 If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p> ]]></description>
 </item>
-<item>	<title>Bazel Support</title>
-	<link>https://github.com/github/super-linter/issues/393</link>
-	<description><![CDATA[ <p>bazel linter</p>
-<ul>
-<li><a href="https://github.com/bazelbuild/buildtools/blob/master/buildifier/README.md">buildifier</a></li>
-</ul> ]]></description>
-</item>
-<item>	<title>Scala Support</title>
-	<link>https://github.com/github/super-linter/issues/392</link>
-	<description><![CDATA[ <p>Scala linter support.</p>
-<p>Choices are
-- <a href="https://github.com/scalacenter/scalafix">scalafix</a>
-- <a href="https://github.com/scalameta/scalafmt">scalafmt</a>
-- <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
-- <a href="https://github.com/wartremover/wartremover">wartremover</a></p> ]]></description>
-</item>
-<item>	<title>Scala Support</title>
-	<link>https://github.com/github/super-linter/issues/392</link>
-	<description><![CDATA[ <p>Scala linter support.</p>
-<p>Choices are
-- <a href="https://github.com/scalacenter/scalafix">scalafix</a>
-- <a href="https://github.com/scalameta/scalafmt">scalafmt</a>
-- <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
-- <a href="https://github.com/wartremover/wartremover">wartremover</a></p> ]]></description>
-</item>
 <item>	<title>ActiveSupport::Notifications instrumentation</title>
 	<link>https://github.com/github/view_component/issues/427</link>
 	<description><![CDATA[ <h2 id="feature-request">Feature request</h2>
@@ -399,6 +374,72 @@ training a model with all the available datasets.</li>
 	<link>https://github.com/mozilla/TTS/issues/395</link>
 	<description><![CDATA[ <p>Please consider sharing your pre-trained models in any language (If the licenses allow that). We can include them in our model catalog for public use by referencing your name (website, company etc.).</p>
 <p>That would enable more people experiment together and coordinate, instead of individual efforts to achieve similar goals. That is also a good chance to make your work more visible.</p> ]]></description>
+</item>
+<item>	<title>Error building on Windows 10</title>
+	<link>https://github.com/Autodesk/maya-usd/issues/820</link>
+	<description><![CDATA[ <p><strong>Describe the issue</strong>
+I am attempting to build this plugin on windows. Following the instructions on the build page, I have cloned the repo and on attempting to run the build.py file, it errors with the following.</p>
+<pre><code>E:iles\USD\maya-usd&gt;python build.py --maya-location \&quot;C:\Program Files\Autodesk\Maya2020\&quot; --pxrusd-location E:\downloads\usd-20-08-win64_py27_release --devkit-location E:\downloads\Autodesk_Maya_2020_2_Update_DEVKIT_Windows E:iles\USD\maya-usd\workspace
+
+    Building with settings:
+      Source directory          E:iles\USD\maya-usd
+      Workspace directory       E:iles\USD\maya-usd\workspace
+      Build directory           E:iles\USD\maya-usd\workspaceuild\RelWithDebInfo
+      Install directory         E:iles\USD\maya-usd\workspace\install\RelWithDebInfo
+      Variant                   RelWithDebInfo
+      Python Debug              Off
+      CMake generator           Default
+      Build Log                 E:iles\USD\maya-usd\workspaceuild\RelWithDebInfouild_log.txt
+      Stages arguments          [&#39;clean&#39;, &#39;configure&#39;, &#39;build&#39;, &#39;install&#39;]
+#####################################################################################
+log date: 2020-10-06 21:16
+commit sha: f94bcfaa2884b5955169b379a24e6979fc38ee2e
+commit date: Wed Sep 30 15:30:26 2020 -0400
+#####################################################################################
+
+cmake -DCMAKE_INSTALL_PREFIX=\&quot;E:iles\USD\maya-usd\workspace\install\RelWithDebInfo\&quot; -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G \&quot;Visual Studio 14 2015 Win64\&quot; -DMAYA_LOCATION=\&quot;C:\Program Files\Autodesk\Maya2020\&quot; -DPXR_USD_LOCATION=\&quot;E:\downloads\usd-20-08-win64_py27_release\&quot; -DMAYA_DEVKIT_LOCATION=\&quot;E:\downloads\Autodesk_Maya_2020_2_Update_DEVKIT_Windows\&quot; -DMAYAUSD_DEFINE_BOOST_DEBUG_PYTHON_FLAG=OFF \&quot;E:iles\USD\maya-usd\&quot;
+-- Selecting Windows SDK version  to target Windows 10.0.19041.
+CMake Error at CMakeLists.txt:18 (project):
+  Failed to run MSBuild command:
+
+    MSBuild.exe
+
+  to get the value of VCTargetsPath:
+
+    The system cannot find the file specified
+
+
+
+-- Configuring incomplete, errors occurred!
+See also \&quot;E:/files/USD/maya-usd/workspace/build/RelWithDebInfo/CMakeFiles/CMakeOutput.log\&quot;.
+
+Traceback (most recent call last):
+  File \&quot;build.py\&quot;, line 602, in &lt;module&gt;
+    BuildAndInstall(context, context.buildArgs, context.stagesArgs)
+  File \&quot;build.py\&quot;, line 371, in BuildAndInstall
+    RunCMake(context, extraArgs, stagesArgs)
+  File \&quot;build.py\&quot;, line 277, in RunCMake
+    extraArgs=(\&quot; \&quot;.join(extraArgs) if extraArgs else \&quot;\&quot;)))
+  File \&quot;build.py\&quot;, line 165, in Run
+    .format(cmd=cmd, log=os.path.abspath(context.logFileLocation)))
+RuntimeError: Failed to run &#39;cmake -DCMAKE_INSTALL_PREFIX=\&quot;E:iles\USD\maya-usd\workspace\install\RelWithDebInfo\&quot; -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G \&quot;Visual Studio 14 2015 Win64\&quot; -DMAYA_LOCATION=\&quot;C:\Program Files\Autodesk\Maya2020\&quot; -DPXR_USD_LOCATION=\&quot;E:\downloads\usd-20-08-win64_py27_release\&quot; -DMAYA_DEVKIT_LOCATION=\&quot;E:\downloads\Autodesk_Maya_2020_2_Update_DEVKIT_Windows\&quot; -DMAYAUSD_DEFINE_BOOST_DEBUG_PYTHON_FLAG=OFF \&quot;E:iles\USD\maya-usd\&quot;&#39;
+See E:iles\USD\maya-usd\workspaceuild\RelWithDebInfouild_log.txt for more details.</code></pre>
+<p><strong>Build log</strong>
+Build log and cmake output attached.<br />
+<a href="https://github.com/Autodesk/maya-usd/files/5338267/build_log.txt">build_log.txt</a>
+<a href="https://github.com/Autodesk/maya-usd/files/5338268/CMakeOutput.log">CMakeOutput.log</a></p>
+<p><strong>Specs:</strong>
+- Windows 10
+- VS 2019
+- Maya 2020
+- Maya USD commit SHA
+master d9f5bd5</p>
+<ul>
+<li>Pixar USD commit SHA
+binaries downloaded from https://developer.nvidia.com/usd</li>
+</ul>
+<p><strong>Additional context</strong>
+I have USD up and running using the binaries from nvidia. However I am not sure if that works with building this plugin for maya? Do I need to have the source for USD cloned and build to be able to use this plugin, or is there a way that I can use it in conjunction with the binaries from nvidia? I like to avoid having to go down the route of fully building USD on windows if I can. I have heard it is quite to journey!</p> ]]></description>
 </item>
 <item>	<title>Can't load  pxrUSD.mll and AL_USDMayaTestPlugin</title>
 	<link>https://github.com/Autodesk/maya-usd/issues/747</link>
