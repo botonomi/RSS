@@ -116,6 +116,11 @@ If this is a request to add a new language, after submitting this issue check ou
 - <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
 - <a href="https://github.com/wartremover/wartremover">wartremover</a></p></pre> ]]></description>
 </item>
+<item>	<title>Fix broken link in ISSUE TEMPLATE</title>
+	<link>https://github.com/github/training-kit/pull/779</link>
+	<description><![CDATA[ <pre><h2 id="overview">Overview</h2>
+<p>I fix a broken link in <strong>ISSUE TEMPLATE</strong>.</p></pre> ]]></description>
+</item>
 <item>	<title>ActiveSupport::Notifications instrumentation</title>
 	<link>https://github.com/github/view_component/issues/427</link>
 	<description><![CDATA[ <pre><h2 id="feature-request">Feature request</h2>
@@ -317,6 +322,10 @@ https://guides.github.com/activities/citable-code/</p></pre> ]]></description>
 <li>transcribing individual files in a dir</li>
 <li>transcribing long audio file after VAD split</li>
 </ol></pre> ]]></description>
+</item>
+<item>	<title>Add code coverage report to CI</title>
+	<link>https://github.com/mozilla/DeepSpeech/issues/2977</link>
+	<description><![CDATA[ <pre></pre> ]]></description>
 </item>
 <item>	<title>getting very bad transcript while live streaming on r0.6 version node js socket api</title>
 	<link>https://github.com/mozilla/DeepSpeech-examples/issues/66</link>
