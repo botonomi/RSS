@@ -16,6 +16,24 @@
 <p><span class="citation" data-cites="parkr">@parkr</span> any interest?
 <span class="citation" data-cites="dhcole">@dhcole</span> any insight / words of wisdom?</p></pre> ]]></description>
 </item>
+<item>	<title>Support for locally present bundles</title>
+	<link>https://github.com/github/codeql-action/issues/154</link>
+	<description><![CDATA[ <pre><p>I would like to run code-scanning with a custom code-scanning bundle
+that already is present on my local disk. I can currently do that by
+making the following hack:</p>
+<h3 id="install-bundle-in-tool-cache">1 Install bundle in tool cache:</h3>
+<p>Use <code>toolCache.cacheDir</code> to install the bundle with a specially crafted ID:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1"></a>tc<span class="op">.</span><span class="fu">cacheDir</span>(localBundlePath<span class="op">,</span> <span class="st">&#39;CodeQL&#39;</span><span class="op">,</span> \<span class="st">&quot;0.0.0-XXX-DUMMY-BUNDLE-ID</span><span class="sc">\&quot;</span><span class="st">);</span></span></code></pre></div>
+<h3 id="convince-codeql-to-look-in-the-tool-cache">2 Convince codeql to look in the tool cache:</h3>
+<p>The codeql action is then invoked with a dummy URL that will make codeql.ts lookup the bundle with the specially crafted ID:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1"></a><span class="at">        ...</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="at">        </span><span class="fu">tools</span><span class="kw">:</span><span class="at"> dummy://codeql-bundle-XXX-DUMMY-BUNDLE-ID/dummy</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="at">        ...</span></span></code></pre></div>
+<hr />
+<p>This works, but I would like a more reliable solution. I am not sure
+what the best approach is for supporting my use case, but I am happy
+to look into implementing a suggestion.</p></pre> ]]></description>
+</item>
 <item>	<title>TODO: Configure caching for fast building on CI</title>
 	<link>https://github.com/github/government.github.com/issues/750</link>
 	<description><![CDATA[ <pre><p>Description and details here: https://github.com/gjtorikian/html-proofer#configuring-caching and https://github.com/gjtorikian/html-proofer#caching-with-travis</p></pre> ]]></description>
@@ -402,72 +420,6 @@ training a model with all the available datasets.</li>
 	<link>https://github.com/mozilla/TTS/issues/395</link>
 	<description><![CDATA[ <pre><p>Please consider sharing your pre-trained models in any language (If the licenses allow that). We can include them in our model catalog for public use by referencing your name (website, company etc.).</p>
 <p>That would enable more people experiment together and coordinate, instead of individual efforts to achieve similar goals. That is also a good chance to make your work more visible.</p></pre> ]]></description>
-</item>
-<item>	<title>Error building on Windows 10</title>
-	<link>https://github.com/Autodesk/maya-usd/issues/820</link>
-	<description><![CDATA[ <pre><p><strong>Describe the issue</strong>
-I am attempting to build this plugin on windows. Following the instructions on the build page, I have cloned the repo and on attempting to run the build.py file, it errors with the following.</p>
-<pre><code>E:\files\USD\maya-usd&gt;python build.py --maya-location \&quot;C:\Program Files\Autodesk\Maya2020\&quot; --pxrusd-location E:\downloads\usd-20-08-win64_py27_release --devkit-location E:\downloads\Autodesk_Maya_2020_2_Update_DEVKIT_Windows E:\files\USD\maya-usd\workspace
-
-    Building with settings:
-      Source directory          E:\files\USD\maya-usd
-      Workspace directory       E:\files\USD\maya-usd\workspace
-      Build directory           E:\files\USD\maya-usd\workspace\build\RelWithDebInfo
-      Install directory         E:\files\USD\maya-usd\workspace\install\RelWithDebInfo
-      Variant                   RelWithDebInfo
-      Python Debug              Off
-      CMake generator           Default
-      Build Log                 E:\files\USD\maya-usd\workspace\build\RelWithDebInfo\build_log.txt
-      Stages arguments          [&#39;clean&#39;, &#39;configure&#39;, &#39;build&#39;, &#39;install&#39;]
-#####################################################################################
-log date: 2020-10-06 21:16
-commit sha: f94bcfaa2884b5955169b379a24e6979fc38ee2e
-commit date: Wed Sep 30 15:30:26 2020 -0400
-#####################################################################################
-
-cmake -DCMAKE_INSTALL_PREFIX=\&quot;E:\files\USD\maya-usd\workspace\install\RelWithDebInfo\&quot; -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G \&quot;Visual Studio 14 2015 Win64\&quot; -DMAYA_LOCATION=\&quot;C:\Program Files\Autodesk\Maya2020\&quot; -DPXR_USD_LOCATION=\&quot;E:\downloads\usd-20-08-win64_py27_release\&quot; -DMAYA_DEVKIT_LOCATION=\&quot;E:\downloads\Autodesk_Maya_2020_2_Update_DEVKIT_Windows\&quot; -DMAYAUSD_DEFINE_BOOST_DEBUG_PYTHON_FLAG=OFF \&quot;E:\files\USD\maya-usd\&quot;
--- Selecting Windows SDK version  to target Windows 10.0.19041.
-CMake Error at CMakeLists.txt:18 (project):
-  Failed to run MSBuild command:
-
-    MSBuild.exe
-
-  to get the value of VCTargetsPath:
-
-    The system cannot find the file specified
-
-
-
--- Configuring incomplete, errors occurred!
-See also \&quot;E:/files/USD/maya-usd/workspace/build/RelWithDebInfo/CMakeFiles/CMakeOutput.log\&quot;.
-
-Traceback (most recent call last):
-  File \&quot;build.py\&quot;, line 602, in &lt;module&gt;
-    BuildAndInstall(context, context.buildArgs, context.stagesArgs)
-  File \&quot;build.py\&quot;, line 371, in BuildAndInstall
-    RunCMake(context, extraArgs, stagesArgs)
-  File \&quot;build.py\&quot;, line 277, in RunCMake
-    extraArgs=(\&quot; \&quot;.join(extraArgs) if extraArgs else \&quot;\&quot;)))
-  File \&quot;build.py\&quot;, line 165, in Run
-    .format(cmd=cmd, log=os.path.abspath(context.logFileLocation)))
-RuntimeError: Failed to run &#39;cmake -DCMAKE_INSTALL_PREFIX=\&quot;E:\files\USD\maya-usd\workspace\install\RelWithDebInfo\&quot; -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G \&quot;Visual Studio 14 2015 Win64\&quot; -DMAYA_LOCATION=\&quot;C:\Program Files\Autodesk\Maya2020\&quot; -DPXR_USD_LOCATION=\&quot;E:\downloads\usd-20-08-win64_py27_release\&quot; -DMAYA_DEVKIT_LOCATION=\&quot;E:\downloads\Autodesk_Maya_2020_2_Update_DEVKIT_Windows\&quot; -DMAYAUSD_DEFINE_BOOST_DEBUG_PYTHON_FLAG=OFF \&quot;E:\files\USD\maya-usd\&quot;&#39;
-See E:\files\USD\maya-usd\workspace\build\RelWithDebInfo\build_log.txt for more details.</code></pre>
-<p><strong>Build log</strong>
-Build log and cmake output attached.<br />
-<a href="https://github.com/Autodesk/maya-usd/files/5338267/build_log.txt">build_log.txt</a>
-<a href="https://github.com/Autodesk/maya-usd/files/5338268/CMakeOutput.log">CMakeOutput.log</a></p>
-<p><strong>Specs:</strong>
-- Windows 10
-- VS 2019
-- Maya 2020
-- Maya USD commit SHA
-master d9f5bd5</p>
-<ul>
-<li>Pixar USD commit SHA
-binaries downloaded from https://developer.nvidia.com/usd</li>
-</ul>
-<p><strong>Additional context</strong>
-I have USD up and running using the binaries from nvidia. However I am not sure if that works with building this plugin for maya? Do I need to have the source for USD cloned and build to be able to use this plugin, or is there a way that I can use it in conjunction with the binaries from nvidia? I like to avoid having to go down the route of fully building USD on windows if I can. I have heard it is quite to journey!</p></pre> ]]></description>
 </item>
 <item>	<title>Not sure im going the stage test correctly</title>
 	<link>https://github.com/Autodesk/maya-usd/issues/705</link>
