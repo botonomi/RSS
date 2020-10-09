@@ -91,11 +91,6 @@ N/A</p>
 <p><strong>Note</strong>
 If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p></pre> ]]></description>
 </item>
-<item>	<title>Fix broken link in ISSUE TEMPLATE</title>
-	<link>https://github.com/github/training-kit/pull/779</link>
-	<description><![CDATA[ <pre><h2 id="overview">Overview</h2>
-<p>I fix a broken link in <strong>ISSUE TEMPLATE</strong>.</p></pre> ]]></description>
-</item>
 <item>	<title>ActiveSupport::Notifications instrumentation</title>
 	<link>https://github.com/github/view_component/issues/427</link>
 	<description><![CDATA[ <pre><h2 id="feature-request">Feature request</h2>
@@ -193,33 +188,6 @@ temporary buffer correctly.</p></pre> ]]></description>
 <figure>
 <img src="https://user-images.githubusercontent.com/2692138/85305349-90fd1d00-b472-11ea-9db7-e0e1611c0b26.png" alt="" /><figcaption>Screenshot at 2020-06-22 10-14-35</figcaption>
 </figure></pre> ]]></description>
-</item>
-<item>	<title>[Bionic] Check mark (✓) is invisible in Firefox context menu</title>
-	<link>https://github.com/ubuntu/yaru/issues/2064</link>
-	<description><![CDATA[ <pre><h3 id="steps-to-see-the-issue">Steps to see the issue</h3>
-<ol type="1">
-<li>Open Firefox and go to a text field</li>
-<li>Right-click in a text field and select "Check Spelling"</li>
-<li>You should see a check mark (✓) beside "Check Spelling"</li>
-<li>The check mark is invisible</li>
-</ol>
-<h3 id="software-that-presents-the-issue">Software that presents the issue</h3>
-<ul>
-<li>OS: Ubuntu 18.04</li>
-<li>App: Firefox</li>
-<li>Version: 74</li>
-</ul>
-<h3 id="yaru-version">Yaru version</h3>
-<p>$ snap info communitheme
-snap-id: Yd6CISPIf6tEf3ZEJ0cqSoEg9rG2VkRi
-tracking: latest/edge
-refresh-date: 11 days ago, at 19:12 CET
-channels:
-stable: 0.1 2019-03-13 (1768) 16MB -
-candidate: ↑<br />
-beta: ↑<br />
-edge: 29.180 2020-03-03 (1970) 18MB -
-installed: 29.180 (1970) 18MB -</p></pre> ]]></description>
 </item>
 <item>	<title>Debug builds for Windows</title>
 	<link>https://github.com/mozilla/DeepSpeech/issues/3359</link>
@@ -350,10 +318,6 @@ If so, can I use socketio protocol, to send the transcribed text over to client?
 <item>	<title>Command table should contain short command names</title>
 	<link>https://github.com/mozilla/OpenWPM/issues/684</link>
 	<description><![CDATA[ <pre><p>It shouldn’t be the full type name in the table but so instead of automation.commands…GetCommand</p></pre> ]]></description>
-</item>
-<item>	<title>Use a stack approach for cognitive complexity</title>
-	<link>https://github.com/mozilla/rust-code-analysis/issues/289</link>
-	<description><![CDATA[ <pre><p>Currently the cognitive complexity metric analyzes the nodes using ancestors. It would be helpful to analyze the nodes using a stack approach</p></pre> ]]></description>
 </item>
 <item>	<title>Multi-Speaker TTS with Attentron</title>
 	<link>https://github.com/mozilla/TTS/issues/516</link>
