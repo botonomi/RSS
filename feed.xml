@@ -347,32 +347,6 @@ If so, can I use socketio protocol, to send the transcribed text over to client?
 	<description><![CDATA[ <pre><p>It would be nice to have Azure tests available as we make further use of it.</p>
 <p>Can refer to the <a href="https://www.cisecurity.org/benchmark/azure/">CIS Benchmark for Azure</a>, our internal review, and <a href="https://github.com/nccgroup/ScoutSuite/tree/master/ScoutSuite/providers/azure/rules/findings">ScoutSuite’s rules</a> to determine an initial list of tests to add.</p></pre> ]]></description>
 </item>
-<item>	<title>feat(fxa-settings): RTL support</title>
-	<link>https://github.com/mozilla/fxa/pull/6624</link>
-	<description><![CDATA[ <pre><h2 id="because">Because</h2>
-<p>The new settings page needs to support RTL languages (HE, AR, FA)</p>
-<h2 id="this-pull-request">This pull request</h2>
-<p>Uses the Tailwind Direcion plugin to support both LTR and RTL languages. Class names were updated to use the new convention. The README file for the project was also updated to explain the usage going forward</p>
-<h2 id="issue-that-this-pull-request-solves">Issue that this pull request solves</h2>
-<p>Closes: #5169</p>
-<h2 id="checklist">Checklist</h2>
-<ul class="task-list">
-<li><input type="checkbox" disabled="" checked="" />
-My commit is GPG signed.</li>
-<li><input type="checkbox" disabled="" />
-If applicable, I have modified or added tests which pass locally.</li>
-<li><input type="checkbox" disabled="" checked="" />
-I have added necessary documentation (if appropriate).</li>
-</ul>
-<h2 id="screenshots-optional">Screenshots (Optional)</h2>
-<p>Before:
-<img src="https://user-images.githubusercontent.com/633345/95248697-59975e00-0820-11eb-84b4-6b5ab4b6d417.png" alt="settings-rtl-before" /></p>
-<p>After:
-<img src="https://user-images.githubusercontent.com/633345/95248029-5780cf80-081f-11eb-9d21-944e92fd18da.png" alt="settings-rtl-after" /></p>
-<h2 id="other-information-optional">Other information (Optional)</h2>
-<p>This PR covers for now the main settings page, and the Avater and Bento menus. It was checked by me on Firefox desktop and mobile emulations (phone + tablet).
-Since the settings page is still a work in progress, much more work will be required to maintain the RTL support for the drill-down screens. Hopefully with the examples in the code and the README, it will be easier to do.</p></pre> ]]></description>
-</item>
 <item>	<title>Command table should contain short command names</title>
 	<link>https://github.com/mozilla/OpenWPM/issues/684</link>
 	<description><![CDATA[ <pre><p>It shouldn’t be the full type name in the table but so instead of automation.commands…GetCommand</p></pre> ]]></description>
