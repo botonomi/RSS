@@ -168,24 +168,6 @@ temporary buffer correctly.</p></pre> ]]></description>
 </blockquote>
 <p>I’d like to be able to clone a gist, just like I can clone a repo. This is all that’s still needed in order to be able to use <code>gh</code> to enumerate and backup/export (clone) all owned gists.</p></pre> ]]></description>
 </item>
-<item>	<title>Letting the user specify the base init dir for the newly created repo</title>
-	<link>https://github.com/cli/cli/issues/2077</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
-<p>I’m really happy to use <code>gh</code> for my projects and it’s really helping me with increasing GitHub processes speed. But when I use <code>gh repo create</code>, it initializes the created repository in the current directory and I cannot customize the target base folder. If I’m in another directory than the actual folder I would like to create the project in, then I have to switch the directory and then use <code>gh</code>.</p>
-<pre><code>▶ gh repo create organization/foo --confirm --private
-✓ Created repository organization/foo on GitHub
-Initialized empty Git repository in ./foo/.git/
-✓ Initialized repository in &#39;./foo/&#39;</code></pre>
-<p>In this case, I would like to init the repo in another folder, not in the current one.</p>
-<h3 id="proposed-solution">Proposed solution</h3>
-<p>To be able to achieve this issue, we can add a new flag for <code>gh repo create</code> and let the user specify the base init dir for the newly created repo. So they can initialize the repo in whatever directory they want.</p>
-<pre><code>▶ gh repo create organization/foo --confirm --private --init-base-dir=/dev/repo/target
-✓ Created repository organization/foo on GitHub
-Initialized empty Git repository in /dev/repo/target/foo/.git/
-✓ Initialized repository in &#39;/dev/repo/target/foo/&#39;</code></pre>
-<h3 id="additional-context">Additional context</h3>
-<p>I can happily send a pull request for this feature if you would agree with the feature.</p></pre> ]]></description>
-</item>
 <item>	<title>Mate: OSD level scale invisible</title>
 	<link>https://github.com/ubuntu/yaru/issues/2214</link>
 	<description><![CDATA[ <pre><p>Hi there, first of all, thanks for this very nice theme.</p>
