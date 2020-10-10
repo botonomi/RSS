@@ -195,9 +195,9 @@ temporary buffer correctly.</p></pre> ]]></description>
 	<link>https://github.com/mozilla/DeepSpeech/issues/3336</link>
 	<description><![CDATA[ <pre><p>This is a follow-up of #3297: new API entry points have been added and exposed in all bindings.</p>
 <p>This bug is about replicating what has been done in #3297 for using this new API in the Python binary and do that in all our other binaries, as well as add CI testing:
-- JavaScript (NodeJS, ElectronJS)
-- Java (APK app)
-- .Net</p>
+- [x] JavaScript (NodeJS, ElectronJS) #3361
+- [ ] Java (APK app)
+- [ ] .Net</p>
 <p>Anyone willing to take care of that is welcome to ask more details, here or on Matrix. This is a good way to get into the project: it’s technically easy but it touches several places as well as CI testing, so you get a nice overview of the surface.</p></pre> ]]></description>
 </item>
 <item>	<title>Please add citation information</title>
