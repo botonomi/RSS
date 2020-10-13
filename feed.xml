@@ -73,6 +73,10 @@ N/A</p>
 <p><strong>Note</strong>
 If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p></pre> ]]></description>
 </item>
+<item>	<title>[WIP] Add support for fragment caching</title>
+	<link>https://github.com/github/view_component/pull/476</link>
+	<description><![CDATA[ <pre></pre> ]]></description>
+</item>
 <item>	<title>ActiveSupport::Notifications instrumentation</title>
 	<link>https://github.com/github/view_component/issues/427</link>
 	<description><![CDATA[ <pre><h2 id="feature-request">Feature request</h2>
