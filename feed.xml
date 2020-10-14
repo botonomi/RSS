@@ -16,6 +16,24 @@
 <p><span class="citation" data-cites="parkr">@parkr</span> any interest?
 <span class="citation" data-cites="dhcole">@dhcole</span> any insight / words of wisdom?</p></pre> ]]></description>
 </item>
+<item>	<title>Support for locally present bundles</title>
+	<link>https://github.com/github/codeql-action/issues/154</link>
+	<description><![CDATA[ <pre><p>I would like to run code-scanning with a custom code-scanning bundle
+that already is present on my local disk. I can currently do that by
+making the following hack:</p>
+<h3 id="install-bundle-in-tool-cache">1 Install bundle in tool cache:</h3>
+<p>Use <code>toolCache.cacheDir</code> to install the bundle with a specially crafted ID:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1"></a>tc<span class="op">.</span><span class="fu">cacheDir</span>(localBundlePath<span class="op">,</span> <span class="st">&#39;CodeQL&#39;</span><span class="op">,</span> \<span class="st">&quot;0.0.0-XXX-DUMMY-BUNDLE-ID</span><span class="sc">\&quot;</span><span class="st">);</span></span></code></pre></div>
+<h3 id="convince-codeql-to-look-in-the-tool-cache">2 Convince codeql to look in the tool cache:</h3>
+<p>The codeql action is then invoked with a dummy URL that will make codeql.ts lookup the bundle with the specially crafted ID:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1"></a><span class="at">        ...</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="at">        </span><span class="fu">tools</span><span class="kw">:</span><span class="at"> dummy://codeql-bundle-XXX-DUMMY-BUNDLE-ID/dummy</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="at">        ...</span></span></code></pre></div>
+<hr />
+<p>This works, but I would like a more reliable solution. I am not sure
+what the best approach is for supporting my use case, but I am happy
+to look into implementing a suggestion.</p></pre> ]]></description>
+</item>
 <item>	<title>TODO: Configure caching for fast building on CI</title>
 	<link>https://github.com/github/government.github.com/issues/750</link>
 	<description><![CDATA[ <pre><p>Description and details here: https://github.com/gjtorikian/html-proofer#configuring-caching and https://github.com/gjtorikian/html-proofer#caching-with-travis</p></pre> ]]></description>
@@ -72,6 +90,41 @@ N/A</p>
 N/A</p>
 <p><strong>Note</strong>
 If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p></pre> ]]></description>
+</item>
+<item>	<title>Bazel Support</title>
+	<link>https://github.com/github/super-linter/issues/393</link>
+	<description><![CDATA[ <pre><p>bazel linter</p>
+<ul>
+<li><a href="https://github.com/bazelbuild/buildtools/blob/master/buildifier/README.md">buildifier</a></li>
+</ul></pre> ]]></description>
+</item>
+<item>	<title>Scala Support</title>
+	<link>https://github.com/github/super-linter/issues/392</link>
+	<description><![CDATA[ <pre><p>Scala linter support.</p>
+<p>Choices are
+- <a href="https://github.com/scalacenter/scalafix">scalafix</a>
+- <a href="https://github.com/scalameta/scalafmt">scalafmt</a>
+- <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
+- <a href="https://github.com/wartremover/wartremover">wartremover</a></p></pre> ]]></description>
+</item>
+<item>	<title>Scala Support</title>
+	<link>https://github.com/github/super-linter/issues/392</link>
+	<description><![CDATA[ <pre><p>Scala linter support.</p>
+<p>Choices are
+- <a href="https://github.com/scalacenter/scalafix">scalafix</a>
+- <a href="https://github.com/scalameta/scalafmt">scalafmt</a>
+- <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
+- <a href="https://github.com/wartremover/wartremover">wartremover</a></p></pre> ]]></description>
+</item>
+<item>	<title>Prettier for JavaScript and TypeScript</title>
+	<link>https://github.com/github/super-linter/issues/175</link>
+	<description><![CDATA[ <pre><p>IIUC, super-linter uses ESLint and Standard to format JavaScript and TypeScript code rather than Prettier. I think many developers will have an issue with this. Despite the name, Standard is not a standard. It’s developers just gave it that name. For the past few years the trend has been to use ESLint only to check for issues and to use Prettier for formatting.</p>
+<p>Most developers will be fine with most of the formatting that Standard performs. However, there is one controversial thing that it does. It enforces a space after function names in their definition. For example:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">function</span> <span class="fu">myName</span> (param1<span class="op">,</span> param2) {</span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="op">...</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>)</span></code></pre></div>
+<p>I think you will find that almost no JavaScript developer does this. So using Standard will make this change across their code bases and they will not like it.</p>
+<p>Please reconsider the use of Standard for JavaScript formatting and instead use Prettier, which is by far the more popular option.</p></pre> ]]></description>
 </item>
 <item>	<title>[WIP] Add support for fragment caching</title>
 	<link>https://github.com/github/view_component/pull/476</link>
@@ -159,6 +212,36 @@ its <code>child_component</code>s output_buffer to whatever <code>output_buffer<
 to. With that in place, when <code>capture</code> is called, then #output_buffer=`
 is called which will update the child component’s output buffer to the new
 temporary buffer correctly.</p></pre> ]]></description>
+</item>
+<item>	<title>Components should play nicely with Rails caching mechanisms</title>
+	<link>https://github.com/github/view_component/issues/234</link>
+	<description><![CDATA[ <pre><h3 id="feature-request">Feature request</h3>
+<p>Components should provide a digest to Rails views, or be able to use Rails explicit caching directive comments or be able to provide a cache_key.</p>
+<p>Essentially we should be able to invalidate a cache based on whether the Component class or template has changed.</p>
+<h3 id="motivation">Motivation</h3>
+<p>I’m just building on some previous reports primarily around where templates live and the filenames of the template/s. My concerns come down to integrating with Rails caching basics.</p>
+<p>The issue that we run into is basically summed up by</p>
+<pre><code>## In any view/partial
+cache[object, another_object] do
+  render(MyComponent.new(attribute: value))
+end</code></pre>
+<p>In this case if the template for <code>MyComponent</code> is changed the cache will not be invalidated. I tried to add <code>MyComponent</code> to the array used by <code>cache</code> and provide a <code>self.cache_key</code> method that used <code>ActionView::Digestor</code> but without having some further mechanism to invalidate the digestor’s cache for the template/s when the template changes this didn’t work.</p>
+<p>Rails allows for explicit directives to be used (https://guides.rubyonrails.org/caching_with_rails.html#explicit-dependencies) but by default this will only look inside <code>app/views</code>. You can add a view path <code>append_view_path(\"app/components\")</code> but the digestor is expecting a partial and so a template filename would have to be prefixed with underscore.</p>
+<p>The way we are currently working around this is to have an <code>ApplicationComponent</code> that our components inherit from and where we override <code>ActionView::Component::Base.matching_views_in_source_location</code> so that templates are now found in <code>app/views/component_templates</code> and where the files are prefixed with underscore.</p>
+<pre><code>  def self.matching_views_in_source_location
+    return [] unless source_location
+
+    *path, file_name = source_location.chomp(File.extname(source_location)).split(\&quot;/\&quot;)
+    path.pop # remove components
+    path.concat([\&quot;views\&quot;, \&quot;component_templates\&quot;])
+    path_to_template = path.push(\&quot;_#{ file_name }\&quot;).join(\&quot;/\&quot;)
+
+    Dir[\&quot;#{ path_to_template }.*{#{ActionView::Template.template_handler_extensions.join(&#39;,&#39;)}}\&quot;]
+  end</code></pre>
+<p>Then in the above example where cache invalidation does not work via template digest changes we can do</p>
+<p>```
+## In any view/partial
+# Template Dependency: component_templates/my_component</p></pre> ]]></description>
 </item>
 <item>	<title>support .ssh/config Include directives</title>
 	<link>https://github.com/cli/cli/issues/2179</link>
