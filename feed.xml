@@ -489,6 +489,13 @@ alas it doesn’t do the test, looks pretty unhappy. Not sure whats up.</p>
 First time trying this in awhile has never worked for me before. Any help would be appreciated.
 Sue</p></pre> ]]></description>
 </item>
+<item>	<title>WANT_UFE_BUILD scattered throughout build process</title>
+	<link>https://github.com/Autodesk/maya-usd/issues/589</link>
+	<description><![CDATA[ <pre><p><strong>Describe the issue</strong>
+<strong>WANT_UFE_BUILD</strong> can wind up controlling vtable layout and availability of functions.
+Currently it’s usage is scattered throughout CMake and headers in mayaUsd, hdMaya, mayaToHydra, AL-usdmaya. Usually as <strong>PRIVATE</strong> sometimes as <strong>PUBLIC</strong> (#583).</p>
+<p>Seems better to be held in a spot where all sub-projects consume the value, and anyone building against a distribution can ingest the MACRO properly (i.e. in an installed CMake target).</p></pre> ]]></description>
+</item>
 
 </channel>
 </rss>
