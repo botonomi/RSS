@@ -91,13 +91,6 @@ N/A</p>
 <p><strong>Note</strong>
 If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p></pre> ]]></description>
 </item>
-<item>	<title>Bazel Support</title>
-	<link>https://github.com/github/super-linter/issues/393</link>
-	<description><![CDATA[ <pre><p>bazel linter</p>
-<ul>
-<li><a href="https://github.com/bazelbuild/buildtools/blob/master/buildifier/README.md">buildifier</a></li>
-</ul></pre> ]]></description>
-</item>
 <item>	<title>Scala Support</title>
 	<link>https://github.com/github/super-linter/issues/392</link>
 	<description><![CDATA[ <pre><p>Scala linter support.</p>
