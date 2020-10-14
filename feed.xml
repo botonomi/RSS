@@ -456,6 +456,21 @@ training a model with all the available datasets.</li>
 	<description><![CDATA[ <pre><p>Please consider sharing your pre-trained models in any language (If the licenses allow that). We can include them in our model catalog for public use by referencing your name (website, company etc.).</p>
 <p>That would enable more people experiment together and coordinate, instead of individual efforts to achieve similar goals. That is also a good chance to make your work more visible.</p></pre> ]]></description>
 </item>
+<item>	<title>Can't load maya-usd plugin: undefined symbol</title>
+	<link>https://github.com/Autodesk/maya-usd/issues/830</link>
+	<description><![CDATA[ <pre><p>After building the maya-usd plugin successfully, I am getting the error when trying to load the plugin:
+<code>undefined symbol: _ZNK6Ufe_v14Path6stringB5cxx11Ev</code>
+This is similar to Issue #724, but the solution there was to add the flag <code>D_GLIBCXX_USE_CXX11_ABI=0</code>. This did not work for me, it caused build error’s that all look like this:</p>
+<p><code>undefined reference to `pxrInternal_v0_20__pxrReserved__::SdfLayer:`</code></p>
+<p>I’ve tried compiling USD and maya-usd with the same exact GCC version and I’m still having the same issue.</p>
+<p>As for UFE, the correct libraries <strong>are</strong> being found from the maya-devkit directory as per CMAKE’s output log, so I’m not sure what’s causing the issue.</p>
+<p><strong>Specs:</strong>
+- OS &amp; version: Ubuntu 20.04
+- Compiler &amp; version: 6.4.0
+- Maya version: 2020
+- Maya USD commit SHA: v0.4.0
+- Pixar USD commit SHA: v20.08</p></pre> ]]></description>
+</item>
 <item>	<title>Not sure im going the stage test correctly</title>
 	<link>https://github.com/Autodesk/maya-usd/issues/705</link>
 	<description><![CDATA[ <pre><p><strong>Describe the bug</strong>
