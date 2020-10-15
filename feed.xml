@@ -236,6 +236,13 @@ end</code></pre>
 ## In any view/partial
 # Template Dependency: component_templates/my_component</p></pre> ]]></description>
 </item>
+<item>	<title>`gh auth login` should accept a list of scopes just like `gh auth refresh`</title>
+	<link>https://github.com/cli/cli/issues/2195</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>The user experience when you need anything other than the default scopes is very subpar. For example we’re using <code>gh</code> to automate setting up new developer laptops. One step is to add a newly generated public key with <code>gh api /users/key</code>, however we first have to call <code>auth login</code>, then <code>auth refresh</code> to add a single scope. This forces you to go through the challenge twice back-to-back even though we knew all the scopes we’d need at the initial login.</p>
+<h3 id="proposed-solution">Proposed solution</h3>
+<p><code>gh auth login</code> should accept a list of scopes, just like <code>gh auth refresh</code>.</p></pre> ]]></description>
+</item>
 <item>	<title>support .ssh/config Include directives</title>
 	<link>https://github.com/cli/cli/issues/2179</link>
 	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
@@ -259,21 +266,6 @@ end</code></pre>
 <item>	<title>do not allow setting invalid git_protocol</title>
 	<link>https://github.com/cli/cli/issues/2130</link>
 	<description><![CDATA[ <pre><p>Currently you can set <code>git_protocol</code> to any value which is unhelpful; we should validate that input.</p></pre> ]]></description>
-</item>
-<item>	<title>Mate: OSD level scale invisible</title>
-	<link>https://github.com/ubuntu/yaru/issues/2214</link>
-	<description><![CDATA[ <pre><p>Hi there, first of all, thanks for this very nice theme.</p>
-<p>I’m using Yaru 20.04 on openSUSE Tumbleweed and Leap 15.2 with Mate 1.24.0. There is a problem where the OSD horizontal fine-grained level/scale is invisible. Maybe some code could be borrowed from Numix, as it looks perfect under Numix.</p>
-<hr />
-<p>Yaru (light and normal all behave the same):</p>
-<figure>
-<img src="https://user-images.githubusercontent.com/2692138/85305326-880c4b80-b472-11ea-8d15-98d63fb4b3c6.png" alt="" /><figcaption>Screenshot at 2020-06-22 10-14-21</figcaption>
-</figure>
-<hr />
-<p>Numix:</p>
-<figure>
-<img src="https://user-images.githubusercontent.com/2692138/85305349-90fd1d00-b472-11ea-9db7-e0e1611c0b26.png" alt="" /><figcaption>Screenshot at 2020-06-22 10-14-35</figcaption>
-</figure></pre> ]]></description>
 </item>
 <item>	<title>Debug builds for Windows</title>
 	<link>https://github.com/mozilla/DeepSpeech/issues/3359</link>
@@ -404,6 +396,13 @@ If so, can I use socketio protocol, to send the transcribed text over to client?
 <item>	<title>Command table should contain short command names</title>
 	<link>https://github.com/mozilla/OpenWPM/issues/684</link>
 	<description><![CDATA[ <pre><p>It shouldn’t be the full type name in the table but so instead of automation.commands…GetCommand</p></pre> ]]></description>
+</item>
+<item>	<title>[Help needed] TTS Community Survey - Let us know your feedback </title>
+	<link>https://github.com/mozilla/TTS/issues/541</link>
+	<description><![CDATA[ <pre><p>I’ve created this short survey to have a better understanding of the TTS community, and use cases of Mozilla TTS.</p>
+<p>This way we can plan the future of the project in more clarity and prioritize the work in an order that would serve the community in a more effective way.</p>
+<p>If you use Mozilla TTS please spare your 5 mins and let us know what you think.</p>
+<p>https://docs.google.com/forms/d/e/1FAIpQLSfSZuQzfWghgwzmv-i7BP0r5s-5JmVF-qncnkvJroAfW7YO8A/viewform?usp=sf_link</p></pre> ]]></description>
 </item>
 <item>	<title>Multi-Speaker TTS with Attentron</title>
 	<link>https://github.com/mozilla/TTS/issues/516</link>
