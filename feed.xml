@@ -260,14 +260,6 @@ end</code></pre>
 	<link>https://github.com/cli/cli/issues/2130</link>
 	<description><![CDATA[ <pre><p>Currently you can set <code>git_protocol</code> to any value which is unhelpful; we should validate that input.</p></pre> ]]></description>
 </item>
-<item>	<title>Support cloning a gist (just like cloning a repo)</title>
-	<link>https://github.com/cli/cli/issues/2115</link>
-	<description><![CDATA[ <pre><p>In https://github.com/cli/cli/pull/1699#issue-486709880, <span class="citation" data-cites="vilmibm">@vilmibm</span> notes a limitation:</p>
-<blockquote>
-<p>no affordance for cloning a gist to do more advance editing</p>
-</blockquote>
-<p>I’d like to be able to clone a gist, just like I can clone a repo. This is all that’s still needed in order to be able to use <code>gh</code> to enumerate and backup/export (clone) all owned gists.</p></pre> ]]></description>
-</item>
 <item>	<title>Mate: OSD level scale invisible</title>
 	<link>https://github.com/ubuntu/yaru/issues/2214</link>
 	<description><![CDATA[ <pre><p>Hi there, first of all, thanks for this very nice theme.</p>
@@ -488,13 +480,6 @@ alas it doesn’t do the test, looks pretty unhappy. Not sure whats up.</p>
 <p><strong>Additional context</strong>
 First time trying this in awhile has never worked for me before. Any help would be appreciated.
 Sue</p></pre> ]]></description>
-</item>
-<item>	<title>WANT_UFE_BUILD scattered throughout build process</title>
-	<link>https://github.com/Autodesk/maya-usd/issues/589</link>
-	<description><![CDATA[ <pre><p><strong>Describe the issue</strong>
-<strong>WANT_UFE_BUILD</strong> can wind up controlling vtable layout and availability of functions.
-Currently it’s usage is scattered throughout CMake and headers in mayaUsd, hdMaya, mayaToHydra, AL-usdmaya. Usually as <strong>PRIVATE</strong> sometimes as <strong>PUBLIC</strong> (#583).</p>
-<p>Seems better to be held in a spot where all sub-projects consume the value, and anyone building against a distribution can ingest the MACRO properly (i.e. in an installed CMake target).</p></pre> ]]></description>
 </item>
 
 </channel>
