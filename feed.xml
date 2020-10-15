@@ -448,6 +448,10 @@ training a model with all the available datasets.</li>
 	<description><![CDATA[ <pre><p>Please consider sharing your pre-trained models in any language (If the licenses allow that). We can include them in our model catalog for public use by referencing your name (website, company etc.).</p>
 <p>That would enable more people experiment together and coordinate, instead of individual efforts to achieve similar goals. That is also a good chance to make your work more visible.</p></pre> ]]></description>
 </item>
+<item>	<title>Help wanted to add more unit tests (keep adding more unit tests)</title>
+	<link>https://github.com/Autodesk/go-awsecs/issues/16</link>
+	<description><![CDATA[ <pre></pre> ]]></description>
+</item>
 <item>	<title>Can't load maya-usd plugin: undefined symbol UFE</title>
 	<link>https://github.com/Autodesk/maya-usd/issues/830</link>
 	<description><![CDATA[ <pre><p>After building the maya-usd plugin successfully, I am getting the error when trying to load the plugin:
