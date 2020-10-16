@@ -243,6 +243,23 @@ end</code></pre>
 <h3 id="proposed-solution">Proposed solution</h3>
 <p><code>gh auth login</code> should accept a list of scopes, just like <code>gh auth refresh</code>.</p></pre> ]]></description>
 </item>
+<item>	<title>Milestone filtering by title doesn't work on closed Milestones</title>
+	<link>https://github.com/cli/cli/issues/2192</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-bug">Describe the bug</h3>
+<p>Version: <code>gh version 1.1.0 (2020-10-06)</code></p>
+<p>Filtering issues by the title of a <strong>closed</strong> milestone returns <code>no milestone found with title \"MILESTONE\"</code></p>
+<h3 id="steps-to-reproduce-the-behavior">Steps to reproduce the behavior</h3>
+<ol type="1">
+<li>Create a milestone called. Mine is called <code>3.159.0</code></li>
+<li>Attach an issue so there is something to filter</li>
+<li>First filter by milestone number (In my case 181): <code>gh issue list --milestone 181</code></li>
+<li>This works correctly, showing on issue attached to the milestone.</li>
+<li>Try filtering by title: <code>gh issue list --milestone \"3.159.0\"</code></li>
+</ol>
+<h3 id="expected-vs-actual-behavior">Expected vs actual behavior</h3>
+<p>Steps (3) and (5) should produce the same output but (3) works correctly and (5) returns: <code>no milestone found with title \"3.159.0\"</code></p>
+<p>If you reopen the milestone and perform the same steps then (3) and (5) produce the same, correct results. So it only seems to be the case where a milestone is closed that you can’t filter by milestone.</p></pre> ]]></description>
+</item>
 <item>	<title>support .ssh/config Include directives</title>
 	<link>https://github.com/cli/cli/issues/2179</link>
 	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
@@ -262,6 +279,10 @@ end</code></pre>
 <p>Another idea is to support host: github.com in hosts.yml and don’t parse ssh config to try and resolve the remote hostname, instead have hosts.yml "keys" match the remote "domain" directly.</p>
 <h3 id="additional-context">Additional context</h3>
 <p>Workaround for now is to put everything into <code>.ssh/config</code> directly</p></pre> ]]></description>
+</item>
+<item>	<title>do not allow setting invalid git_protocol</title>
+	<link>https://github.com/cli/cli/issues/2130</link>
+	<description><![CDATA[ <pre><p>Currently you can set <code>git_protocol</code> to any value which is unhelpful; we should validate that input.</p></pre> ]]></description>
 </item>
 <item>	<title>Debug builds for Windows</title>
 	<link>https://github.com/mozilla/DeepSpeech/issues/3359</link>
@@ -457,24 +478,6 @@ This is similar to Issue #724, but the solution there was to add the flag <code>
 - Maya version: 2020
 - Maya USD commit SHA: v0.4.0
 - Pixar USD commit SHA: v20.08</p></pre> ]]></description>
-</item>
-<item>	<title>Not sure im going the stage test correctly</title>
-	<link>https://github.com/Autodesk/maya-usd/issues/705</link>
-	<description><![CDATA[ <pre><p><strong>Describe the bug</strong>
-Please See attatched txt file. I am trying to run my build with –stage=test like this:
-<code>python build.py --maya-location /usr/autodesk/maya2021 --pxrusd-location $SCRIPT_DIR/USD --devkit-location $SCRIPT_DIR/maya_devkit/devkitBase --stages=test  $SCRIPT_DIR/WorkspaceRefractor</code>
-alas it doesn’t do the test, looks pretty unhappy. Not sure whats up.</p>
-<p><strong>Attachments</strong>
-<a href="https://github.com/Autodesk/maya-usd/files/5057146/build_log.txt">build_log.txt</a></p>
-<p><strong>Specs (if applicable):</strong>
-- OS &amp; version [Linux centos 7.7]
-- Compiler &amp; version [ gcc 6.3.1]
-- Maya version [Maya 2021/Maya beta PR117]
-- Maya USD commit SHA [ dev at 6210a2a]
-- Pixar USD commit SHA [20.08]</p>
-<p><strong>Additional context</strong>
-First time trying this in awhile has never worked for me before. Any help would be appreciated.
-Sue</p></pre> ]]></description>
 </item>
 
 </channel>
