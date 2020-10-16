@@ -280,10 +280,6 @@ end</code></pre>
 <h3 id="additional-context">Additional context</h3>
 <p>Workaround for now is to put everything into <code>.ssh/config</code> directly</p></pre> ]]></description>
 </item>
-<item>	<title>do not allow setting invalid git_protocol</title>
-	<link>https://github.com/cli/cli/issues/2130</link>
-	<description><![CDATA[ <pre><p>Currently you can set <code>git_protocol</code> to any value which is unhelpful; we should validate that input.</p></pre> ]]></description>
-</item>
 <item>	<title>Debug builds for Windows</title>
 	<link>https://github.com/mozilla/DeepSpeech/issues/3359</link>
 	<description><![CDATA[ <pre><p>Followup of #3353: we would welcome debug builds on Windows</p></pre> ]]></description>
