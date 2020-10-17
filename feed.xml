@@ -236,13 +236,6 @@ end</code></pre>
 ## In any view/partial
 # Template Dependency: component_templates/my_component</p></pre> ]]></description>
 </item>
-<item>	<title>`gh auth login` should accept a list of scopes just like `gh auth refresh`</title>
-	<link>https://github.com/cli/cli/issues/2195</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
-<p>The user experience when you need anything other than the default scopes is very subpar. For example we’re using <code>gh</code> to automate setting up new developer laptops. One step is to add a newly generated public key with <code>gh api /users/key</code>, however we first have to call <code>auth login</code>, then <code>auth refresh</code> to add a single scope. This forces you to go through the challenge twice back-to-back even though we knew all the scopes we’d need at the initial login.</p>
-<h3 id="proposed-solution">Proposed solution</h3>
-<p><code>gh auth login</code> should accept a list of scopes, just like <code>gh auth refresh</code>.</p></pre> ]]></description>
-</item>
 <item>	<title>Milestone filtering by title doesn't work on closed Milestones</title>
 	<link>https://github.com/cli/cli/issues/2192</link>
 	<description><![CDATA[ <pre><h3 id="describe-the-bug">Describe the bug</h3>
@@ -349,6 +342,10 @@ https://guides.github.com/activities/citable-code/</p></pre> ]]></description>
 <li>transcribing individual files in a dir</li>
 <li>transcribing long audio file after VAD split</li>
 </ol></pre> ]]></description>
+</item>
+<item>	<title>Add code coverage report to CI</title>
+	<link>https://github.com/mozilla/DeepSpeech/issues/2977</link>
+	<description><![CDATA[ <pre></pre> ]]></description>
 </item>
 <item>	<title>getting very bad transcript while live streaming on r0.6 version node js socket api</title>
 	<link>https://github.com/mozilla/DeepSpeech-examples/issues/66</link>
@@ -459,21 +456,6 @@ training a model with all the available datasets.</li>
 <item>	<title>Help wanted to add more unit tests (keep adding more unit tests)</title>
 	<link>https://github.com/Autodesk/go-awsecs/issues/16</link>
 	<description><![CDATA[ <pre></pre> ]]></description>
-</item>
-<item>	<title>Ufe_v1 built with gcc 4.xx and old ABI. Can't link against it</title>
-	<link>https://github.com/Autodesk/maya-usd/issues/830</link>
-	<description><![CDATA[ <pre><p>After building the maya-usd plugin successfully, I am getting the error when trying to load the plugin:
-<code>undefined symbol: _ZNK6Ufe_v14Path6stringB5cxx11Ev</code>
-This is similar to Issue #724, but the solution there was to add the flag <code>D_GLIBCXX_USE_CXX11_ABI=0</code>. This did not work for me, it caused build error’s that all look like this:</p>
-<p><code>undefined reference to `pxrInternal_v0_20__pxrReserved__::SdfLayer:`</code></p>
-<p>I’ve tried compiling USD and maya-usd with the same exact GCC version and I’m still having the same issue.</p>
-<p>As for UFE, the correct libraries <strong>are</strong> being found from the maya-devkit directory as per CMAKE’s output log, so I’m not sure what’s causing the issue. When I built with <code>-DCMAKE_WANT_UFE_BULD=OFF</code> it worked fine and loaded in Maya, but of course I would like the UFE features. I even tried editing the CMAKE to use the ufe library from the /usr/autodesk/maya directory and still the same problem.</p>
-<p><strong>Specs:</strong>
-- OS &amp; version: Ubuntu 20.04
-- Compiler &amp; version: 6.4.0
-- Maya version: 2020
-- Maya USD commit SHA: v0.4.0
-- Pixar USD commit SHA: v20.08</p></pre> ]]></description>
 </item>
 
 </channel>
