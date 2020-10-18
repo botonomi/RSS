@@ -315,10 +315,6 @@ https://guides.github.com/activities/citable-code/</p></pre> ]]></description>
 <li>transcribing long audio file after VAD split</li>
 </ol></pre> ]]></description>
 </item>
-<item>	<title>Add code coverage report to CI</title>
-	<link>https://github.com/mozilla/DeepSpeech/issues/2977</link>
-	<description><![CDATA[ <pre></pre> ]]></description>
-</item>
 <item>	<title>getting very bad transcript while live streaming on r0.6 version node js socket api</title>
 	<link>https://github.com/mozilla/DeepSpeech-examples/issues/66</link>
 	<description><![CDATA[ <pre><p>Hi,
