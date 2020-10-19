@@ -91,6 +91,34 @@ N/A</p>
 <p><strong>Note</strong>
 If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p></pre> ]]></description>
 </item>
+<item>	<title>Scala Support</title>
+	<link>https://github.com/github/super-linter/issues/392</link>
+	<description><![CDATA[ <pre><p>Scala linter support.</p>
+<p>Choices are
+- <a href="https://github.com/scalacenter/scalafix">scalafix</a>
+- <a href="https://github.com/scalameta/scalafmt">scalafmt</a>
+- <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
+- <a href="https://github.com/wartremover/wartremover">wartremover</a></p></pre> ]]></description>
+</item>
+<item>	<title>Scala Support</title>
+	<link>https://github.com/github/super-linter/issues/392</link>
+	<description><![CDATA[ <pre><p>Scala linter support.</p>
+<p>Choices are
+- <a href="https://github.com/scalacenter/scalafix">scalafix</a>
+- <a href="https://github.com/scalameta/scalafmt">scalafmt</a>
+- <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
+- <a href="https://github.com/wartremover/wartremover">wartremover</a></p></pre> ]]></description>
+</item>
+<item>	<title>Prettier for JavaScript and TypeScript</title>
+	<link>https://github.com/github/super-linter/issues/175</link>
+	<description><![CDATA[ <pre><p>IIUC, super-linter uses ESLint and Standard to format JavaScript and TypeScript code rather than Prettier. I think many developers will have an issue with this. Despite the name, Standard is not a standard. It’s developers just gave it that name. For the past few years the trend has been to use ESLint only to check for issues and to use Prettier for formatting.</p>
+<p>Most developers will be fine with most of the formatting that Standard performs. However, there is one controversial thing that it does. It enforces a space after function names in their definition. For example:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">function</span> <span class="fu">myName</span> (param1<span class="op">,</span> param2) {</span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="op">...</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>)</span></code></pre></div>
+<p>I think you will find that almost no JavaScript developer does this. So using Standard will make this change across their code bases and they will not like it.</p>
+<p>Please reconsider the use of Standard for JavaScript formatting and instead use Prettier, which is by far the more popular option.</p></pre> ]]></description>
+</item>
 <item>	<title>[WIP] Add support for fragment caching</title>
 	<link>https://github.com/github/view_component/pull/476</link>
 	<description><![CDATA[ <pre></pre> ]]></description>
@@ -215,15 +243,15 @@ end</code></pre>
 <p>Filtering issues by the title of a <strong>closed</strong> milestone returns <code>no milestone found with title \"MILESTONE\"</code></p>
 <h3 id="steps-to-reproduce-the-behavior">Steps to reproduce the behavior</h3>
 <ol type="1">
-<li>Create a milestone called. Mine is called <code>3.159.0</code></li>
+<li>Create a milestone. Mine is called <code>3.159.0</code></li>
 <li>Attach an issue so there is something to filter</li>
 <li>First filter by milestone number (In my case 181): <code>gh issue list --milestone 181</code></li>
-<li>This works correctly, showing on issue attached to the milestone.</li>
+<li>This works correctly, showing one issue attached to the milestone.</li>
 <li>Try filtering by title: <code>gh issue list --milestone \"3.159.0\"</code></li>
 </ol>
 <h3 id="expected-vs-actual-behavior">Expected vs actual behavior</h3>
 <p>Steps (3) and (5) should produce the same output but (3) works correctly and (5) returns: <code>no milestone found with title \"3.159.0\"</code></p>
-<p>If you reopen the milestone and perform the same steps then (3) and (5) produce the same, correct results. So it only seems to be the case where a milestone is closed that you can’t filter by milestone.</p></pre> ]]></description>
+<p>If you reopen the milestone and perform the same steps then (3) and (5) produce the same, correct results. So it only seems to be the case where a milestone is closed that you can’t filter by milestone title.</p></pre> ]]></description>
 </item>
 <item>	<title>support .ssh/config Include directives</title>
 	<link>https://github.com/cli/cli/issues/2179</link>
