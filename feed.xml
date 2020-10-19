@@ -401,7 +401,7 @@ write preprocessors for new datasets</li>
 increase the efficiency of the speaker encoder data-loader.</li>
 <li><input type="checkbox" disabled="" checked="" />
 training a model only using Eng datasets.</li>
-<li><input type="checkbox" disabled="" />
+<li><input type="checkbox" disabled="" checked="" />
 training a model with all the available datasets.</li>
 </ul></pre> ]]></description>
 </item>
