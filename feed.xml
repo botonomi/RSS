@@ -243,26 +243,6 @@ end</code></pre>
 <p>Steps (3) and (5) should produce the same output but (3) works correctly and (5) returns: <code>no milestone found with title \"3.159.0\"</code></p>
 <p>If you reopen the milestone and perform the same steps then (3) and (5) produce the same, correct results. So it only seems to be the case where a milestone is closed that you can’t filter by milestone title.</p></pre> ]]></description>
 </item>
-<item>	<title>support .ssh/config Include directives</title>
-	<link>https://github.com/cli/cli/issues/2179</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
-<p>This is sort of related to #326 - I use different ssh keys for organizations on github, so I have Host aliases set up in <code>~/.ssh/config.d/org_name</code> files. One of these aliases may look like this:</p>
-<pre><code>Host github.com-org_name
-    HostName github.com
-    User sclem
-    IdentityFile ~/.ssh/org_name_key
-    IdentitiesOnly yes</code></pre>
-<p>git remote will look like: <code>git@github.com-org_name:Org/Repo.git</code></p>
-<p>My top level .ssh/config contains some global wildcards and <code>Include ~/.ssh/config.d/*</code>, which is documented in the <code>ssh_config</code> man page.</p>
-<p>I perused through the codebase to find that gh cli does in fact read and parse ~/.ssh/config for these Host aliases to resolve the upstream host. This works correctly, however I couldn’t find any documentation on this behavior and it doesn’t support multiple files.</p>
-<p>The error seen (after auth, if alias is not in .ssh/config directly):</p>
-<pre><code>none of the git remotes configured for this repository point to a known GitHub host. To tell gh about a new GitHub host, please use `gh auth login`</code></pre>
-<h3 id="proposed-solution">Proposed solution</h3>
-<p>Read all the ssh_config files the user has configured. Workaround for now is to put all hosts into my .ssh/config. This may get tricky, considering <code>man ssh_config</code> supports conditional includes inside a Match/Host block.</p>
-<p>Another idea is to support host: github.com in hosts.yml and don’t parse ssh config to try and resolve the remote hostname, instead have hosts.yml "keys" match the remote "domain" directly.</p>
-<h3 id="additional-context">Additional context</h3>
-<p>Workaround for now is to put everything into <code>.ssh/config</code> directly</p></pre> ]]></description>
-</item>
 <item>	<title>Debug builds for Windows</title>
 	<link>https://github.com/mozilla/DeepSpeech/issues/3359</link>
 	<description><![CDATA[ <pre><p>Followup of #3353: we would welcome debug builds on Windows</p></pre> ]]></description>
