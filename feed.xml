@@ -109,6 +109,27 @@ If this is a request to add a new language, after submitting this issue check ou
 - <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
 - <a href="https://github.com/wartremover/wartremover">wartremover</a></p></pre> ]]></description>
 </item>
+<item>	<title>Prettier for JavaScript and TypeScript</title>
+	<link>https://github.com/github/super-linter/issues/175</link>
+	<description><![CDATA[ <pre><p>IIUC, super-linter uses ESLint and Standard to format JavaScript and TypeScript code rather than Prettier. I think many developers will have an issue with this. Despite the name, Standard is not a standard. It’s developers just gave it that name. For the past few years the trend has been to use ESLint only to check for issues and to use Prettier for formatting.</p>
+<p>Most developers will be fine with most of the formatting that Standard performs. However, there is one controversial thing that it does. It enforces a space after function names in their definition. For example:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">function</span> <span class="fu">myName</span> (param1<span class="op">,</span> param2) {</span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="op">...</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>)</span></code></pre></div>
+<p>I think you will find that almost no JavaScript developer does this. So using Standard will make this change across their code bases and they will not like it.</p>
+<p>Please reconsider the use of Standard for JavaScript formatting and instead use Prettier, which is by far the more popular option.</p></pre> ]]></description>
+</item>
+<item>	<title>Support the GitHub Checks Run UI</title>
+	<link>https://github.com/github/super-linter/issues/151</link>
+	<description><![CDATA[ <pre><p><strong>Is your feature request related to a problem? Please describe.</strong>
+After the super-linters runs, you have to go to the workflow logs, and then the step, and look at the logs, to see the errors that were found. This is not ideal and error-prone.</p>
+<p><strong>Describe the solution you’d like</strong>
+A better approach would be to use the <a href="https://developer.github.com/v3/checks/runs/#create-a-check-run">Checks Run UI</a> to report the errors directly into the PR/code lines, to better visibility.</p>
+<p><strong>Describe alternatives you’ve considered</strong>
+Other linters already do this like https://github.com/andrewmcodes/rubocop-linter-action and https://github.com/devmasx/brakeman-linter-action</p>
+<p><strong>Additional context</strong>
+I think this is a really big feature, but it will also improve a lot the super-linter, and we could leverage how others already do it.</p></pre> ]]></description>
+</item>
 <item>	<title>[WIP] Add support for fragment caching</title>
 	<link>https://github.com/github/view_component/pull/476</link>
 	<description><![CDATA[ <pre></pre> ]]></description>
