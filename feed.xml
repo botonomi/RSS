@@ -91,24 +91,6 @@ N/A</p>
 <p><strong>Note</strong>
 If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p></pre> ]]></description>
 </item>
-<item>	<title>Scala Support</title>
-	<link>https://github.com/github/super-linter/issues/392</link>
-	<description><![CDATA[ <pre><p>Scala linter support.</p>
-<p>Choices are
-- <a href="https://github.com/scalacenter/scalafix">scalafix</a>
-- <a href="https://github.com/scalameta/scalafmt">scalafmt</a>
-- <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
-- <a href="https://github.com/wartremover/wartremover">wartremover</a></p></pre> ]]></description>
-</item>
-<item>	<title>Scala Support</title>
-	<link>https://github.com/github/super-linter/issues/392</link>
-	<description><![CDATA[ <pre><p>Scala linter support.</p>
-<p>Choices are
-- <a href="https://github.com/scalacenter/scalafix">scalafix</a>
-- <a href="https://github.com/scalameta/scalafmt">scalafmt</a>
-- <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
-- <a href="https://github.com/wartremover/wartremover">wartremover</a></p></pre> ]]></description>
-</item>
 <item>	<title>[WIP] Add support for fragment caching</title>
 	<link>https://github.com/github/view_component/pull/476</link>
 	<description><![CDATA[ <pre></pre> ]]></description>
@@ -226,22 +208,20 @@ end</code></pre>
 ## In any view/partial
 # Template Dependency: component_templates/my_component</p></pre> ]]></description>
 </item>
-<item>	<title>Milestone filtering by title doesn't work on closed Milestones</title>
-	<link>https://github.com/cli/cli/issues/2192</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-bug">Describe the bug</h3>
-<p>Version: <code>gh version 1.1.0 (2020-10-06)</code></p>
-<p>Filtering issues by the title of a <strong>closed</strong> milestone returns <code>no milestone found with title \"MILESTONE\"</code></p>
-<h3 id="steps-to-reproduce-the-behavior">Steps to reproduce the behavior</h3>
-<ol type="1">
-<li>Create a milestone. Mine is called <code>3.159.0</code></li>
-<li>Attach an issue so there is something to filter</li>
-<li>First filter by milestone number (In my case 181): <code>gh issue list --milestone 181</code></li>
-<li>This works correctly, showing one issue attached to the milestone.</li>
-<li>Try filtering by title: <code>gh issue list --milestone \"3.159.0\"</code></li>
-</ol>
-<h3 id="expected-vs-actual-behavior">Expected vs actual behavior</h3>
-<p>Steps (3) and (5) should produce the same output but (3) works correctly and (5) returns: <code>no milestone found with title \"3.159.0\"</code></p>
-<p>If you reopen the milestone and perform the same steps then (3) and (5) produce the same, correct results. So it only seems to be the case where a milestone is closed that you can’t filter by milestone title.</p></pre> ]]></description>
+<item>	<title>gh repo clone: Make the error message more useful, if the <repository> argument isn't passed.</title>
+	<link>https://github.com/cli/cli/issues/2216</link>
+	<description><![CDATA[ <pre><h1 id="cli-feedback">CLI Feedback</h1>
+<p>As mentioned in the title, please make the error message more useful, like, instead of:</p>
+<pre><code>requires at least 1 arg(s), only received 0</code></pre>
+<p>…you can use:</p>
+<pre><code>cannot clone: no repository name given</code></pre>
+<p>Obviously, the above message can be changed. Its just an example 😉</p>
+<h2 id="what-have-you-loved">What have you loved?</h2>
+<p>The overall functionality of the <code>gh</code> cli that helped me to do everything I do on the website, through the CLI (well, almost 😄 )</p>
+<h2 id="what-was-confusing-or-gave-you-pause">What was confusing or gave you pause?</h2>
+<p>Not anything ‘confusing or gave me pause’, but the above thing <em>could</em> be implemented.</p>
+<h2 id="are-there-features-youd-like-to-see-added">Are there features you’d like to see added?</h2>
+<p>Well, no 🎉</p></pre> ]]></description>
 </item>
 <item>	<title>Support Node v15</title>
 	<link>https://github.com/mozilla/DeepSpeech/issues/3382</link>
