@@ -226,6 +226,54 @@ end</code></pre>
 ## In any view/partial
 # Template Dependency: component_templates/my_component</p></pre> ]]></description>
 </item>
+<item>	<title>Milestone filtering by title doesn't work on closed Milestones</title>
+	<link>https://github.com/cli/cli/issues/2192</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-bug">Describe the bug</h3>
+<p>Version: <code>gh version 1.1.0 (2020-10-06)</code></p>
+<p>Filtering issues by the title of a <strong>closed</strong> milestone returns <code>no milestone found with title \"MILESTONE\"</code></p>
+<h3 id="steps-to-reproduce-the-behavior">Steps to reproduce the behavior</h3>
+<ol type="1">
+<li>Create a milestone. Mine is called <code>3.159.0</code></li>
+<li>Attach an issue so there is something to filter</li>
+<li>First filter by milestone number (In my case 181): <code>gh issue list --milestone 181</code></li>
+<li>This works correctly, showing one issue attached to the milestone.</li>
+<li>Try filtering by title: <code>gh issue list --milestone \"3.159.0\"</code></li>
+</ol>
+<h3 id="expected-vs-actual-behavior">Expected vs actual behavior</h3>
+<p>Steps (3) and (5) should produce the same output but (3) works correctly and (5) returns: <code>no milestone found with title \"3.159.0\"</code></p>
+<p>If you reopen the milestone and perform the same steps then (3) and (5) produce the same, correct results. So it only seems to be the case where a milestone is closed that you can’t filter by milestone title.</p></pre> ]]></description>
+</item>
+<item>	<title>Support Node v15</title>
+	<link>https://github.com/mozilla/DeepSpeech/issues/3382</link>
+	<description><![CDATA[ <pre><p>Supporting Node v15 should hopefully just be about:
+- Adding new node 15.0.0 to the list of <code>SUPPORTED_NODEJS_BUILD_VERSIONS</code> and <code>SUPPORTED_NODEJS_TESTS_VERSIONS</code>
+- Updating <code>node-gyp</code> cache artifact
+- Adding new TaskCluster tasks for Node v15.0.0, existing <code>v14.x</code> being:</p>
+<pre><code>$ ll taskcluster/test-nodejs_14x*.yml
+-rw-rw-r-- 1 alex alex 737 sept.  9 10:22 taskcluster/test-nodejs_14x_16k-linux-amd64-opt.yml
+-rw-rw-r-- 1 alex alex 652 sept.  9 10:22 taskcluster/test-nodejs_14x_16k-linux-amd64-prod_pbmodel-opt.yml
+-rw-rw-r-- 1 alex alex 770 sept.  9 10:22 taskcluster/test-nodejs_14x_16k_multiarchpkg-linux-amd64-opt.yml
+-rw-rw-r-- 1 alex alex 685 sept.  9 10:22 taskcluster/test-nodejs_14x_16k_multiarchpkg-linux-amd64-prod_pbmodel-opt.yml
+-rw-rw-r-- 1 alex alex 786 sept.  9 10:22 taskcluster/test-nodejs_14x_16k_multiarchpkg-linux-tflite-opt.yml
+-rw-rw-r-- 1 alex alex 663 sept.  9 10:22 taskcluster/test-nodejs_14x_16k_tflite-linux-amd64-prod-opt.yml
+-rw-rw-r-- 1 alex alex 732 sept.  9 10:22 taskcluster/test-nodejs_14x_8k-linux-amd64-opt.yml
+-rw-rw-r-- 1 alex alex 649 sept.  9 10:22 taskcluster/test-nodejs_14x_8k-linux-amd64-prod_pbmodel-opt.yml
+-rw-rw-r-- 1 alex alex 765 sept.  9 10:22 taskcluster/test-nodejs_14x_8k_multiarchpkg-linux-amd64-opt.yml
+-rw-rw-r-- 1 alex alex 682 sept.  9 10:22 taskcluster/test-nodejs_14x_8k_multiarchpkg-linux-amd64-prod_pbmodel-opt.yml
+-rw-rw-r-- 1 alex alex 781 sept.  9 10:22 taskcluster/test-nodejs_14x_8k_multiarchpkg-linux-tflite-opt.yml
+-rw-rw-r-- 1 alex alex 660 sept.  9 10:22 taskcluster/test-nodejs_14x_8k_tflite-linux-amd64-prod-opt.yml
+-rw-rw-r-- 1 alex alex 691 sept.  9 10:22 taskcluster/test-nodejs_14x-armbian-arm64-opt.yml
+-rw-rw-r-- 1 alex alex 558 sept.  9 10:22 taskcluster/test-nodejs_14x-darwin-amd64-opt.yml
+-rw-rw-r-- 1 alex alex 724 sept.  9 10:22 taskcluster/test-nodejs_14x_multiarchpkg-armbian-arm64-opt.yml
+-rw-rw-r-- 1 alex alex 590 sept.  9 10:22 taskcluster/test-nodejs_14x_multiarchpkg-darwin-amd64-opt.yml
+-rw-rw-r-- 1 alex alex 606 sept.  9 10:22 taskcluster/test-nodejs_14x_multiarchpkg-darwin-tflite-opt.yml
+-rw-rw-r-- 1 alex alex 715 sept.  9 10:22 taskcluster/test-nodejs_14x_multiarchpkg-raspbian-rpi3-opt.yml
+-rw-rw-r-- 1 alex alex 579 sept.  9 10:22 taskcluster/test-nodejs_14x_multiarchpkg-win-amd64-opt.yml
+-rw-rw-r-- 1 alex alex 586 sept.  9 10:22 taskcluster/test-nodejs_14x_multiarchpkg-win-cuda-opt.yml
+-rw-rw-r-- 1 alex alex 595 sept.  9 10:22 taskcluster/test-nodejs_14x_multiarchpkg-win-tflite-opt.yml
+-rw-rw-r-- 1 alex alex 681 sept.  9 10:22 taskcluster/test-nodejs_14x-raspbian-rpi3-opt.yml
+-rw-rw-r-- 1 alex alex 544 sept.  9 10:22 taskcluster/test-nodejs_14x-win-amd64-opt.yml</code></pre></pre> ]]></description>
+</item>
 <item>	<title>Debug builds for Windows</title>
 	<link>https://github.com/mozilla/DeepSpeech/issues/3359</link>
 	<description><![CDATA[ <pre><p>Followup of #3353: we would welcome debug builds on Windows</p></pre> ]]></description>
@@ -287,14 +335,6 @@ https://guides.github.com/activities/citable-code/</p></pre> ]]></description>
 <p>With the <code>version 0.7.3</code> and older it finds the ds_ctcdecoder but always calls that I need <code>numpy</code> in <code>version 1.16</code>, when I install 1.16 it calls me that I need <code>numpy 1.13.3</code> because of other modules and so on. That’s why I think my only chance to use DeepSpeech is with the newest version.</p>
 <p>I’m on windwos 10 with python 3.6.</p>
 <p>Thanks in advance!</p></pre> ]]></description>
-</item>
-<item>	<title>Add progress bars to transcribe.py</title>
-	<link>https://github.com/mozilla/DeepSpeech/issues/2985</link>
-	<description><![CDATA[ <pre><p>it would be nice to have 2 progress bars</p>
-<ol type="1">
-<li>transcribing individual files in a dir</li>
-<li>transcribing long audio file after VAD split</li>
-</ol></pre> ]]></description>
 </item>
 <item>	<title>getting very bad transcript while live streaming on r0.6 version node js socket api</title>
 	<link>https://github.com/mozilla/DeepSpeech-examples/issues/66</link>
