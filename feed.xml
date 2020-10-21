@@ -109,16 +109,6 @@ If this is a request to add a new language, after submitting this issue check ou
 - <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
 - <a href="https://github.com/wartremover/wartremover">wartremover</a></p></pre> ]]></description>
 </item>
-<item>	<title>Prettier for JavaScript and TypeScript</title>
-	<link>https://github.com/github/super-linter/issues/175</link>
-	<description><![CDATA[ <pre><p>IIUC, super-linter uses ESLint and Standard to format JavaScript and TypeScript code rather than Prettier. I think many developers will have an issue with this. Despite the name, Standard is not a standard. It’s developers just gave it that name. For the past few years the trend has been to use ESLint only to check for issues and to use Prettier for formatting.</p>
-<p>Most developers will be fine with most of the formatting that Standard performs. However, there is one controversial thing that it does. It enforces a space after function names in their definition. For example:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">function</span> <span class="fu">myName</span> (param1<span class="op">,</span> param2) {</span>
-<span id="cb1-2"><a href="#cb1-2"></a>  <span class="op">...</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>)</span></code></pre></div>
-<p>I think you will find that almost no JavaScript developer does this. So using Standard will make this change across their code bases and they will not like it.</p>
-<p>Please reconsider the use of Standard for JavaScript formatting and instead use Prettier, which is by far the more popular option.</p></pre> ]]></description>
-</item>
 <item>	<title>[WIP] Add support for fragment caching</title>
 	<link>https://github.com/github/view_component/pull/476</link>
 	<description><![CDATA[ <pre></pre> ]]></description>
@@ -235,23 +225,6 @@ end</code></pre>
 <p>```
 ## In any view/partial
 # Template Dependency: component_templates/my_component</p></pre> ]]></description>
-</item>
-<item>	<title>Milestone filtering by title doesn't work on closed Milestones</title>
-	<link>https://github.com/cli/cli/issues/2192</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-bug">Describe the bug</h3>
-<p>Version: <code>gh version 1.1.0 (2020-10-06)</code></p>
-<p>Filtering issues by the title of a <strong>closed</strong> milestone returns <code>no milestone found with title \"MILESTONE\"</code></p>
-<h3 id="steps-to-reproduce-the-behavior">Steps to reproduce the behavior</h3>
-<ol type="1">
-<li>Create a milestone. Mine is called <code>3.159.0</code></li>
-<li>Attach an issue so there is something to filter</li>
-<li>First filter by milestone number (In my case 181): <code>gh issue list --milestone 181</code></li>
-<li>This works correctly, showing one issue attached to the milestone.</li>
-<li>Try filtering by title: <code>gh issue list --milestone \"3.159.0\"</code></li>
-</ol>
-<h3 id="expected-vs-actual-behavior">Expected vs actual behavior</h3>
-<p>Steps (3) and (5) should produce the same output but (3) works correctly and (5) returns: <code>no milestone found with title \"3.159.0\"</code></p>
-<p>If you reopen the milestone and perform the same steps then (3) and (5) produce the same, correct results. So it only seems to be the case where a milestone is closed that you can’t filter by milestone title.</p></pre> ]]></description>
 </item>
 <item>	<title>Debug builds for Windows</title>
 	<link>https://github.com/mozilla/DeepSpeech/issues/3359</link>
@@ -432,6 +405,20 @@ training a model with all the available datasets.</li>
 <item>	<title>Help wanted to add more unit tests (keep adding more unit tests)</title>
 	<link>https://github.com/Autodesk/go-awsecs/issues/16</link>
 	<description><![CDATA[ <pre></pre> ]]></description>
+</item>
+<item>	<title>libboost_python.so: undefined reference to `PyClass_Type</title>
+	<link>https://github.com/Autodesk/maya-usd/issues/857</link>
+	<description><![CDATA[ <pre><p><strong>Describe the issue</strong>
+Hi, I am installing USD from this link https://github.com/Autodesk/maya-usd/blob/dev/doc/build.md.</p>
+<p>However, I got this error.</p>
+<p><strong>Build log</strong>
+<a href="https://github.com/Autodesk/maya-usd/files/5414863/build_log.txt">build_log.txt</a></p>
+<p><strong>Specs:</strong>
+- OS &amp; version [Centos 7]
+- Compiler &amp; version [gcc 4.8.2]
+- Maya version [Maya 2018]
+- The C compiler identification is GNU 4.8.2
+- The CXX compiler identification is GNU 4.8.5</p></pre> ]]></description>
 </item>
 
 </channel>
