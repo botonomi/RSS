@@ -430,20 +430,6 @@ training a model with all the available datasets.</li>
 	<link>https://github.com/Autodesk/go-awsecs/issues/22</link>
 	<description><![CDATA[ <pre></pre> ]]></description>
 </item>
-<item>	<title>libboost_python.so: undefined reference to `PyClass_Type</title>
-	<link>https://github.com/Autodesk/maya-usd/issues/857</link>
-	<description><![CDATA[ <pre><p><strong>Describe the issue</strong>
-Hi, I am installing USD from this link https://github.com/Autodesk/maya-usd/blob/dev/doc/build.md.</p>
-<p>However, I got this error.</p>
-<p><strong>Build log</strong>
-<a href="https://github.com/Autodesk/maya-usd/files/5414863/build_log.txt">build_log.txt</a></p>
-<p><strong>Specs:</strong>
-- OS &amp; version [Centos 7]
-- Compiler &amp; version [gcc 4.8.2]
-- Maya version [Maya 2018]
-- The C compiler identification is GNU 4.8.2
-- The CXX compiler identification is GNU 4.8.5</p></pre> ]]></description>
-</item>
 
 </channel>
 </rss>
