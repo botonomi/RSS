@@ -219,30 +219,6 @@ end</code></pre>
 <h2 id="how-will-it-benefit-cli-and-its-users">How will it benefit CLI and its users?</h2>
 <p>This speeds up the cloning progress. Adding support for gitflags will also align <code>repo fork</code> with <code>repo clone</code></p></pre> ]]></description>
 </item>
-<item>	<title>gh repo clone: Make the error message more useful, if the <repository> argument isn't passed.</title>
-	<link>https://github.com/cli/cli/issues/2216</link>
-	<description><![CDATA[ <pre><h1 id="cli-feedback">CLI Feedback</h1>
-<p>As mentioned in the title, please make the error message more useful, like, instead of:</p>
-<pre><code>requires at least 1 arg(s), only received 0</code></pre>
-<p>…you can use:</p>
-<pre><code>cannot clone: no repository name given</code></pre>
-<p>Obviously, the above message can be changed. Its just an example 😉</p>
-<h2 id="what-have-you-loved">What have you loved?</h2>
-<p>The overall functionality of the <code>gh</code> cli that helped me to do everything I do on the website, through the CLI (well, almost 😄 )</p>
-<h2 id="what-was-confusing-or-gave-you-pause">What was confusing or gave you pause?</h2>
-<p>Not anything ‘confusing or gave me pause’, but the above thing <em>could</em> be implemented.</p>
-<h2 id="are-there-features-youd-like-to-see-added">Are there features you’d like to see added?</h2>
-<p>Well, no 🎉</p></pre> ]]></description>
-</item>
-<item>	<title>Option to disallow edits from maintainers</title>
-	<link>https://github.com/cli/cli/issues/2213</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
-<p>I would like to disallow edits by maintainers when creating a PR from the command line. Currently, I have to open the PR in the browser and untick the checkbox ("Allow edits and access to secrets by maintainers"). Correct me if I’m wrong, but I could not find an option in <a href="https://cli.github.com/manual/">the manual</a> or an existing issue.</p>
-<h3 id="proposed-solution">Proposed solution</h3>
-<p>Add a flag and a config option to untick this checkbox / disallow edits from the terminal, so that users do not have to open the browser.</p>
-<h3 id="additional-context">Additional context</h3>
-<p>Hub had an issue for this too. At first, the API did not support this, but later a PR got merged (see end of thread): https://github.com/github/hub/issues/1349</p></pre> ]]></description>
-</item>
 <item>	<title>LP#1875993 "yaru-theme-icon missing category icons"</title>
 	<link>https://github.com/ubuntu/yaru/issues/2441</link>
 	<description><![CDATA[ <pre><p>Reported first on Launchpad at https://bugs.launchpad.net/ubuntu/+source/yaru-theme/+bug/1875993</p></pre> ]]></description>
@@ -386,11 +362,6 @@ If so, can I use socketio protocol, to send the transcribed text over to client?
 	<description><![CDATA[ <pre><p>We currently hard-code syncable to mean "everything under the five built-in roots". This works for <span class="citation" data-cites="eoger">@eoger</span>’s use case (filtering out <code>readinglist</code> and <code>pinned</code> when importing bookmarks from Fennec), and it wouldn’t be much more work to make them customizable.</p>
 <p>I imagine we’d add a method like <code>Builder::syncable(vec![MENU_GUID, MOBILE_GUID, TOOLBAR_GUID, UNFILED_GUID])</code>, store the list of syncable roots on the tree, and check them in <code>Node::is_syncable</code>.</p>
 <p>While we’re at it, we could also generalize our special handling for tags on Desktop—they’re part of the merged tree (so not deleted), but never uploaded. Or we can leave it and wait for tags to move to a separate table, which we already do in Rust Places. 😁</p></pre> ]]></description>
-</item>
-<item>	<title>Add support for Azure tests</title>
-	<link>https://github.com/mozilla/frost/issues/312</link>
-	<description><![CDATA[ <pre><p>It would be nice to have Azure tests available as we make further use of it.</p>
-<p>Can refer to the <a href="https://www.cisecurity.org/benchmark/azure/">CIS Benchmark for Azure</a>, our internal review, and <a href="https://github.com/nccgroup/ScoutSuite/tree/master/ScoutSuite/providers/azure/rules/findings">ScoutSuite’s rules</a> to determine an initial list of tests to add.</p></pre> ]]></description>
 </item>
 <item>	<title>Command table should contain short command names</title>
 	<link>https://github.com/mozilla/OpenWPM/issues/684</link>
