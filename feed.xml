@@ -208,25 +208,6 @@ end</code></pre>
 ## In any view/partial
 # Template Dependency: component_templates/my_component</p></pre> ]]></description>
 </item>
-<item>	<title>`gh issue create -R cli/cli` does not work on GitHub Enterprise</title>
-	<link>https://github.com/cli/cli/issues/2258</link>
-	<description><![CDATA[ <pre><h1 id="cli-feedback">CLI Feedback</h1>
-<h2 id="what-was-confusing-or-gave-you-pause">What was confusing or gave you pause?</h2>
-<p><code>gh</code> suggests that we use ‘gh issue create -R cli/cli’ to feedback about this CLI tool.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a>$ <span class="ex">gh</span> <span class="kw">|</span> <span class="fu">grep</span> -A1 FEEDBACK</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="ex">FEEDBACK</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>  <span class="ex">Open</span> an issue using <span class="st">&#39;gh issue create -R cli/cli&#39;</span></span></code></pre></div>
-<p>But this is not working if I used github enterprise server. And messages has no guide to suggest switching to github.com.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a>$ <span class="ex">gh</span> issue create -R cli/cli</span>
-<span id="cb2-2"><a href="#cb2-2"></a></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="ex">Creating</span> issue in cli/cli</span>
-<span id="cb2-4"><a href="#cb2-4"></a></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="ex">GraphQL</span> error: Could not resolve to a User with the username <span class="st">&#39;cli&#39;</span>.</span></code></pre></div>
-<h2 id="are-there-features-youd-like-to-see-added">Are there features you’d like to see added?</h2>
-<p>I just want to add <code>github.com/</code> to help messeges for creating issue correctly.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">FEEDBACK</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>  <span class="ex">Open</span> an issue using <span class="st">&#39;gh issue create -R github.com/cli/cli&#39;</span></span></code></pre></div></pre> ]]></description>
-</item>
 <item>	<title>support gitflags in gh repo fork</title>
 	<link>https://github.com/cli/cli/issues/2236</link>
 	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
