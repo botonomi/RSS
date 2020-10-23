@@ -243,12 +243,9 @@ end</code></pre>
 <h3 id="additional-context">Additional context</h3>
 <p>Hub had an issue for this too. At first, the API did not support this, but later a PR got merged (see end of thread): https://github.com/github/hub/issues/1349</p></pre> ]]></description>
 </item>
-<item>	<title>Display the number of approvals in 'pr status'</title>
-	<link>https://github.com/cli/cli/issues/2210</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
-<p>My team requires &gt;=2 PR approvals before merging a branch. I’m sure there’s other teams that have some min. requirement for number of approvals as well. My problem is that <code>gh pr status</code> only shows if a PR’s been approved at least once.</p>
-<h3 id="proposed-solution">Proposed solution</h3>
-<p>I’d love for it to show the number of approvals.</p></pre> ]]></description>
+<item>	<title>LP#1875993 "yaru-theme-icon missing category icons"</title>
+	<link>https://github.com/ubuntu/yaru/issues/2441</link>
+	<description><![CDATA[ <pre><p>Reported first on Launchpad at https://bugs.launchpad.net/ubuntu/+source/yaru-theme/+bug/1875993</p></pre> ]]></description>
 </item>
 <item>	<title>Support Node v15</title>
 	<link>https://github.com/mozilla/DeepSpeech/issues/3382</link>
