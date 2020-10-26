@@ -54,39 +54,6 @@ https://github.com/github/smimesign/tree/macos-build</p>
 	<link>https://github.com/github/SoftU2F/issues/39</link>
 	<description><![CDATA[ <pre><p>We try to connect to the kext when the app starts (<a href="https://github.com/github/SoftU2F/blob/45825a5bd6e6bad7ae9bd681c8584cbcb6e7fb7b/SoftU2FTool/U2FHID.swift#L24">code</a>). This also happens when the app is launched from the command line (Eg. for deleting/listing registrations). If the app is already running in the background we’ll get an error because the kext only allows one connection. This error is surfaced to the user, which is confusing. We should not connect to the kext unless we need to.</p></pre> ]]></description>
 </item>
-<item>	<title>Default to main and then master</title>
-	<link>https://github.com/github/super-linter/issues/698</link>
-	<description><![CDATA[ <pre><p><strong>Is your feature request related to a problem? Please describe.</strong></p>
-<p>Following the guidance of github, many developers are moving to <code>main</code> as their default branch. Saving developers from the very small hindrance of using <code>DEFAULT_BRANCH: main</code> would contribute to smoothing the transition.</p>
-<p><strong>Describe the solution you’d like</strong></p>
-<p>The default branch should be <code>main</code>. If it does not exist, use <code>master</code>, given that many repositories will continue using this name.</p></pre> ]]></description>
-</item>
-<item>	<title>Support linting infrastructure-as-code descriptors with Checkov</title>
-	<link>https://github.com/github/super-linter/issues/694</link>
-	<description><![CDATA[ <pre><p><strong>Is your feature request related to a problem? Please describe.</strong>
-https://github.com/bridgecrewio/checkov is a tool to check infrastructure-as-code descriptors. <code>It scans cloud infrastructure provisioned using Terraform, Cloudformation, Kubernetes, Serverless or ARM Templates and detects security and compliance misconfigurations.</code></p>
-<p><strong>Describe the solution you’d like</strong>
-Support <code>checkov</code>.</p>
-<p><strong>Describe alternatives you’ve considered</strong>
-N/A</p>
-<p><strong>Additional context</strong>
-N/A</p>
-<p><strong>Note</strong>
-If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p></pre> ]]></description>
-</item>
-<item>	<title>Support scanning Terraform with tfsec</title>
-	<link>https://github.com/github/super-linter/issues/693</link>
-	<description><![CDATA[ <pre><p><strong>Is your feature request related to a problem? Please describe.</strong>
-https://github.com/liamg/tfsec is a popular (more than TerraScan at least!) security-oriented linter for Terraform.</p>
-<p><strong>Describe the solution you’d like</strong>
-Support tfsec as one of the linters that super-linter ships.</p>
-<p><strong>Describe alternatives you’ve considered</strong>
-N/A</p>
-<p><strong>Additional context</strong>
-N/A</p>
-<p><strong>Note</strong>
-If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p></pre> ]]></description>
-</item>
 <item>	<title>[WIP] Add support for fragment caching</title>
 	<link>https://github.com/github/view_component/pull/476</link>
 	<description><![CDATA[ <pre></pre> ]]></description>
@@ -203,6 +170,17 @@ end</code></pre>
 <p>```
 ## In any view/partial
 # Template Dependency: component_templates/my_component</p></pre> ]]></description>
+</item>
+<item>	<title>support gitflags in gh repo fork</title>
+	<link>https://github.com/cli/cli/issues/2236</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>I want to create a fork and then clone it locally shallowly. This is not possible since <code>gh repo fork --clone</code> does not provide any options and does not return the repo name in a clean way.</p>
+<h3 id="proposed-solution">Proposed solution</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">gh</span> repo clone -- --depth 1 --single-branch <span class="va">$(</span><span class="ex">gh</span> repo fork --clone=false<span class="va">)</span></span></code></pre></div>
+<p>or accept gitflags <a href="https://cli.github.com/manual/gh_repo_clone">like <code>gh repo clone</code> does</a></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">gh</span> repo fork --clone -- --depth 1 --single-branch</span></code></pre></div>
+<h2 id="how-will-it-benefit-cli-and-its-users">How will it benefit CLI and its users?</h2>
+<p>This speeds up the cloning progress. Adding support for gitflags will also align <code>repo fork</code> with <code>repo clone</code></p></pre> ]]></description>
 </item>
 <item>	<title>LP#1875993 "yaru-theme-icon missing category icons"</title>
 	<link>https://github.com/ubuntu/yaru/issues/2441</link>
