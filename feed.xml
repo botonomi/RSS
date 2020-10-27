@@ -58,6 +58,57 @@ https://github.com/github/smimesign/tree/macos-build</p>
 	<link>https://github.com/github/SoftU2F/issues/39</link>
 	<description><![CDATA[ <pre><p>We try to connect to the kext when the app starts (<a href="https://github.com/github/SoftU2F/blob/45825a5bd6e6bad7ae9bd681c8584cbcb6e7fb7b/SoftU2FTool/U2FHID.swift#L24">code</a>). This also happens when the app is launched from the command line (Eg. for deleting/listing registrations). If the app is already running in the background we’ll get an error because the kext only allows one connection. This error is surfaced to the user, which is confusing. We should not connect to the kext unless we need to.</p></pre> ]]></description>
 </item>
+<item>	<title>Default to main and then master</title>
+	<link>https://github.com/github/super-linter/issues/698</link>
+	<description><![CDATA[ <pre><p><strong>Is your feature request related to a problem? Please describe.</strong></p>
+<p>Following the guidance of github, many developers are moving to <code>main</code> as their default branch. Saving developers from the very small hindrance of using <code>DEFAULT_BRANCH: main</code> would contribute to smoothing the transition.</p>
+<p><strong>Describe the solution you’d like</strong></p>
+<p>The default branch should be <code>main</code>. If it does not exist, use <code>master</code>, given that many repositories will continue using this name.</p></pre> ]]></description>
+</item>
+<item>	<title>Support linting infrastructure-as-code descriptors with Checkov</title>
+	<link>https://github.com/github/super-linter/issues/694</link>
+	<description><![CDATA[ <pre><p><strong>Is your feature request related to a problem? Please describe.</strong>
+https://github.com/bridgecrewio/checkov is a tool to check infrastructure-as-code descriptors. <code>It scans cloud infrastructure provisioned using Terraform, Cloudformation, Kubernetes, Serverless or ARM Templates and detects security and compliance misconfigurations.</code></p>
+<p><strong>Describe the solution you’d like</strong>
+Support <code>checkov</code>.</p>
+<p><strong>Describe alternatives you’ve considered</strong>
+N/A</p>
+<p><strong>Additional context</strong>
+N/A</p>
+<p><strong>Note</strong>
+If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p></pre> ]]></description>
+</item>
+<item>	<title>Support scanning Terraform with tfsec</title>
+	<link>https://github.com/github/super-linter/issues/693</link>
+	<description><![CDATA[ <pre><p><strong>Is your feature request related to a problem? Please describe.</strong>
+https://github.com/liamg/tfsec is a popular (more than TerraScan at least!) security-oriented linter for Terraform.</p>
+<p><strong>Describe the solution you’d like</strong>
+Support tfsec as one of the linters that super-linter ships.</p>
+<p><strong>Describe alternatives you’ve considered</strong>
+N/A</p>
+<p><strong>Additional context</strong>
+N/A</p>
+<p><strong>Note</strong>
+If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p></pre> ]]></description>
+</item>
+<item>	<title>Scala Support</title>
+	<link>https://github.com/github/super-linter/issues/392</link>
+	<description><![CDATA[ <pre><p>Scala linter support.</p>
+<p>Choices are
+- <a href="https://github.com/scalacenter/scalafix">scalafix</a>
+- <a href="https://github.com/scalameta/scalafmt">scalafmt</a>
+- <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
+- <a href="https://github.com/wartremover/wartremover">wartremover</a></p></pre> ]]></description>
+</item>
+<item>	<title>Scala Support</title>
+	<link>https://github.com/github/super-linter/issues/392</link>
+	<description><![CDATA[ <pre><p>Scala linter support.</p>
+<p>Choices are
+- <a href="https://github.com/scalacenter/scalafix">scalafix</a>
+- <a href="https://github.com/scalameta/scalafmt">scalafmt</a>
+- <a href="https://github.com/scalastyle/scalastyle">scalastyle</a>
+- <a href="https://github.com/wartremover/wartremover">wartremover</a></p></pre> ]]></description>
+</item>
 <item>	<title>[WIP] Add support for fragment caching</title>
 	<link>https://github.com/github/view_component/pull/476</link>
 	<description><![CDATA[ <pre></pre> ]]></description>
@@ -174,6 +225,12 @@ end</code></pre>
 <p>```
 ## In any view/partial
 # Template Dependency: component_templates/my_component</p></pre> ]]></description>
+</item>
+<item>	<title>when GITHUB_TOKEN is set, print better messaging during gh auth login</title>
+	<link>https://github.com/cli/cli/issues/2304</link>
+	<description><![CDATA[ <pre><p>Currently we let a user get through two prompts of <code>gh auth login</code> when GITHUB_TOKEN is set, then unceremoniously tell them that the token is read-only.</p>
+<p>We should proactively notice that situation when <code>gh auth login</code> is run and give clear messaging about unsetting the token in order to use the command.</p>
+<p>Initially we thought only power users would be using GITHUB_TOKEN as an opt-in choice, making this fine; but in Codespaces GITHUB_TOKEN is being set without users ever knowing about it.﻿</p></pre> ]]></description>
 </item>
 <item>	<title>support gitflags in gh repo fork</title>
 	<link>https://github.com/cli/cli/issues/2236</link>
