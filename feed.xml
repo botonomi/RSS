@@ -16,55 +16,6 @@
 <p><span class="citation" data-cites="parkr">@parkr</span> any interest?
 <span class="citation" data-cites="dhcole">@dhcole</span> any insight / words of wisdom?</p></pre> ]]></description>
 </item>
-<item>	<title>Clarify artifact upload/download mechanism</title>
-	<link>https://github.com/github/docs/pull/836</link>
-	<description><![CDATA[ <pre><h3 id="why">Why:</h3>
-<p>Doc link: https://docs.github.com/en/free-pro-team@latest/actions/guides/storing-workflow-data-as-artifacts</p>
-<p>The article seems to confuse the term "file", "artifact" and "directory" in certain places, which can be very confusing to the reader.</p>
-<h4 id="case-1">Case 1</h4>
-<blockquote>
-<p>upload the <code>math-homework.txt</code> file with the name <code>homework</code></p>
-</blockquote>
-<p>This formulation is problematic since, by not qualifying "name", the reader may think it refers back to "file", while it indeed refers back to "upload" (aka "artifact"). In other words, it may be understood as if the <code>math-homework.txt</code> file changes name to <code>homework</code>.</p>
-<h4 id="case-2">Case 2</h4>
-<blockquote>
-<p>Reads the value in the <code>homework/math-homework.txt</code> file</p>
-</blockquote>
-<p>This appears to be an error, in that the <code>homework</code> directory doesn’t exist. Using <code>download-artifact@v2</code> with a named artifact, will place the artifact contents in the current working directory. Only without a named artifact will it create separate directories for each downloaded artifact. See also this compatibility note from <code>download-artifact</code>’s README.md:</p>
-<blockquote>
-<p>When using download-artifact@v1, a directory denoted by the name of the artifact would be created if the path input was not provided. All of the contents would be downloaded to this directory.</p>
-</blockquote>
-<p>The examples use v2, however.</p>
-<h4 id="case-3">Case 3</h4>
-<blockquote>
-<p>This upload overwrites the previous upload because both of the uploads share the same name</p>
-</blockquote>
-<p>This uses the arguably ambiguous "upload" term in lieu of "artifact". It may be confusing to the reader to discern between uploading of files vs uploading of artifacts.</p>
-<h3 id="whats-being-changed">What’s being changed:</h3>
-<p>The problems above are addressed, like so:
-* Clarify the difference between file(s), directories and artifacts.
-* Remove "places the file in a directory named ..". This seems to confuse directory with artifact name. (Alternatively, I speculate that it may needlessly document how file storage is organized on the server side.)
-* Remove erroneous directory "homework" in step 2 of the example.</p></pre> ]]></description>
-</item>
-<item>	<title>Make note about HTML-encoding Query Strings in Search Docs</title>
-	<link>https://github.com/github/docs/pull/820</link>
-	<description><![CDATA[ <pre><h3 id="why">Why:</h3>
-<p>Before, the examples of constructing a query string in this document were a combination of unencoded and encoded HTML strings. Now, the examples explicitly state that users should construct their query strings using the HTML-encoder of their choice.</p>
-<p>Issue: https://github.com/github/docs/issues/819</p>
-<h3 id="whats-being-changed">What’s being changed:</h3>
-<p>The "Search Code" docs are updated with a note about HTML-encoding query strings, along with a JavaScript example.</p>
-<h3 id="check-off-the-following">Check off the following:</h3>
-<ul class="task-list">
-<li><input type="checkbox" disabled="" />
-All of the tests are passing.</li>
-<li><input type="checkbox" disabled="" />
-I have reviewed my changes in staging.</li>
-<li><input type="checkbox" disabled="" checked="" />
-For content changes, I have reviewed the <a href="https://github.com/github/docs/blob/main/contributing/localization-checklist.md">localization checklist</a></li>
-<li><input type="checkbox" disabled="" checked="" />
-For content changes, I have reviewed the <a href="https://github.com/github/docs/blob/main/contributing/content-style-guide.md">Content style guide for GitHub Docs</a>.</li>
-</ul></pre> ]]></description>
-</item>
 <item>	<title>TODO: Configure caching for fast building on CI</title>
 	<link>https://github.com/github/government.github.com/issues/750</link>
 	<description><![CDATA[ <pre><p>Description and details here: https://github.com/gjtorikian/html-proofer#configuring-caching and https://github.com/gjtorikian/html-proofer#caching-with-travis</p></pre> ]]></description>
