@@ -65,40 +65,6 @@ For content changes, I have reviewed the <a href="https://github.com/github/docs
 For content changes, I have reviewed the <a href="https://github.com/github/docs/blob/main/contributing/content-style-guide.md">Content style guide for GitHub Docs</a>.</li>
 </ul></pre> ]]></description>
 </item>
-<item>	<title>Fix external link to Pro Git subtree merge chapter</title>
-	<link>https://github.com/github/docs/pull/904</link>
-	<description><![CDATA[ <pre><!--
-Thank you for contributing to this project! You must fill out the information below before we can review this pull request. By explaining why you're making a change (or linking to a pull request) and what changes you've made, we can triage your pull request to the best possible team for review.
-
-See our [CONTRIBUTING.md](/main/CONTRIBUTING.md) for information how to contribute.
-
-For changes to content in [site policy](https://github.com/github/docs/tree/main/content/github/site-policy), see the [CONTRIBUTING guide in the site-policy repo](https://github.com/github/site-policy/blob/main/CONTRIBUTING.md).
-
-We cannot accept changes to our translated content right now. See the [contributing.md](/main/CONTRIBUTING.md#earth_asia-translations) for more information.
-
-Thanks again!
--->
-<h3 id="why">Why:</h3>
-<!-- 
-- If there's an existing issue for your change, please link to it.
-- If there's _not_ an existing issue, please open one first to make it more likely that this update will be accepted: https://github.com/github/docs/issues/new/choose. -->
-<p>The external link to the Pro Git subtree merge chapter no longer works because the second edition of the book has a different chapter that covers subtree merging.</p>
-<h3 id="whats-being-changed">What’s being changed:</h3>
-<!-- Share artifacts of the changes, be they code snippets, GIFs or screenshots; whatever shares the most context. -->
-<p>This updates the external link to the Pro Git book to point to the current URL for content on subtree merging.</p>
-<p>I hope you don’t mind me skipping most of the checklist and process for submitting a pull request, since this was just a one-line change to fix a URL.</p>
-<h3 id="check-off-the-following">Check off the following:</h3>
-<ul class="task-list">
-<li><input type="checkbox" disabled="" />
-All of the tests are passing.</li>
-<li><input type="checkbox" disabled="" />
-I have reviewed my changes in staging.</li>
-<li><input type="checkbox" disabled="" />
-For content changes, I have reviewed the <a href="https://github.com/github/docs/blob/main/contributing/localization-checklist.md">localization checklist</a></li>
-<li><input type="checkbox" disabled="" />
-For content changes, I have reviewed the <a href="https://github.com/github/docs/blob/main/contributing/content-style-guide.md">Content style guide for GitHub Docs</a>.</li>
-</ul></pre> ]]></description>
-</item>
 <item>	<title>TODO: Configure caching for fast building on CI</title>
 	<link>https://github.com/github/government.github.com/issues/750</link>
 	<description><![CDATA[ <pre><p>Description and details here: https://github.com/gjtorikian/html-proofer#configuring-caching and https://github.com/gjtorikian/html-proofer#caching-with-travis</p></pre> ]]></description>
