@@ -38,6 +38,10 @@ For content changes, I have reviewed the <a href="https://github.com/github/docs
 	<link>https://github.com/github/government.github.com/issues/750</link>
 	<description><![CDATA[ <pre><p>Description and details here: https://github.com/gjtorikian/html-proofer#configuring-caching and https://github.com/gjtorikian/html-proofer#caching-with-travis</p></pre> ]]></description>
 </item>
+<item>	<title>List of languages without a colour</title>
+	<link>https://github.com/github/linguist/issues/5003</link>
+	<description><![CDATA[ <pre><p>Continuing from #4506. 49</p></pre> ]]></description>
+</item>
 <item>	<title>R support</title>
 	<link>https://github.com/github/semantic/issues/382</link>
 	<description><![CDATA[ <pre><p>R is a <a href="https://stackoverflow.blog/2017/10/10/impressive-growth-r/">widely used</a>, growing language often used in Data Science and Statistics.</p>
@@ -68,6 +72,32 @@ https://github.com/github/smimesign/tree/macos-build</p>
 <p>Following the guidance of github, many developers are moving to <code>main</code> as their default branch. Saving developers from the very small hindrance of using <code>DEFAULT_BRANCH: main</code> would contribute to smoothing the transition.</p>
 <p><strong>Describe the solution you’d like</strong></p>
 <p>The default branch should be <code>main</code>. If it does not exist, use <code>master</code>, given that many repositories will continue using this name.</p></pre> ]]></description>
+</item>
+<item>	<title>Support linting infrastructure-as-code descriptors with Checkov</title>
+	<link>https://github.com/github/super-linter/issues/694</link>
+	<description><![CDATA[ <pre><p><strong>Is your feature request related to a problem? Please describe.</strong>
+https://github.com/bridgecrewio/checkov is a tool to check infrastructure-as-code descriptors. <code>It scans cloud infrastructure provisioned using Terraform, Cloudformation, Kubernetes, Serverless or ARM Templates and detects security and compliance misconfigurations.</code></p>
+<p><strong>Describe the solution you’d like</strong>
+Support <code>checkov</code>.</p>
+<p><strong>Describe alternatives you’ve considered</strong>
+N/A</p>
+<p><strong>Additional context</strong>
+N/A</p>
+<p><strong>Note</strong>
+If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p></pre> ]]></description>
+</item>
+<item>	<title>Support scanning Terraform with tfsec</title>
+	<link>https://github.com/github/super-linter/issues/693</link>
+	<description><![CDATA[ <pre><p><strong>Is your feature request related to a problem? Please describe.</strong>
+https://github.com/liamg/tfsec is a popular (more than TerraScan at least!) security-oriented linter for Terraform.</p>
+<p><strong>Describe the solution you’d like</strong>
+Support tfsec as one of the linters that super-linter ships.</p>
+<p><strong>Describe alternatives you’ve considered</strong>
+N/A</p>
+<p><strong>Additional context</strong>
+N/A</p>
+<p><strong>Note</strong>
+If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p></pre> ]]></description>
 </item>
 <item>	<title>[WIP] Add support for fragment caching</title>
 	<link>https://github.com/github/view_component/pull/476</link>
