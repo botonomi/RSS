@@ -1,11 +1,11 @@
 name: RSS
 
-on:
-  workflow_dispatch:
-
 #on:
-#  schedule:
-#    - cron: "00 */4 * * *"
+#  workflow_dispatch:
+
+on:
+  schedule:
+    - cron: "00 */4 * * *"
 
 jobs:
   concentrator:
