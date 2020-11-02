@@ -56,7 +56,7 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
                         true
                     else
                         LABELS=$(echo   "$RAW" | awk -F"¡" '{ print $2 }')
-                        TITLE=$(echo    "$RAW" | awk -F"¡" '{ print $3 }' | sed -e 's/</&lt;/g' | sed -e 's/>/&gt;/g')
+                        TITLE=$(echo    "$RAW" | awk -F"¡" '{ print $3 }' | sed -e 's/</\&lt;/g' | sed -e 's/>/\&gt;/g')
                         URL=$(echo      "$RAW" | awk -F"¡" '{ print $4 }')
                         ID=$(echo       "$RAW" | awk -F"¡" '{ print $5 }')  
                         
