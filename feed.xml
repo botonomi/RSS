@@ -243,7 +243,7 @@ https://github.com/cli/cli/releases/latest</code></pre>
 <h3 id="logs">Logs</h3>
 <p>N/A</p></pre> ]]></description>
 </item>
-<item>	<title>:gh release create: Make the error message more descriptive, if <tag> isn't passed.</title>
+<item>	<title>:gh release create: Make the error message more descriptive, if &lt;tag&gt; isn't passed.</title>
 	<link>https://github.com/cli/cli/issues/2327</link>
 	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
 <p>When <code>gh release create</code> is run, without any arguments, the output received is: <code>requires at least 1 arg(s), only received 0</code>. This is not helpful to a user who is not aware of the command (until <code>gh release create --help</code>).</p>
