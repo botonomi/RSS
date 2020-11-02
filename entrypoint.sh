@@ -61,10 +61,16 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
                         ID=$(echo       "$RAW" | awk -F"¡" '{ print $5 }')  
                         
                         # Feeler: is there a PR open for this?
-                        #PRD=$(curl -s -u :$TOKEN "https://github.com/pulls?q=is%3Apr+user%3Acli+"$I"+is%3Aclosed")
+                        PRed=$(curl -s -u :$TOKEN "https://github.com/pulls?q=is%3Apr+user%3A"$ORG"+%23"$ID | jq .total_count)
                         
                         BODY=$(curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues/$ID" | jq .body| sed -e 's/^"//' | sed -e 's/"$//'| xargs -0 printf | pandoc --wrap=preserve | sed -e 's/</&lt;/g' | sed -e 's/</&gt;/g')
-                        printf "<item>\t<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ <pre>$BODY</pre> ID: $ID ]]></description>\n</item>\n" | awk '{ gsub("\014","\\f"); gsub("\010","\\b"); print }'
+                        
+                        if [[ $PRed -gt 0 ]]
+                        then
+                            printf "<item>\t<title>$TITLE : $PRed PRs opened</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ <pre>$BODY</pre> ]]></description>\n</item>\n" | awk '{ gsub("\014","\\f"); gsub("\010","\\b"); print }'
+                        else
+                            printf "<item>\t<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ <pre>$BODY</pre> ]]></description>\n</item>\n" | awk '{ gsub("\014","\\f"); gsub("\010","\\b"); print }'
+                        fi
                     fi
                 done
                 )
