@@ -34,34 +34,21 @@ making the following hack:</p>
 what the best approach is for supporting my use case, but I am happy
 to look into implementing a suggestion.</p></pre> ]]></description>
 </item>
-<item>	<title>fix typo</title>
-	<link>https://github.com/github/docs/pull/909</link>
-	<description><![CDATA[ <pre><!--
-Thank you for contributing to this project! You must fill out the information below before we can review this pull request. By explaining why you're making a change (or linking to a pull request) and what changes you've made, we can triage your pull request to the best possible team for review.
-
-See our [CONTRIBUTING.md](/main/CONTRIBUTING.md) for information how to contribute.
-
-For changes to content in [site policy](https://github.com/github/docs/tree/main/content/github/site-policy), see the [CONTRIBUTING guide in the site-policy repo](https://github.com/github/site-policy/blob/main/CONTRIBUTING.md).
-
-We cannot accept changes to our translated content right now. See the [contributing.md](/main/CONTRIBUTING.md#earth_asia-translations) for more information.
-
-Thanks again!
--->
-<h3 id="why">Why:</h3>
-<!-- 
-- If there's an existing issue for your change, please link to it.
-- If there's _not_ an existing issue, please open one first to make it more likely that this update will be accepted: https://github.com/github/docs/issues/new/choose. -->
+<item>	<title>Fix broken link: voice and tone </title>
+	<link>https://github.com/github/docs/pull/972</link>
+	<description><![CDATA[ <pre><h3 id="why">Why:</h3>
+<p>I clicked a link and got a 404.</p>
 <h3 id="whats-being-changed">What’s being changed:</h3>
-<!-- Share artifacts of the changes, be they code snippets, GIFs or screenshots; whatever shares the most context. -->
+<p>The PR just removes a slash to correct the link.</p>
 <h3 id="check-off-the-following">Check off the following:</h3>
 <ul class="task-list">
-<li><input type="checkbox" disabled="" />
+<li><input type="checkbox" disabled="" checked="" />
 All of the tests are passing.</li>
-<li><input type="checkbox" disabled="" />
+<li><input type="checkbox" disabled="" checked="" />
 I have reviewed my changes in staging.</li>
-<li><input type="checkbox" disabled="" />
+<li><input type="checkbox" disabled="" checked="" />
 For content changes, I have reviewed the <a href="https://github.com/github/docs/blob/main/contributing/localization-checklist.md">localization checklist</a></li>
-<li><input type="checkbox" disabled="" />
+<li><input type="checkbox" disabled="" checked="" />
 For content changes, I have reviewed the <a href="https://github.com/github/docs/blob/main/contributing/content-style-guide.md">Content style guide for GitHub Docs</a>.</li>
 </ul></pre> ]]></description>
 </item>
@@ -103,32 +90,6 @@ https://github.com/github/smimesign/tree/macos-build</p>
 <p>Following the guidance of github, many developers are moving to <code>main</code> as their default branch. Saving developers from the very small hindrance of using <code>DEFAULT_BRANCH: main</code> would contribute to smoothing the transition.</p>
 <p><strong>Describe the solution you’d like</strong></p>
 <p>The default branch should be <code>main</code>. If it does not exist, use <code>master</code>, given that many repositories will continue using this name.</p></pre> ]]></description>
-</item>
-<item>	<title>Support linting infrastructure-as-code descriptors with Checkov</title>
-	<link>https://github.com/github/super-linter/issues/694</link>
-	<description><![CDATA[ <pre><p><strong>Is your feature request related to a problem? Please describe.</strong>
-https://github.com/bridgecrewio/checkov is a tool to check infrastructure-as-code descriptors. <code>It scans cloud infrastructure provisioned using Terraform, Cloudformation, Kubernetes, Serverless or ARM Templates and detects security and compliance misconfigurations.</code></p>
-<p><strong>Describe the solution you’d like</strong>
-Support <code>checkov</code>.</p>
-<p><strong>Describe alternatives you’ve considered</strong>
-N/A</p>
-<p><strong>Additional context</strong>
-N/A</p>
-<p><strong>Note</strong>
-If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p></pre> ]]></description>
-</item>
-<item>	<title>Support scanning Terraform with tfsec</title>
-	<link>https://github.com/github/super-linter/issues/693</link>
-	<description><![CDATA[ <pre><p><strong>Is your feature request related to a problem? Please describe.</strong>
-https://github.com/liamg/tfsec is a popular (more than TerraScan at least!) security-oriented linter for Terraform.</p>
-<p><strong>Describe the solution you’d like</strong>
-Support tfsec as one of the linters that super-linter ships.</p>
-<p><strong>Describe alternatives you’ve considered</strong>
-N/A</p>
-<p><strong>Additional context</strong>
-N/A</p>
-<p><strong>Note</strong>
-If this is a request to add a new language, after submitting this issue check out <a href="https://github.com/github/super-linter/wiki/Adding-new-language-support">the wiki</a> for more info on how to accomplish that.</p></pre> ]]></description>
 </item>
 <item>	<title>[WIP] Add support for fragment caching</title>
 	<link>https://github.com/github/view_component/pull/476</link>
@@ -246,6 +207,40 @@ end</code></pre>
 <p>```
 ## In any view/partial
 # Template Dependency: component_templates/my_component</p></pre> ]]></description>
+</item>
+<item>	<title>`gh repo garden` doesn't clear the whole line</title>
+	<link>https://github.com/cli/cli/issues/2331</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-bug">Describe the bug</h3>
+<p><code>gh repo garden</code> doesn’t clear the whole message line. If the line is longer than roughly the width of the "garden", it leaves behind some of the line when you go to a different spot.</p>
+<pre><code>gh version 1.2.0 (2020-10-27)
+https://github.com/cli/cli/releases/latest</code></pre>
+<h3 id="steps-to-reproduce-the-behavior">Steps to reproduce the behavior</h3>
+<ol type="1">
+<li>Type <code>gh repo garden</code></li>
+<li>Go to a spot in the garden whose message line is longer than the garden is wide</li>
+<li>Then go to a different spot where the message line is shorter</li>
+<li>Observe leftover text</li>
+</ol>
+<h3 id="expected-vs-actual-behavior">Expected vs actual behavior</h3>
+<h4 id="expected">Expected</h4>
+<p>The line is fully cleared between spots in the garden.</p>
+<h4 id="actual">Actual</h4>
+<p>Text is left behind:</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/37223377/97793857-d5ca5a80-1bae-11eb-8ba6-deb951640b56.png" alt="" /><figcaption>image</figcaption>
+</figure>
+<figure>
+<img src="https://user-images.githubusercontent.com/37223377/97793858-da8f0e80-1bae-11eb-8c71-e5f0c9517e15.png" alt="" /><figcaption>image</figcaption>
+</figure>
+<h3 id="logs">Logs</h3>
+<p>N/A</p></pre> ]]></description>
+</item>
+<item>	<title>:gh release create: Make the error message more descriptive, if <tag> isn't passed.</title>
+	<link>https://github.com/cli/cli/issues/2327</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>When <code>gh release create</code> is run, without any arguments, the output received is: <code>requires at least 1 arg(s), only received 0</code>. This is not helpful to a user who is not aware of the command (until <code>gh release create --help</code>).</p>
+<h3 id="proposed-solution">Proposed solution</h3>
+<p>Instead of the not-so-useful message, a user can receive a message like: <code>could not create: no tag name provided</code>. This will help to describe the user about the command at command execution time, rather than using <code>gh release create --help</code>.</p></pre> ]]></description>
 </item>
 <item>	<title>when GITHUB_TOKEN is set, print better messaging during gh auth login</title>
 	<link>https://github.com/cli/cli/issues/2304</link>
