@@ -6,29 +6,29 @@
 <link>https://lbonanomi.github.io/workspace/feed.xml</link>
 <item>	<title>Help wanted to add more unit tests</title>
 	<link>https://github.com/Autodesk/go-awsecs/issues/22</link>
-	<description><![CDATA[ <pre></pre> ]]></description>
+	<description><![CDATA[ <h1 style=background-color:yellow> PRs opened</h1><pre></pre> ]]></description>
 </item>
 <item>	<title>Help wanted to add more unit tests</title>
 	<link>https://github.com/Autodesk/go-awsecs/issues/22</link>
-	<description><![CDATA[ <pre></pre> ]]></description>
+	<description><![CDATA[ <h1 style=background-color:yellow> PRs opened</h1><pre></pre> ]]></description>
 </item>
 <item>	<title>WANT_UFE_BUILD scattered throughout build process</title>
 	<link>https://github.com/Autodesk/maya-usd/issues/589</link>
-	<description><![CDATA[ <pre><p><strong>Describe the issue</strong>
+	<description><![CDATA[ <h1 style=background-color:yellow> PRs opened</h1><pre><p><strong>Describe the issue</strong>
 <strong>WANT_UFE_BUILD</strong> can wind up controlling vtable layout and availability of functions.
 Currently it’s usage is scattered throughout CMake and headers in mayaUsd, hdMaya, mayaToHydra, AL-usdmaya. Usually as <strong>PRIVATE</strong> sometimes as <strong>PUBLIC</strong> (#583).</p>
 <p>Seems better to be held in a spot where all sub-projects consume the value, and anyone building against a distribution can ingest the MACRO properly (i.e. in an installed CMake target).</p></pre> ]]></description>
 </item>
-<item>	<title>:gh release create: Make the error message more descriptive, if <gt;lt;tag> isn't passed.</title>
+<item>	<title>:gh release create: Make the error message more descriptive, if <lt;tag>gt; isn't passed.</title>
 	<link>https://github.com/cli/cli/issues/2327</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+	<description><![CDATA[ <h1 style=background-color:yellow> PRs opened</h1><pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
 <p>When <code>gh release create</code> is run, without any arguments, the output received is: <code>requires at least 1 arg(s), only received 0</code>. This is not helpful to a user who is not aware of the command (until <code>gh release create --help</code>).</p>
 <h3 id="proposed-solution">Proposed solution</h3>
 <p>Instead of the not-so-useful message, a user can receive a message like: <code>could not create: no tag name provided</code>. This will help to describe the user about the command at command execution time, rather than using <code>gh release create --help</code>.</p></pre> ]]></description>
 </item>
 <item>	<title>when GITHUB_TOKEN is set, print better messaging during gh auth login</title>
 	<link>https://github.com/cli/cli/issues/2304</link>
-	<description><![CDATA[ <pre><p>Currently we let a user get through two prompts of <code>gh auth login</code> when GITHUB_TOKEN is set, then unceremoniously tell them that the token is read-only.</p>
+	<description><![CDATA[ <h1 style=background-color:yellow> PRs opened</h1><pre><p>Currently we let a user get through two prompts of <code>gh auth login</code> when GITHUB_TOKEN is set, then unceremoniously tell them that the token is read-only.</p>
 <p>We should proactively notice that situation when <code>gh auth login</code> is run and give clear messaging about unsetting the token in order to use the command.</p>
 <p>Initially we thought only power users would be using GITHUB_TOKEN as an opt-in choice, making this fine; but in Codespaces GITHUB_TOKEN is being set without users ever knowing about it.﻿</p></pre> ]]></description>
 </item>
