@@ -19,7 +19,7 @@
 Currently it’s usage is scattered throughout CMake and headers in mayaUsd, hdMaya, mayaToHydra, AL-usdmaya. Usually as <strong>PRIVATE</strong> sometimes as <strong>PUBLIC</strong> (#583).</p>
 <p>Seems better to be held in a spot where all sub-projects consume the value, and anyone building against a distribution can ingest the MACRO properly (i.e. in an installed CMake target).</p></pre> ]]></description>
 </item>
-<item>	<title>:gh release create: Make the error message more descriptive, if <lt;tag>gt; isn't passed.</title>
+<item>	<title>:gh release create: Make the error message more descriptive, if &lt;tag&gt; isn't passed.</title>
 	<link>https://github.com/cli/cli/issues/2327</link>
 	<description><![CDATA[ <h1 style="background-color:yellow">0 PRs opened</h1><pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
 <p>When <code>gh release create</code> is run, without any arguments, the output received is: <code>requires at least 1 arg(s), only received 0</code>. This is not helpful to a user who is not aware of the command (until <code>gh release create --help</code>).</p>
