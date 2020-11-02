@@ -58,9 +58,13 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
                         LABELS=$(echo   "$RAW" | awk -F"¡" '{ print $2 }')
                         TITLE=$(echo    "$RAW" | awk -F"¡" '{ print $3 }')
                         URL=$(echo      "$RAW" | awk -F"¡" '{ print $4 }')
-                        ID=$(echo       "$RAW" | awk -F"¡" '{ print $5 }')                        
+                        ID=$(echo       "$RAW" | awk -F"¡" '{ print $5 }')  
+                        
+                        # Feeler: is there a PR open for this?
+                        #PRD=$(curl -s -u :$TOKEN "https://github.com/pulls?q=is%3Apr+user%3Acli+"$I"+is%3Aclosed")
+                        
                         BODY=$(curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues/$ID" | jq .body| sed -e 's/^"//' | sed -e 's/"$//'| xargs -0 printf | pandoc --wrap=preserve | sed -e 's/</&lt;/g' | sed -e 's/</&gt;/g')
-                        printf "<item>\t<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ <pre>$BODY</pre> ]]></description>\n</item>\n" | awk '{ gsub("\014","\\f"); gsub("\010","\\b"); print }'
+                        printf "<item>\t<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ <pre>$BODY</pre> ID: $ID ]]></description>\n</item>\n" | awk '{ gsub("\014","\\f"); gsub("\010","\\b"); print }'
                     fi
                 done
                 )
@@ -78,4 +82,3 @@ curl -s -u :$TOKEN -X PUT -d '{ "message":"RSS Refresh Activity", "sha":"'$CURRE
 
 # Push page
 curl -s -u :$TOKEN https://api.github.com/repos/$GITHUB_REPOSITORY/pages | jq .html_url | grep -q "$GITHUB_REPOSITORY" || curl -s -u :$TOKEN -X POST -H "Accept: application/vnd.github.switcheroo-preview+json" https://api.github.com/repos/$GITHUB_REPOSITORY/pages
-        
