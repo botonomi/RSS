@@ -8,7 +8,7 @@ export LANGUAGES=$(echo "$2" | tr ',' '|')
 export LABELS=$(echo "$3" | tr ',' '|')
 
 
-export LABELS="Help Wanted|Hacktoberfest"
+export LABELS="Help Wanted|Up For Grabs"
 # Should this be an argument?
 CUTOFFDATE=12096000
 
@@ -59,7 +59,7 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
                         TITLE=$(echo    "$RAW" | awk -F"¡" '{ print $3 }')
                         URL=$(echo      "$RAW" | awk -F"¡" '{ print $4 }')
                         ID=$(echo       "$RAW" | awk -F"¡" '{ print $5 }')                        
-                        BODY=$(curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues/$ID" | jq .body| sed -e 's/^"//' | sed -e 's/"$//'| xargs -0 printf | pandoc --wrap=preserve)
+                        BODY=$(curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues/$ID" | jq .body| sed -e 's/^"//' | sed -e 's/"$//'| xargs -0 printf | pandoc --wrap=preserve | sed -e 's/</&lt;/g' | sed -e 's/</&gt;/g')
                         printf "<item>\t<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ <pre>$BODY</pre> ]]></description>\n</item>\n" | awk '{ gsub("\014","\\f"); gsub("\010","\\b"); print }'
                     fi
                 done
