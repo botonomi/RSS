@@ -5,52 +5,6 @@
 <description>Help Wanted Issues</description>
 <link>https://lbonanomi.github.io/workspace/feed.xml</link>
 
-<item>	
-	<title>:gh release create: Make the error message more descriptive, if &amp;lt;tag&amp;gt; isn't passed.</title>
-	<link>https://github.com/cli/cli/issues/2327</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
-<p>When <code>gh release create</code> is run, without any arguments, the output received is: <code>requires at least 1 arg(s), only received 0</code>. This is not helpful to a user who is not aware of the command (until <code>gh release create --help</code>).</p>
-<h3 id="proposed-solution">Proposed solution</h3>
-<p>Instead of the not-so-useful message, a user can receive a message like: <code>could not create: no tag name provided</code>. This will help to describe the user about the command at command execution time, rather than using <code>gh release create --help</code>.</p></pre> ]]></description>
-</item>
-	
-<item>	
-	<title>when GITHUB_TOKEN is set, print better messaging during gh auth login</title>
-	<link>https://github.com/cli/cli/issues/2304</link>
-	<description><![CDATA[ <pre><p>Currently we let a user get through two prompts of <code>gh auth login</code> when GITHUB_TOKEN is set, then unceremoniously tell them that the token is read-only.</p>
-<p>We should proactively notice that situation when <code>gh auth login</code> is run and give clear messaging about unsetting the token in order to use the command.</p>
-<p>Initially we thought only power users would be using GITHUB_TOKEN as an opt-in choice, making this fine; but in Codespaces GITHUB_TOKEN is being set without users ever knowing about it.﻿</p></pre> ]]></description>
-</item>
-
-<item>	
-	<title>support gitflags in gh repo fork</title>
-	<link>https://github.com/cli/cli/issues/2236</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
-<p>I want to create a fork and then clone it locally shallowly. This is not possible since <code>gh repo fork --clone</code> does not provide any options and does not return the repo name in a clean way.</p>
-<h3 id="proposed-solution">Proposed solution</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">gh</span> repo clone -- --depth 1 --single-branch <span class="va">$(</span><span class="ex">gh</span> repo fork --clone=false<span class="va">)</span></span></code></pre></div>
-<p>or accept gitflags <a href="https://cli.github.com/manual/gh_repo_clone">like <code>gh repo clone</code> does</a></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">gh</span> repo fork --clone -- --depth 1 --single-branch</span></code></pre></div>
-<h2 id="how-will-it-benefit-cli-and-its-users">How will it benefit CLI and its users?</h2>
-<p>This speeds up the cloning progress. Adding support for gitflags will also align <code>repo fork</code> with <code>repo clone</code></p></pre> ]]></description>
-</item>
-	
-<item>	<title>Option to disallow edits from maintainers</title>
-	<link>https://github.com/cli/cli/issues/2213</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
-<p>I would like to disallow edits by maintainers when creating a PR from the command line. Currently, I have to open the PR in the browser and untick the checkbox ("Allow edits and access to secrets by maintainers"). Correct me if I’m wrong, but I could not find an option in <a href="https://cli.github.com/manual/">the manual</a> or an existing issue.</p>
-<h3 id="proposed-solution">Proposed solution</h3>
-<p>Add a flag and a config option to untick this checkbox / disallow edits from the terminal, so that users do not have to open the browser.</p>
-<h3 id="additional-context">Additional context</h3>
-<p>Hub had an issue for this too. At first, the API did not support this, but later a PR got merged (see end of thread): https://github.com/github/hub/issues/1349</p></pre> ]]></description>
-</item>
-<item>	<title>Display the number of approvals in 'pr status'</title>
-	<link>https://github.com/cli/cli/issues/2210</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
-<p>My team requires &gt;=2 PR approvals before merging a branch. I’m sure there’s other teams that have some min. requirement for number of approvals as well. My problem is that <code>gh pr status</code> only shows if a PR’s been approved at least once.</p>
-<h3 id="proposed-solution">Proposed solution</h3>
-<p>I’d love for it to show the number of approvals.</p></pre> ]]></description>
-</item>
 <item>	<title>support .ssh/config Include directives</title>
 	<link>https://github.com/cli/cli/issues/2179</link>
 	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
