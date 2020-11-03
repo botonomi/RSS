@@ -33,15 +33,6 @@ Followup to #148</p></pre> ]]></description>
 <p>p.s. thank you for making this awesome cli :)</p></pre> ]]></description>
 </item>
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 <item>	
 	<title>:gh release create: Make the error message more descriptive, if &amp;lt;tag&amp;gt; isn't passed.</title>
 	<link>https://github.com/cli/cli/issues/2327</link>
@@ -71,6 +62,85 @@ Followup to #148</p></pre> ]]></description>
 <h2 id="how-will-it-benefit-cli-and-its-users">How will it benefit CLI and its users?</h2>
 <p>This speeds up the cloning progress. Adding support for gitflags will also align <code>repo fork</code> with <code>repo clone</code></p></pre> ]]></description>
 </item>
+	
+	
+	
+	
+	
+	
+
+<item>	<title>Option to disallow edits from maintainers</title>
+	<link>https://github.com/cli/cli/issues/2213</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>I would like to disallow edits by maintainers when creating a PR from the command line. Currently, I have to open the PR in the browser and untick the checkbox ("Allow edits and access to secrets by maintainers"). Correct me if I’m wrong, but I could not find an option in <a href="https://cli.github.com/manual/">the manual</a> or an existing issue.</p>
+<h3 id="proposed-solution">Proposed solution</h3>
+<p>Add a flag and a config option to untick this checkbox / disallow edits from the terminal, so that users do not have to open the browser.</p>
+<h3 id="additional-context">Additional context</h3>
+<p>Hub had an issue for this too. At first, the API did not support this, but later a PR got merged (see end of thread): https://github.com/github/hub/issues/1349</p></pre> ]]></description>
+</item>
+<item>	<title>Display the number of approvals in 'pr status'</title>
+	<link>https://github.com/cli/cli/issues/2210</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>My team requires &gt;=2 PR approvals before merging a branch. I’m sure there’s other teams that have some min. requirement for number of approvals as well. My problem is that <code>gh pr status</code> only shows if a PR’s been approved at least once.</p>
+<h3 id="proposed-solution">Proposed solution</h3>
+<p>I’d love for it to show the number of approvals.</p></pre> ]]></description>
+</item>
+
+<item>	<title>support .ssh/config Include directives</title>
+	<link>https://github.com/cli/cli/issues/2179</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>This is sort of related to #326 - I use different ssh keys for organizations on github, so I have Host aliases set up in <code>~/.ssh/config.d/org_name</code> files. One of these aliases may look like this:</p>
+<pre><code>Host github.com-org_name
+    HostName github.com
+    User sclem
+    IdentityFile ~/.ssh/org_name_key
+    IdentitiesOnly yes</code></pre>
+<p>git remote will look like: <code>git@github.com-org_name:Org/Repo.git</code></p>
+<p>My top level .ssh/config contains some global wildcards and <code>Include ~/.ssh/config.d/*</code>, which is documented in the <code>ssh_config</code> man page.</p>
+<p>I perused through the codebase to find that gh cli does in fact read and parse ~/.ssh/config for these Host aliases to resolve the upstream host. This works correctly, however I couldn’t find any documentation on this behavior and it doesn’t support multiple files.</p>
+<p>The error seen (after auth, if alias is not in .ssh/config directly):</p>
+<pre><code>none of the git remotes configured for this repository point to a known GitHub host. To tell gh about a new GitHub host, please use `gh auth login`</code></pre>
+<h3 id="proposed-solution">Proposed solution</h3>
+<p>Read all the ssh_config files the user has configured. Workaround for now is to put all hosts into my .ssh/config. This may get tricky, considering <code>man ssh_config</code> supports conditional includes inside a Match/Host block.</p>
+<p>Another idea is to support host: github.com in hosts.yml and don’t parse ssh config to try and resolve the remote hostname, instead have hosts.yml "keys" match the remote "domain" directly.</p>
+<h3 id="additional-context">Additional context</h3>
+<p>Workaround for now is to put everything into <code>.ssh/config</code> directly</p></pre> ]]></description>
+</item>
+
+
+<item>	<title>Letting the user specify the base init dir for the newly created repo</title>
+	<link>https://github.com/cli/cli/issues/2077</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>I’m really happy to use <code>gh</code> for my projects and it’s really helping me with increasing GitHub processes speed. But when I use <code>gh repo create</code>, it initializes the created repository in the current directory and I cannot customize the target base folder. If I’m in another directory than the actual folder I would like to create the project in, then I have to switch the directory and then use <code>gh</code>.</p>
+<pre><code>▶ gh repo create organization/foo --confirm --private
+✓ Created repository organization/foo on GitHub
+Initialized empty Git repository in ./foo/.git/
+✓ Initialized repository in &#39;./foo/&#39;</code></pre>
+<p>In this case, I would like to init the repo in another folder, not in the current one.</p>
+<h3 id="proposed-solution">Proposed solution</h3>
+<p>To be able to achieve this issue, we can add a new flag for <code>gh repo create</code> and let the user specify the base init dir for the newly created repo. So they can initialize the repo in whatever directory they want.</p>
+<pre><code>▶ gh repo create organization/foo --confirm --private --init-base-dir=/dev/repo/target
+✓ Created repository organization/foo on GitHub
+Initialized empty Git repository in /dev/repo/target/foo/.git/
+✓ Initialized repository in &#39;/dev/repo/target/foo/&#39;</code></pre>
+<h3 id="additional-context">Additional context</h3>
+<p>I can happily send a pull request for this feature if you would agree with the feature.</p></pre> ]]></description>
+</item>
+<item>	<title>Supply --web to gist create to streamline create &amp; view process</title>
+	<link>https://github.com/cli/cli/issues/2071</link>
+	<description><![CDATA[ <pre><p>I would like to able to able to supply the <code>--web</code> flag, or something similar, potentially a configuration option, to gist create options.</p>
+<p>for example: <code>gh gist create [&lt;filename&gt;... | -] --web</code></p>
+<p>This would then open the created gist in the browser.</p>
+<p>Currently it requires you to copy the gist id and supply it in <code>gh gist view</code>.</p></pre> ]]></description>
+</item>
+<item>	<title>Columns truncated when printing nontty table</title>
+	<link>https://github.com/cli/cli/issues/2042</link>
+	<description><![CDATA[ <pre><p>The table printer is truncating columns (at least in <code>issue list</code>) to meet the terminal width even
+when invoked non-interactively. This breaks grep-based scripting for, say, long lists of labels.</p></pre> ]]></description>
+</item>
+	
+	
+	
 	
 	
 </channel>
