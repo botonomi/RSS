@@ -69,7 +69,7 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
                         
                                BODY=$(curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues/$ID" | jq .body| sed -e 's/^"//' | sed -e 's/"$//'| xargs -0 printf | pandoc --wrap=preserve)
                         
-                                if [[ $PRed -gt 0 ]]
+                                if [[ "$PRed" -gt "0" ]]
                                 then
                                     printf "<item>\n<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ <h3 style=\"background-color:yellow\">$PRed PRs opened</h3><pre>$BODY</pre> ]]></description>\n</item>\n" | awk '{ gsub("\014","\\f"); gsub("\010","\\b"); print }'
                                 else
