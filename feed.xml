@@ -119,12 +119,13 @@ Initialized empty Git repository in ./foo/.git/
 Initialized empty Git repository in /dev/repo/target/foo/.git/
 ✓ Initialized repository in &#39;/dev/repo/target/foo/&#39;</code></pre>
 <h3 id="additional-context">Additional context</h3>
-<p>I can happily send a pull request for this feature if you would agree with the feature.</p></pre> ]]></description>
+<p>I can happily send a pull request for this feature if you would agree with the feature.</p></pre> ]]>
+	</description>
 </item>
 	
 	
 <item>	
-	<title>Supply --web to gist create to streamline create & view process</title>
+	<title>Supply \-\-web to gist create to streamline create & view process</title>
 	<link>https://github.com/cli/cli/issues/2071</link>
 	<description><![CDATA[ <pre><p>I would like to able to able to supply the <code>--web</code> flag, or something similar, potentially a configuration option, to gist create options.</p>
 <p>for example: <code>gh gist create [&lt;filename&gt;... | -] --web</code></p>
