@@ -63,11 +63,6 @@ Followup to #148</p></pre> ]]></description>
 <p>This speeds up the cloning progress. Adding support for gitflags will also align <code>repo fork</code> with <code>repo clone</code></p></pre> ]]></description>
 </item>
 	
-	
-	
-	
-	
-	
 
 <item>	<title>Option to disallow edits from maintainers</title>
 	<link>https://github.com/cli/cli/issues/2213</link>
@@ -139,7 +134,98 @@ Initialized empty Git repository in /dev/repo/target/foo/.git/
 when invoked non-interactively. This breaks grep-based scripting for, say, long lists of labels.</p></pre> ]]></description>
 </item>
 	
+
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<item>	<title>Render a local markdown file</title>
+	<link>https://github.com/cli/cli/issues/2007</link>
+	<description><![CDATA[ <pre><p>Let’s suppose that the new command is going to be called <code>gh render</code> (suggestions welcome). I imagine that it could work like this:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a>$ <span class="ex">gh</span> render README.md</span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="co"># or, by taking in standard input</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>$ <span class="fu">cat</span> README.md <span class="kw">|</span> <span class="ex">gh</span> render </span></code></pre></div>
+<p>Original issue:</p>
+<h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>currently the <code>gh repo view</code> only shows the remote content, so if I want to show my local changes like:
+* current recently created branch
+* or an existing branch with some changes in the Readme.md file</p>
+<p>I’d have to push the changes before in order to see them</p>
+<h3 id="proposed-solution">Proposed solution</h3>
+<p>Add a new flag like <code>--local</code> or a dot arg
+1. <code>gh repo view --local</code>
+2. <code>gh repo view .</code></p>
+<p>since the dot argument is widely known as my current location (aka working flow, branch) locally, I think it’s a better option than an extra flag</p>
+<h3 id="additional-context">Additional context</h3>
+<p>the reason of showing the local readme instead of the remote is in order to see my changes in the readme file before publish them, and how they’d look through the <code>repo view</code> command.</p>
+<p>note: I had started an implementation <a href="https://github.com/cli/cli/pull/1986">here</a> although it does quite more than just showing the local changes (may refactor it), but the specific build are failing as well</p></pre> ]]></description>
+</item>
+<item>	<title>Store gh config in 
+<item>	<title>[Feature] Run from Windows Explorer Address Bar</title>
+	<link>https://github.com/cli/cli/issues/1919</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>On windows when <code>Git for Windows</code> with <code>Git Bash</code> is installed, I can run git commands directly from the Windows Explorer Address Bar, for example like this:
+<img src="https://user-images.githubusercontent.com/18656830/94027461-2504ba80-fdbb-11ea-8e25-6c4bcad2a75f.png" alt="grafik" /></p>
+<p>It would be cool if the GitHub CLI could be run the same way:
+<img src="https://user-images.githubusercontent.com/18656830/94027555-41085c00-fdbb-11ea-841d-b9967f16fc51.png" alt="grafik" /></p>
+<p>Right now if I type in this command, a cmd window with toe following message appears:</p>
+<pre><code>This is a command line tool.
+
+You need to open cmd.exe and run it from there.</code></pre>
+<h3 id="proposed-solution">Proposed solution</h3>
+<p>Access will be faster as no terminal / cmd window has to be opened.</p></pre> ]]></description>
+</item>
+<item>	<title>Debian packaging-source (deb-src) not available</title>
+	<link>https://github.com/cli/cli/issues/1916</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-bug">Describe the bug</h3>
+<p>There are (apparently) no debian <em>source</em> packages in the repo. When uncommenting the commented "deb-src" line (which is injected into the apt sources.list alongside the "deb" line) and re-running apt update it throws a warning about the missing source-packages Release file.</p>
+<pre><code># gh --version
+gh version 1.0.0 (2020-09-16)
+https://github.com/cli/cli/releases/tag/v1.0.0
+</code></pre>
+<h3 id="steps-to-reproduce-the-behavior">Steps to reproduce the behavior</h3>
+<ol type="1">
+<li>Uncomment the deb-src line for cli.github.com in /etc/apt/sources.list (keeping the deb line too)</li>
+</ol>
+<pre><code>deb https://cli.github.com/packages unstable main
+## change the following line...
+# deb-src https://cli.github.com/packages unstable main
+## to this...
+deb-src https://cli.github.com/packages unstable main</code></pre>
+<ol start="2" type="1">
+<li>Run "apt update"</li>
+<li>See warning at the end of the output</li>
+</ol>
+<h3 id="expected-vs-actual-behavior">Expected vs actual behavior</h3>
+<p>Although access to the source itself is possible through the git repo, once the debian package is able to be built reproducibly (if it isn’t already?) then having access to the source-packages allows external users to download those and build them to compare checksums and <em>prove</em> the binary packages correspond to the source (no backdoors, etc). Also, searching through alternate branches I haven’t been able to find the source of the debian-packaging files anyway (the "/debian" subdir) so the <em>packaging</em> still seems essentially "not yet open-source" (unless it is somewhere and I just couldn’t find it).</p>
+<h3 id="logs">Logs</h3>
+<pre><code>...
+...
+Hit:5 https://cli.github.com/packages unstable InRelease                                                                                                  
+...
+...
+Fetched 6,594 B in 2s (3,618 B/s)
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+1656 packages can be upgraded. Run &#39;apt list --upgradable&#39; to see them.
+W: Skipping acquire of configured file &#39;main/source/Sources&#39; as repository &#39;https://cli.github.com/packages unstable InRelease&#39; does not seem to provide it (sources.list entry misspelt?)</code></pre></pre> ]]></description>
+</item>
+<item>	<title>Ability to initialize repo with .gitignore and license</title>
+	<link>https://github.com/cli/cli/issues/1907</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>Since we can now do everything we can from CLI, it makes no sense to open a browser for any tasks, no matter how simple it is.
+Right now we cant use default templates for <code>.gitignore</code> or <code>LICENSE</code>, since there is no such option. We have to download from internet or use from a previous one, which is quite tedious or boring or straight up a bad practice in some cases. Forgetting to do so will cause unnecessary cluttering in the repo too.</p>
+<h3 id="proposed-solution">Proposed solution</h3>
+<p>Providing a command which will automatically initialize the repo with <code>.gitignore</code> or <code>LICENSE</code> like how its done with a check box in the browser or GitHub Desktop, saving everyone some time and also easing the workflow</p></pre> ]]></description>
+</item>
 	
 	
 	
