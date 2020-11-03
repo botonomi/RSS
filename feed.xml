@@ -121,13 +121,18 @@ Initialized empty Git repository in /dev/repo/target/foo/.git/
 <h3 id="additional-context">Additional context</h3>
 <p>I can happily send a pull request for this feature if you would agree with the feature.</p></pre> ]]></description>
 </item>
-<item>	<title>Supply --web to gist create to streamline create & view process</title>
+	
+	
+<item>	
+	<title>Supply --web to gist create to streamline create & view process</title>
 	<link>https://github.com/cli/cli/issues/2071</link>
 	<description><![CDATA[ <pre><p>I would like to able to able to supply the <code>--web</code> flag, or something similar, potentially a configuration option, to gist create options.</p>
 <p>for example: <code>gh gist create [&lt;filename&gt;... | -] --web</code></p>
 <p>This would then open the created gist in the browser.</p>
 <p>Currently it requires you to copy the gist id and supply it in <code>gh gist view</code>.</p></pre> ]]></description>
 </item>
+	
+	
 <item>	<title>Columns truncated when printing nontty table</title>
 	<link>https://github.com/cli/cli/issues/2042</link>
 	<description><![CDATA[ <pre><p>The table printer is truncating columns (at least in <code>issue list</code>) to meet the terminal width even
