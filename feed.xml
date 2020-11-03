@@ -4,6 +4,67 @@
 <title>Help Wanted</title>
 <description>Help Wanted Issues</description>
 <link>https://lbonanomi.github.io/workspace/feed.xml</link>
+CURL https://api.github.com/repos/Autodesk/animx/issues?page=1
+CURL https://api.github.com/repos/Autodesk/animx/issues?page=2
+CURL https://api.github.com/repos/Autodesk/animx/issues?page=3
+CURL https://api.github.com/repos/Autodesk/animx/issues?page=4
+CURL https://api.github.com/repos/Autodesk/animx/issues?page=5
+CURL https://api.github.com/repos/Autodesk/aomi/issues?page=1
+CURL https://api.github.com/repos/Autodesk/aomi/issues?page=2
+CURL https://api.github.com/repos/Autodesk/aomi/issues?page=3
+CURL https://api.github.com/repos/Autodesk/aomi/issues?page=4
+CURL https://api.github.com/repos/Autodesk/aomi/issues?page=5
+CURL https://api.github.com/repos/Autodesk/arnold-usd/issues?page=1
+CURL https://api.github.com/repos/Autodesk/arnold-usd/issues?page=2
+CURL https://api.github.com/repos/Autodesk/arnold-usd/issues?page=3
+CURL https://api.github.com/repos/Autodesk/arnold-usd/issues?page=4
+CURL https://api.github.com/repos/Autodesk/arnold-usd/issues?page=5
+CURL https://api.github.com/repos/Autodesk/AutodeskMachineControlFramework/issues?page=1
+CURL https://api.github.com/repos/Autodesk/AutodeskMachineControlFramework/issues?page=2
+CURL https://api.github.com/repos/Autodesk/AutodeskMachineControlFramework/issues?page=3
+CURL https://api.github.com/repos/Autodesk/AutodeskMachineControlFramework/issues?page=4
+CURL https://api.github.com/repos/Autodesk/AutodeskMachineControlFramework/issues?page=5
+CURL https://api.github.com/repos/Autodesk/AutomaticComponentToolkit/issues?page=1
+CURL https://api.github.com/repos/Autodesk/AutomaticComponentToolkit/issues?page=2
+CURL https://api.github.com/repos/Autodesk/AutomaticComponentToolkit/issues?page=3
+CURL https://api.github.com/repos/Autodesk/AutomaticComponentToolkit/issues?page=4
+CURL https://api.github.com/repos/Autodesk/AutomaticComponentToolkit/issues?page=5
+CURL https://api.github.com/repos/Autodesk/biomolecular-design-database/issues?page=1
+CURL https://api.github.com/repos/Autodesk/biomolecular-design-database/issues?page=2
+CURL https://api.github.com/repos/Autodesk/biomolecular-design-database/issues?page=3
+CURL https://api.github.com/repos/Autodesk/biomolecular-design-database/issues?page=4
+CURL https://api.github.com/repos/Autodesk/biomolecular-design-database/issues?page=5
+CURL https://api.github.com/repos/Autodesk/bionano-wetLabAccelerator/issues?page=1
+CURL https://api.github.com/repos/Autodesk/bionano-wetLabAccelerator/issues?page=2
+CURL https://api.github.com/repos/Autodesk/bionano-wetLabAccelerator/issues?page=3
+CURL https://api.github.com/repos/Autodesk/bionano-wetLabAccelerator/issues?page=4
+CURL https://api.github.com/repos/Autodesk/bionano-wetLabAccelerator/issues?page=5
+CURL https://api.github.com/repos/Autodesk/cloud-compute-cannon/issues?page=1
+CURL https://api.github.com/repos/Autodesk/cloud-compute-cannon/issues?page=2
+CURL https://api.github.com/repos/Autodesk/cloud-compute-cannon/issues?page=3
+CURL https://api.github.com/repos/Autodesk/cloud-compute-cannon/issues?page=4
+CURL https://api.github.com/repos/Autodesk/cloud-compute-cannon/issues?page=5
+CURL https://api.github.com/repos/Autodesk/cryptorito/issues?page=1
+CURL https://api.github.com/repos/Autodesk/cryptorito/issues?page=2
+CURL https://api.github.com/repos/Autodesk/cryptorito/issues?page=3
+CURL https://api.github.com/repos/Autodesk/cryptorito/issues?page=4
+CURL https://api.github.com/repos/Autodesk/cryptorito/issues?page=5
+CURL https://api.github.com/repos/Autodesk/enterprise-config-for-git/issues?page=1
+CURL https://api.github.com/repos/Autodesk/enterprise-config-for-git/issues?page=2
+CURL https://api.github.com/repos/Autodesk/enterprise-config-for-git/issues?page=3
+CURL https://api.github.com/repos/Autodesk/enterprise-config-for-git/issues?page=4
+CURL https://api.github.com/repos/Autodesk/enterprise-config-for-git/issues?page=5
+CURL https://api.github.com/repos/Autodesk/flame-family/issues?page=1
+CURL https://api.github.com/repos/Autodesk/flame-family/issues?page=2
+CURL https://api.github.com/repos/Autodesk/flame-family/issues?page=3
+CURL https://api.github.com/repos/Autodesk/flame-family/issues?page=4
+CURL https://api.github.com/repos/Autodesk/flame-family/issues?page=5
+CURL https://api.github.com/repos/Autodesk/genetic-constructor-ce/issues?page=1
+CURL https://api.github.com/repos/Autodesk/genetic-constructor-ce/issues?page=2
+CURL https://api.github.com/repos/Autodesk/genetic-constructor-ce/issues?page=3
+CURL https://api.github.com/repos/Autodesk/genetic-constructor-ce/issues?page=4
+CURL https://api.github.com/repos/Autodesk/genetic-constructor-ce/issues?page=5
+CURL https://api.github.com/repos/Autodesk/go-awsecs/issues?page=1
 <item>	<title>Help wanted to add more unit tests</title>
 	<link>https://github.com/Autodesk/go-awsecs/issues/22</link>
 	<description><![CDATA[ <pre></pre> ]]></description>
@@ -12,6 +73,27 @@
 	<link>https://github.com/Autodesk/go-awsecs/issues/22</link>
 	<description><![CDATA[ <pre></pre> ]]></description>
 </item>
+CURL https://api.github.com/repos/Autodesk/go-awsecs/issues?page=2
+CURL https://api.github.com/repos/Autodesk/go-awsecs/issues?page=3
+CURL https://api.github.com/repos/Autodesk/go-awsecs/issues?page=4
+CURL https://api.github.com/repos/Autodesk/go-awsecs/issues?page=5
+CURL https://api.github.com/repos/Autodesk/hig/issues?page=1
+CURL https://api.github.com/repos/Autodesk/hig/issues?page=2
+CURL https://api.github.com/repos/Autodesk/hig/issues?page=3
+CURL https://api.github.com/repos/Autodesk/hig/issues?page=4
+CURL https://api.github.com/repos/Autodesk/hig/issues?page=5
+CURL https://api.github.com/repos/Autodesk/hubble/issues?page=1
+CURL https://api.github.com/repos/Autodesk/hubble/issues?page=2
+CURL https://api.github.com/repos/Autodesk/hubble/issues?page=3
+CURL https://api.github.com/repos/Autodesk/hubble/issues?page=4
+CURL https://api.github.com/repos/Autodesk/hubble/issues?page=5
+CURL https://api.github.com/repos/Autodesk/machine-collaboration-utility/issues?page=1
+CURL https://api.github.com/repos/Autodesk/machine-collaboration-utility/issues?page=2
+CURL https://api.github.com/repos/Autodesk/machine-collaboration-utility/issues?page=3
+CURL https://api.github.com/repos/Autodesk/machine-collaboration-utility/issues?page=4
+CURL https://api.github.com/repos/Autodesk/machine-collaboration-utility/issues?page=5
+CURL https://api.github.com/repos/Autodesk/maya-usd/issues?page=1
+CURL https://api.github.com/repos/Autodesk/maya-usd/issues?page=2
 <item>	<title>WANT_UFE_BUILD scattered throughout build process</title>
 	<link>https://github.com/Autodesk/maya-usd/issues/589</link>
 	<description><![CDATA[ <pre><p><strong>Describe the issue</strong>
@@ -19,6 +101,50 @@
 Currently it’s usage is scattered throughout CMake and headers in mayaUsd, hdMaya, mayaToHydra, AL-usdmaya. Usually as <strong>PRIVATE</strong> sometimes as <strong>PUBLIC</strong> (#583).</p>
 <p>Seems better to be held in a spot where all sub-projects consume the value, and anyone building against a distribution can ingest the MACRO properly (i.e. in an installed CMake target).</p></pre> ]]></description>
 </item>
+CURL https://api.github.com/repos/Autodesk/maya-usd/issues?page=3
+CURL https://api.github.com/repos/Autodesk/maya-usd/issues?page=4
+CURL https://api.github.com/repos/Autodesk/maya-usd/issues?page=5
+CURL https://api.github.com/repos/Autodesk/molecular-design-toolkit/issues?page=1
+CURL https://api.github.com/repos/Autodesk/molecular-design-toolkit/issues?page=2
+CURL https://api.github.com/repos/Autodesk/molecular-design-toolkit/issues?page=3
+CURL https://api.github.com/repos/Autodesk/molecular-design-toolkit/issues?page=4
+CURL https://api.github.com/repos/Autodesk/molecular-design-toolkit/issues?page=5
+CURL https://api.github.com/repos/Autodesk/molecular-simulation-tools/issues?page=1
+CURL https://api.github.com/repos/Autodesk/molecular-simulation-tools/issues?page=2
+CURL https://api.github.com/repos/Autodesk/molecular-simulation-tools/issues?page=3
+CURL https://api.github.com/repos/Autodesk/molecular-simulation-tools/issues?page=4
+CURL https://api.github.com/repos/Autodesk/molecular-simulation-tools/issues?page=5
+CURL https://api.github.com/repos/Autodesk/notebook-molecular-visualization/issues?page=1
+CURL https://api.github.com/repos/Autodesk/notebook-molecular-visualization/issues?page=2
+CURL https://api.github.com/repos/Autodesk/notebook-molecular-visualization/issues?page=3
+CURL https://api.github.com/repos/Autodesk/notebook-molecular-visualization/issues?page=4
+CURL https://api.github.com/repos/Autodesk/notebook-molecular-visualization/issues?page=5
+CURL https://api.github.com/repos/Autodesk/propriecle/issues?page=1
+CURL https://api.github.com/repos/Autodesk/propriecle/issues?page=2
+CURL https://api.github.com/repos/Autodesk/propriecle/issues?page=3
+CURL https://api.github.com/repos/Autodesk/propriecle/issues?page=4
+CURL https://api.github.com/repos/Autodesk/propriecle/issues?page=5
+CURL https://api.github.com/repos/Autodesk/pyccc/issues?page=1
+CURL https://api.github.com/repos/Autodesk/pyccc/issues?page=2
+CURL https://api.github.com/repos/Autodesk/pyccc/issues?page=3
+CURL https://api.github.com/repos/Autodesk/pyccc/issues?page=4
+CURL https://api.github.com/repos/Autodesk/pyccc/issues?page=5
+CURL https://api.github.com/repos/Autodesk/quack/issues?page=1
+CURL https://api.github.com/repos/Autodesk/quack/issues?page=2
+CURL https://api.github.com/repos/Autodesk/quack/issues?page=3
+CURL https://api.github.com/repos/Autodesk/quack/issues?page=4
+CURL https://api.github.com/repos/Autodesk/quack/issues?page=5
+CURL https://api.github.com/repos/Autodesk/sitoa/issues?page=1
+CURL https://api.github.com/repos/Autodesk/sitoa/issues?page=2
+CURL https://api.github.com/repos/Autodesk/sitoa/issues?page=3
+CURL https://api.github.com/repos/Autodesk/sitoa/issues?page=4
+CURL https://api.github.com/repos/Autodesk/sitoa/issues?page=5
+CURL https://api.github.com/repos/Autodesk/synthesis/issues?page=1
+CURL https://api.github.com/repos/Autodesk/synthesis/issues?page=2
+CURL https://api.github.com/repos/Autodesk/synthesis/issues?page=3
+CURL https://api.github.com/repos/Autodesk/synthesis/issues?page=4
+CURL https://api.github.com/repos/Autodesk/synthesis/issues?page=5
+CURL https://api.github.com/repos/cli/cli/issues?page=1
 <item>	<title>:gh release create: Make the error message more descriptive, if &amp;lt;tag&amp;gt; isn't passed.</title>
 	<link>https://github.com/cli/cli/issues/2327</link>
 	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
@@ -32,6 +158,7 @@ Currently it’s usage is scattered throughout CMake and headers in mayaUsd, hdM
 <p>We should proactively notice that situation when <code>gh auth login</code> is run and give clear messaging about unsetting the token in order to use the command.</p>
 <p>Initially we thought only power users would be using GITHUB_TOKEN as an opt-in choice, making this fine; but in Codespaces GITHUB_TOKEN is being set without users ever knowing about it.﻿</p></pre> ]]></description>
 </item>
+CURL https://api.github.com/repos/cli/cli/issues?page=2
 <item>	<title>support gitflags in gh repo fork</title>
 	<link>https://github.com/cli/cli/issues/2236</link>
 	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
@@ -79,6 +206,7 @@ Currently it’s usage is scattered throughout CMake and headers in mayaUsd, hdM
 <h3 id="additional-context">Additional context</h3>
 <p>Workaround for now is to put everything into <code>.ssh/config</code> directly</p></pre> ]]></description>
 </item>
+CURL https://api.github.com/repos/cli/cli/issues?page=3
 <item>	<title>Support cloning a gist (just like cloning a repo)</title>
 	<link>https://github.com/cli/cli/issues/2115</link>
 	<description><![CDATA[ <pre><p>In https://github.com/cli/cli/pull/1699#issue-486709880, <span class="citation" data-cites="vilmibm">@vilmibm</span> notes a limitation:</p>
@@ -133,6 +261,7 @@ Initialized empty Git repository in /dev/repo/target/foo/.git/
 	<description><![CDATA[ <pre><p>The table printer is truncating columns (at least in <code>issue list</code>) to meet the terminal width even
 when invoked non-interactively. This breaks grep-based scripting for, say, long lists of labels.</p></pre> ]]></description>
 </item>
+CURL https://api.github.com/repos/cli/cli/issues?page=4
 <item>	<title>Render a local markdown file</title>
 	<link>https://github.com/cli/cli/issues/2007</link>
 	<description><![CDATA[ <pre><p>Let’s suppose that the new command is going to be called <code>gh render</code> (suggestions welcome). I imagine that it could work like this:</p>
@@ -214,6 +343,7 @@ Right now we cant use default templates for <code>.gitignore</code> or <code>LIC
 <h3 id="proposed-solution">Proposed solution</h3>
 <p>Providing a command which will automatically initialize the repo with <code>.gitignore</code> or <code>LICENSE</code> like how its done with a check box in the browser or GitHub Desktop, saving everyone some time and also easing the workflow</p></pre> ]]></description>
 </item>
+CURL https://api.github.com/repos/cli/cli/issues?page=5
 <item>	<title>gh gist delete command request</title>
 	<link>https://github.com/cli/cli/issues/1832</link>
 	<description><![CDATA[ <pre><h3 id="the-feature">The feature</h3>
