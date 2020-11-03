@@ -155,6 +155,12 @@ when invoked non-interactively. This breaks grep-based scripting for, say, long 
 <p>the reason of showing the local readme instead of the remote is in order to see my changes in the readme file before publish them, and how they’d look through the <code>repo view</code> command.</p>
 <p>note: I had started an implementation <a href="https://github.com/cli/cli/pull/1986">here</a> although it does quite more than just showing the local changes (may refactor it), but the specific build are failing as well</p></pre> ]]></description>
 </item>
+<item>	<title>Store gh config in %APPDATA% on windows</title>
+	<link>https://github.com/cli/cli/issues/1944</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-bug">Describe the bug</h3>
+<p>When I authenticate in gh with Powershell on Windows 10 it saves variuous files in <code>.config/gh</code> in my user profile folder.
+It is expected on Linux, but on Windows I would love to have those files in</p></pre> ]]></description>
+</item>
 <item>	<title>[Feature] Run from Windows Explorer Address Bar</title>
 	<link>https://github.com/cli/cli/issues/1919</link>
 	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
