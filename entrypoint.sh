@@ -48,6 +48,7 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
                 curl -s -u :$TOKEN "https://api.github.com/repos/$I/languages" | jq . | egrep -qi "$LANGUAGES" && (
 
                     for IPAGE in $(seq 1 5)
+                    do
                         #
                         curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues?page=$IPAGE" | jq '.[] | "\(.updated_at)¡\(.labels[].name)¡\(.title)¡\(.html_url)¡\(.number)"' | egrep -i "$LABELS" | while read RAW
                         do
