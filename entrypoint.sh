@@ -46,33 +46,38 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
             curl -s -u :$TOKEN "https://api.github.com/users/$ORG/repos?page=$PAGE" | jq '.[] | "\(.open_issues) \(.full_name)"' | awk '$1 != "\"0" { gsub(/"/, ""); print $NF }' | while read I
             do
                 curl -s -u :$TOKEN "https://api.github.com/repos/$I/languages" | jq . | egrep -qi "$LANGUAGES" && (
-                curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues" | jq '.[] | "\(.updated_at)¡\(.labels[].name)¡\(.title)¡\(.html_url)¡\(.number)"' | egrep -i "$LABELS" | while read RAW
-                do
-                    THEN=$(date -d $(echo "$RAW" | awk -F"¡" '{ gsub(/"/, ""); print $1 }'| awk -F"T" '{ print $1 }') +%s )
-                    DIFF=$(($(date +%s)-$THEN))
 
-                    if [[ $DIFF -ge $CUTOFFDATE ]]
-                    then
-                        true
-                    else
-                        LABELS=$(echo   "$RAW" | awk -F"¡" '{ print $2 }')
-                        TITLE=$(echo    "$RAW" | awk -F"¡" '{ print $3 }' | sed -e 's/</\&lt;/g' | sed -e 's/>/\&gt;/g')
-                        URL=$(echo      "$RAW" | awk -F"¡" '{ print $4 }')
-                        ID=$(echo       "$RAW" | awk -F"¡" '{ print $5 }')  
+                    for IPAGE in $(seq 1 5)
+                        #
+                        curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues?page=$IPAGE" | jq '.[] | "\(.updated_at)¡\(.labels[].name)¡\(.title)¡\(.html_url)¡\(.number)"' | egrep -i "$LABELS" | while read RAW
+                        do
+                            THEN=$(date -d $(echo "$RAW" | awk -F"¡" '{ gsub(/"/, ""); print $1 }'| awk -F"T" '{ print $1 }') +%s )
+                            DIFF=$(($(date +%s)-$THEN))
+
+                            if [[ $DIFF -ge $CUTOFFDATE ]]
+                            then
+                              true
+                            else
+                                LABELS=$(echo   "$RAW" | awk -F"¡" '{ print $2 }')
+                                TITLE=$(echo    "$RAW" | awk -F"¡" '{ print $3 }' | sed -e 's/</\&lt;/g' | sed -e 's/>/\&gt;/g')
+                                URL=$(echo      "$RAW" | awk -F"¡" '{ print $4 }')
+                                ID=$(echo       "$RAW" | awk -F"¡" '{ print $5 }')  
+                            
+                                # Feeler: is there a PR open for this?
+                              PRed=$(curl -s -u :$TOKEN "https://github.com/pulls?q=is%3Apr+user%3A"$ORG"+%23"$ID | jq .total_count)
                         
-                        # Feeler: is there a PR open for this?
-                        PRed=$(curl -s -u :$TOKEN "https://github.com/pulls?q=is%3Apr+user%3A"$ORG"+%23"$ID | jq .total_count)
+                               BODY=$(curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues/$ID" | jq .body| sed -e 's/^"//' | sed -e 's/"$//'| xargs -0 printf | pandoc --wrap=preserve)
                         
-                        BODY=$(curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues/$ID" | jq .body| sed -e 's/^"//' | sed -e 's/"$//'| xargs -0 printf | pandoc --wrap=preserve)
-                        
-                        if [[ $PRed -gt 0 ]]
-                        then
-                            printf "<item>\t<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ <h3 style=\"background-color:yellow\">$PRed PRs opened</h3><pre>$BODY</pre> ]]></description>\n</item>\n" | awk '{ gsub("\014","\\f"); gsub("\010","\\b"); print }'
-                        else
-                            printf "<item>\t<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ <pre>$BODY</pre> ]]></description>\n</item>\n" | awk '{ gsub("\014","\\f"); gsub("\010","\\b"); print }'
-                        fi
-                    fi
-                done
+                                if [[ $PRed -gt 0 ]]
+                                then
+                                    printf "<item>\t<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ <h3 style=\"background-color:yellow\">$PRed PRs opened</h3><pre>$BODY</pre> ]]></description>\n</item>\n" | awk '{ gsub("\014","\\f"); gsub("\010","\\b"); print }'
+                                else
+                                    printf "<item>\t<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ <pre>$BODY</pre> ]]></description>\n</item>\n" | awk '{ gsub("\014","\\f"); gsub("\010","\\b"); print }'
+                                fi
+                            fi
+                        done
+                    #
+                    done
                 )
             done
         done
