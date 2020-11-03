@@ -49,9 +49,7 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
 
                     for IPAGE in $(seq 1 5)
                     do
-                        #
-                        
-                        echo "CURL https://api.github.com/repos/$I/issues?page=$IPAGE"
+                        #                        
                         curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues?page=$IPAGE" | jq '.[] | "\(.updated_at)¡\(.labels[].name)¡\(.title)¡\(.html_url)¡\(.number)"' | egrep -i "$LABELS" | while read RAW
                         do
                             THEN=$(date -d $(echo "$RAW" | awk -F"¡" '{ gsub(/"/, ""); print $1 }'| awk -F"T" '{ print $1 }') +%s )
