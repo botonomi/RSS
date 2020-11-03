@@ -125,7 +125,7 @@ Initialized empty Git repository in /dev/repo/target/foo/.git/
 	
 	
 <item>	
-	<title>Supply \-\-web to gist create to streamline create & view process</title>
+	<title>Supply --web to gist create to streamline create &amp; view process</title>
 	<link>https://github.com/cli/cli/issues/2071</link>
 	<description><![CDATA[ <pre><p>I would like to able to able to supply the <code>--web</code> flag, or something similar, potentially a configuration option, to gist create options.</p>
 <p>for example: <code>gh gist create [&lt;filename&gt;... | -] --web</code></p>
