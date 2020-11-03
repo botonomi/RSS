@@ -4,344 +4,6 @@
 <title>Help Wanted</title>
 <description>Help Wanted Issues</description>
 <link>https://lbonanomi.github.io/workspace/feed.xml</link>
-<item>	<title>Move from AppVeyor to GitHub Actions</title>
-	<link>https://github.com/github/certstore/issues/19</link>
-	<description><![CDATA[ <pre><p>This file should be migrated to GitHub Actions: https://github.com/github/certstore/blob/main/.appveyor.yml</p></pre> ]]></description>
-</item>
-<item>	<title>I18N</title>
-	<link>https://github.com/github/choosealicense.com/issues/68</link>
-	<description><![CDATA[ <pre><p>Would love to see about baking in I18N support to choosealicense.com proper. See #67 and #62</p>
-<p>We already have the bulk of the strings in a single file (<code>_config.yml</code>), so it should just be a matter of abstracting out some of our variables, as far as I can tell.</p>
-<p>Would love to take this on starting in August if there’s interest. Would be a great exercise to set a standard for Jekyll L10N, and can iterate on some of the lessons learned form https://github.com/CMSgov/healthcare.gov.</p>
-<p><span class="citation" data-cites="parkr">@parkr</span> any interest?
-<span class="citation" data-cites="dhcole">@dhcole</span> any insight / words of wisdom?</p></pre> ]]></description>
-</item>
-<item>	<title>TODO: Configure caching for fast building on CI</title>
-	<link>https://github.com/github/government.github.com/issues/750</link>
-	<description><![CDATA[ <pre><p>Description and details here: https://github.com/gjtorikian/html-proofer#configuring-caching and https://github.com/gjtorikian/html-proofer#caching-with-travis</p></pre> ]]></description>
-</item>
-<item>	<title>List of languages without a colour</title>
-	<link>https://github.com/github/linguist/issues/5003</link>
-	<description><![CDATA[ <pre><p>Continuing from #4506. 49</p></pre> ]]></description>
-</item>
-<item>	<title>R support</title>
-	<link>https://github.com/github/semantic/issues/382</link>
-	<description><![CDATA[ <pre><p>R is a <a href="https://stackoverflow.blog/2017/10/10/impressive-growth-r/">widely used</a>, growing language often used in Data Science and Statistics.</p>
-<p>While it does not have a published formal specification, there is a <a href="https://cran.r-project.org/doc/manuals/r-release/R-lang.pdf">draft specification</a> that describes lexing and parsing the language.</p>
-<p>In the most <a href="https://github.com/wch/r-source">widely used implementation</a> the parsing is done with a bison parser defined in <a href="https://github.com/wch/r-source/blob/ff1bca2f21aba271d428474f00494eece5c36dd3/src/main/gram.y">gram.y</a>.</p>
-<p>The lexing rules for R are somewhat complex, but the parsing is relatively straightforward, as generally everything is an expression.</p>
-<p>It would very beneficial to the R community to have support for R in semantic!</p></pre> ]]></description>
-</item>
-<item>	<title>Move from Travis CI and Appveyor to GitHub Actions</title>
-	<link>https://github.com/github/smimesign/issues/71</link>
-	<description><![CDATA[ <pre><p>The following files are historical artifacts:</p>
-<ul>
-<li>Travis CI for macOS builds: https://github.com/github/smimesign/blob/main/.travis.yml</li>
-<li>AppVeyor for Windows builds: https://github.com/github/smimesign/blob/main/.appveyor.yml</li>
-</ul>
-<p>In fact, the macOS build doesn’t upload releases anymore.</p>
-<p>Both of these should be moved to GitHub Actions. I have a test branch for macOS at:
-https://github.com/github/smimesign/tree/macos-build</p>
-<p>This is not a high priority for us, but if someone took the time to migrate and debug the CI files for GH Actions it would help us maintain this project!</p></pre> ]]></description>
-</item>
-<item>	<title>Don't connect to kext when invoked with CLI args</title>
-	<link>https://github.com/github/SoftU2F/issues/39</link>
-	<description><![CDATA[ <pre><p>We try to connect to the kext when the app starts (<a href="https://github.com/github/SoftU2F/blob/45825a5bd6e6bad7ae9bd681c8584cbcb6e7fb7b/SoftU2FTool/U2FHID.swift#L24">code</a>). This also happens when the app is launched from the command line (Eg. for deleting/listing registrations). If the app is already running in the background we’ll get an error because the kext only allows one connection. This error is surfaced to the user, which is confusing. We should not connect to the kext unless we need to.</p></pre> ]]></description>
-</item>
-<item>	<title>[WIP] Add support for fragment caching</title>
-	<link>https://github.com/github/view_component/pull/476</link>
-	<description><![CDATA[ <pre></pre> ]]></description>
-</item>
-<item>	<title>ActiveSupport::Notifications instrumentation</title>
-	<link>https://github.com/github/view_component/issues/427</link>
-	<description><![CDATA[ <pre><h2 id="feature-request">Feature request</h2>
-<p>Have <code>ActiveSupport::Notifications</code> instrumentation.</p>
-<h3 id="motivation">Motivation</h3>
-<p>It may be nice to have some information about time used to render the component. Like <code>ActionView</code> does in developer server logs.</p>
-<p>Examples:
-- simple component rendering <code>Rendered ButtonComponent (Duration: 1.2ms | Allocations: 123)</code>
-- collection rendering <code>Rendered collection of ButtonComponent [10 times] (Duration: 1.2ms | Allocations: 123)</code></p>
-<pre><code>Started GET \&quot;/posts/aa147930-7749-4d52-a44b-29548e093447/edit\&quot; for 127.0.0.1 at 2020-07-29 01:09:19 +0200
-Processing by PostsController#edit as HTML
-  Parameters: {\&quot;id\&quot;=&gt;\&quot;aa147930-7749-4d52-a44b-29548e093447\&quot;}
-  Post Load (2.0ms)  SELECT \&quot;posts\&quot;.* FROM \&quot;posts\&quot; WHERE \&quot;posts\&quot;.\&quot;id\&quot; = $1 LIMIT $2  [[\&quot;id\&quot;, \&quot;aa147930-7749-4d52-a44b-29548e093447\&quot;], [\&quot;LIMIT\&quot;, 1]]
-  ↳ app/controllers/posts_controller.rb:51:in `set_post&#39;
-  Rendering posts/edit.html.slim within layouts/application
-  Rendered ButtonComponent (Duration: 1.2ms | Allocations: 123)
-  Rendered posts/_form.html.slim (Duration: 6.3ms | Allocations: 3331)
-  Rendered posts/edit.html.slim within layouts/application (Duration: 9.4ms | Allocations: 5561)
-Completed 200 OK in 46ms (Views: 26.1ms | ActiveRecord: 2.3ms | Allocations: 19197)</code></pre></pre> ]]></description>
-</item>
-<item>	<title>Access request within SlotComponent instance</title>
-	<link>https://github.com/github/view_component/issues/409</link>
-	<description><![CDATA[ <pre><h2 id="feature-request">Feature request</h2>
-<p>https://github.com/github/view_component/pull/59 added context and access to the request object within the component, however this does not seem to extend to SlotComponent.
-I would like to propose this change to SlotComponents also</p>
-<h3 id="motivation">Motivation</h3>
-<p>I would like to use an active nav anchor tag in a NavItem slot within a NavBarComponent, by using the request to determine the <code>current_page?</code> Currently I having to work around this by wrapping the SlotComponent instance in a method in the parent Component and calling the method from the template.
-To me the SlotComponents should have access to the same helpers and view context that the parent components currently provide.</p>
-<p>I will attempt a PR of this myself if there’s acceptance and motivation to do so.</p></pre> ]]></description>
-</item>
-<item>	<title>Add failing tests for rendering with layouts</title>
-	<link>https://github.com/github/view_component/pull/395</link>
-	<description><![CDATA[ <pre><!-- See https://github.com/github/view_component/blob/master/CONTRIBUTING.md#submitting-a-pull-request  -->
-<h3 id="summary">Summary</h3>
-<!-- Provide a general description of the code changes in your pull
-request... were there any bugs you had fixed? If so, mention them. If
-these bugs have open GitHub issues, be sure to tag them here as well,
-to keep the conversation linked together. -->
-<p>This is a merge request for discussing a possible API for implementing #391</p>
-<p>I would have liked to have layouts included by default with <code>render</code>. I would understand if that is deemed an API break and a alternative needs to be determined.</p>
-<p>Additionally, I have added a test that checks the view context is shared between the layout and the component.</p>
-<h3 id="other-information">Other Information</h3>
-<!-- If there's anything else that's important and relevant to your pull
-request, mention that information here. This could include
-benchmarks, or other information.
-
-If you are updating any of the CHANGELOG files or are asked to update the
-CHANGELOG files by reviewers, please add the CHANGELOG entry at the top of the file. --></pre> ]]></description>
-</item>
-<item>	<title>Support multiple views</title>
-	<link>https://github.com/github/view_component/issues/387</link>
-	<description><![CDATA[ <pre><h2 id="feature-request">Feature request</h2>
-<!-- Provide a summary of the behavior. -->
-<p>Allow refactoring small view parts into a separate view, and be able to <code>render</code> them into the template. These views should not be available outside the component.</p>
-<pre><code>app/components/my_component/my_component.html.erb
-app/components/my_component/a_part.html.erb</code></pre>
-<p>```erb
-&lt;</p></pre> ]]></description>
-</item>
-<item>	<title>Fix rendering of components that utilize `capture` in a parent view context</title>
-	<link>https://github.com/github/view_component/pull/240</link>
-	<description><![CDATA[ <pre><p>In Rails, when you create a form it saves a reference to the current
-template object that is rendering the form. When you render a form
-builder helper method, like <code>form.label</code> inside of a child component the
-template object will be the original template object from where the form
-builder was instantiated.</p>
-<p>This means in cases where we pass a block to a form builder helper the
-<code>@output_buffer</code> is the parent component’s output buffer. So when that
-buffer is overridden via <code>.capture</code> it’s setting the parent component’s
-<code>@output_buffer</code> to a new, temporary buffer but it doesn’t change the
-child component that is actually rendering’s <code>@output_buffer</code>. This
-means the block is executed in the context of the child components
-actual <code>@output_buffer</code> and immediately writes to the buffer. Since
-<code>capture</code> had nothing written to the temporary buffer, it returns the
-value of the block call and then inserts that into the parent
-component’s <code>@output_buffer</code>.</p>
-<p>This resolves the issue by monkey patching <code>ActionView::Base</code> to support
-a new <code>child_component</code> attribute and overriding <code>output_buffer=</code> to set
-its <code>child_component</code>s output_buffer to whatever <code>output_buffer</code> is set
-to. With that in place, when <code>capture</code> is called, then #output_buffer=`
-is called which will update the child component’s output buffer to the new
-temporary buffer correctly.</p></pre> ]]></description>
-</item>
-<item>	<title>Components should play nicely with Rails caching mechanisms</title>
-	<link>https://github.com/github/view_component/issues/234</link>
-	<description><![CDATA[ <pre><h3 id="feature-request">Feature request</h3>
-<p>Components should provide a digest to Rails views, or be able to use Rails explicit caching directive comments or be able to provide a cache_key.</p>
-<p>Essentially we should be able to invalidate a cache based on whether the Component class or template has changed.</p>
-<h3 id="motivation">Motivation</h3>
-<p>I’m just building on some previous reports primarily around where templates live and the filenames of the template/s. My concerns come down to integrating with Rails caching basics.</p>
-<p>The issue that we run into is basically summed up by</p>
-<pre><code>## In any view/partial
-cache[object, another_object] do
-  render(MyComponent.new(attribute: value))
-end</code></pre>
-<p>In this case if the template for <code>MyComponent</code> is changed the cache will not be invalidated. I tried to add <code>MyComponent</code> to the array used by <code>cache</code> and provide a <code>self.cache_key</code> method that used <code>ActionView::Digestor</code> but without having some further mechanism to invalidate the digestor’s cache for the template/s when the template changes this didn’t work.</p>
-<p>Rails allows for explicit directives to be used (https://guides.rubyonrails.org/caching_with_rails.html#explicit-dependencies) but by default this will only look inside <code>app/views</code>. You can add a view path <code>append_view_path(\"app/components\")</code> but the digestor is expecting a partial and so a template filename would have to be prefixed with underscore.</p>
-<p>The way we are currently working around this is to have an <code>ApplicationComponent</code> that our components inherit from and where we override <code>ActionView::Component::Base.matching_views_in_source_location</code> so that templates are now found in <code>app/views/component_templates</code> and where the files are prefixed with underscore.</p>
-<pre><code>  def self.matching_views_in_source_location
-    return [] unless source_location
-
-    *path, file_name = source_location.chomp(File.extname(source_location)).split(\&quot;/\&quot;)
-    path.pop # remove components
-    path.concat([\&quot;views\&quot;, \&quot;component_templates\&quot;])
-    path_to_template = path.push(\&quot;_#{ file_name }\&quot;).join(\&quot;/\&quot;)
-
-    Dir[\&quot;#{ path_to_template }.*{#{ActionView::Template.template_handler_extensions.join(&#39;,&#39;)}}\&quot;]
-  end</code></pre>
-<p>Then in the above example where cache invalidation does not work via template digest changes we can do</p>
-<p>```
-## In any view/partial
-# Template Dependency: component_templates/my_component</p></pre> ]]></description>
-</item>
-<item>	<title>:gh release create: Make the error message more descriptive, if &lt;tag&gt; isn't passed.</title>
-	<link>https://github.com/cli/cli/issues/2327</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
-<p>When <code>gh release create</code> is run, without any arguments, the output received is: <code>requires at least 1 arg(s), only received 0</code>. This is not helpful to a user who is not aware of the command (until <code>gh release create --help</code>).</p>
-<h3 id="proposed-solution">Proposed solution</h3>
-<p>Instead of the not-so-useful message, a user can receive a message like: <code>could not create: no tag name provided</code>. This will help to describe the user about the command at command execution time, rather than using <code>gh release create --help</code>.</p></pre> ]]></description>
-</item>
-<item>	<title>when GITHUB_TOKEN is set, print better messaging during gh auth login</title>
-	<link>https://github.com/cli/cli/issues/2304</link>
-	<description><![CDATA[ <pre><p>Currently we let a user get through two prompts of <code>gh auth login</code> when GITHUB_TOKEN is set, then unceremoniously tell them that the token is read-only.</p>
-<p>We should proactively notice that situation when <code>gh auth login</code> is run and give clear messaging about unsetting the token in order to use the command.</p>
-<p>Initially we thought only power users would be using GITHUB_TOKEN as an opt-in choice, making this fine; but in Codespaces GITHUB_TOKEN is being set without users ever knowing about it.﻿</p></pre> ]]></description>
-</item>
-<item>	<title>Debug builds for Windows</title>
-	<link>https://github.com/mozilla/DeepSpeech/issues/3359</link>
-	<description><![CDATA[ <pre><p>Followup of #3353: we would welcome debug builds on Windows</p></pre> ]]></description>
-</item>
-<item>	<title>Debug builds for macOS</title>
-	<link>https://github.com/mozilla/DeepSpeech/issues/3358</link>
-	<description><![CDATA[ <pre><p>Followup of #3353: we would welcome debug builds on macOS</p></pre> ]]></description>
-</item>
-<item>	<title>Expose Hot Words into binaries</title>
-	<link>https://github.com/mozilla/DeepSpeech/issues/3336</link>
-	<description><![CDATA[ <pre><p>This is a follow-up of #3297: new API entry points have been added and exposed in all bindings.</p>
-<p>This bug is about replicating what has been done in #3297 for using this new API in the Python binary and do that in all our other binaries, as well as add CI testing:
-- [x] JavaScript (NodeJS, ElectronJS) #3361
-- [ ] Java (APK app)
-- [ ] .Net</p>
-<p>Anyone willing to take care of that is welcome to ask more details, here or on Matrix. This is a good way to get into the project: it’s technically easy but it touches several places as well as CI testing, so you get a nice overview of the surface.</p></pre> ]]></description>
-</item>
-<item>	<title>Please add citation information</title>
-	<link>https://github.com/mozilla/DeepSpeech/issues/3323</link>
-	<description><![CDATA[ <pre><p>A <code>CITATION.txt</code> with a BibTeX (ideally a DOI) would be much appreciated :)</p>
-<p>See here for a guideline on how to make code citable:
-https://guides.github.com/activities/citable-code/</p></pre> ]]></description>
-</item>
-<item>	<title>Moving away from TaskCluster</title>
-	<link>https://github.com/mozilla/DeepSpeech/issues/3317</link>
-	<description><![CDATA[ <pre><p>TaskCluster is a CI service provided by Mozilla, and available to both Firefox development (Firefox-CI instance) and Community on Github (Community TaskCluster). It’s being widely used across some Mozilla projects, and it has its own advantages. In our case, the control over tasks, over workers for specific needs and long build time was easier to achieve working with the TaskCluster team rather than relying on other CI services.</p>
-<p>However, this has lead to the CI code being very specific to the project, and kind of a source of frustration for non employees trying to send patches and get involved in the project ; specifically because some of the CI parts were “hand-crafted” and triggering builds and tests requires being a “collaborator” on the Github project, which has other implications making it complicated to enable it easily to anyone. In the end, this creates an artificial barrier to contributing to this project, even though we happily run PRs manually, it is still frustrating for everyone. The issue https://github.com/mozilla/DeepSpeech/issues/3228 was an attempt to fix that, but we came to the conclusion it would be more beneficial for everyone to switch to some well known CI service and setup that is less intimidating. While TaskCluster is a great tool and has helped us a lot, we feel its limitations now makes it inappropriate for the project to stimulate and enable external contributions.</p>
-<p>We would like to take this opportunity to also enable more contributors to hack and own the code related to CI, so discussion is open.</p></pre> ]]></description>
-</item>
-<item>	<title>.Net Standard lib in the nuget package</title>
-	<link>https://github.com/mozilla/DeepSpeech/issues/3285</link>
-	<description><![CDATA[ <pre><p>Will you add the .Net Standard library into nuget package?</p></pre> ]]></description>
-</item>
-<item>	<title>Memory Leak using Java Native Client</title>
-	<link>https://github.com/mozilla/DeepSpeech/issues/3271</link>
-	<description><![CDATA[ <pre><p>For support and discussions, please use our <a href="https://discourse.mozilla.org/c/mozilla-voice-stt">Discourse forums</a>.</p>
-<p>If you’ve found a bug, or have a feature request, then please create an issue with the following information:</p>
-<ul>
-<li><strong>Have I written custom code (as opposed to running examples on an unmodified clone of the repository)</strong>:</li>
-<li><strong>OS Platform and Distribution (e.g., Linux Ubuntu 16.04)</strong>: Android R (API 30)</li>
-<li><strong>Exact command to reproduce</strong>:</li>
-</ul>
-<p>I modified the STT-example in Kotlin for use in a Mozilla-STT React Native module I’m building. However, running streaming transcription uses more and more memory until the app crashes. See a fully working example by cloning <a href="https://github.com/zaptrem/react-native-transcription">this repo</a>, running <code>yarn bootstrap</code>, then <code>yarn example android</code>. Attach to it using the Android Studio profiler to watch the memory usage creep upwards.</p>
-<p>Implementation: https://github.com/zaptrem/react-native-transcription/blob/master/android/src/main/java/com/reactnativetranscription/TranscriptionModule.kt</p>
-<p>Please describe the problem clearly. Be sure to convey here why it’s a bug or a feature request.</p>
-<p>Include any logs or source code that would be helpful to diagnose the problem. For larger logs, link to a Gist, not a screenshot. If including tracebacks, please include the full traceback. Try to provide a reproducible test case.</p></pre> ]]></description>
-</item>
-<item>	<title>Change Alphabet::EncodeSingle and Alphabet::DecodeSingle to use an outparam and return an error code instead of calling `abort`</title>
-	<link>https://github.com/mozilla/DeepSpeech/issues/3175</link>
-	<description><![CDATA[ <pre><p>I run into the error "Invalid label 0". I assume it is from the function <code>Alphabet::DecodeSingle()</code> in the file <code>native_client/alphabet.cc</code>.</p>
-<p>I don’t know why I am running into this error and it is not important for now. What is important is the fact that the code calls <code>abort()</code> just after printing this error.</p>
-<p>I don’t know your guidelines. But I can tell that aborting the whole process, including the python interpreter which might be interactive, is a terrible way of handling errors, especially in such a trivial function, and I call it a bug.</p></pre> ]]></description>
-</item>
-<item>	<title>No working download links found for ds_ctcdecoder==training/deepspeech_training/VERSION</title>
-	<link>https://github.com/mozilla/DeepSpeech/issues/3099</link>
-	<description><![CDATA[ <pre><p>Hello,</p>
-<p>when I trie to use the <code>setup.py</code> on from <code>version 0.7.4</code> it always calls this error:</p>
-<p><code>No local packages or working download links found for ds_ctcdecoder==training/deepspeech_training/VERSION error:  Could not find suitable distribution for Requirement.parse('ds_ctcdecoder==training/deepspeech_training/VERSION')</code></p>
-<p>With the <code>version 0.7.3</code> and older it finds the ds_ctcdecoder but always calls that I need <code>numpy</code> in <code>version 1.16</code>, when I install 1.16 it calls me that I need <code>numpy 1.13.3</code> because of other modules and so on. That’s why I think my only chance to use DeepSpeech is with the newest version.</p>
-<p>I’m on windwos 10 with python 3.6.</p>
-<p>Thanks in advance!</p></pre> ]]></description>
-</item>
-<item>	<title>getting very bad transcript while live streaming on r0.6 version node js socket api</title>
-	<link>https://github.com/mozilla/DeepSpeech-examples/issues/66</link>
-	<description><![CDATA[ <pre><p>Hi,
-I have trained my custom model DeepSpeech 0.6.1 on my own data from scratch.</p>
-<p>I have getting good accuracy while inference using deepspeech binary (testing wer: 0.18).</p>
-<p>When i try r0.6 node js socket api and also mic vad streaming using my own data and lm, I am getting very bad transcript.</p>
-<p>It does not capture any word, it just give me an output of same garbage word for each and every spoken word.</p>
-<p>My predicted transcripts:</p>
-<p>haan
-haan haan
-haan haan haan …</p>
-<p>I saved recorded audio and listen it was of very good quality and when i infer trans from deepspeech binary using the command:
-deepspeech –model model_path –lm lm_path –trie trie_path –audio audio_path</p>
-<p>It gives me very good transcripts.</p>
-<p>So I am not able to understand why this happens with r0.6.
-when I test with 0.5.1 model example of mic vad streaming, then I am getting good accuracy.</p>
-<p>Can anyone help me to resolve this.
-Why I am getting bad transcript on r0.6 node js socket api as well as mic vad streaming.</p>
-<p>Thanks</p></pre> ]]></description>
-</item>
-<item>	<title>Windows 10:- mic_vad_streaming.py exited without error and without expected output</title>
-	<link>https://github.com/mozilla/DeepSpeech-examples/issues/59</link>
-	<description><![CDATA[ <pre><p>Even though, I have all the dependencies mentioned in requirements, mic_vad_streaming.py didn’t executed properly. Not sure why this happened, I am a beginner please help. Thanks.
-<strong>I used this command:-</strong>
-python mic_vad_streaming.py -m deepspeech-0.7.3-models.pbmm -s deepspeech-0.7.3-models.scorer
-<strong>Got this output on command line without any errors:-</strong>
-Initializing model…
-INFO:root:ARGS.model: deepspeech-0.7.3-models.pbmm
-TensorFlow: v1.15.0-24-gceb46aae58
-DeepSpeech: v0.7.3-0-g88584941
-2020-06-14 15:59:26.545446: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
-INFO:root:ARGS.scorer: deepspeech-0.7.3-models.scorer</p>
-<p>(newdsvenv) C:_vad_streaming&gt;</p></pre> ]]></description>
-</item>
-<item>	<title>NodeJS Microphone VAD Streaming - cannot start server</title>
-	<link>https://github.com/mozilla/DeepSpeech-examples/issues/30</link>
-	<description><![CDATA[ <pre><p>Hi.
-After I run node start.js , nothing happened.
-Do i need to specify to specific port first?
-If so, can I use socketio protocol, to send the transcribed text over to client?</p></pre> ]]></description>
-</item>
-<item>	<title>Make the set of syncable roots configurable</title>
-	<link>https://github.com/mozilla/dogear/issues/51</link>
-	<description><![CDATA[ <pre><p>We currently hard-code syncable to mean "everything under the five built-in roots". This works for <span class="citation" data-cites="eoger">@eoger</span>’s use case (filtering out <code>readinglist</code> and <code>pinned</code> when importing bookmarks from Fennec), and it wouldn’t be much more work to make them customizable.</p>
-<p>I imagine we’d add a method like <code>Builder::syncable(vec![MENU_GUID, MOBILE_GUID, TOOLBAR_GUID, UNFILED_GUID])</code>, store the list of syncable roots on the tree, and check them in <code>Node::is_syncable</code>.</p>
-<p>While we’re at it, we could also generalize our special handling for tags on Desktop—they’re part of the merged tree (so not deleted), but never uploaded. Or we can leave it and wait for tags to move to a separate table, which we already do in Rust Places. 😁</p></pre> ]]></description>
-</item>
-<item>	<title>Add support for Azure tests</title>
-	<link>https://github.com/mozilla/frost/issues/312</link>
-	<description><![CDATA[ <pre><p>It would be nice to have Azure tests available as we make further use of it.</p>
-<p>Can refer to the <a href="https://www.cisecurity.org/benchmark/azure/">CIS Benchmark for Azure</a>, our internal review, and <a href="https://github.com/nccgroup/ScoutSuite/tree/master/ScoutSuite/providers/azure/rules/findings">ScoutSuite’s rules</a> to determine an initial list of tests to add.</p></pre> ]]></description>
-</item>
-<item>	<title>[Help needed] TTS Community Survey - Let us know your feedback </title>
-	<link>https://github.com/mozilla/TTS/issues/541</link>
-	<description><![CDATA[ <pre><p>I’ve created this short survey to have a better understanding of the TTS community, and use cases of Mozilla TTS.</p>
-<p>This way we can plan the future of the project in more clarity and prioritize the work in an order that would serve the community in a more effective way.</p>
-<p>If you use Mozilla TTS please spare your 5 mins and let us know what you think.</p>
-<p>https://docs.google.com/forms/d/e/1FAIpQLSfSZuQzfWghgwzmv-i7BP0r5s-5JmVF-qncnkvJroAfW7YO8A/viewform?usp=sf_link</p></pre> ]]></description>
-</item>
-<item>	<title>Multi-Speaker TTS with Attentron</title>
-	<link>https://github.com/mozilla/TTS/issues/516</link>
-	<description><![CDATA[ <pre><p>Attentron is a new method proposed recently and looks like an easy alternation over our current Tacotron2 to enable easier multi-speaker TTS.</p>
-<p>paper: https://arxiv.org/pdf/2005.08484.pdf
-samples: https://hyperconnect.github.io/Attentron/</p>
-<p>Raise hands if you are willing to take this.</p></pre> ]]></description>
-</item>
-<item>	<title>Train a better Speaker Encoder</title>
-	<link>https://github.com/mozilla/TTS/issues/512</link>
-	<description><![CDATA[ <pre><p>Our current <strong>speaker encoder</strong> is trained with only LibriTTS (100, 360) datasets. However, we can improve its performance using other available datasets (VoxCeleb, LibriTTS-500, Common Voice etc.). It will also increase the performance of<a href="https://colab.research.google.com/drive/1OX2jtyxmeFt7kRO65QgPy65ku6HWUrFK?usp=sharing">our multi-speaker model</a> and makes it easier to adapt to new voices.</p>
-<p>I can’t really work on this alone due to the recent changes and the amount of work needed therefore <strong>I need some hand</strong> here to work together.</p>
-<p>So I can list the TODO as follows and feel free to contribute to any part of it or suggest changes;</p>
-<ul class="task-list">
-<li><input type="checkbox" disabled="" checked="" />
-decide target datasets</li>
-<li><input type="checkbox" disabled="" checked="" />
-download and preprocess the datasets</li>
-<li><input type="checkbox" disabled="" checked="" />
-write preprocessors for new datasets</li>
-<li><input type="checkbox" disabled="" checked="" />
-increase the efficiency of the speaker encoder data-loader.</li>
-<li><input type="checkbox" disabled="" checked="" />
-training a model only using Eng datasets.</li>
-<li><input type="checkbox" disabled="" checked="" />
-training a model with all the available datasets.</li>
-</ul></pre> ]]></description>
-</item>
-<item>	<title>[Feature Request]Android app</title>
-	<link>https://github.com/mozilla/TTS/issues/506</link>
-	<description><![CDATA[ <pre></pre> ]]></description>
-</item>
-<item>	<title>[Poll] Should we include WaveRNN in Mozilla TTS ?</title>
-	<link>https://github.com/mozilla/TTS/issues/458</link>
-	<description><![CDATA[ <pre><p>I see a lot of people still use WaveRNN although we released new faster vocoders.</p>
-<p>I am not willing to invest time in it given the way faster alternatives but you can let us know if you like to see WaveRNN as a part of Mozilla TTS repo.</p>
-<p>Please give <strong>thumps up</strong> or <strong>down</strong> to this post to have a poll.</p>
-<p>You can also state your comment or reason to have WaveRNN below.</p></pre> ]]></description>
-</item>
-<item>	<title>[HELP] Share your trained TTS models?</title>
-	<link>https://github.com/mozilla/TTS/issues/395</link>
-	<description><![CDATA[ <pre><p>Please consider sharing your pre-trained models in any language (If the licenses allow that). We can include them in our model catalog for public use by referencing your name (website, company etc.).</p>
-<p>That would enable more people experiment together and coordinate, instead of individual efforts to achieve similar goals. That is also a good chance to make your work more visible.</p></pre> ]]></description>
-</item>
 <item>	<title>Help wanted to add more unit tests</title>
 	<link>https://github.com/Autodesk/go-awsecs/issues/22</link>
 	<description><![CDATA[ <pre></pre> ]]></description>
@@ -356,6 +18,233 @@ training a model with all the available datasets.</li>
 <strong>WANT_UFE_BUILD</strong> can wind up controlling vtable layout and availability of functions.
 Currently it’s usage is scattered throughout CMake and headers in mayaUsd, hdMaya, mayaToHydra, AL-usdmaya. Usually as <strong>PRIVATE</strong> sometimes as <strong>PUBLIC</strong> (#583).</p>
 <p>Seems better to be held in a spot where all sub-projects consume the value, and anyone building against a distribution can ingest the MACRO properly (i.e. in an installed CMake target).</p></pre> ]]></description>
+</item>
+<item>	<title>:gh release create: Make the error message more descriptive, if &lt;tag&gt; isn't passed.</title>
+	<link>https://github.com/cli/cli/issues/2327</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>When <code>gh release create</code> is run, without any arguments, the output received is: <code>requires at least 1 arg(s), only received 0</code>. This is not helpful to a user who is not aware of the command (until <code>gh release create --help</code>).</p>
+<h3 id="proposed-solution">Proposed solution</h3>
+<p>Instead of the not-so-useful message, a user can receive a message like: <code>could not create: no tag name provided</code>. This will help to describe the user about the command at command execution time, rather than using <code>gh release create --help</code>.</p></pre> ]]></description>
+</item>
+<item>	<title>when GITHUB_TOKEN is set, print better messaging during gh auth login</title>
+	<link>https://github.com/cli/cli/issues/2304</link>
+	<description><![CDATA[ <pre><p>Currently we let a user get through two prompts of <code>gh auth login</code> when GITHUB_TOKEN is set, then unceremoniously tell them that the token is read-only.</p>
+<p>We should proactively notice that situation when <code>gh auth login</code> is run and give clear messaging about unsetting the token in order to use the command.</p>
+<p>Initially we thought only power users would be using GITHUB_TOKEN as an opt-in choice, making this fine; but in Codespaces GITHUB_TOKEN is being set without users ever knowing about it.﻿</p></pre> ]]></description>
+</item>
+<item>	<title>support gitflags in gh repo fork</title>
+	<link>https://github.com/cli/cli/issues/2236</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>I want to create a fork and then clone it locally shallowly. This is not possible since <code>gh repo fork --clone</code> does not provide any options and does not return the repo name in a clean way.</p>
+<h3 id="proposed-solution">Proposed solution</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">gh</span> repo clone -- --depth 1 --single-branch <span class="va">$(</span><span class="ex">gh</span> repo fork --clone=false<span class="va">)</span></span></code></pre></div>
+<p>or accept gitflags <a href="https://cli.github.com/manual/gh_repo_clone">like <code>gh repo clone</code> does</a></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">gh</span> repo fork --clone -- --depth 1 --single-branch</span></code></pre></div>
+<h2 id="how-will-it-benefit-cli-and-its-users">How will it benefit CLI and its users?</h2>
+<p>This speeds up the cloning progress. Adding support for gitflags will also align <code>repo fork</code> with <code>repo clone</code></p></pre> ]]></description>
+</item>
+<item>	<title>Option to disallow edits from maintainers</title>
+	<link>https://github.com/cli/cli/issues/2213</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>I would like to disallow edits by maintainers when creating a PR from the command line. Currently, I have to open the PR in the browser and untick the checkbox ("Allow edits and access to secrets by maintainers"). Correct me if I’m wrong, but I could not find an option in <a href="https://cli.github.com/manual/">the manual</a> or an existing issue.</p>
+<h3 id="proposed-solution">Proposed solution</h3>
+<p>Add a flag and a config option to untick this checkbox / disallow edits from the terminal, so that users do not have to open the browser.</p>
+<h3 id="additional-context">Additional context</h3>
+<p>Hub had an issue for this too. At first, the API did not support this, but later a PR got merged (see end of thread): https://github.com/github/hub/issues/1349</p></pre> ]]></description>
+</item>
+<item>	<title>Display the number of approvals in 'pr status'</title>
+	<link>https://github.com/cli/cli/issues/2210</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>My team requires &gt;=2 PR approvals before merging a branch. I’m sure there’s other teams that have some min. requirement for number of approvals as well. My problem is that <code>gh pr status</code> only shows if a PR’s been approved at least once.</p>
+<h3 id="proposed-solution">Proposed solution</h3>
+<p>I’d love for it to show the number of approvals.</p></pre> ]]></description>
+</item>
+<item>	<title>support .ssh/config Include directives</title>
+	<link>https://github.com/cli/cli/issues/2179</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>This is sort of related to #326 - I use different ssh keys for organizations on github, so I have Host aliases set up in <code>~/.ssh/config.d/org_name</code> files. One of these aliases may look like this:</p>
+<pre><code>Host github.com-org_name
+    HostName github.com
+    User sclem
+    IdentityFile ~/.ssh/org_name_key
+    IdentitiesOnly yes</code></pre>
+<p>git remote will look like: <code>git@github.com-org_name:Org/Repo.git</code></p>
+<p>My top level .ssh/config contains some global wildcards and <code>Include ~/.ssh/config.d/*</code>, which is documented in the <code>ssh_config</code> man page.</p>
+<p>I perused through the codebase to find that gh cli does in fact read and parse ~/.ssh/config for these Host aliases to resolve the upstream host. This works correctly, however I couldn’t find any documentation on this behavior and it doesn’t support multiple files.</p>
+<p>The error seen (after auth, if alias is not in .ssh/config directly):</p>
+<pre><code>none of the git remotes configured for this repository point to a known GitHub host. To tell gh about a new GitHub host, please use `gh auth login`</code></pre>
+<h3 id="proposed-solution">Proposed solution</h3>
+<p>Read all the ssh_config files the user has configured. Workaround for now is to put all hosts into my .ssh/config. This may get tricky, considering <code>man ssh_config</code> supports conditional includes inside a Match/Host block.</p>
+<p>Another idea is to support host: github.com in hosts.yml and don’t parse ssh config to try and resolve the remote hostname, instead have hosts.yml "keys" match the remote "domain" directly.</p>
+<h3 id="additional-context">Additional context</h3>
+<p>Workaround for now is to put everything into <code>.ssh/config</code> directly</p></pre> ]]></description>
+</item>
+<item>	<title>Support cloning a gist (just like cloning a repo)</title>
+	<link>https://github.com/cli/cli/issues/2115</link>
+	<description><![CDATA[ <pre><p>In https://github.com/cli/cli/pull/1699#issue-486709880, <span class="citation" data-cites="vilmibm">@vilmibm</span> notes a limitation:</p>
+<blockquote>
+<p>no affordance for cloning a gist to do more advance editing</p>
+</blockquote>
+<p>I’d like to be able to clone a gist, just like I can clone a repo. This is all that’s still needed in order to be able to use <code>gh</code> to enumerate and backup/export (clone) all owned gists.</p></pre> ]]></description>
+</item>
+<item>	<title>Sign `gh.exe` binaries in addition to signing the MSI installer</title>
+	<link>https://github.com/cli/cli/issues/2111</link>
+	<description><![CDATA[ <pre><p>This would help identify Windows binaries that were officially packaged by us vs. ones that might have been modified/corrupted. Right now, we only do signing with the MSI installer.</p>
+<p>Ref. https://github.com/cli/cli/issues/2064
+Followup to #148</p></pre> ]]></description>
+</item>
+<item>	<title>Ask to git init on repo create </title>
+	<link>https://github.com/cli/cli/issues/2099</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>If you run <code>gh repo create</code> in a folder that isn’t initialized with git the command fails.</p>
+<h3 id="proposed-solution">Proposed solution</h3>
+<p>Instead of failing the user would be asked if they want to initialize the current folder a git repo.</p>
+<h3 id="additional-context">Additional context</h3>
+<p>I would love to take up the implementation of this! The <a href="https://github.com/go-git/go-git">go-git</a> module seems like the easiest way to implement this but it is a big dep. Should we just run an exec command or is there some other way to do it?</p>
+<p>p.s. thank you for making this awesome cli :)</p></pre> ]]></description>
+</item>
+<item>	<title>Letting the user specify the base init dir for the newly created repo</title>
+	<link>https://github.com/cli/cli/issues/2077</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>I’m really happy to use <code>gh</code> for my projects and it’s really helping me with increasing GitHub processes speed. But when I use <code>gh repo create</code>, it initializes the created repository in the current directory and I cannot customize the target base folder. If I’m in another directory than the actual folder I would like to create the project in, then I have to switch the directory and then use <code>gh</code>.</p>
+<pre><code>▶ gh repo create organization/foo --confirm --private
+✓ Created repository organization/foo on GitHub
+Initialized empty Git repository in ./foo/.git/
+✓ Initialized repository in &#39;./foo/&#39;</code></pre>
+<p>In this case, I would like to init the repo in another folder, not in the current one.</p>
+<h3 id="proposed-solution">Proposed solution</h3>
+<p>To be able to achieve this issue, we can add a new flag for <code>gh repo create</code> and let the user specify the base init dir for the newly created repo. So they can initialize the repo in whatever directory they want.</p>
+<pre><code>▶ gh repo create organization/foo --confirm --private --init-base-dir=/dev/repo/target
+✓ Created repository organization/foo on GitHub
+Initialized empty Git repository in /dev/repo/target/foo/.git/
+✓ Initialized repository in &#39;/dev/repo/target/foo/&#39;</code></pre>
+<h3 id="additional-context">Additional context</h3>
+<p>I can happily send a pull request for this feature if you would agree with the feature.</p></pre> ]]></description>
+</item>
+<item>	<title>Supply --web to gist create to streamline create & view process</title>
+	<link>https://github.com/cli/cli/issues/2071</link>
+	<description><![CDATA[ <pre><p>I would like to able to able to supply the <code>--web</code> flag, or something similar, potentially a configuration option, to gist create options.</p>
+<p>for example: <code>gh gist create [&lt;filename&gt;... | -] --web</code></p>
+<p>This would then open the created gist in the browser.</p>
+<p>Currently it requires you to copy the gist id and supply it in <code>gh gist view</code>.</p></pre> ]]></description>
+</item>
+<item>	<title>Columns truncated when printing nontty table</title>
+	<link>https://github.com/cli/cli/issues/2042</link>
+	<description><![CDATA[ <pre><p>The table printer is truncating columns (at least in <code>issue list</code>) to meet the terminal width even
+when invoked non-interactively. This breaks grep-based scripting for, say, long lists of labels.</p></pre> ]]></description>
+</item>
+<item>	<title>Render a local markdown file</title>
+	<link>https://github.com/cli/cli/issues/2007</link>
+	<description><![CDATA[ <pre><p>Let’s suppose that the new command is going to be called <code>gh render</code> (suggestions welcome). I imagine that it could work like this:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a>$ <span class="ex">gh</span> render README.md</span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="co"># or, by taking in standard input</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>$ <span class="fu">cat</span> README.md <span class="kw">|</span> <span class="ex">gh</span> render </span></code></pre></div>
+<p>Original issue:</p>
+<h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>currently the <code>gh repo view</code> only shows the remote content, so if I want to show my local changes like:
+* current recently created branch
+* or an existing branch with some changes in the Readme.md file</p>
+<p>I’d have to push the changes before in order to see them</p>
+<h3 id="proposed-solution">Proposed solution</h3>
+<p>Add a new flag like <code>--local</code> or a dot arg
+1. <code>gh repo view --local</code>
+2. <code>gh repo view .</code></p>
+<p>since the dot argument is widely known as my current location (aka working flow, branch) locally, I think it’s a better option than an extra flag</p>
+<h3 id="additional-context">Additional context</h3>
+<p>the reason of showing the local readme instead of the remote is in order to see my changes in the readme file before publish them, and how they’d look through the <code>repo view</code> command.</p>
+<p>note: I had started an implementation <a href="https://github.com/cli/cli/pull/1986">here</a> although it does quite more than just showing the local changes (may refactor it), but the specific build are failing as well</p></pre> ]]></description>
+</item>
+<item>	<title>Store gh config in 
+<item>	<title>[Feature] Run from Windows Explorer Address Bar</title>
+	<link>https://github.com/cli/cli/issues/1919</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>On windows when <code>Git for Windows</code> with <code>Git Bash</code> is installed, I can run git commands directly from the Windows Explorer Address Bar, for example like this:
+<img src="https://user-images.githubusercontent.com/18656830/94027461-2504ba80-fdbb-11ea-8e25-6c4bcad2a75f.png" alt="grafik" /></p>
+<p>It would be cool if the GitHub CLI could be run the same way:
+<img src="https://user-images.githubusercontent.com/18656830/94027555-41085c00-fdbb-11ea-841d-b9967f16fc51.png" alt="grafik" /></p>
+<p>Right now if I type in this command, a cmd window with toe following message appears:</p>
+<pre><code>This is a command line tool.
+
+You need to open cmd.exe and run it from there.</code></pre>
+<h3 id="proposed-solution">Proposed solution</h3>
+<p>Access will be faster as no terminal / cmd window has to be opened.</p></pre> ]]></description>
+</item>
+<item>	<title>Debian packaging-source (deb-src) not available</title>
+	<link>https://github.com/cli/cli/issues/1916</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-bug">Describe the bug</h3>
+<p>There are (apparently) no debian <em>source</em> packages in the repo. When uncommenting the commented "deb-src" line (which is injected into the apt sources.list alongside the "deb" line) and re-running apt update it throws a warning about the missing source-packages Release file.</p>
+<pre><code># gh --version
+gh version 1.0.0 (2020-09-16)
+https://github.com/cli/cli/releases/tag/v1.0.0
+</code></pre>
+<h3 id="steps-to-reproduce-the-behavior">Steps to reproduce the behavior</h3>
+<ol type="1">
+<li>Uncomment the deb-src line for cli.github.com in /etc/apt/sources.list (keeping the deb line too)</li>
+</ol>
+<pre><code>deb https://cli.github.com/packages unstable main
+## change the following line...
+# deb-src https://cli.github.com/packages unstable main
+## to this...
+deb-src https://cli.github.com/packages unstable main</code></pre>
+<ol start="2" type="1">
+<li>Run "apt update"</li>
+<li>See warning at the end of the output</li>
+</ol>
+<h3 id="expected-vs-actual-behavior">Expected vs actual behavior</h3>
+<p>Although access to the source itself is possible through the git repo, once the debian package is able to be built reproducibly (if it isn’t already?) then having access to the source-packages allows external users to download those and build them to compare checksums and <em>prove</em> the binary packages correspond to the source (no backdoors, etc). Also, searching through alternate branches I haven’t been able to find the source of the debian-packaging files anyway (the "/debian" subdir) so the <em>packaging</em> still seems essentially "not yet open-source" (unless it is somewhere and I just couldn’t find it).</p>
+<h3 id="logs">Logs</h3>
+<pre><code>...
+...
+Hit:5 https://cli.github.com/packages unstable InRelease                                                                                                  
+...
+...
+Fetched 6,594 B in 2s (3,618 B/s)
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+1656 packages can be upgraded. Run &#39;apt list --upgradable&#39; to see them.
+W: Skipping acquire of configured file &#39;main/source/Sources&#39; as repository &#39;https://cli.github.com/packages unstable InRelease&#39; does not seem to provide it (sources.list entry misspelt?)</code></pre></pre> ]]></description>
+</item>
+<item>	<title>Ability to initialize repo with .gitignore and license</title>
+	<link>https://github.com/cli/cli/issues/1907</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>Since we can now do everything we can from CLI, it makes no sense to open a browser for any tasks, no matter how simple it is.
+Right now we cant use default templates for <code>.gitignore</code> or <code>LICENSE</code>, since there is no such option. We have to download from internet or use from a previous one, which is quite tedious or boring or straight up a bad practice in some cases. Forgetting to do so will cause unnecessary cluttering in the repo too.</p>
+<h3 id="proposed-solution">Proposed solution</h3>
+<p>Providing a command which will automatically initialize the repo with <code>.gitignore</code> or <code>LICENSE</code> like how its done with a check box in the browser or GitHub Desktop, saving everyone some time and also easing the workflow</p></pre> ]]></description>
+</item>
+<item>	<title>gh gist delete command request</title>
+	<link>https://github.com/cli/cli/issues/1832</link>
+	<description><![CDATA[ <pre><h3 id="the-feature">The feature</h3>
+<p>I do not think right now the GitHub CLI has ability to delete gists</p>
+<p>I will be better if it can delete it via <code>gh gist delete &lt;id&gt;</code></p>
+<pre class="cmd"><code>$ gh gist delete --help
+Delete one of your gists
+
+USAGE
+    gh gist delete {&lt;gist ID&gt; | &lt;gist URL&gt;} [flags]
+
+FLAGS
+    -f, --filename string      a specific filename to delete
+
+INHERITED FLAGS
+   --help    Show help for command</code></pre></pre> ]]></description>
+</item>
+<item>	<title>Update messaging when `gh pr check` run on repo w/o CI</title>
+	<link>https://github.com/cli/cli/issues/1818</link>
+	<description><![CDATA[ <pre><p>When running this <code>gh pr checks [branch] -R [owner/repo]</code> command and there is no pull request but no CI, I get this:</p>
+<p><code>no open pull requests found for branch \"JJJ\"</code></p>
+<p>However, when running the same command on a different branch and there is a pull request but no CI, nothing is returned.</p>
+<p>In both cases, I think it would be more accurate to say something like "no CI checks are set up for this repository".</p></pre> ]]></description>
+</item>
+<item>	<title>Document where authentication credentials are stored</title>
+	<link>https://github.com/cli/cli/issues/1773</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>I can’t find any information on the website or in the CLI help command about where authentication information is stored.</p>
+<h3 id="proposed-solution">Proposed solution</h3>
+<p>Document where GH CLI stores authentication credentials. Also explain the relationship of this with existing GitHub credentials you may have on your system, like an SSH key or git https credentials in the keychain.</p>
+<p>This helps the user understand the security and practical implications of logging in to the CLI.</p></pre> ]]></description>
 </item>
 
 </channel>
