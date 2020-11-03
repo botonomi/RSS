@@ -3,55 +3,163 @@
 <channel>
 <title>Help Wanted</title>
 <description>Help Wanted Issues</description>
-	<link>https://lbonanomi.github.io/workspace/feed.xml</link>
-
-	<item>	
-		<title>Support cloning a gist (just like cloning a repo)</title>
-		<link>https://github.com/cli/cli/issues/2115</link>
-		<description><![CDATA[ <pre><p>In https://github.com/cli/cli/pull/1699#issue-486709880, <span class="citation" data-cites="vilmibm">@vilmibm</span> notes a limitation:</p>
-<blockquote>
-<p>no affordance for cloning a gist to do more advance editing</p>
-</blockquote>
-<p>I’d like to be able to clone a gist, just like I can clone a repo. This is all that’s still needed in order to be able to use <code>gh</code> to enumerate and backup/export (clone) all owned gists.</p></pre> ]]></description>
+<link>https://lbonanomi.github.io/workspace/feed.xml</link>
+CURL https://api.github.com/repos/Autodesk/animx/issues?page=1
+CURL https://api.github.com/repos/Autodesk/animx/issues?page=2
+CURL https://api.github.com/repos/Autodesk/animx/issues?page=3
+CURL https://api.github.com/repos/Autodesk/animx/issues?page=4
+CURL https://api.github.com/repos/Autodesk/animx/issues?page=5
+CURL https://api.github.com/repos/Autodesk/aomi/issues?page=1
+CURL https://api.github.com/repos/Autodesk/aomi/issues?page=2
+CURL https://api.github.com/repos/Autodesk/aomi/issues?page=3
+CURL https://api.github.com/repos/Autodesk/aomi/issues?page=4
+CURL https://api.github.com/repos/Autodesk/aomi/issues?page=5
+CURL https://api.github.com/repos/Autodesk/arnold-usd/issues?page=1
+CURL https://api.github.com/repos/Autodesk/arnold-usd/issues?page=2
+CURL https://api.github.com/repos/Autodesk/arnold-usd/issues?page=3
+CURL https://api.github.com/repos/Autodesk/arnold-usd/issues?page=4
+CURL https://api.github.com/repos/Autodesk/arnold-usd/issues?page=5
+CURL https://api.github.com/repos/Autodesk/AutodeskMachineControlFramework/issues?page=1
+CURL https://api.github.com/repos/Autodesk/AutodeskMachineControlFramework/issues?page=2
+CURL https://api.github.com/repos/Autodesk/AutodeskMachineControlFramework/issues?page=3
+CURL https://api.github.com/repos/Autodesk/AutodeskMachineControlFramework/issues?page=4
+CURL https://api.github.com/repos/Autodesk/AutodeskMachineControlFramework/issues?page=5
+CURL https://api.github.com/repos/Autodesk/AutomaticComponentToolkit/issues?page=1
+CURL https://api.github.com/repos/Autodesk/AutomaticComponentToolkit/issues?page=2
+CURL https://api.github.com/repos/Autodesk/AutomaticComponentToolkit/issues?page=3
+CURL https://api.github.com/repos/Autodesk/AutomaticComponentToolkit/issues?page=4
+CURL https://api.github.com/repos/Autodesk/AutomaticComponentToolkit/issues?page=5
+CURL https://api.github.com/repos/Autodesk/biomolecular-design-database/issues?page=1
+CURL https://api.github.com/repos/Autodesk/biomolecular-design-database/issues?page=2
+CURL https://api.github.com/repos/Autodesk/biomolecular-design-database/issues?page=3
+CURL https://api.github.com/repos/Autodesk/biomolecular-design-database/issues?page=4
+CURL https://api.github.com/repos/Autodesk/biomolecular-design-database/issues?page=5
+CURL https://api.github.com/repos/Autodesk/bionano-wetLabAccelerator/issues?page=1
+CURL https://api.github.com/repos/Autodesk/bionano-wetLabAccelerator/issues?page=2
+CURL https://api.github.com/repos/Autodesk/bionano-wetLabAccelerator/issues?page=3
+CURL https://api.github.com/repos/Autodesk/bionano-wetLabAccelerator/issues?page=4
+CURL https://api.github.com/repos/Autodesk/bionano-wetLabAccelerator/issues?page=5
+CURL https://api.github.com/repos/Autodesk/cloud-compute-cannon/issues?page=1
+CURL https://api.github.com/repos/Autodesk/cloud-compute-cannon/issues?page=2
+CURL https://api.github.com/repos/Autodesk/cloud-compute-cannon/issues?page=3
+CURL https://api.github.com/repos/Autodesk/cloud-compute-cannon/issues?page=4
+CURL https://api.github.com/repos/Autodesk/cloud-compute-cannon/issues?page=5
+CURL https://api.github.com/repos/Autodesk/cryptorito/issues?page=1
+CURL https://api.github.com/repos/Autodesk/cryptorito/issues?page=2
+CURL https://api.github.com/repos/Autodesk/cryptorito/issues?page=3
+CURL https://api.github.com/repos/Autodesk/cryptorito/issues?page=4
+CURL https://api.github.com/repos/Autodesk/cryptorito/issues?page=5
+CURL https://api.github.com/repos/Autodesk/enterprise-config-for-git/issues?page=1
+CURL https://api.github.com/repos/Autodesk/enterprise-config-for-git/issues?page=2
+CURL https://api.github.com/repos/Autodesk/enterprise-config-for-git/issues?page=3
+CURL https://api.github.com/repos/Autodesk/enterprise-config-for-git/issues?page=4
+CURL https://api.github.com/repos/Autodesk/enterprise-config-for-git/issues?page=5
+CURL https://api.github.com/repos/Autodesk/flame-family/issues?page=1
+CURL https://api.github.com/repos/Autodesk/flame-family/issues?page=2
+CURL https://api.github.com/repos/Autodesk/flame-family/issues?page=3
+CURL https://api.github.com/repos/Autodesk/flame-family/issues?page=4
+CURL https://api.github.com/repos/Autodesk/flame-family/issues?page=5
+CURL https://api.github.com/repos/Autodesk/genetic-constructor-ce/issues?page=1
+CURL https://api.github.com/repos/Autodesk/genetic-constructor-ce/issues?page=2
+CURL https://api.github.com/repos/Autodesk/genetic-constructor-ce/issues?page=3
+CURL https://api.github.com/repos/Autodesk/genetic-constructor-ce/issues?page=4
+CURL https://api.github.com/repos/Autodesk/genetic-constructor-ce/issues?page=5
+CURL https://api.github.com/repos/Autodesk/go-awsecs/issues?page=1
+<item>	<title>Help wanted to add more unit tests</title>
+	<link>https://github.com/Autodesk/go-awsecs/issues/22</link>
+	<description><![CDATA[ <pre></pre> ]]></description>
 </item>
-	
-<item>	<title>Sign `gh.exe` binaries in addition to signing the MSI installer</title>
-	<link>https://github.com/cli/cli/issues/2111</link>
-	<description><![CDATA[ <pre><p>This would help identify Windows binaries that were officially packaged by us vs. ones that might have been modified/corrupted. Right now, we only do signing with the MSI installer.</p>
-<p>Ref. https://github.com/cli/cli/issues/2064
-Followup to #148</p></pre> ]]></description>
+<item>	<title>Help wanted to add more unit tests</title>
+	<link>https://github.com/Autodesk/go-awsecs/issues/22</link>
+	<description><![CDATA[ <pre></pre> ]]></description>
 </item>
-	
-<item>	<title>Ask to git init on repo create </title>
-	<link>https://github.com/cli/cli/issues/2099</link>
-	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
-<p>If you run <code>gh repo create</code> in a folder that isn’t initialized with git the command fails.</p>
-<h3 id="proposed-solution">Proposed solution</h3>
-<p>Instead of failing the user would be asked if they want to initialize the current folder a git repo.</p>
-<h3 id="additional-context">Additional context</h3>
-<p>I would love to take up the implementation of this! The <a href="https://github.com/go-git/go-git">go-git</a> module seems like the easiest way to implement this but it is a big dep. Should we just run an exec command or is there some other way to do it?</p>
-<p>p.s. thank you for making this awesome cli :)</p></pre> ]]></description>
+CURL https://api.github.com/repos/Autodesk/go-awsecs/issues?page=2
+CURL https://api.github.com/repos/Autodesk/go-awsecs/issues?page=3
+CURL https://api.github.com/repos/Autodesk/go-awsecs/issues?page=4
+CURL https://api.github.com/repos/Autodesk/go-awsecs/issues?page=5
+CURL https://api.github.com/repos/Autodesk/hig/issues?page=1
+CURL https://api.github.com/repos/Autodesk/hig/issues?page=2
+CURL https://api.github.com/repos/Autodesk/hig/issues?page=3
+CURL https://api.github.com/repos/Autodesk/hig/issues?page=4
+CURL https://api.github.com/repos/Autodesk/hig/issues?page=5
+CURL https://api.github.com/repos/Autodesk/hubble/issues?page=1
+CURL https://api.github.com/repos/Autodesk/hubble/issues?page=2
+CURL https://api.github.com/repos/Autodesk/hubble/issues?page=3
+CURL https://api.github.com/repos/Autodesk/hubble/issues?page=4
+CURL https://api.github.com/repos/Autodesk/hubble/issues?page=5
+CURL https://api.github.com/repos/Autodesk/machine-collaboration-utility/issues?page=1
+CURL https://api.github.com/repos/Autodesk/machine-collaboration-utility/issues?page=2
+CURL https://api.github.com/repos/Autodesk/machine-collaboration-utility/issues?page=3
+CURL https://api.github.com/repos/Autodesk/machine-collaboration-utility/issues?page=4
+CURL https://api.github.com/repos/Autodesk/machine-collaboration-utility/issues?page=5
+CURL https://api.github.com/repos/Autodesk/maya-usd/issues?page=1
+CURL https://api.github.com/repos/Autodesk/maya-usd/issues?page=2
+<item>	<title>WANT_UFE_BUILD scattered throughout build process</title>
+	<link>https://github.com/Autodesk/maya-usd/issues/589</link>
+	<description><![CDATA[ <pre><p><strong>Describe the issue</strong>
+<strong>WANT_UFE_BUILD</strong> can wind up controlling vtable layout and availability of functions.
+Currently it’s usage is scattered throughout CMake and headers in mayaUsd, hdMaya, mayaToHydra, AL-usdmaya. Usually as <strong>PRIVATE</strong> sometimes as <strong>PUBLIC</strong> (#583).</p>
+<p>Seems better to be held in a spot where all sub-projects consume the value, and anyone building against a distribution can ingest the MACRO properly (i.e. in an installed CMake target).</p></pre> ]]></description>
 </item>
-	
-<item>	
-	<title>:gh release create: Make the error message more descriptive, if &amp;lt;tag&amp;gt; isn't passed.</title>
+CURL https://api.github.com/repos/Autodesk/maya-usd/issues?page=3
+CURL https://api.github.com/repos/Autodesk/maya-usd/issues?page=4
+CURL https://api.github.com/repos/Autodesk/maya-usd/issues?page=5
+CURL https://api.github.com/repos/Autodesk/molecular-design-toolkit/issues?page=1
+CURL https://api.github.com/repos/Autodesk/molecular-design-toolkit/issues?page=2
+CURL https://api.github.com/repos/Autodesk/molecular-design-toolkit/issues?page=3
+CURL https://api.github.com/repos/Autodesk/molecular-design-toolkit/issues?page=4
+CURL https://api.github.com/repos/Autodesk/molecular-design-toolkit/issues?page=5
+CURL https://api.github.com/repos/Autodesk/molecular-simulation-tools/issues?page=1
+CURL https://api.github.com/repos/Autodesk/molecular-simulation-tools/issues?page=2
+CURL https://api.github.com/repos/Autodesk/molecular-simulation-tools/issues?page=3
+CURL https://api.github.com/repos/Autodesk/molecular-simulation-tools/issues?page=4
+CURL https://api.github.com/repos/Autodesk/molecular-simulation-tools/issues?page=5
+CURL https://api.github.com/repos/Autodesk/notebook-molecular-visualization/issues?page=1
+CURL https://api.github.com/repos/Autodesk/notebook-molecular-visualization/issues?page=2
+CURL https://api.github.com/repos/Autodesk/notebook-molecular-visualization/issues?page=3
+CURL https://api.github.com/repos/Autodesk/notebook-molecular-visualization/issues?page=4
+CURL https://api.github.com/repos/Autodesk/notebook-molecular-visualization/issues?page=5
+CURL https://api.github.com/repos/Autodesk/propriecle/issues?page=1
+CURL https://api.github.com/repos/Autodesk/propriecle/issues?page=2
+CURL https://api.github.com/repos/Autodesk/propriecle/issues?page=3
+CURL https://api.github.com/repos/Autodesk/propriecle/issues?page=4
+CURL https://api.github.com/repos/Autodesk/propriecle/issues?page=5
+CURL https://api.github.com/repos/Autodesk/pyccc/issues?page=1
+CURL https://api.github.com/repos/Autodesk/pyccc/issues?page=2
+CURL https://api.github.com/repos/Autodesk/pyccc/issues?page=3
+CURL https://api.github.com/repos/Autodesk/pyccc/issues?page=4
+CURL https://api.github.com/repos/Autodesk/pyccc/issues?page=5
+CURL https://api.github.com/repos/Autodesk/quack/issues?page=1
+CURL https://api.github.com/repos/Autodesk/quack/issues?page=2
+CURL https://api.github.com/repos/Autodesk/quack/issues?page=3
+CURL https://api.github.com/repos/Autodesk/quack/issues?page=4
+CURL https://api.github.com/repos/Autodesk/quack/issues?page=5
+CURL https://api.github.com/repos/Autodesk/sitoa/issues?page=1
+CURL https://api.github.com/repos/Autodesk/sitoa/issues?page=2
+CURL https://api.github.com/repos/Autodesk/sitoa/issues?page=3
+CURL https://api.github.com/repos/Autodesk/sitoa/issues?page=4
+CURL https://api.github.com/repos/Autodesk/sitoa/issues?page=5
+CURL https://api.github.com/repos/Autodesk/synthesis/issues?page=1
+CURL https://api.github.com/repos/Autodesk/synthesis/issues?page=2
+CURL https://api.github.com/repos/Autodesk/synthesis/issues?page=3
+CURL https://api.github.com/repos/Autodesk/synthesis/issues?page=4
+CURL https://api.github.com/repos/Autodesk/synthesis/issues?page=5
+CURL https://api.github.com/repos/cli/cli/issues?page=1
+<item>	<title>:gh release create: Make the error message more descriptive, if &amp;lt;tag&amp;gt; isn't passed.</title>
 	<link>https://github.com/cli/cli/issues/2327</link>
 	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
 <p>When <code>gh release create</code> is run, without any arguments, the output received is: <code>requires at least 1 arg(s), only received 0</code>. This is not helpful to a user who is not aware of the command (until <code>gh release create --help</code>).</p>
 <h3 id="proposed-solution">Proposed solution</h3>
 <p>Instead of the not-so-useful message, a user can receive a message like: <code>could not create: no tag name provided</code>. This will help to describe the user about the command at command execution time, rather than using <code>gh release create --help</code>.</p></pre> ]]></description>
 </item>
-	
-<item>	
-	<title>when GITHUB_TOKEN is set, print better messaging during gh auth login</title>
+<item>	<title>when GITHUB_TOKEN is set, print better messaging during gh auth login</title>
 	<link>https://github.com/cli/cli/issues/2304</link>
 	<description><![CDATA[ <pre><p>Currently we let a user get through two prompts of <code>gh auth login</code> when GITHUB_TOKEN is set, then unceremoniously tell them that the token is read-only.</p>
 <p>We should proactively notice that situation when <code>gh auth login</code> is run and give clear messaging about unsetting the token in order to use the command.</p>
 <p>Initially we thought only power users would be using GITHUB_TOKEN as an opt-in choice, making this fine; but in Codespaces GITHUB_TOKEN is being set without users ever knowing about it.﻿</p></pre> ]]></description>
 </item>
-
-<item>	
-	<title>support gitflags in gh repo fork</title>
+CURL https://api.github.com/repos/cli/cli/issues?page=2
+<item>	<title>support gitflags in gh repo fork</title>
 	<link>https://github.com/cli/cli/issues/2236</link>
 	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
 <p>I want to create a fork and then clone it locally shallowly. This is not possible since <code>gh repo fork --clone</code> does not provide any options and does not return the repo name in a clean way.</p>
@@ -62,8 +170,6 @@ Followup to #148</p></pre> ]]></description>
 <h2 id="how-will-it-benefit-cli-and-its-users">How will it benefit CLI and its users?</h2>
 <p>This speeds up the cloning progress. Adding support for gitflags will also align <code>repo fork</code> with <code>repo clone</code></p></pre> ]]></description>
 </item>
-	
-
 <item>	<title>Option to disallow edits from maintainers</title>
 	<link>https://github.com/cli/cli/issues/2213</link>
 	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
@@ -80,7 +186,6 @@ Followup to #148</p></pre> ]]></description>
 <h3 id="proposed-solution">Proposed solution</h3>
 <p>I’d love for it to show the number of approvals.</p></pre> ]]></description>
 </item>
-
 <item>	<title>support .ssh/config Include directives</title>
 	<link>https://github.com/cli/cli/issues/2179</link>
 	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
@@ -101,8 +206,31 @@ Followup to #148</p></pre> ]]></description>
 <h3 id="additional-context">Additional context</h3>
 <p>Workaround for now is to put everything into <code>.ssh/config</code> directly</p></pre> ]]></description>
 </item>
-
-
+CURL https://api.github.com/repos/cli/cli/issues?page=3
+<item>	<title>Support cloning a gist (just like cloning a repo)</title>
+	<link>https://github.com/cli/cli/issues/2115</link>
+	<description><![CDATA[ <pre><p>In https://github.com/cli/cli/pull/1699#issue-486709880, <span class="citation" data-cites="vilmibm">@vilmibm</span> notes a limitation:</p>
+<blockquote>
+<p>no affordance for cloning a gist to do more advance editing</p>
+</blockquote>
+<p>I’d like to be able to clone a gist, just like I can clone a repo. This is all that’s still needed in order to be able to use <code>gh</code> to enumerate and backup/export (clone) all owned gists.</p></pre> ]]></description>
+</item>
+<item>	<title>Sign `gh.exe` binaries in addition to signing the MSI installer</title>
+	<link>https://github.com/cli/cli/issues/2111</link>
+	<description><![CDATA[ <pre><p>This would help identify Windows binaries that were officially packaged by us vs. ones that might have been modified/corrupted. Right now, we only do signing with the MSI installer.</p>
+<p>Ref. https://github.com/cli/cli/issues/2064
+Followup to #148</p></pre> ]]></description>
+</item>
+<item>	<title>Ask to git init on repo create </title>
+	<link>https://github.com/cli/cli/issues/2099</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>If you run <code>gh repo create</code> in a folder that isn’t initialized with git the command fails.</p>
+<h3 id="proposed-solution">Proposed solution</h3>
+<p>Instead of failing the user would be asked if they want to initialize the current folder a git repo.</p>
+<h3 id="additional-context">Additional context</h3>
+<p>I would love to take up the implementation of this! The <a href="https://github.com/go-git/go-git">go-git</a> module seems like the easiest way to implement this but it is a big dep. Should we just run an exec command or is there some other way to do it?</p>
+<p>p.s. thank you for making this awesome cli :)</p></pre> ]]></description>
+</item>
 <item>	<title>Letting the user specify the base init dir for the newly created repo</title>
 	<link>https://github.com/cli/cli/issues/2077</link>
 	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
@@ -133,18 +261,7 @@ Initialized empty Git repository in /dev/repo/target/foo/.git/
 	<description><![CDATA[ <pre><p>The table printer is truncating columns (at least in <code>issue list</code>) to meet the terminal width even
 when invoked non-interactively. This breaks grep-based scripting for, say, long lists of labels.</p></pre> ]]></description>
 </item>
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+CURL https://api.github.com/repos/cli/cli/issues?page=4
 <item>	<title>Render a local markdown file</title>
 	<link>https://github.com/cli/cli/issues/2007</link>
 	<description><![CDATA[ <pre><p>Let’s suppose that the new command is going to be called <code>gh render</code> (suggestions welcome). I imagine that it could work like this:</p>
@@ -226,8 +343,32 @@ Right now we cant use default templates for <code>.gitignore</code> or <code>LIC
 <h3 id="proposed-solution">Proposed solution</h3>
 <p>Providing a command which will automatically initialize the repo with <code>.gitignore</code> or <code>LICENSE</code> like how its done with a check box in the browser or GitHub Desktop, saving everyone some time and also easing the workflow</p></pre> ]]></description>
 </item>
-	
-	
-	
+CURL https://api.github.com/repos/cli/cli/issues?page=5
+<item>	<title>gh gist delete command request</title>
+	<link>https://github.com/cli/cli/issues/1832</link>
+	<description><![CDATA[ <pre><h3 id="the-feature">The feature</h3>
+<p>I do not think right now the GitHub CLI has ability to delete gists</p>
+<p>I will be better if it can delete it via <code>gh gist delete &lt;id&gt;</code></p>
+<pre class="cmd"><code>$ gh gist delete --help
+Delete one of your gists
+
+USAGE
+    gh gist delete {&lt;gist ID&gt; | &lt;gist URL&gt;} [flags]
+
+FLAGS
+    -f, --filename string      a specific filename to delete
+
+INHERITED FLAGS
+   --help    Show help for command</code></pre></pre> ]]></description>
+</item>
+<item>	<title>Document where authentication credentials are stored</title>
+	<link>https://github.com/cli/cli/issues/1773</link>
+	<description><![CDATA[ <pre><h3 id="describe-the-feature-or-problem-youd-like-to-solve">Describe the feature or problem you’d like to solve</h3>
+<p>I can’t find any information on the website or in the CLI help command about where authentication information is stored.</p>
+<h3 id="proposed-solution">Proposed solution</h3>
+<p>Document where GH CLI stores authentication credentials. Also explain the relationship of this with existing GitHub credentials you may have on your system, like an SSH key or git https credentials in the keychain.</p>
+<p>This helps the user understand the security and practical implications of logging in to the CLI.</p></pre> ]]></description>
+</item>
+
 </channel>
 </rss>
