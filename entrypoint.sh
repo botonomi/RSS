@@ -18,6 +18,8 @@ do
     printf '\e[1;37m%-6s\e[m\n' "* $ORG"
 done
 
+echo;
+
 printf '\e[1;37m%-6s\e[m\n' "Filtering for languages:"
 echo $2 | tr ',' "\n" | while read LANGUAGE
 do
@@ -29,7 +31,6 @@ REPO_NAME=$(basename $(pwd))
 RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
 
 (
-
     # RSS Boilerplate
     #
 
@@ -59,6 +60,9 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
                             then
                               true
                             else
+                            
+                                echo "CAW CAW"
+                            
                                 LABELS=$(echo   "$RAW" | awk -F"¡" '{ print $2 }')
                                 TITLE=$(echo    "$RAW" | awk -F"¡" '{ print $3 }' | sed -e 's/</\&lt;/g' | sed -e 's/>/\&gt;/g' | sed -e 's/\&/\&amp;/g' | sed -e 's/%/%%/g')
                                 URL=$(echo      "$RAW" | awk -F"¡" '{ print $4 }')
