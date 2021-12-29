@@ -67,6 +67,7 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
                                 # Feeler: is there a PR open for this?
                                 #PRed=$(curl -s -u :$TOKEN "https://github.com/pulls?q=is%3Apr+user%3A"$ORG"+%23"$ID | jq .total_count)
                         
+                                echo "I: [$I] ID: [$ID]"
                                 BODY=$(curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues/$ID" | jq .body| sed -e 's/^"//' | sed -e 's/"$//'| xargs -0 printf | pandoc --wrap=preserve)
                         
                                 #if [[ "$PRed" -gt "0" ]]
