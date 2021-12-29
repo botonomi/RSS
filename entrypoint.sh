@@ -66,12 +66,12 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
                                 LABELS=$(echo   "$RAW" | awk -F"¡" '{ print $2 }')
                                 TITLE=$(echo    "$RAW" | awk -F"¡" '{ print $3 }' | sed -e 's/</\&lt;/g' | sed -e 's/>/\&gt;/g' | sed -e 's/\&/\&amp;/g' | sed -e 's/%/%%/g')
                                 URL=$(echo      "$RAW" | awk -F"¡" '{ print $4 }')
-                                ID=$(echo       "$RAW" | awk -F"¡" '{ print $5 }')  
+                                ID=$(echo       "$RAW" | awk -F"¡" '{ print $5 }' | tr -d '"')  
                             
                                 # Feeler: is there a PR open for this?
                                 #PRed=$(curl -s -u :$TOKEN "https://github.com/pulls?q=is%3Apr+user%3A"$ORG"+%23"$ID | jq .total_count)
                         
-                                echo "I: [$I] ID: [$ID]"
+                                echo "I: [$I] ID: [$ID] makes https://api.github.com/repos/$I/issues/$ID"
                                 #-BODY=$(curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues/$ID" | jq .body| sed -e 's/^"//' | sed -e 's/"$//'| xargs -0 printf | pandoc --wrap=preserve)
                         
                                 #if [[ "$PRed" -gt "0" ]]
