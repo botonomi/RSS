@@ -23,6 +23,6 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: RSS
         with:
-          #orgs: 'autodesk,cli'
-          orgs: 'github,cli,octokit,mozilla,autodesk'
+          #orgs: 'github,cli,octokit,mozilla,autodesk'
+          orgs: 'github,octokit'
           languages: shell,perl,python,awk,go
