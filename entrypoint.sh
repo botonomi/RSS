@@ -30,7 +30,7 @@ REPO_OWNER=$GITHUB_ACTOR
 REPO_NAME=$(basename $(pwd))
 RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
 
-#-(
+(
     # RSS Boilerplate
     #
 
@@ -72,7 +72,7 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
                                 #PRed=$(curl -s -u :$TOKEN "https://github.com/pulls?q=is%3Apr+user%3A"$ORG"+%23"$ID | jq .total_count)
                         
                                 echo "I: [$I] ID: [$ID] makes https://api.github.com/repos/$I/issues/$ID"
-                                #-BODY=$(curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues/$ID" | jq .body| sed -e 's/^"//' | sed -e 's/"$//'| xargs -0 printf | pandoc --wrap=preserve)
+                                BODY=$(curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues/$ID" | jq .body| sed -e 's/^"//' | sed -e 's/"$//'| xargs -0 printf | pandoc --wrap=preserve)
                         
                                 #if [[ "$PRed" -gt "0" ]]
                                 #then
@@ -89,7 +89,7 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
         done
     done
     printf "\n</channel>\n</rss>\n"
-#-) | base64 | tr -d "\n" > feed.xml
+) | base64 | tr -d "\n" > feed.xml
 
 # Harvest current SHA of feed.xml
 CURRENT_SHA=$(curl -L -s -u :$TOKEN https://api.github.com/repos/$GITHUB_REPOSITORY/contents/feed.xml | jq .sha | tr -d '"' | head -1)
