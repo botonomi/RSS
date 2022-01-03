@@ -69,6 +69,12 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
                         
                                 BODY=$(curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues/$ID" | jq .body | sed -e 's/^"//' | sed -e 's/"$//' | xargs -0 echo -e | pandoc --wrap=preserve)
                                 echo "BODYSLAM: ${#BODY}"
+
+                                if [[ ${#BODY} -gt 1000 ]]
+                                then
+                                    BODY="Clipped"
+                                fi
+
                         
                                 echo -e "FML TITLE: $TITLE URL: $URL" 
                                 echo -e "<item>\t<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ <pre>$BODY</pre> ]]></description>\n</item>\n" | awk '{ gsub("\014","\\f"); gsub("\010","\\b"); print }'
