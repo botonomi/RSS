@@ -60,7 +60,7 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
                               true
                             else                            
                                 LABELS=$(echo   "$RAW" | awk -F"¡" '{ print $2 }')
-                                TITLE=$(echo    "$RAW" | awk -F"¡" '{ print $3 }' | sed -e 's/</\&lt;/g' | sed -e 's/>/\&gt;/g' | sed -e 's/\&/\&amp;/g' | sed -e 's/%/%%/g' | awk '{ print '"$ORG"'"/"'"$I"'":"$0}')
+                                TITLE=$(echo    "$RAW" | awk -F"¡" '{ print $3 }' | sed -e 's/</\&lt;/g' | sed -e 's/>/\&gt;/g' | sed -e 's/\&/\&amp;/g' | sed -e 's/%/%%/g') # | awk '{ print '"$ORG"'"/"'"$I"'":"$0}')
                                 URL=$(echo      "$RAW" | awk -F"¡" '{ print $4 }')
                                 ID=$(echo       "$RAW" | awk -F"¡" '{ print $5 }' | tr -d '"')  
                             
@@ -95,10 +95,6 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
     done
     printf "\n</channel>\n</rss>\n"
 ) | base64 | tr -d "\n" > feed.xml
-
-echo "MARK"
-cat feed.xml
-
 
 # Harvest current SHA of feed.xml
 CURRENT_SHA=$(curl -L -s -u :$TOKEN https://api.github.com/repos/$GITHUB_REPOSITORY/contents/feed.xml | jq .sha | tr -d '"' | head -1)
