@@ -4,14 +4,14 @@
 <title>Help Wanted</title>
 <description>Help Wanted Issues</description>
 <link>https://lbonanomi.github.io/workspace/feed.xml</link>
-<item>	<title>Use relative units for fonts (rem, em)</title>
+<item>	<title></title>
 	<link>https://github.com/github/choosealicense.com/issues/904</link>
 	<description><![CDATA[ <pre><p>Hello,</p>
 <p>I see that this website uses pixel values on "application.scss" file. I suggest to convert pixel values used for fonts and spacing to relative fonts like "rem’" or "em". This will lead to accessibility of the site and rank higher on Google.</p>
 <p>Thank you</p></pre> ]]></description>
 </item>
 
-<item>	<title>Internationalization / i18n / multilingual site</title>
+<item>	<title></title>
 	<link>https://github.com/github/choosealicense.com/issues/68</link>
 	<description><![CDATA[ <pre><p>Would love to see about baking in I18N support to choosealicense.com proper. See #67 and #62</p>
 <p>We already have the bulk of the strings in a single file (<code>_config.yml</code>), so it should just be a matter of abstracting out some of our variables, as far as I can tell.</p>
@@ -20,37 +20,37 @@
 <span class="citation" data-cites="dhcole">@dhcole</span> any insight / words of wisdom?</p></pre> ]]></description>
 </item>
 
-<item>	<title>Mention Case Sensitivity In CODEOWNERS Docs</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/12760</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>"Security advisory credit" and "discussion(s) answered" missing from section "Displaying badges on your profile"</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/12556</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Add clear instructions to use git on ChromeOS devices</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/12012</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>composite example does not run in Windows</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/11849</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>[Improvement]: Duplicate content in description of "private" parameter for Update a Repo endpoint</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/11784</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Inconsistency between SCIM support</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/11639</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Mention gh_color_mode for directly uploaded images?</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/11491</link>
 	<description><![CDATA[ <pre><h3 id="discussed-in-httpsgithub.comgithubdocsdiscussions11479">Discussed in https://github.com/github/docs/discussions/11479</h3>
 <div type="discussions-op-text">
@@ -60,17 +60,17 @@ I feel like this should be mentioned in the docs somewhere, probably under the m
 </div></pre> ]]></description>
 </item>
 
-<item>	<title>Use HTML kbd tag for keyboard information</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/11237</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Improve warning for handing out `write` level rights with regards to repo secrets</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/11167</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Missing documentation for `head_ref_force_pushed` issue event</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/11129</link>
 	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
 <ul class="task-list">
@@ -85,67 +85,67 @@ I have read and agree to the GitHub Docs project’s <a href="https://github.com
 <p><em>No response</em></p></pre> ]]></description>
 </item>
 
-<item>	<title>Update "Configuring nameservers using the administrative shell" to include a note about 127.0.0.1</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/11080</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Provide detailed instructions on how to check for `ssh-agent` on Windows with OpenSSH</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/10967</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>How to properly escape values for $GITHUB_ENV file</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/10788</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>CodeQL status check name is wrong</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/10188</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Add correct commands for steps on Creating a Docker container action page</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/9432</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>"Advanced search syntax" page doesn't include `@me` syntax</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/9403</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Deploying to Google Kubernetes Engine specifies incorrect add-iam-policy-binding command</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/9401</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>[Improvement]: Add instructions for increasing resources for GitHub Enterprise Server instances on Azure and Google Cloud Platform</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/9240</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Raw link doesn't appear to be documented</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/8530</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Clarify what all sources are supported for Terraform Dependency Updates</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/8419</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Not all Dependabot languages support private repos</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/8188</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Add info about transferring action repos, the marketplace `verified` badge and IDs</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/7573</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>GPG keys: add about how to save passphrase against typing it on every commit</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/7323</link>
 	<description><![CDATA[ <pre><h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
 <p>https://github.com/github/docs/blob/main/content/github/authenticating-to-github/managing-commit-signature-verification/signing-commits.md</p>
@@ -153,115 +153,115 @@ I have read and agree to the GitHub Docs project’s <a href="https://github.com
 <p>Near <code>To store your GPG key passphrase so you don't have to enter it every time you sign a commit, we recommend using the following tools:</code> add about Linux, how to configure <code>gpg-agent</code> (as I tried it will start automatically after first commit, without any configuration), and how to not enter passphrase even for the first time.</p></pre> ]]></description>
 </item>
 
-<item>	<title>add copy 📋 button the text fields</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/7044</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Add intros to GraphQL pages</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/6970</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Add intros to GraphQL pages</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/6969</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Document how to skip a step if a secret isn't present</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/6861</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Intros for map topics on search</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/6793</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Link to GitHub Classroom content in other docs articles</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/6738</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>::set-output does not document that `value` cannot contain newlines</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/6693</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Add new conceptual article 'About assignments' for GitHub Classroom docs</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/6326</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Add new conceptual article 'About GitHub Classroom'</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/6289</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Intro for software supply chain map topic</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/6284</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>[Improvement]: Update REST API header examples and eliminate extraneous information</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/5993</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Fix dependabot registries examples for maven-repositories with a token</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/5981</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Provide instructions for how to allow non admins to see dependabot security alerts</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/4760</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Code Owners and Code Review Assignment warnings incorrect</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/4420</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>[GitHub Desktop] Update Configuring Git for GitHub Desktop Flow</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/4033</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Document all the GHCR labels which can be used</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/2617</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Comment in Creating dependent jobs section is vague and confusing</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/764</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Use operationId for `#anchor` tags of REST API endpoint titles</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/139</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Outstanding Grammar Issues</title>
+<item>	<title></title>
 	<link>https://github.com/github/linguist/issues/3924</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Kotlin support</title>
+<item>	<title></title>
 	<link>https://github.com/github/semantic/issues/233</link>
 	<description><![CDATA[ <pre><p>As a Kotlin user, it would be benefical if semantic support Kotlin programming language.
 https://kotlinlang.org/</p></pre> ]]></description>
 </item>
 
-<item>	<title>F# support</title>
+<item>	<title></title>
 	<link>https://github.com/github/semantic/issues/132</link>
 	<description><![CDATA[ <pre><p>Any interest in supporting F#?</p>
 <p>We have our own compiler APIs that enable all kinds of stuff based on structure and semantics; and it’s part of the compiler proper, not some janky thing that breaks because the compiler changed stuff. You can see this in the Fable REPL, which supports a wide range of tooling features in the editor: https://fable.io/repl/</p>
 <p>Based on looking at how you do things, you wouldn’t be able to use this directly, which would imply a lot of work. F# syntax and semantic aren’t trivial 😅. But if there was a way to extend this to allow the existing tooling support (which can run in a browser!), then we might be able to prioritize stuff on the F# side of things to make it easier.</p></pre> ]]></description>
 </item>
 
-<item>	<title>Build `x86` on Windows with the built-in tools</title>
+<item>	<title></title>
 	<link>https://github.com/github/smimesign/issues/91</link>
 	<description><![CDATA[ <pre><p>We build <code>amd64</code> directly: https://github.com/github/smimesign/blob/e650daf6eaadf85c763fa06dcfb0e4d794d293dc/.github/workflows/build-binaries.yml#L89</p>
 <p>But I had trouble figuring out how to build for <code>GOARCH=386</code> without errors. Right now, we use https://github.com/egor-tensin/setup-mingw to switch to 32-bit builds, which pulls down a bunch of tooling and takes a few minutes:</p>
@@ -269,12 +269,12 @@ https://kotlinlang.org/</p></pre> ]]></description>
 <p>I can’t help but feel there must still be a nice (or at least much faster) way to do this using the built-in tools from Actions.</p></pre> ]]></description>
 </item>
 
-<item>	<title>Super-linter algorithm for finding changed files is broken</title>
+<item>	<title></title>
 	<link>https://github.com/github/super-linter/issues/1167</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Versioned documentation</title>
+<item>	<title></title>
 	<link>https://github.com/github/view_component/issues/1151</link>
 	<description><![CDATA[ <pre><h2 id="feature-request">Feature request</h2>
 <p>As a developer reading the ViewComponent documentation, it is unclear whether there are unreleased features in the docs.</p>
@@ -284,12 +284,12 @@ https://kotlinlang.org/</p></pre> ]]></description>
 <p>I could see us solving this a couple ways. We could only publish the docs when a release is cut, we could version the docs (see https://glebbahmutov.com/blog/versioned-doc-pages/, or perhaps we could start with a disclaimer that the docs are for the <code>main</code> branch.</p></pre> ]]></description>
 </item>
 
-<item>	<title>Using asset_path in component previews</title>
+<item>	<title></title>
 	<link>https://github.com/github/view_component/issues/1093</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>How to configure stimulus using the new rails 7 asset pipeline</title>
+<item>	<title></title>
 	<link>https://github.com/github/view_component/issues/1064</link>
 	<description><![CDATA[ <pre><h2 id="feature-request">Feature request</h2>
 <p>Hello, how could this be done? In the javascript documentation the configuration needed to use webpack is indicated, but I am interested in using stimulus using importmap and sprockets, as it will be in rails 7 by default, using the asset pipeline.</p>
@@ -305,12 +305,12 @@ context or references to similar behavior in other libraries? -->
 </ul></pre> ]]></description>
 </item>
 
-<item>	<title>Static types?</title>
+<item>	<title></title>
 	<link>https://github.com/github/view_component/issues/1048</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Add paved path for unit testing components with behaviors</title>
+<item>	<title></title>
 	<link>https://github.com/github/view_component/issues/904</link>
 	<description><![CDATA[ <pre><h3 id="problem-statement">Problem statement</h3>
 <blockquote>
@@ -320,12 +320,12 @@ context or references to similar behavior in other libraries? -->
 <p>In Primer ViewComponents, we use system tests powered by cuprite and ViewComponent Previews for testing behaviors. As this approach matures, we should aim to move of much of it as possible into ViewComponent.</p></pre> ]]></description>
 </item>
 
-<item>	<title>Support multiple views</title>
+<item>	<title></title>
 	<link>https://github.com/github/view_component/issues/387</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Components should play nicely with Rails caching mechanisms</title>
+<item>	<title></title>
 	<link>https://github.com/github/view_component/issues/234</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
