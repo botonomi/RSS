@@ -7,8 +7,8 @@ export ORGS=$(echo "$1" | tr ',' ' ' | tr '|' ' ') #FIXME
 export LANGUAGES=$(echo "$2" | tr ',' '|')
 export LABELS=$(echo "$3" | tr ',' '|')
 
-
 export LABELS="Help Wanted|Up For Grabs"
+
 # Should this be an argument?
 CUTOFFDATE=12096000
 
@@ -50,7 +50,6 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
 
                     for IPAGE in $(seq 1 5)
                     do
-                        #                        
                         curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues?page=$IPAGE" | jq '.[] | "\(.updated_at)¡\(.labels[].name)¡\(.title)¡\(.html_url)¡\(.number)"' | egrep -i "$LABELS" | while read RAW
                         do
                             THEN=$(date -d $(echo "$RAW" | awk -F"¡" '{ gsub(/"/, ""); print $1 }'| awk -F"T" '{ print $1 }') +%s )
@@ -59,19 +58,15 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
                             if [[ $DIFF -ge $CUTOFFDATE ]]
                             then
                               true
-                            else
-                            
-                                #echo "CAW CAW"
-                            
+                            else                            
                                 LABELS=$(echo   "$RAW" | awk -F"¡" '{ print $2 }')
                                 TITLE=$(echo    "$RAW" | awk -F"¡" '{ print $3 }' | sed -e 's/</\&lt;/g' | sed -e 's/>/\&gt;/g' | sed -e 's/\&/\&amp;/g' | sed -e 's/%/%%/g')
                                 URL=$(echo      "$RAW" | awk -F"¡" '{ print $4 }')
                                 ID=$(echo       "$RAW" | awk -F"¡" '{ print $5 }' | tr -d '"')  
                             
                                 # Feeler: is there a PR open for this?
-                                PRed=$(curl -s -u :$TOKEN "https://github.com/pulls?q=is%3Apr+user%3A"$ORG"+%23"$ID | jq .total_count)
+                                #-PRed=$(curl -s -u :$TOKEN "https://github.com/pulls?q=is%3Apr+user%3A"$ORG"+%23"$ID | jq .total_count)
                         
-                                #echo "I: [$I] ID: [$ID] makes https://api.github.com/repos/$I/issues/$ID"
                                 BODY=$(curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues/$ID" | jq .body | sed -e 's/^"//' | sed -e 's/"$//' | xargs -0 echo -e | pandoc --wrap=preserve)
                         
                                 echo -e "FML TITLE: $TITLE URL: $URL" 
@@ -85,7 +80,6 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
                                 #fi
                             fi
                         done
-                    #
                     done
                 )
             done
