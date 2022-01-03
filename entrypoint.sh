@@ -60,7 +60,7 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
                               true
                             else                            
                                 LABELS=$(echo   "$RAW" | awk -F"¡" '{ print $2 }')
-                                TITLE=$(echo    "$RAW" | awk -F"¡" '{ print $3 }' | sed -e 's/</\&lt;/g' | sed -e 's/>/\&gt;/g' | sed -e 's/\&/\&amp;/g' | sed -e 's/%/%%/g')
+                                TITLE=$(echo    "$RAW" | awk -F"¡" '{ print $3 }' | sed -e 's/</\&lt;/g' | sed -e 's/>/\&gt;/g' | sed -e 's/\&/\&amp;/g' | sed -e 's/%/%%/g' | awk '{ print '"$ORG"'"/"'"$I"'":"$0}')
                                 URL=$(echo      "$RAW" | awk -F"¡" '{ print $4 }')
                                 ID=$(echo       "$RAW" | awk -F"¡" '{ print $5 }' | tr -d '"')  
                             
@@ -77,14 +77,15 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
 
                         
                                 #echo -e "FML TITLE: $TITLE URL: $URL" 
-                                echo -e "<item>\t<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ <pre>$BODY</pre> ]]></description>\n</item>\n" | awk '{ gsub("\014","\\f"); gsub("\010","\\b"); print }'
+                                #echo -e "<item>\t<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ <pre>$BODY</pre> ]]></description>\n</item>\n" | awk '{ gsub("\014","\\f"); gsub("\010","\\b"); print }'
                         
-                                #if [[ "$PRed" -gt "0" ]]
-                                #then
-                                #    printf "<item>\n<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ <h3 style=\"background-color:yellow\">$PRed PRs opened</h3><pre>$BODY</pre> ]]></description>\n</item>\n" | awk '{ gsub("\014","\\f"); gsub("\010","\\b"); print }'
-                                #else
+                                if [[ "$PRed" -gt "0" ]]
+                                then
+                                    echo -e "<item>\n<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ <h3 style=\"background-color:yellow\">$PRed PRs opened</h3><pre>$BODY</pre> ]]></description>\n</item>\n" | awk '{ gsub("\014","\\f"); gsub("\010","\\b"); print }'
+                                else
                                 #-    printf "<item>\t<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ <pre>$BODY</pre> ]]></description>\n</item>\n" | awk '{ gsub("\014","\\f"); gsub("\010","\\b"); print }'
-                                #fi
+                                       echo -e "<item>\t<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ <pre>$BODY</pre> ]]></description>\n</item>\n" | awk '{ gsub("\014","\\f"); gsub("\010","\\b"); print }'
+                                fi
                             fi
                         done
                     done
