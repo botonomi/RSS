@@ -4,6 +4,55 @@
 <title>Help Wanted</title>
 <description>Help Wanted Issues</description>
 <link>https://lbonanomi.github.io/workspace/feed.xml</link>
+FML TITLE: Use relative units for fonts (rem, em) URL: https://github.com/github/choosealicense.com/issues/904
+FML TITLE: Internationalization / i18n / multilingual site URL: https://github.com/github/choosealicense.com/issues/68
+FML TITLE: Mention Case Sensitivity In CODEOWNERS Docs URL: https://github.com/github/docs/issues/12760
+FML TITLE: "Security advisory credit" and "discussion(s) answered" missing from section "Displaying badges on your profile" URL: https://github.com/github/docs/issues/12556
+FML TITLE: Add clear instructions to use git on ChromeOS devices URL: https://github.com/github/docs/issues/12012
+FML TITLE: composite example does not run in Windows URL: https://github.com/github/docs/issues/11849
+FML TITLE: [Improvement]: Duplicate content in description of "private" parameter for Update a Repo endpoint URL: https://github.com/github/docs/issues/11784
+FML TITLE: Inconsistency between SCIM support URL: https://github.com/github/docs/issues/11639
+FML TITLE: Mention gh_color_mode for directly uploaded images? URL: https://github.com/github/docs/issues/11491
+FML TITLE: Use HTML kbd tag for keyboard information URL: https://github.com/github/docs/issues/11237
+FML TITLE: Improve warning for handing out `write` level rights with regards to repo secrets URL: https://github.com/github/docs/issues/11167
+FML TITLE: Missing documentation for `head_ref_force_pushed` issue event URL: https://github.com/github/docs/issues/11129
+FML TITLE: Update "Configuring nameservers using the administrative shell" to include a note about 127.0.0.1 URL: https://github.com/github/docs/issues/11080
+FML TITLE: Provide detailed instructions on how to check for `ssh-agent` on Windows with OpenSSH URL: https://github.com/github/docs/issues/10967
+FML TITLE: How to properly escape values for $GITHUB_ENV file URL: https://github.com/github/docs/issues/10788
+FML TITLE: CodeQL status check name is wrong URL: https://github.com/github/docs/issues/10188
+FML TITLE: Add correct commands for steps on Creating a Docker container action page URL: https://github.com/github/docs/issues/9432
+FML TITLE: "Advanced search syntax" page doesn't include `@me` syntax URL: https://github.com/github/docs/issues/9403
+FML TITLE: Deploying to Google Kubernetes Engine specifies incorrect add-iam-policy-binding command URL: https://github.com/github/docs/issues/9401
+FML TITLE: [Improvement]: Add instructions for increasing resources for GitHub Enterprise Server instances on Azure and Google Cloud Platform URL: https://github.com/github/docs/issues/9240
+FML TITLE: Raw link doesn't appear to be documented URL: https://github.com/github/docs/issues/8530
+FML TITLE: Clarify what all sources are supported for Terraform Dependency Updates URL: https://github.com/github/docs/issues/8419
+FML TITLE: Not all Dependabot languages support private repos URL: https://github.com/github/docs/issues/8188
+FML TITLE: Add info about transferring action repos, the marketplace `verified` badge and IDs URL: https://github.com/github/docs/issues/7573
+FML TITLE: GPG keys: add about how to save passphrase against typing it on every commit URL: https://github.com/github/docs/issues/7323
+FML TITLE: add copy 📋 button the text fields URL: https://github.com/github/docs/issues/7044
+FML TITLE: Add intros to GraphQL pages URL: https://github.com/github/docs/issues/6970
+FML TITLE: Add intros to GraphQL pages URL: https://github.com/github/docs/issues/6969
+FML TITLE: Document how to skip a step if a secret isn't present URL: https://github.com/github/docs/issues/6861
+FML TITLE: Intros for map topics on search URL: https://github.com/github/docs/issues/6793
+FML TITLE: Link to GitHub Classroom content in other docs articles URL: https://github.com/github/docs/issues/6738
+FML TITLE: ::set-output does not document that `value` cannot contain newlines URL: https://github.com/github/docs/issues/6693
+FML TITLE: Add new conceptual article 'About assignments' for GitHub Classroom docs URL: https://github.com/github/docs/issues/6326
+FML TITLE: Add new conceptual article 'About GitHub Classroom' URL: https://github.com/github/docs/issues/6289
+FML TITLE: Intro for software supply chain map topic URL: https://github.com/github/docs/issues/6284
+FML TITLE: [Improvement]: Update REST API header examples and eliminate extraneous information URL: https://github.com/github/docs/issues/5993
+FML TITLE: Fix dependabot registries examples for maven-repositories with a token URL: https://github.com/github/docs/issues/5981
+FML TITLE: Outstanding Grammar Issues URL: https://github.com/github/linguist/issues/3924
+FML TITLE: Kotlin support URL: https://github.com/github/semantic/issues/233
+FML TITLE: F# support URL: https://github.com/github/semantic/issues/132
+FML TITLE: Build `x86` on Windows with the built-in tools URL: https://github.com/github/smimesign/issues/91
+FML TITLE: Super-linter algorithm for finding changed files is broken URL: https://github.com/github/super-linter/issues/1167
+FML TITLE: Versioned documentation URL: https://github.com/github/view_component/issues/1151
+FML TITLE: Using asset_path in component previews URL: https://github.com/github/view_component/issues/1093
+FML TITLE: How to configure stimulus using the new rails 7 asset pipeline URL: https://github.com/github/view_component/issues/1064
+FML TITLE: Static types? URL: https://github.com/github/view_component/issues/1048
+FML TITLE: Add paved path for unit testing components with behaviors URL: https://github.com/github/view_component/issues/904
+FML TITLE: Support multiple views URL: https://github.com/github/view_component/issues/387
+FML TITLE: Components should play nicely with Rails caching mechanisms URL: https://github.com/github/view_component/issues/234
 
 </channel>
 </rss>
