@@ -72,11 +72,11 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
 
                                 if [[ ${#BODY} -gt 1000 ]]
                                 then
-                                    BODY="Clipped"
+                                    BODY="Content clipped"
                                 fi
 
                         
-                                echo -e "FML TITLE: $TITLE URL: $URL" 
+                                #echo -e "FML TITLE: $TITLE URL: $URL" 
                                 echo -e "<item>\t<title>$TITLE</title>\n\t<link>$URL</link>\n\t<description><![CDATA[ <pre>$BODY</pre> ]]></description>\n</item>\n" | awk '{ gsub("\014","\\f"); gsub("\010","\\b"); print }'
                         
                                 #if [[ "$PRed" -gt "0" ]]
