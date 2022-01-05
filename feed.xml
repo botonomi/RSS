@@ -4,14 +4,14 @@
 <title>Help Wanted</title>
 <description>Help Wanted Issues</description>
 <link>https://lbonanomi.github.io/workspace/feed.xml</link>
-<item>	<title>Use relative units for fonts (rem, em)</title>
+<item>	<title></title>
 	<link>https://github.com/github/choosealicense.com/issues/904</link>
 	<description><![CDATA[ <pre><p>Hello,</p>
 <p>I see that this website uses pixel values on "application.scss" file. I suggest to convert pixel values used for fonts and spacing to relative fonts like "rem’" or "em". This will lead to accessibility of the site and rank higher on Google.</p>
 <p>Thank you</p></pre> ]]></description>
 </item>
 
-<item>	<title>Internationalization / i18n / multilingual site</title>
+<item>	<title></title>
 	<link>https://github.com/github/choosealicense.com/issues/68</link>
 	<description><![CDATA[ <pre><p>Would love to see about baking in I18N support to choosealicense.com proper. See #67 and #62</p>
 <p>We already have the bulk of the strings in a single file (<code>_config.yml</code>), so it should just be a matter of abstracting out some of our variables, as far as I can tell.</p>
@@ -20,32 +20,109 @@
 <span class="citation" data-cites="dhcole">@dhcole</span> any insight / words of wisdom?</p></pre> ]]></description>
 </item>
 
-<item>	<title>Mention Case Sensitivity In CODEOWNERS Docs</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/12760</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>Some mention that codeowners file paths are case sensitive, even if developing on case insensitive systems. I’ve seen this in other articles, but I think it belongs in the official documentation.</p>
+<p>It might also be good to list a few examples demonstrating the case sensitive behavior.</p>
+<h3 id="additional-information">Additional information</h3>
+<p><em>No response</em></p></pre> ]]></description>
 </item>
 
-<item>	<title>"Security advisory credit" and "discussion(s) answered" missing from section "Displaying badges on your profile"</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/12556</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/personalizing-your-profile#displaying-badges-on-your-profile</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>While there are some <a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/personalizing-your-profile#displaying-badges-on-your-profile">entries listed</a> which appear under "Highlights" on ones profile, for example "Developer Program Member" on <a href="https://github.com/Schweinepriester">mine</a>, the "security advisory credit" (<a href="https://github.com/robmcl4">example profile</a>) as well as the "discussion(s) answered" (<a href="https://github.com/Forceu">example profile</a>) are missing.</p>
+<p>So I’d like to see them added.
+If there are more, those as well :)</p>
+<h3 id="additional-information">Additional information</h3>
+<p><em>No response</em></p></pre> ]]></description>
 </item>
 
-<item>	<title>composite example does not run in Windows</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/11849</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://docs.github.com/en/actions/creating-actions/creating-a-composite-action</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p><a href="https://docs.github.com/en/actions/creating-actions/creating-a-composite-action#creating-an-action-metadata-file">Creating an action metadata file</a> works for ubunut and mac. For windows, <code>/</code> does not work.</p>
+<p>suggest the following change:</p>
+<pre><code>        - run: echo \&quot;${{ github.action_path }}\&quot; &gt;&gt; $GITHUB_PATH
+          shell: bash          
+        - run: goodbye.sh
+          shell: bash</code></pre>
+<h3 id="additional-information">Additional information</h3>
+<p><em>No response</em></p></pre> ]]></description>
 </item>
 
-<item>	<title>[Improvement]: Duplicate content in description of "private" parameter for Update a Repo endpoint</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/11784</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="is-this-issue-for-a-product-update-or-release-that-is-not-yet-available-to-customers">Is this issue for a product update or release that is not yet available to customers?</h3>
+<p>No? Then please continue. Thank you!</p>
+<h3 id="what-articles-is-affected">What article(s) is affected?</h3>
+<p>https://docs.github.com/en/rest/reference/repos#update-a-repository</p>
+<h3 id="describe-the-desired-docs-changes-and-the-problem-they-solve-for-customers.">Describe the desired docs changes and the problem they solve for customers.</h3>
+<p>Remove duplicate content.</p>
+<p>There is a duplicated statement in the description of the "private" field:</p>
+<blockquote>
+<p>Either true to make the repository private or false to make it public. Default: false.
+Note: You will get a 422 error if the organization restricts changing repository visibility to organization owners and a non-owner tries to change the value of private. Note: You will get a 422 error if the organization restricts changing repository visibility to organization owners and a non-owner tries to change the value of private.
+Default: false</p>
+</blockquote>
+<p>To fix this, we should remove one of the duplicated sentences.</p>
+<h3 id="who-does-this-affect">Who does this affect?</h3>
+<p>REST API users</p>
+<h3 id="what-is-the-impact-to-users">What is the impact to users?</h3>
+<p>It’s confusing to have duplicate sentences</p>
+<h3 id="are-you-willing-to-open-a-pr-to-make-this-fix-if-not-do-you-know-anyone-hubber-or-not-were-open-source-whos-willing-to-help-write-this-documentation">Are you willing to open a PR to make this fix? If not, do you know anyone (Hubber or not, we’re open source!) who’s willing to help write this documentation?</h3>
+<p>No 😸</p></pre> ]]></description>
 </item>
 
-<item>	<title>Inconsistency between SCIM support</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/11639</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p><a href="https://docs.github.com/en/enterprise-cloud@latest/admin/authentication/managing-identity-and-access-for-your-enterprise/about-identity-and-access-management-for-your-enterprise#about-identity-and-access-management-for-your-enterprise">About identity and access management for your enterprise</a> states</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/827666/140076632-53f9fe39-83ae-4245-9e55-db057a54e8b9.png" alt="" /><figcaption>grafik</figcaption>
+</figure>
+<p><a href="https://docs.github.com/en/enterprise-cloud@latest/admin/authentication/managing-identity-and-access-for-your-enterprise/managing-team-synchronization-for-organizations-in-your-enterprise">Managing team synchronization for organizations in your enterprise</a> states</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/827666/140076701-24a107ea-df97-4263-bbc0-882510df91e9.png" alt="" /><figcaption>grafik</figcaption>
+</figure>
+<p>What is correct?</p>
+<p>Kind Regards,
+Martin</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>See screens. What is the current SCIM support für Enterprise Accounts with Enterprise Managed Users?</p>
+<p>SCIM available for Enterprise Accounts and required for AAD Group / GH Teams synchronization? This is sth. that the <em>Enterprise Managed Users</em> does not support?</p>
+<h3 id="additional-information">Additional information</h3>
+<p><em>No response</em></p></pre> ]]></description>
 </item>
 
-<item>	<title>Mention gh_color_mode for directly uploaded images?</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/11491</link>
 	<description><![CDATA[ <pre><h3 id="discussed-in-httpsgithub.comgithubdocsdiscussions11479">Discussed in https://github.com/github/docs/discussions/11479</h3>
 <div type="discussions-op-text">
@@ -55,17 +132,54 @@ I feel like this should be mentioned in the docs somewhere, probably under the m
 </div></pre> ]]></description>
 </item>
 
-<item>	<title>Use HTML kbd tag for keyboard information</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/11237</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>Selâm ola (Hi).</p>
+<p>Şu örkteki yazıda tuşlar için <strong>HTML code</strong> kullanıldığını gördüm. (I saw that <strong>HTML code</strong> is used for keys in the article at this link.)
+https://docs.github.com/en/issues/trying-out-the-new-projects-experience/customizing-your-project-views</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>HTML code yerine HTML kbd kullanılması gerekiyor (HTML kbd should be used instead of HTML code).</p>
+<p>Bilgi için (For information)
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd</p>
+<h3 id="additional-information">Additional information</h3>
+<p>Ayrıca bu etiket CSS ile özelleştirilerek başka görünüşlere büründürülebilir (In addition, this tag can be customized with CSS to take on other appearances).</p>
+<p>Teşekkürler (Thanks).</p></pre> ]]></description>
 </item>
 
-<item>	<title>Improve warning for handing out `write` level rights with regards to repo secrets</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/11167</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>There’s a big warning in the linked page:</p>
+<blockquote>
+<ul>
+<li>Use credentials that are minimally scoped:
+<ul>
+<li>Make sure the credentials being used within workflows have the least privileges required, and be mindful that any user with write access to your repository has read access to all secrets configured in your repository.</li>
+</ul></li>
+</ul>
+</blockquote>
+<p>It’s really easy to read/skim past this the way the document is structured now.</p>
+<p>I propose we add a new heading: <code>Strongly consider who you give write rights to</code> and
+put the warning "Be mindful that any user with write access to your repository has read access to all secrets configured in your repository." in that section.</p>
+<p>I suggest styling the warning message itself as a warning box with a red background, or something similar to really capture the attention of the reader.</p>
+<h3 id="additional-information">Additional information</h3>
+<p><em>No response</em></p></pre> ]]></description>
 </item>
 
-<item>	<title>Missing documentation for `head_ref_force_pushed` issue event</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/11129</link>
 	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
 <ul class="task-list">
@@ -80,67 +194,176 @@ I have read and agree to the GitHub Docs project’s <a href="https://github.com
 <p><em>No response</em></p></pre> ]]></description>
 </item>
 
-<item>	<title>Update "Configuring nameservers using the administrative shell" to include a note about 127.0.0.1</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/11080</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="issue-overview">Issue overview</h3>
+<p>Sometimes customers want to change their nameservers. They simply read <a href="https://help.github.com/en/enterprise/2.19/admin/installation/configuring-dns-nameservers#configuring-nameservers-using-the-administrative-shell">Configuring DNS nameservers</a> and start making changes to the <em>/etc/resolvconf/resolv.conf.d/head</em> file. We have seen some cases where customers just remove this:</p>
+<pre><code>nameserver 127.0.0.1</code></pre>
+<p>And got a ton of <code>500</code> errors after restarting <code>resolvconf</code>.</p>
+<p>This is warned in the <em>/etc/resolvconf/resolv.conf.d/head</em> file:</p>
+<pre><code># DO NOT CHANGE THIS FILE DIRECTLY. YOUR MODIFICATIONS WILL BE OVERWRITTEN.
+#
+# For static IP configurations, nameservers can be specified via `ghe-setup-network&#39;.
+# For DHCP configurations, nameservers are auto-populated with values provided in the DHCP lease.
+# To add custom options to this file, edit /etc/resolvconf/resolv.conf.d/head and run `sudo service resolvconf restart&#39;.
+#
+# The 127.0.0.1 entry is *required* to be the first entry in the list here. Removing it
+# or having another entry as the first entry will break GitHub Enterprise. It&#39;s also not
+# supported to add options that affect the ordering here such as \&quot;options rotate\&quot;.</code></pre>
+<p>But the same content should be documented. Ideally we should have something like this:</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/18643/72710429-6bf63c80-3baa-11ea-861b-fe83d47b82a6.png" alt="" /><figcaption>image</figcaption>
+</figure></pre> ]]></description>
 </item>
 
-<item>	<title>Provide detailed instructions on how to check for `ssh-agent` on Windows with OpenSSH</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/10967</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>How to properly escape values for $GITHUB_ENV file</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/10788</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://docs.github.com/en/actions/learn-github-actions/workflow-commands-for-github-actions#environment-files</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>I’m missing explanation how to properly escape values written to $GITHUB_ENV file. It would be also helpful to describe how this file is read.</p>
+<h3 id="additional-information">Additional information</h3>
+<p>I’m writing this issue based on my current experience.</p>
+<p>I’m trying to set environment variable with value which starts with <code>$</code> and so far I haven’t been able to do so.
+Please see following workflow file as example: https://github.com/klinki/github-actions-for-packages/blob/main/.github/workflows/test-env-vars.yml</p></pre> ]]></description>
 </item>
 
-<item>	<title>CodeQL status check name is wrong</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/10188</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Add correct commands for steps on Creating a Docker container action page</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/9432</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>"Advanced search syntax" page doesn't include `@me` syntax</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/9403</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Deploying to Google Kubernetes Engine specifies incorrect add-iam-policy-binding command</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/9401</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://docs.github.com/en/actions/guides/deploying-to-google-kubernetes-engine</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>The section "Configuring a service account and storing its credentials" has this call documented:</p>
+<pre><code> gcloud projects add-iam-policy-binding $GKE_PROJECT \
+  --member=serviceAccount:$SA_EMAIL \
+  --role=roles/container.admin \
+  --role=roles/storage.admin \
+  --role=roles/container.clusterViewer</code></pre>
+<p>But it seems that <code>add-iam-policy-binding</code> can only take one <code>--role</code> argument at a time.</p>
+<p>For instance, this will cause a failure during <code>docker push</code>:</p>
+<pre><code>denied: Token exchange failed for project &#39;***&#39;. Caller does not have permission &#39;storage.buckets.get&#39;. To configure permissions, follow instructions at: https://cloud.google.com/container-registry/docs/access-control</code></pre>
+<p>The example given is otherwise able to correctly auth with gcloud, configure docker, and get credentials for the GKE cluster, but then fails to push to <code>gcr.io</code>.</p>
+<p>Looking through the output of <code>add-iam-policy-binding</code>, the new service account is only listed in the <code>role: roles/container.clusterViewer</code> section.</p>
+<p>It seems that whatever the last <code>--role</code> given to <code>add-iam-policy-binding</code> is the role that will actually be applied to the binding without an error.</p>
+<h3 id="additional-information">Additional information</h3>
+<p><em>No response</em></p></pre> ]]></description>
 </item>
 
-<item>	<title>[Improvement]: Add instructions for increasing resources for GitHub Enterprise Server instances on Azure and Google Cloud Platform</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/9240</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><p><strong>What feature or product is affected?</strong></p>
+<p>GitHub Enterprise Server.</p>
+<p><strong>What is the new or expected behavior?</strong></p>
+<p>It’d be good to include some advice for increasing hardware resources available to GitHub Enterprise Server instances in Azure or Google Cloud Platform.</p>
+<p><strong>How is the old or inaccurate behavior currently documented?</strong></p>
+<p>Per https://github.com/github/docs-internal/pull/17498#discussion_r566528908, "<a href="https://docs.github.com/en/enterprise-server/admin/enterprise-management/increasing-cpu-or-memory-resources">Increasing CPU or memory resources</a>" only addresses GitHub Enterprise Server instances hosted on AWS, KVM, and VMware. It’d be nice to include instructions for increasing resources for instances hosted on Azure and Google Cloud Platform, or at least write a blurb at the top of the page with any known limitations or high-level instructions. (We link to this article from the <a href="https://docs.github.com/en/enterprise-server/admin/installation/setting-up-a-github-enterprise-server-instance">various articles on installing GitHub Enterprise Server</a>, so right now, administrators on Azure and Google Cloud Platform might end up at this article, but they won’t see any instructions for their hypervisor.)</p>
+<p><strong>Who does this affect?</strong></p>
+<p>Administrators of GitHub Enterprise Server using Azure or Google Cloud Platform.</p>
+<p><strong>What is the impact to users?</strong></p>
+<p>Folks might contact support for instructions. Since GitHub doesn’t own Azure or Google Cloud Platform, sometimes we then have to point the customer to other documentation, so it’s potentially a frustrating adventure to find the information that you need for upgrading the virtual machine you’re running 😅</p>
+<p><strong>Content design and implementation (for Docs Content team members only)</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Core</th>
+<th>DSP</th>
+<th>Ecosystem/API</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Content design plan</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></pre> ]]></description>
 </item>
 
-<item>	<title>Raw link doesn't appear to be documented</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/8530</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><!--
+HUBBERS BEWARE! THE GITHUB/DOCS REPO IS PUBLIC TO THE ENTIRE INTERNET. OPEN AN ISSUE IN GITHUB/DOCS-CONTENT INSTEAD.
+-->
+<!--
+For questions, ask in Discussions: https://github.com/github/docs/discussions
+
+Before you file an issue read the:
+- Code of Conduct: https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md
+- Contributing guide: https://github.com/github/docs/blob/main/CONTRIBUTING.md
+
+Check to make sure someone hasn't already opened a similar issue: https://github.com/github/docs/issues
+-->
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>#8031</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>An explanation of how to view raw documents would be useful. I tried searching docs for <code>raw</code> and can’t find anything</p>
+<p>There’s a widget in many pages for this:
+<img src="https://user-images.githubusercontent.com/2119212/126888185-e4888207-b523-4bd3-8ef6-fe8400ad3d90.png" alt="image" />
+But, it doesn’t appear to actually be documented. This leads to users reporting:</p>
+<h3 id="additional-information">Additional information</h3>
+<p>https://github.community/t/feature-request-allow-the-user-to-download-a-single-file/191964</p></pre> ]]></description>
 </item>
 
-<item>	<title>Clarify what all sources are supported for Terraform Dependency Updates</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/8419</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Not all Dependabot languages support private repos</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/8188</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Add info about transferring action repos, the marketplace `verified` badge and IDs</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/7573</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://docs.github.com/en/actions/creating-actions/publishing-actions-in-github-marketplace</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>It would be nice to have a section about transferring action repositories and another about some finer details regarding the marketplace:</p>
+<ul>
+<li>A repo can be transferred and actions will continue to work because there is a redirect in place (users of the action won’t have to update their workflows)</li>
+<li>An action in the marketplace is linked to a repository by ID, allowing for new releases to be published under the same marketplace listing from the "new" repo</li>
+<li>If an action repository is deleted, so is the marketplace listing. The unique <code>name</code> identifier becomes available again.</li>
+<li>The <code>verified</code> status seen on GitHub org profiles is different from the marketplace <code>verified</code> badge. By transferring an action repo, the owner changes and the marketplace badge will be lost unless the new owner is a verified publisher too.</li>
+</ul>
+<h3 id="additional-information">Additional information</h3>
+<p>The above list is a brief summary of https://github.community/t/any-risks-of-moving-already-published-action-repository/163739</p></pre> ]]></description>
 </item>
 
-<item>	<title>GPG keys: add about how to save passphrase against typing it on every commit</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/7323</link>
 	<description><![CDATA[ <pre><h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
 <p>https://github.com/github/docs/blob/main/content/github/authenticating-to-github/managing-commit-signature-verification/signing-commits.md</p>
@@ -148,115 +371,310 @@ I have read and agree to the GitHub Docs project’s <a href="https://github.com
 <p>Near <code>To store your GPG key passphrase so you don't have to enter it every time you sign a commit, we recommend using the following tools:</code> add about Linux, how to configure <code>gpg-agent</code> (as I tried it will start automatically after first commit, without any configuration), and how to not enter passphrase even for the first time.</p></pre> ]]></description>
 </item>
 
-<item>	<title>add copy 📋 button the text fields</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/7044</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><!--
+HUBBERS BEWARE! THE GITHUB/DOCS REPO IS PUBLIC TO THE ENTIRE INTERNET. OPEN AN ISSUE IN GITHUB/DOCS-CONTENT INSTEAD.
+-->
+<!--
+For questions, ask in Discussions: https://github.com/github/docs/discussions
+
+Before you file an issue read the:
+- Code of Conduct: https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md
+- Contributing guide: https://github.com/github/docs/blob/main/CONTRIBUTING.md
+
+Check to make sure someone hasn't already opened a similar issue: https://github.com/github/docs/issues
+-->
+<h3 id="what-is-the-current-behavior">What is the current behavior?</h3>
+<p>https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#webhook-payload-example-32</p>
+<pre><code>pre blocks in docs look like they did a year ago in GitHub issues</code></pre>
+<figure>
+<img src="https://user-images.githubusercontent.com/2119212/120619094-abcd6500-c429-11eb-973f-45f4daa0dcd5.png" alt="" /><figcaption>image</figcaption>
+</figure>
+<!-- Include links to articles where you're seeing a problem, screenshots, what browser you're using, etc. -->
+<h3 id="what-changes-are-you-suggesting">What changes are you suggesting?</h3>
+<!-- Give as much detail as you can to help us understand the change you want to see. Why should the docs be changed? What use cases does it support? What is the expected outcome? -->
+<p>GitHub issues (like this one) have a 📋 at the top right of</p>
+<pre><code>pre
+blocks</code></pre>
+<figure>
+<img src="https://user-images.githubusercontent.com/2119212/120619140-b7209080-c429-11eb-9a57-4468f85924f8.png" alt="" /><figcaption>image</figcaption>
+</figure>
+<p>Which lets users copy their contents</p>
+<h3 id="additional-information">Additional information</h3>
+<!-- Any additional information, configuration, or data that might be necessary to reproduce the issue. --></pre> ]]></description>
 </item>
 
-<item>	<title>Add intros to GraphQL pages</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/6970</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<ul>
+<li>"<a href="https://docs.github.com/en/graphql/reference/queries">Queries</a>"</li>
+<li>"<a href="https://docs.github.com/en/graphql/reference/interfaces">Interfaces</a>"</li>
+<li>"<a href="https://docs.github.com/en/graphql/reference/enums">Enums</a>"</li>
+<li>"<a href="https://docs.github.com/en/graphql/reference/mutations">Mutations</a>"</li>
+</ul>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>Each of these articles needs an intro to help orient users to the content on the page and what each data type in the GraphQL API schema can be used for. Intros should be one sentence long and define what the feature is.</p>
+<p>For "<a href="https://docs.github.com/en/graphql/reference/interfaces">Interfaces</a>" and "<a href="https://docs.github.com/en/graphql/reference/enums">Enums</a>" the first sentence in the "About" sections can be cut and pasted for the intros (but do not include any hyperlinks).</p>
+<p>For "<a href="https://docs.github.com/en/graphql/reference/mutations">Mutations</a>," the second sentence can be used for the intro.</p>
+<p>For "<a href="https://docs.github.com/en/graphql/reference/queries">Queries</a>" you will need to write a new intro.</p>
+<p>For more information about writing intros, see:</p>
+<ul>
+<li><a href="https://github.com/github/docs/blob/main/contributing/content-model.md#intro">Information about writing intros</a> in the GitHub docs content model</li>
+<li><a href="https://github.com/github/docs/tree/main/content#intro">Information about the <code>intro</code> frontmatter property</a> in the GitHub Docs content directory README</li>
+</ul>
+<h3 id="additional-information">Additional information</h3>
+<p>This issue is for the Campus Experts + Docs program and not currently available for contributors outside the program to work on.</p></pre> ]]></description>
 </item>
 
-<item>	<title>Add intros to GraphQL pages</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/6969</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<ul>
+<li>"<a href="https://docs.github.com/en/graphql/reference/input-objects">Input objects</a>"</li>
+<li>"<a href="https://docs.github.com/en/graphql/reference/unions">Unions</a>"</li>
+<li>"<a href="https://docs.github.com/en/graphql/reference/scalars">Scalars</a>"</li>
+<li>"<a href="https://docs.github.com/en/graphql/reference/objects">Objects</a>"</li>
+</ul>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>Each of these articles needs an intro to help orient users to the content on the page and what each data type in the GraphQL API schema can be used for. Intros should be one sentence long and define what the feature is.</p>
+<p>For these four articles, the first sentence in the "About" sections can be cut and pasted for the intro (but do not include any hyperlinks).</p>
+<p>For more information about writing intros, see:</p>
+<ul>
+<li><a href="https://github.com/github/docs/blob/main/contributing/content-model.md#intro">Information about writing intros</a> in the GitHub docs content model</li>
+<li><a href="https://github.com/github/docs/tree/main/content#intro">Information about the <code>intro</code> frontmatter property</a> in the GitHub Docs content directory README</li>
+</ul>
+<h3 id="additional-information">Additional information</h3>
+<p>This issue is for the Campus Experts + Docs program and not currently available for contributors outside the program to work on.</p></pre> ]]></description>
 </item>
 
-<item>	<title>Document how to skip a step if a secret isn't present</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/6861</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Intros for map topics on search</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/6793</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>Two map topics (task-based groupings of articles):
+- “<a href="https://docs.github.com/en/github/searching-for-information-on-github/getting-started-with-searching-on-github">Getting started with searching on GitHub</a>”
+- “<a href="https://docs.github.com/en/github/searching-for-information-on-github/searching-on-github">Searching on GitHub</a>”</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>Each of these map topics needs an intro to help orient users to the content on the page. Intros should be one sentence long. For more information on writing intros, see:
+- <a href="https://github.com/github/docs/blob/main/contributing/content-model.md#map-topic">Information about map topics</a>” in the GitHub Docs content model, including guidance on map topic intros
+- <a href="https://github.com/github/docs/blob/main/contributing/content-model.md#intro">Information about writing intros</a> in the GitHub docs content model
+- <a href="https://github.com/github/docs/tree/main/content#intro">Information about the <code>intro</code> frontmatter property</a> in the GitHub Docs content directory README
+- Make sure your intro is general enough to cover the content in each version of the page (use the version picker in the upper-right corner of the page to see what’s included on the page for different versions of GitHub)</p>
+<h3 id="additional-information">Additional information</h3>
+<p>This issue is for the Campus Experts + Docs program and is not available for contributors outside the program to work on.</p></pre> ]]></description>
 </item>
 
-<item>	<title>Link to GitHub Classroom content in other docs articles</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/6738</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>::set-output does not document that `value` cannot contain newlines</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/6693</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><!--
+HUBBERS BEWARE! THE GITHUB/DOCS REPO IS PUBLIC TO THE ENTIRE INTERNET. OPEN AN ISSUE IN GITHUB/DOCS-CONTENT INSTEAD.
+-->
+<!--
+For questions, ask in Discussions: https://github.com/github/docs/discussions
+
+Before you file an issue read the:
+- Code of Conduct: https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md
+- Contributing guide: https://github.com/github/docs/blob/main/CONTRIBUTING.md
+
+Check to make sure someone hasn't already opened a similar issue: https://github.com/github/docs/issues
+-->
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<!-- Please link to the article you'd like to see updated -->
+<p>https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-an-output-parameter</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<!-- Give as much detail as you can to help us understand the change you want to see. Why should the docs be changed? What use cases does it support? What is the expected outcome? -->
+<p>It should indicate that <code>value</code> cannot contain newlines.</p>
+<h3 id="additional-information">Additional information</h3>
+<!-- Add any other context or screenshots about the feature request here. -->
+<p>https://github.community/t/use-ssh-key-from-secret-in-output-set-output/141071/2
+https://github.community/t/set-output-truncates-multiline-strings/16852/3</p>
+<h3 id="content-design-plan">Content design plan</h3>
+<ul>
+<li>Document the solution from https://github.community/t/set-output-truncates-multiline-strings/16852/3 in https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-an-output-parameter.</li>
+</ul></pre> ]]></description>
 </item>
 
-<item>	<title>Add new conceptual article 'About assignments' for GitHub Classroom docs</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/6326</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Add new conceptual article 'About GitHub Classroom'</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/6289</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Intro for software supply chain map topic</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/6284</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>The “<a href="https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain">Understanding your software supply chain</a>” map topic (a map topic is a task-based group of articles)</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>Write an intro to help orient users to the content on the page. Intros are also displayed in search results. Intros should be one sentence long. For more information on writing intros, see:
+- <a href="https://github.com/github/docs/blob/main/contributing/content-model.md#map-topic">Information about map topics</a>” in the GitHub Docs content model, including guidance on map topic intros
+- <a href="https://github.com/github/docs/blob/main/contributing/content-model.md#intro">Information about writing intros</a> in the GitHub docs content model
+- <a href="https://github.com/github/docs/tree/main/content#intro">Information about the <code>intro</code> frontmatter property</a> in the GitHub Docs content directory README
+- Make sure your intro is general enough to cover the content in each version of the page (use the version picker in the upper-right corner of the page to see what’s included on the page for different versions of GitHub)</p>
+<h3 id="additional-information">Additional information</h3>
+<p>This issue is for a special project and is not currently available for contributors to work on.</p></pre> ]]></description>
 </item>
 
-<item>	<title>[Improvement]: Update REST API header examples and eliminate extraneous information</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/5993</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="what-feature-or-product-is-affected">What feature or product is affected?</h3>
+<p>REST API</p>
+<h3 id="what-is-the-new-or-expected-behavior">What is the new or expected behavior?</h3>
+<p>Currently, we have several REST API articles that include examples with headers. However, these examples are outdated because the header has changed.</p>
+<ol type="1">
+<li>Omit portions of the header that are not relevant to the example. For instance, if an example is talking about rate limiting, only include the rate limiting headers.</li>
+<li>Ensure that the headers that are used are up-to-date.</li>
+</ol>
+<h3 id="how-is-the-old-or-inaccurate-behavior-currently-documented">How is the old or inaccurate behavior currently documented?</h3>
+<p>headers are out of date and show extraneous information</p>
+<h3 id="who-does-this-affect">Who does this affect?</h3>
+<p>users of the REST API</p>
+<h3 id="what-is-the-impact-to-users">What is the impact to users?</h3>
+<p>confusion about differences between the API headers that the user sees and what the docs show</p></pre> ]]></description>
 </item>
 
-<item>	<title>Fix dependabot registries examples for maven-repositories with a token</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/5981</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Provide instructions for how to allow non admins to see dependabot security alerts</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/4760</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Code Owners and Code Review Assignment warnings incorrect</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/4420</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<ul>
+<li><a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners#about-code-owners">About code owners</a></li>
+<li><a href="https://docs.github.com/en/github/setting-up-and-managing-organizations-and-teams/managing-code-review-assignment-for-your-team#about-code-review-assignments">Managing code review assignment for your team</a></li>
+</ul>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>Both <a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners#about-code-owners">About code owners</a> and <a href="https://docs.github.com/en/github/setting-up-and-managing-organizations-and-teams/managing-code-review-assignment-for-your-team#about-code-review-assignments">Managing code review assignment for your team</a> have very explicit warnings about the mutual incompatibility of CODEOWNERS with review assignment. From the former:
+&gt; If a team has enabled code review assignments, the individual approvals won’t satisfy the requirement for code owner approval in a protected branch. For more information, see "Managing code review assignment for your team."</p>
+<p>From the latter:
+&gt; When code owners are automatically requested for review, the team is still removed and replaced with individuals. The individual approvals don’t satisfy the requirement for code owner approval in a protected branch. For more information, see "About code owners."</p>
+<p>Based on our internal testing, <strong>this is no longer correct.</strong> The team is not removed from the PR, and the round robin reviewer can approve the PR successfully. Additionally, if code review assignment is enabled and set not to notify the team, only the single reviewer will be requested as intended.</p>
+<details>
+<p><summary> Branch protection settings </summary></p>
+<figure>
+<img src="https://user-images.githubusercontent.com/8343799/110523392-a9cc6200-80d7-11eb-940f-514b93a022e6.png" alt="" /><figcaption>image</figcaption>
+</figure>
+</details>
+<details>
+<p><summary> Team Review Settings </summary></p>
+<figure>
+<img src="https://user-images.githubusercontent.com/8343799/110523423-b18c0680-80d7-11eb-9ad9-b9f984ec69f2.png" alt="" /><figcaption>image</figcaption>
+</figure>
+<details></pre> ]]></description>
 </item>
 
-<item>	<title>[GitHub Desktop] Update Configuring Git for GitHub Desktop Flow</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/4033</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Document all the GHCR labels which can be used</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/2617</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><!--
+HUBBERS BEWARE! THE GITHUB/DOCS REPO IS PUBLIC TO THE ENTIRE INTERNET. OPEN AN ISSUE IN GITHUB/DOCS-CONTENT INSTEAD.
+-->
+<!--
+For questions, ask in Discussions: https://github.com/github/docs/discussions
+
+Before you file an issue read the:
+- Code of Conduct: https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md
+- Contributing guide: https://github.com/github/docs/blob/main/CONTRIBUTING.md
+
+Check to make sure someone hasn't already opened a similar issue: https://github.com/github/docs/issues
+-->
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>I don’t think we want to update this article but likely expand into a new one on the various labels which can be used and their effects with GHCR. Perhaps the labeling details of this one could be done in that other article.
+https://docs.github.com/en/free-pro-team@latest/packages/guides/connecting-a-repository-to-a-container-image#connecting-a-repository-to-a-container-image-on-the-command-line</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p><New Article>
+GHCR and metadata labels</p>
+<p>The following labels are currently supported by GHCR.</p>
+<ul>
+<li><code>org.opencontainers.image.source</code> (use existing content to describe linking to a repo)</li>
+<li><code>org.opencontainers.image.description</code>="A short text-only description limited to 512 characters that will appear on the containers page below the name of the container"</li>
+<li><code>org.opencontainers.image.licenses</code>="MIT" with an <a href="https://spdx.org/licenses/">spdx license identifier</a> like MIT GitHub will show the license on side details area for a container (limited to 256 characters)</li>
+</ul>
+<h3 id="additional-information">Additional information</h3>
+<ul>
+<li>This came up from a forum post here https://github.community/t/container-registry-package-description/130640</li>
+</ul></pre> ]]></description>
 </item>
 
-<item>	<title>Comment in Creating dependent jobs section is vague and confusing</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/764</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Use operationId for `#anchor` tags of REST API endpoint titles</title>
+<item>	<title></title>
 	<link>https://github.com/github/docs/issues/139</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="what-feature-or-product-is-affected">What feature or product is affected?</h3>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+REST API</li>
+</ul>
+<h3 id="what-is-the-new-or-expected-behavior">What is the new or expected behavior?</h3>
+<p>Example</p>
+<blockquote>
+<p>https://docs.github.com/en/rest/reference/repos#check-if-vulnerability-alerts-are-enabled-for-a-repository</p>
+</blockquote>
+<p>would become</p>
+<blockquote>
+<p>https://docs.github.com/en/rest/reference/repos#check-vulnerability-alerts</p>
+</blockquote>
+<p>See OpenAPI spec at https://github.com/github/openapi/blob/347c7c385184352692d4118b7e8a266ccf9b7db7/definitions/operations/repos/check-vulnerability-alerts.yml#L6</p>
+<h3 id="how-is-the-old-or-inaccurate-behavior-currently-documented">How is the old or inaccurate behavior currently documented?</h3>
+<p>n/a</p>
+<h3 id="who-does-this-affect">Who does this affect?</h3>
+<p>Every change to an <code>#anchor</code> name for endpoint titles requires a change in the code, due to the error handlers which include a URL to the documentation. The endpoint titles are more prone to changes, while operation IDs should be changed much less frequently, as they are consider a breaking change to some of the OpenAPI consumers, while the <code>\"summary\"</code> key is not.</p>
+<p>The problem with the title changes might also be amplified once translations are introduced.</p>
+<p><span class="citation" data-cites="zeke">@zeke</span> sent me here, we shortly discussed it today:</p>
+<p><img width=\"1571\" alt=\"image\" src=\"https://user-images.githubusercontent.com/39992/88490749-b76f1600-cf52-11ea-818f-439559206511.png\"></p>
+<h3 id="what-is-the-impact-to-users">What is the impact to users?</h3>
+<p>n/a</p>
+<h3 id="content-strategy-and-implementation">Content strategy and implementation</h3>
+<p>tbd</p></pre> ]]></description>
 </item>
 
-<item>	<title>Outstanding Grammar Issues</title>
+<item>	<title></title>
 	<link>https://github.com/github/linguist/issues/3924</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Kotlin support</title>
+<item>	<title></title>
 	<link>https://github.com/github/semantic/issues/233</link>
 	<description><![CDATA[ <pre><p>As a Kotlin user, it would be benefical if semantic support Kotlin programming language.
 https://kotlinlang.org/</p></pre> ]]></description>
 </item>
 
-<item>	<title>F# support</title>
+<item>	<title></title>
 	<link>https://github.com/github/semantic/issues/132</link>
 	<description><![CDATA[ <pre><p>Any interest in supporting F#?</p>
 <p>We have our own compiler APIs that enable all kinds of stuff based on structure and semantics; and it’s part of the compiler proper, not some janky thing that breaks because the compiler changed stuff. You can see this in the Fable REPL, which supports a wide range of tooling features in the editor: https://fable.io/repl/</p>
 <p>Based on looking at how you do things, you wouldn’t be able to use this directly, which would imply a lot of work. F# syntax and semantic aren’t trivial 😅. But if there was a way to extend this to allow the existing tooling support (which can run in a browser!), then we might be able to prioritize stuff on the F# side of things to make it easier.</p></pre> ]]></description>
 </item>
 
-<item>	<title>Build `x86` on Windows with the built-in tools</title>
+<item>	<title></title>
 	<link>https://github.com/github/smimesign/issues/91</link>
 	<description><![CDATA[ <pre><p>We build <code>amd64</code> directly: https://github.com/github/smimesign/blob/e650daf6eaadf85c763fa06dcfb0e4d794d293dc/.github/workflows/build-binaries.yml#L89</p>
 <p>But I had trouble figuring out how to build for <code>GOARCH=386</code> without errors. Right now, we use https://github.com/egor-tensin/setup-mingw to switch to 32-bit builds, which pulls down a bunch of tooling and takes a few minutes:</p>
@@ -264,12 +682,12 @@ https://kotlinlang.org/</p></pre> ]]></description>
 <p>I can’t help but feel there must still be a nice (or at least much faster) way to do this using the built-in tools from Actions.</p></pre> ]]></description>
 </item>
 
-<item>	<title>Super-linter algorithm for finding changed files is broken</title>
+<item>	<title></title>
 	<link>https://github.com/github/super-linter/issues/1167</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Versioned documentation</title>
+<item>	<title></title>
 	<link>https://github.com/github/view_component/issues/1151</link>
 	<description><![CDATA[ <pre><h2 id="feature-request">Feature request</h2>
 <p>As a developer reading the ViewComponent documentation, it is unclear whether there are unreleased features in the docs.</p>
@@ -279,12 +697,12 @@ https://kotlinlang.org/</p></pre> ]]></description>
 <p>I could see us solving this a couple ways. We could only publish the docs when a release is cut, we could version the docs (see https://glebbahmutov.com/blog/versioned-doc-pages/, or perhaps we could start with a disclaimer that the docs are for the <code>main</code> branch.</p></pre> ]]></description>
 </item>
 
-<item>	<title>Using asset_path in component previews</title>
+<item>	<title></title>
 	<link>https://github.com/github/view_component/issues/1093</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>How to configure stimulus using the new rails 7 asset pipeline</title>
+<item>	<title></title>
 	<link>https://github.com/github/view_component/issues/1064</link>
 	<description><![CDATA[ <pre><h2 id="feature-request">Feature request</h2>
 <p>Hello, how could this be done? In the javascript documentation the configuration needed to use webpack is indicated, but I am interested in using stimulus using importmap and sprockets, as it will be in rails 7 by default, using the asset pipeline.</p>
@@ -300,12 +718,12 @@ context or references to similar behavior in other libraries? -->
 </ul></pre> ]]></description>
 </item>
 
-<item>	<title>Static types?</title>
+<item>	<title></title>
 	<link>https://github.com/github/view_component/issues/1048</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title>Add paved path for unit testing components with behaviors</title>
+<item>	<title></title>
 	<link>https://github.com/github/view_component/issues/904</link>
 	<description><![CDATA[ <pre><h3 id="problem-statement">Problem statement</h3>
 <blockquote>
@@ -315,12 +733,35 @@ context or references to similar behavior in other libraries? -->
 <p>In Primer ViewComponents, we use system tests powered by cuprite and ViewComponent Previews for testing behaviors. As this approach matures, we should aim to move of much of it as possible into ViewComponent.</p></pre> ]]></description>
 </item>
 
-<item>	<title>Support multiple views</title>
+<item>	<title></title>
 	<link>https://github.com/github/view_component/issues/387</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h2 id="feature-request">Feature request</h2>
+<!-- Provide a summary of the behavior. -->
+<p>Allow refactoring small view parts into a separate view, and be able to <code>render</code> them into the template. These views should not be available outside the component.</p>
+<pre><code>app/components/my_component/my_component.html.erb
+app/components/my_component/a_part.html.erb</code></pre>
+<pre class="erb"><code>&lt;%# my_component.html.erb %&gt;
+&lt;%= render &#39;a_part&#39; %&gt;</code></pre>
+<h3 id="motivation">Motivation</h3>
+<!-- What would you like to do with this feature? Can you provide
+context or references to similar behavior in other libraries? -->
+<p>Sometimes it is useful to separate a sub-component from the component. For example, if I want to render a popover with extra info about a particular model, I would want to extract that popover into a separate view.</p>
+<p>Alternative Solutions:</p>
+<ol type="1">
+<li>Extract a new component. Because the popover is not a generic one to be used in other parts of the application, it doesn’t make much sense to create a (now public) component for it.</li>
+<li>Use <code>content_for</code>. This is not suitable if the partial needs to take arguments. In my example, it wouldn’t work if I’m displaying a list of models and I want to show the popover for each model.</li>
+</ol>
+<p>Prior art:
+ActionView does support partials, of course.
+Cells does allow multiple views per cell, and allows using <code>render view: 'a_part'</code>.</p>
+<h3 id="possible-solutions-i-see">Possible solutions I see</h3>
+<ol type="1">
+<li>Provide a method that prefixes the component dir and then goes on to call <code>render template:</code> with the full path. I would suspect this is relatively slow given that <code>render</code> is slow in ActionView.</li>
+<li>Precompile all the templates into methods with a reserved prefix, and allow calling them from the view. For example, using <code>extra_views_{view_name}</code>.</li>
+</ol></pre> ]]></description>
 </item>
 
-<item>	<title>Components should play nicely with Rails caching mechanisms</title>
+<item>	<title></title>
 	<link>https://github.com/github/view_component/issues/234</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
