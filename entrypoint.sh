@@ -60,7 +60,7 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
                               true
                             else                            
                                 LABELS=$(echo   "$RAW" | awk -F"¡" '{ print $2 }')
-                                TITLE=$(echo    "$RAW" | awk -F"¡" '{ print $3 }' | sed -e 's/</\&lt;/g' | sed -e 's/>/\&gt;/g' | sed -e 's/\&/\&amp;/g' | sed -e 's/%/%%/g') # | awk '{ print '"$ORG"'"/"'"$I"'":"$0}')
+                                TITLE=$(echo    "$RAW" | awk -F"¡" '{ print $3 }' | sed -e 's/</\&lt;/g' | sed -e 's/>/\&gt;/g' | sed -e 's/\&/\&amp;/g' | sed -e 's/%/%%/g' | awk '{ print "'$ORG'"/"'$I'":"$0}')
                                 URL=$(echo      "$RAW" | awk -F"¡" '{ print $4 }')
                                 ID=$(echo       "$RAW" | awk -F"¡" '{ print $5 }' | tr -d '"')  
                             
@@ -69,7 +69,7 @@ RSS_FEED_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME/feed.xml"
                         
                                 BODY=$(curl -s -u :$TOKEN "https://api.github.com/repos/$I/issues/$ID" | jq .body | sed -e 's/^"//' | sed -e 's/"$//' | xargs -0 echo -e | pandoc --wrap=preserve)
 
-                                if [[ ${#BODY} -gt 1000 ]]
+                                if [[ ${#BODY} -gt 2500 ]]
                                 then
                                     BODY="Content clipped"
                                 fi
