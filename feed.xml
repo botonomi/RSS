@@ -4,14 +4,14 @@
 <title>Help Wanted</title>
 <description>Help Wanted Issues</description>
 <link>https://lbonanomi.github.io/workspace/feed.xml</link>
-<item>	<title></title>
+<item>	<title>Use relative units for fonts (rem, em)</title>
 	<link>https://github.com/github/choosealicense.com/issues/904</link>
 	<description><![CDATA[ <pre><p>Hello,</p>
 <p>I see that this website uses pixel values on "application.scss" file. I suggest to convert pixel values used for fonts and spacing to relative fonts like "rem’" or "em". This will lead to accessibility of the site and rank higher on Google.</p>
 <p>Thank you</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Internationalization / i18n / multilingual site</title>
 	<link>https://github.com/github/choosealicense.com/issues/68</link>
 	<description><![CDATA[ <pre><p>Would love to see about baking in I18N support to choosealicense.com proper. See #67 and #62</p>
 <p>We already have the bulk of the strings in a single file (<code>_config.yml</code>), so it should just be a matter of abstracting out some of our variables, as far as I can tell.</p>
@@ -20,7 +20,7 @@
 <span class="citation" data-cites="dhcole">@dhcole</span> any insight / words of wisdom?</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Mention Case Sensitivity In CODEOWNERS Docs</title>
 	<link>https://github.com/github/docs/issues/12760</link>
 	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
 <ul class="task-list">
@@ -36,7 +36,7 @@ I have read and agree to the GitHub Docs project’s <a href="https://github.com
 <p><em>No response</em></p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>"Security advisory credit" and "discussion(s) answered" missing from section "Displaying badges on your profile"</title>
 	<link>https://github.com/github/docs/issues/12556</link>
 	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
 <ul class="task-list">
@@ -53,7 +53,7 @@ If there are more, those as well :)</p>
 <p><em>No response</em></p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>composite example does not run in Windows</title>
 	<link>https://github.com/github/docs/issues/11849</link>
 	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
 <ul class="task-list">
@@ -73,7 +73,7 @@ I have read and agree to the GitHub Docs project’s <a href="https://github.com
 <p><em>No response</em></p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>[Improvement]: Duplicate content in description of "private" parameter for Update a Repo endpoint</title>
 	<link>https://github.com/github/docs/issues/11784</link>
 	<description><![CDATA[ <pre><h3 id="is-this-issue-for-a-product-update-or-release-that-is-not-yet-available-to-customers">Is this issue for a product update or release that is not yet available to customers?</h3>
 <p>No? Then please continue. Thank you!</p>
@@ -96,7 +96,7 @@ Default: false</p>
 <p>No 😸</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Inconsistency between SCIM support</title>
 	<link>https://github.com/github/docs/issues/11639</link>
 	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
 <ul class="task-list">
@@ -122,7 +122,7 @@ Martin</p>
 <p><em>No response</em></p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Mention gh_color_mode for directly uploaded images?</title>
 	<link>https://github.com/github/docs/issues/11491</link>
 	<description><![CDATA[ <pre><h3 id="discussed-in-httpsgithub.comgithubdocsdiscussions11479">Discussed in https://github.com/github/docs/discussions/11479</h3>
 <div type="discussions-op-text">
@@ -132,7 +132,7 @@ I feel like this should be mentioned in the docs somewhere, probably under the m
 </div></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Use HTML kbd tag for keyboard information</title>
 	<link>https://github.com/github/docs/issues/11237</link>
 	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
 <ul class="task-list">
@@ -152,7 +152,7 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd</p>
 <p>Teşekkürler (Thanks).</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Improve warning for handing out `write` level rights with regards to repo secrets</title>
 	<link>https://github.com/github/docs/issues/11167</link>
 	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
 <ul class="task-list">
@@ -179,7 +179,7 @@ put the warning "Be mindful that any user with write access to your repository h
 <p><em>No response</em></p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Missing documentation for `head_ref_force_pushed` issue event</title>
 	<link>https://github.com/github/docs/issues/11129</link>
 	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
 <ul class="task-list">
@@ -194,7 +194,7 @@ I have read and agree to the GitHub Docs project’s <a href="https://github.com
 <p><em>No response</em></p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Update "Configuring nameservers using the administrative shell" to include a note about 127.0.0.1</title>
 	<link>https://github.com/github/docs/issues/11080</link>
 	<description><![CDATA[ <pre><h3 id="issue-overview">Issue overview</h3>
 <p>Sometimes customers want to change their nameservers. They simply read <a href="https://help.github.com/en/enterprise/2.19/admin/installation/configuring-dns-nameservers#configuring-nameservers-using-the-administrative-shell">Configuring DNS nameservers</a> and start making changes to the <em>/etc/resolvconf/resolv.conf.d/head</em> file. We have seen some cases where customers just remove this:</p>
@@ -216,12 +216,56 @@ I have read and agree to the GitHub Docs project’s <a href="https://github.com
 </figure></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Provide detailed instructions on how to check for `ssh-agent` on Windows with OpenSSH</title>
 	<link>https://github.com/github/docs/issues/10967</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Description</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Source article</td>
+<td><a href="https://docs.github.com/en/authentication/troubleshooting-ssh/error-permission-denied-publickey" class="uri">https://docs.github.com/en/authentication/troubleshooting-ssh/error-permission-denied-publickey</a></td>
+</tr>
+<tr class="even">
+<td>Nearest ancestral anchor point</td>
+<td><a href="https://docs.github.com/en/authentication/troubleshooting-ssh/error-permission-denied-publickey#make-sure-you-have-a-key-that-is-being-used">…#make-sure-you-have-a-key-that-is-being-used</a></td>
+</tr>
+<tr class="odd">
+<td>Specific part</td>
+<td><a href="https://docs.github.com/en/authentication/troubleshooting-ssh/error-permission-denied-publickey#:~:text=%23%20start%20the%20ssh-agent%20in%20the%20background%0A%24%20eval%20%22%24(ssh-agent%20-s)%22%0A%3E%20Agent%20pid%2059566">…If you are using Git Bash, turn on ssh-agent:…</a></td>
+</tr>
+</tbody>
+</table>
+<details>
+<p><summary>Screenshot of entire page using Edge Web Capture</summary></p>
+<figure>
+<img src="https://user-images.githubusercontent.com/5055400/136499119-92a56229-9b1b-46c0-a349-a01a2df10ca5.png" alt="" /><figcaption>screenshot of the current page contents with red-dashed outline around incomplete instructions</figcaption>
+</figure>
+</details>
+<h3 id="what-changes-are-you-suggesting">What changes are you suggesting?</h3>
+<p>When OpenSSH is <a href="https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse">installed using the Settings</a> (Window 10 build 1809 and later; or Windows Server 2019), the <code>ssh-agent</code> runs as a background system service rather than returning a stringified batch script that needs to be <code>eval</code>’d.</p>
+<p>See also <a href="https://stackoverflow.com/questions/18683092/how-to-run-ssh-add-on-windows#:~:text=Update%202019%20-%20A%20better%20solution%20if%20you%27re%20using%20Windows%2010%3A%20OpenSSH%20is%20available%20as%20part%20of%20Windows%2010%20which%20makes%20using%20SSH%20from%20cmd/powershell%20much%20easier%20in%20my%20opinion.%20It%20also%20doesn%27t%20rely%20on%20having%20git%20installed%2C%20unlike%20my%20previous%20solution.">2019 update to top answer on "How to run ssh-add on windows?"</a></p>
+<p>This means that the status quo instructions promoting either <code>eval $(ssh-agent -s)</code> or <code>eval \"$(ssh-agent -s)\"</code> will not work for some users, but will also not provide useful output. For me, either above command does nothing in PowerShell or cmd.</p>
+<h3 id="additional-information">Additional information</h3>
+<p>A succinct emendation is to recommend <code>Get-Service -Name ssh-agent | Get-Process</code> in a PowerShell host to find the <code>ssh-agent</code> process ID.</p>
+<p>A more detailed suggestion is to walk the reader through scrupulously determining what is providing <code>ssh-agent</code>, if anything.</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>How to properly escape values for $GITHUB_ENV file</title>
 	<link>https://github.com/github/docs/issues/10788</link>
 	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
 <ul class="task-list">
@@ -238,22 +282,118 @@ I have read and agree to the GitHub Docs project’s <a href="https://github.com
 Please see following workflow file as example: https://github.com/klinki/github-actions-for-packages/blob/main/.github/workflows/test-env-vars.yml</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>CodeQL status check name is wrong</title>
 	<link>https://github.com/github/docs/issues/10188</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/triaging-code-scanning-alerts-in-pull-requests#code-scanning-results-check</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>Any references to "Code Scanning results" should be changed to reflect the new status check name "CodeQL".</p>
+<h3 id="additional-information">Additional information</h3>
+<p>See <a href="https://josh-ops.com/posts/github-codeql-pr/">this blog post</a> for confirmation that the status check name is "CodeQL" and not "Code Scanning results."</p>
+<hr />
+<p><em>Following the discussion in the comments below, the docs changes needed are as follows.</em></p>
+<h2 id="content-design-for-docs-changes">Content design for docs changes</h2>
+<p><a href="https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/triaging-code-scanning-alerts-in-pull-requests">Triaging code scanning alerts in pull requests</a></p>
+<p>Update the article so that it’s clear to users that:</p>
+<ul>
+<li>"Code scanning results" is a check suite</li>
+<li>"CodeQL"/other tools are checks within this suite</li>
+</ul>
+<p>Sections that need to be updated:</p>
+<ul>
+<li>"About code scanning results on pull requests"
+<ul>
+<li>"If your pull request targets a protected branch…" Make sure that it’s clear that within the "Code scanning results" check suite, one or more of the checks (for example, "CodeQL") might be configured as a required check.</li>
+</ul></li>
+<li>"About code scanning as a pull request check"
+<ul>
+<li>Rename section to "About the Code scanning results check suite"</li>
+<li>Replace the introductory sentence with something more like: "When you configure code scanning to analyze pull requests, this adds a "Code scanning results" check suite to each pull request. Within this suite, you’ll see one check for each code scanning tool that is configured to run (for example, "CodeQL").</li>
+</ul></li>
+<li>"Code scanning results check"
+<ul>
+<li>Rename section to "Checks in the code scanning results suite"</li>
+<li>Review all references to checks and "Code scanning results". Update so that it’s clear which we’re talking about where. If you need an example of a check name, use "CodeQL" but make it clear that it’s an example and that there might be checks in this suite with other names.</li>
+</ul></li>
+<li>"Code scanning results check failures"
+<ul>
+<li>Rename section to "Failures in the code scanning results suite"</li>
+<li>Review all references to checks and "Code scanning results". Update so that it’s clear which we’re talking about where. If you need an example of a check name, use "CodeQL" but make it clear that it’s an example and that there might be checks in this suite with other names.</li>
+</ul></li>
+</ul></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Add correct commands for steps on Creating a Docker container action page</title>
 	<link>https://github.com/github/docs/issues/9432</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<h2 id="the-parts-that-need-modification">The Parts that need modification</h2>
+<ul>
+<li>https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action#writing-the-action-code</li>
+<li>https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action#commit-tag-and-push-your-action-to-github</li>
+</ul>
+<h2 id="context">Context</h2>
+<p>Seven months ago I worked on an issue #974 and submitted PR #1256 and #2988. There was performance concern over making shell files executable explicitly inside the Docker. This
+https://github.com/github/docs/pull/1256#discussion_r542055469 has all the discussion.</p>
+<p>Ultimately it was decided to suggest the users to run <code>chmod +x entrypoint.sh</code> on their machine before pushing it to the remote. I was not convinced that this will work and there won’t be any permission issue while running the script inside GitHub Actions and I am still not convinced.</p>
+<h2 id="root-of-the-problem.">Root of the problem.</h2>
+<p>For the most part, the above method works fine. The problem occurs only when someone clones the repo and then make changes. The permission is reset and it no longer can be run inside GitHub Actions. And that is why you will see a lot of developers/organizations have explicitly made the shell executable inside GitHub Actions before running it.</p>
+<p>## What do I suggest
+Git provides a way to explicitly change the permission mode of a file so that it doesn’t get reset every time there is a clone/fork. The command works as below.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a> <span class="fu">git</span> update-index --chmod=+x entrypoint.sh</span></code></pre></div>
+<p>This will change the permission mode of the file in the git index and it can be checked by running following command.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">git</span> ls-files --stage entrypoint.sh</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="co"># output</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="ex">100755</span> e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 0       entrypoint.sh</span></code></pre></div>
+<p>Here <code>755</code> denotes the executable permission.</p>
+<h3 id="additional-information">Additional information</h3>
+<p>These lines here https://github.com/github/docs/blame/main/content/actions/creating-actions/creating-a-docker-container-action.md#L124-L128 have no use and can be removed if we opt for the above solution.</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>"Advanced search syntax" page doesn't include `@me` syntax</title>
 	<link>https://github.com/github/docs/issues/9403</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+I have read and agree to the GitHub Docs project’s <a href="https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+</ul>
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p><a href="https://docs.github.com/en/github/searching-for-information-on-github/searching-on-github/searching-issues-and-pull-requests">Searching issues and pull requests</a></p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>I would like to see a new part of searching manual related to advanced search variables, like <code>@me</code>.</p>
+<h3 id="additional-information">Additional information</h3>
+<ol type="1">
+<li><p>Open issues search
+<img src="https://user-images.githubusercontent.com/26386660/131217473-e767ed4e-06de-443e-bc93-34ab1d8dc7da.png" alt="image" /></p></li>
+<li><p>Open <em>Filters</em> dropdown and click <a href="https://docs.github.com/articles/searching-issues"><strong>View advanced search syntax</strong></a> option
+<img src="https://user-images.githubusercontent.com/26386660/131217511-907c2fe2-50f2-4b41-8a7d-6c77d6f30e1e.png" alt="image" /></p></li>
+<li><p>There is no information on help page about such advanced search option as <code>commenter:@me</code>
+<img src="https://user-images.githubusercontent.com/26386660/131217587-ea19a73f-d239-451e-a6ce-5872cd0a4219.png" alt="image" /></p></li>
+</ol>
+<hr />
+<h3 id="content-design-for-changes-to-fix-this-issue">Content design for changes to fix this issue</h3>
+<p>In the <a href="https://docs.github.com/en/github/searching-for-information-on-github/searching-on-github/searching-issues-and-pull-requests">Searching issues and pull requests</a> article:</p>
+<ul>
+<li>Create a new section "Searching for my issues and pull requests" after "<a href="https://docs.github.com/en/github/searching-for-information-on-github/searching-on-github/searching-issues-and-pull-requests#search-by-a-user-thats-involved-in-an-issue-or-pull-request">Search by a user that’s involved in an issue or pull request</a>" as this is the last of a series of sections about filtering on usernames.</li>
+<li>Mention that you can view a list of all the issues and pull requests you created, are assigned, mentioned on, or are requested as a reviewer of (pull requests only) using the <strong>Issues</strong> and <strong>Pull requests</strong> links shown in the top menu bar when you’re logged in.</li>
+<li>Explain that you can use <code>@me</code> with any of the fields that take a username to limit your search to issues or pull requests that you have interacted with.</li>
+<li>For more information, see "<a href="https://docs.github.com/en/github/searching-for-information-on-github/getting-started-with-searching-on-github/understanding-the-search-syntax#queries-with-usernames">Understanding the search syntax</a>"</li>
+<li>Give a couple of examples, based on the examples in the sections above.</li>
+</ul></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Deploying to Google Kubernetes Engine specifies incorrect add-iam-policy-binding command</title>
 	<link>https://github.com/github/docs/issues/9401</link>
 	<description><![CDATA[ <pre><h3 id="code-of-conduct">Code of Conduct</h3>
 <ul class="task-list">
@@ -279,7 +419,7 @@ I have read and agree to the GitHub Docs project’s <a href="https://github.com
 <p><em>No response</em></p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>[Improvement]: Add instructions for increasing resources for GitHub Enterprise Server instances on Azure and Google Cloud Platform</title>
 	<link>https://github.com/github/docs/issues/9240</link>
 	<description><![CDATA[ <pre><p><strong>What feature or product is affected?</strong></p>
 <p>GitHub Enterprise Server.</p>
@@ -312,7 +452,7 @@ I have read and agree to the GitHub Docs project’s <a href="https://github.com
 </table></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Raw link doesn't appear to be documented</title>
 	<link>https://github.com/github/docs/issues/8530</link>
 	<description><![CDATA[ <pre><!--
 HUBBERS BEWARE! THE GITHUB/DOCS REPO IS PUBLIC TO THE ENTIRE INTERNET. OPEN AN ISSUE IN GITHUB/DOCS-CONTENT INSTEAD.
@@ -337,17 +477,52 @@ But, it doesn’t appear to actually be documented. This leads to users reportin
 <p>https://github.community/t/feature-request-allow-the-user-to-download-a-single-file/191964</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Clarify what all sources are supported for Terraform Dependency Updates</title>
 	<link>https://github.com/github/docs/issues/8419</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Not all Dependabot languages support private repos</title>
 	<link>https://github.com/github/docs/issues/8188</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><!--
+HUBBERS BEWARE! THE GITHUB/DOCS REPO IS PUBLIC TO THE ENTIRE INTERNET. OPEN AN ISSUE IN GITHUB/DOCS-CONTENT INSTEAD.
+-->
+<!--
+For questions, ask in Discussions: https://github.com/github/docs/discussions
+
+Before you file an issue read the:
+- Code of Conduct: https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md
+- Contributing guide: https://github.com/github/docs/blob/main/CONTRIBUTING.md
+
+Check to make sure someone hasn't already opened a similar issue: https://github.com/github/docs/issues
+-->
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-and-analysis-settings-for-your-organization</p>
+<!-- Please link to the article you'd like to see updated -->
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-and-analysis-settings-for-your-organization#allowing-dependabot-to-access-private-dependencies</p>
+<p>Not all languages (Ruby being one of them) supported by Dependabot support private dependencies. Adding this information to the docs could help give some clarity.</p>
+<!-- Give as much detail as you can to help us understand the change you want to see. Why should the docs be changed? What use cases does it support? What is the expected outcome? -->
+<h3 id="additional-information">Additional information</h3>
+<!-- Add any other context or screenshots about the feature request here. -->
+<p>This created based on this https://github.com/github/docs/pull/7768
+Also, this link could be some additional info https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/configuration-options-for-dependency-updates#package-ecosystem</p>
+<hr />
+<h3 id="content-design-plan">Content design plan</h3>
+<p>We mention that you can use Dependabot with private repositories and registries in quite a few places, but you’re right that we don’t mention that private repositories are not supported for all ecosystems. I suggest that make the following changes to the docs:</p>
+<ol type="1">
+<li>Create a <a href="https://github.com/github/docs/tree/main/data/reusables">reusable</a> that explains that private repositories are not supported for all ecosystems.</li>
+<li>Replace the following text in <a href="https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/enabling-and-disabling-version-updates">Enabling and disabling version updates</a> with the new reusable.
+&gt; Additionally, Dependabot doesn’t support private GitHub dependencies for all package managers. For more information, see "<a href="/github/administering-a-repository/about-dependabot-version-updates#supported-repositories-and-ecosystems">About Dependabot version updates</a>" and "<a href="/github/getting-started-with-github/github-language-support">GitHub language support</a>."</li>
+<li>Add the reusable to the following articles:
+<ul>
+<li><a href="https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/managing-encrypted-secrets-for-dependabot">Managing encrypted secrets for Dependabot</a></li>
+<li><a href="https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-and-analysis-settings-for-your-organization#allowing-dependabot-to-access-private-dependencies">Managing security and analysis settings for your organization</a></li>
+</ul></li>
+</ol></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Add info about transferring action repos, the marketplace `verified` badge and IDs</title>
 	<link>https://github.com/github/docs/issues/7573</link>
 	<description><![CDATA[ <pre><h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
 <p>https://docs.github.com/en/actions/creating-actions/publishing-actions-in-github-marketplace</p>
@@ -363,7 +538,7 @@ But, it doesn’t appear to actually be documented. This leads to users reportin
 <p>The above list is a brief summary of https://github.community/t/any-risks-of-moving-already-published-action-repository/163739</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>GPG keys: add about how to save passphrase against typing it on every commit</title>
 	<link>https://github.com/github/docs/issues/7323</link>
 	<description><![CDATA[ <pre><h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
 <p>https://github.com/github/docs/blob/main/content/github/authenticating-to-github/managing-commit-signature-verification/signing-commits.md</p>
@@ -371,7 +546,7 @@ But, it doesn’t appear to actually be documented. This leads to users reportin
 <p>Near <code>To store your GPG key passphrase so you don't have to enter it every time you sign a commit, we recommend using the following tools:</code> add about Linux, how to configure <code>gpg-agent</code> (as I tried it will start automatically after first commit, without any configuration), and how to not enter passphrase even for the first time.</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>add copy 📋 button the text fields</title>
 	<link>https://github.com/github/docs/issues/7044</link>
 	<description><![CDATA[ <pre><!--
 HUBBERS BEWARE! THE GITHUB/DOCS REPO IS PUBLIC TO THE ENTIRE INTERNET. OPEN AN ISSUE IN GITHUB/DOCS-CONTENT INSTEAD.
@@ -405,7 +580,7 @@ blocks</code></pre>
 <!-- Any additional information, configuration, or data that might be necessary to reproduce the issue. --></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Add intros to GraphQL pages</title>
 	<link>https://github.com/github/docs/issues/6970</link>
 	<description><![CDATA[ <pre><h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
 <ul>
@@ -428,7 +603,7 @@ blocks</code></pre>
 <p>This issue is for the Campus Experts + Docs program and not currently available for contributors outside the program to work on.</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Add intros to GraphQL pages</title>
 	<link>https://github.com/github/docs/issues/6969</link>
 	<description><![CDATA[ <pre><h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
 <ul>
@@ -449,12 +624,34 @@ blocks</code></pre>
 <p>This issue is for the Campus Experts + Docs program and not currently available for contributors outside the program to work on.</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Document how to skip a step if a secret isn't present</title>
 	<link>https://github.com/github/docs/issues/6861</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepsif
+https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions
+https://docs.github.com/en/actions/reference/encrypted-secrets</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<ul>
+<li>Something in the <code>if</code> set should mention that <code>secrets.</code> isn’t available</li>
+<li>Something in the context set should mention that <code>secrets.</code> isn’t available in <code>if</code></li>
+<li>Something in the three should explain how to <a href="https://github.com/actions/runner/issues/953#issuecomment-821537265">work around this</a></li>
+</ul>
+<h3 id="additional-information">Additional information</h3>
+<p>It is common for projects to include a secret for deploying things and an action that uses that secret.</p>
+<p>When one forks that repository, the secret won’t be present and the workflow will break.</p>
+<p>This experience is incredibly painful.</p>
+<p>With just a bit of extra code in a workflow, the ❌ ’s go away. But, w/o documentation on how to do it, 99% of workflow authors won’t.</p>
+<p>Here’s an example which fixed one (of a number of failing workflows):
+https://github.com/jsoref/argo-cd/commit/ae52e407e6b36d2ee65a20abe30d8065aa3d73cf</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> deploy</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="at">        </span><span class="fu">if</span><span class="kw">:</span><span class="at"> ${{ github.event_name == &#39;push&#39; &amp;&amp; env.HAVE_PERSONAL_TOKEN == &#39;true&#39; }}</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> peaceiris/actions-gh-pages@v2.5.0</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="at">        </span><span class="fu">env</span><span class="kw">:</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="at">          </span><span class="fu">HAVE_PERSONAL_TOKEN</span><span class="kw">:</span><span class="at"> ${{ secrets.PERSONAL_TOKEN != &#39;&#39; }}</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="at">          </span><span class="fu">PERSONAL_TOKEN</span><span class="kw">:</span><span class="at"> ${{ secrets.PERSONAL_TOKEN }}</span></span></code></pre></div></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Intros for map topics on search</title>
 	<link>https://github.com/github/docs/issues/6793</link>
 	<description><![CDATA[ <pre><h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
 <p>Two map topics (task-based groupings of articles):
@@ -470,12 +667,23 @@ blocks</code></pre>
 <p>This issue is for the Campus Experts + Docs program and is not available for contributors outside the program to work on.</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Link to GitHub Classroom content in other docs articles</title>
 	<link>https://github.com/github/docs/issues/6738</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>This could effect a variety of GitHub articles, since we want to add links in articles, where it makes sense, to GitHub Classroom articles.</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>Here are 4 examples of articles that could benefit from a link to GitHub Classroom articles:
+- “<a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-template-repository">Creating a template repository</a>” - To this article about template repositories, we can add a link to this GitHub Classroom article “<a href="https://docs.github.com/en/education/manage-coursework-with-github-classroom/teach-with-github-classroom/create-an-assignment-from-a-template-repository">Create an assignment from a template repository</a>” so that those learning how to create a template repository are aware they can be used in GitHub Classroom.
+- “<a href="https://docs.github.com/en/education/manage-coursework-with-github-classroom/teach-with-github-classroom/create-an-individual-assignment#creating-a-pull-request-for-feedback">Create an individual assignment</a>” - To this page in GitHub Classroom, the section “<a href="https://docs.github.com/en/education/manage-coursework-with-github-classroom/teach-with-github-classroom/create-an-individual-assignment#creating-a-pull-request-for-feedback">Creating a pull request for feedback</a>” which is specifically about enabling feedback pull requests to be automatically created for each student submission, we can add a link to this article, “<a href="https://docs.github.com/en/education/manage-coursework-with-github-classroom/teach-with-github-classroom/leave-feedback-with-pull-requests">Leave feedback with pull requests</a>” , which goes into more detail about how to leave feedback in those pull requests.
+- To either “<a href="https://docs.github.com/en/github/customizing-your-github-workflow/exploring-integrations/about-integrations">About integrations</a>” or “<a href="https://docs.github.com/en/github/customizing-your-github-workflow/exploring-integrations/github-extensions-and-integrations">GitHub extensions and integrations</a>”, we can link out to “<a href="https://docs.github.com/en/education/manage-coursework-with-github-classroom/integrate-github-classroom-with-an-ide">Integrate GitHub Classroom with an IDE</a>”, in the context of giving an example of an integration with GitHub specific to education, allowing students to develop in an online IDE.
+- This is a bit more vague, but we could add a link in some page about GitHub Actions, such as “<a href="https://docs.github.com/en/actions/guides/about-continuous-integration">About continuous integration</a>” to “<a href="https://docs.github.com/en/education/manage-coursework-with-github-classroom/teach-with-github-classroom/use-autograding">Use autograding</a>” as an example of one way continuous integration and GitHub Actions is used, in an education/classroom context.</p>
+<p>There may be other articles out there that could also use links to GitHub Classroom articles (including GitHub Classroom articles themselves) - feel free to explore and find other places!</p>
+<h3 id="additional-information">Additional information</h3>
+<p>When you add the link, you would usually want to add it a new paragraph or a "Further reading" section if it doesn’t fit in any of the existing sections. When we link to other articles, we often start with "For more information, see [link]". In this case, you could also say something like "To see an example of how [feature] is used in GitHub Classroom, see [link]" - whatever wording makes clear why they might find it useful or of interest to go to that link.</p>
+<p>For more information on how to add links to docs, see our <a href="https://github.com/github/docs/blob/main/contributing/content-style-guide.md#links">style guide</a>.</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>::set-output does not document that `value` cannot contain newlines</title>
 	<link>https://github.com/github/docs/issues/6693</link>
 	<description><![CDATA[ <pre><!--
 HUBBERS BEWARE! THE GITHUB/DOCS REPO IS PUBLIC TO THE ENTIRE INTERNET. OPEN AN ISSUE IN GITHUB/DOCS-CONTENT INSTEAD.
@@ -505,17 +713,17 @@ https://github.community/t/set-output-truncates-multiline-strings/16852/3</p>
 </ul></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Add new conceptual article 'About assignments' for GitHub Classroom docs</title>
 	<link>https://github.com/github/docs/issues/6326</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Add new conceptual article 'About GitHub Classroom'</title>
 	<link>https://github.com/github/docs/issues/6289</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Intro for software supply chain map topic</title>
 	<link>https://github.com/github/docs/issues/6284</link>
 	<description><![CDATA[ <pre><h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
 <p>The “<a href="https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain">Understanding your software supply chain</a>” map topic (a map topic is a task-based group of articles)</p>
@@ -529,7 +737,7 @@ https://github.community/t/set-output-truncates-multiline-strings/16852/3</p>
 <p>This issue is for a special project and is not currently available for contributors to work on.</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>[Improvement]: Update REST API header examples and eliminate extraneous information</title>
 	<link>https://github.com/github/docs/issues/5993</link>
 	<description><![CDATA[ <pre><h3 id="what-feature-or-product-is-affected">What feature or product is affected?</h3>
 <p>REST API</p>
@@ -547,17 +755,92 @@ https://github.community/t/set-output-truncates-multiline-strings/16852/3</p>
 <p>confusion about differences between the API headers that the user sees and what the docs show</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Fix dependabot registries examples for maven-repositories with a token</title>
 	<link>https://github.com/github/docs/issues/5981</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://docs.github.com/en/code-security/supply-chain-security/configuration-options-for-dependency-updates#maven-repository</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>the part that you can use a token for maven-repositories is wrong. You can see here, that you still need to defined username and password even when you use a token, as you can see in this PR https://github.com/dependabot/dependabot-core/pull/3403/files#diff-48b048f6d8a8b732434e30d186e65de8e3303c03308c116f8e078697b372abecR312
+If you try to use the "token" keyword you will get an error from dependabot, so the documentation is not up-to-date for maven-repositories.</p>
+<h3 id="additional-information">Additional information</h3>
+<p>related PR https://github.com/github/docs/pull/5868</p>
+<hr />
+<h3 id="content-changes-needed">Content changes needed</h3>
+<p>_Update May 6, 2021 ✏️ by <span class="citation" data-cites="felicitymay_">@felicitymay_</span></p>
+<p>I looked into this problem with the engineering team. I wanted to make sure that this was a docs issue and not a bug in Dependabot. During our investigation, it became clear that the existing information about <code>username</code>, <code>password</code> and <code>token</code> was too brief and that this issue needed a larger-scale change to the article.</p>
+<h4 id="tech-summary">Tech summary</h4>
+<ul>
+<li><code>token</code> is used to provide an access token for an external system and should not be used to provide a GitHub personal access token. It’s supported only by: <code>npm-registry</code>, <code>nuget-feed</code>, <code>python-index</code>, <code>rubygems-server</code>. As highlighted by this issue, it is not supported for <code>maven-repository</code>.</li>
+<li><code>username</code> should be an account username or email address.</li>
+<li><code>password</code> should be a password for the account specified by the <code>username</code>. If this is a GitHub account, you can use a GitHub personal access token in place of the password.</li>
+</ul>
+<h4 id="docs-changes-needed">Docs changes needed</h4>
+<ol type="1">
+<li>In the <a href="https://docs.github.com/en/code-security/supply-chain-security/configuration-options-for-dependency-updates#configuration-options-for-private-registries">Configuration options for private registries</a> section:
+<ul>
+<li>Expand the information in the table for <code>token</code>, <code>username</code> and <code>password</code> so that their use is clear. In particular, explain that a <code>token</code> is for an external system and that when you want to use a GitHub access token you should supply it as a <code>password</code>.</li>
+<li>Update all descriptions: "The <system> type supports username and password." to explain that the password can be a GitHub personal access token.</li>
+</ul></li>
+<li>In the <a href="https://docs.github.com/en/code-security/supply-chain-security/configuration-options-for-dependency-updates#registries">registries</a> section:
+<ul>
+<li>Update the <code>maven-github</code> example to use a <code>username</code> and <code>password</code> with an access token.</li>
+<li>Remove <code>token</code> from this example.</li>
+</ul></li>
+<li>In the <a href="https://docs-5868--patch-1.herokuapp.com/en/code-security/supply-chain-security/configuration-options-for-dependency-updates#git">git</a> example, change the username to: <code>username: octocat</code>.</li>
+<li>In the <a href="https://docs.github.com/en/code-security/supply-chain-security/configuration-options-for-dependency-updates#maven-repository">maven-repository</a> section:
+<ul>
+<li>Remove "token" from the description.</li>
+<li>Update the description to match those for other systems that only support a username and password.</li>
+<li>Update the second example to use a <code>username</code> and <code>password</code> with an access token.</li>
+</ul></li>
+</ol></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Provide instructions for how to allow non admins to see dependabot security alerts</title>
 	<link>https://github.com/github/docs/issues/4760</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><!--
+HUBBERS BEWARE! THE GITHUB/DOCS REPO IS PUBLIC TO THE ENTIRE INTERNET. OPEN AN ISSUE IN GITHUB/DOCS-CONTENT INSTEAD.
+-->
+<!--
+For questions, ask in Discussions: https://github.com/github/docs/discussions
+
+Before you file an issue read the:
+- Code of Conduct: https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md
+- Contributing guide: https://github.com/github/docs/blob/main/CONTRIBUTING.md
+
+Check to make sure someone hasn't already opened a similar issue: https://github.com/github/docs/issues
+-->
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<!-- Please link to the article you'd like to see updated -->
+<p>https://docs.github.com/en/code-security/supply-chain-security/viewing-and-updating-vulnerable-dependencies-in-your-repository</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<!-- Give as much detail as you can to help us understand the change you want to see. Why should the docs be changed? What use cases does it support? What is the expected outcome? -->
+<p><code>Viewing and updating vulnerable dependencies</code></p>
+<p>Doesn’t explain how a non admin can view security alerts, it appears to assume that everyone is an admin of all repositories.</p>
+<p>There is no documentation for an admin explaining how to let non admins see the security alerts.</p>
+<p>This leads to two problems:
+1. Admins see alerts and don’t understand why others can’t see them
+2. Others get urls that don’t work and don’t understand what to do</p>
+<h3 id="additional-information">Additional information</h3>
+<!-- Add any other context or screenshots about the feature request here. -->
+<p>The current public facing information for this is here:
+https://github.community/t/cant-see-the-access-to-alerts-for-dependabot-settings/157526</p>
+<p>It does not include pictures, it isn’t maintained, and it is not discoverable.</p>
+<hr />
+<h3 id="content-design-plan">Content design plan</h3>
+<ol type="1">
+<li><p>Change to the <a href="https://docs.github.com/en/code-security/supply-chain-security/managing-vulnerabilities-in-your-projects-dependencies/viewing-and-updating-vulnerable-dependencies-in-your-repository">Viewing and updating vulnerable dependencies in your repository</a> article:</p>
+<ul>
+<li>In the metadata at the top of the file, update the <code>permissions</code> statement. It should mention users with explicit access to security alerts.</li>
+</ul></li>
+<li><p>Change to the reusable that defines step 3 of the procedure.</p>
+<ul>
+<li>After the text, before the <code>{% ifversion ftp %}</code> condition, add a brief sentence explaining that if the option is missing, they should ask for access to security alerts. Then add a "For more information…" link to <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-security-and-analysis-settings-for-your-repository#granting-access-to-security-alerts">Managing security and analysis settings for your repository</a></li>
+</ul></li>
+</ol></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Code Owners and Code Review Assignment warnings incorrect</title>
 	<link>https://github.com/github/docs/issues/4420</link>
 	<description><![CDATA[ <pre><h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
 <ul>
@@ -584,12 +867,12 @@ https://github.community/t/set-output-truncates-multiline-strings/16852/3</p>
 <details></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>[GitHub Desktop] Update Configuring Git for GitHub Desktop Flow</title>
 	<link>https://github.com/github/docs/issues/4033</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Document all the GHCR labels which can be used</title>
 	<link>https://github.com/github/docs/issues/2617</link>
 	<description><![CDATA[ <pre><!--
 HUBBERS BEWARE! THE GITHUB/DOCS REPO IS PUBLIC TO THE ENTIRE INTERNET. OPEN AN ISSUE IN GITHUB/DOCS-CONTENT INSTEAD.
@@ -621,12 +904,32 @@ GHCR and metadata labels</p>
 </ul></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Comment in Creating dependent jobs section is vague and confusing</title>
 	<link>https://github.com/github/docs/issues/764</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><!--
+HUBBERS BEWARE! THE GITHUB/DOCS REPO IS PUBLIC TO THE ENTIRE INTERNET. OPEN AN ISSUE IN GITHUB/DOCS-CONTENT https://github.com/github/docs-content/issues/new/choose INSTEAD.
+-->
+<!--
+For questions, ask in Discussions: https://github.com/github/docs/discussions
+
+Before you file an issue read the: 
+- Code of Conduct: https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md
+- Contributing guide: https://github.com/github/docs/blob/main/CONTRIBUTING.md
+
+Check to make sure someone hasn't already opened a similar issue: https://github.com/github/docs/issues
+-->
+<h3 id="what-article-on-docs.github.com-is-affected">What article on docs.github.com is affected?</h3>
+<p>https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#creating-dependent-jobs and/or https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#jobsjob_idneeds</p>
+<h3 id="what-parts-of-the-article-would-you-like-to-see-updated">What part(s) of the article would you like to see updated?</h3>
+<p>In https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#creating-dependent-jobs, the possibility of constraining jobs to run sequentially without the failure of earlier jobs in the sequence preventing the later jobs from running: <em>If one of the jobs fails, all dependent jobs are skipped; however, if you need the jobs to continue, you can define this using the if conditional statement.</em></p>
+<p>I had expected, thus, to see an example of how to do this, either directly here or in one of the two linked-to articles (either https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#jobsjob_idif or https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#jobsjob_idneeds).</p>
+<p>It is not clear what sort of "if" statement is called for, nor whether it should supplement or replace the "needs" directive. The https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#jobsjob_idneeds article reiterates the possibility of constraining jobs to run in sequence without failing jobs preventing later jobs from running: <em>If a job fails, all jobs that need it are skipped unless the jobs use a conditional statement that causes the job to continue.</em> This at least suggests that the "if" statement supplements the "needs" directive, but again, there is no example given of how to do this.</p>
+<p>Since the <em>Creating dependent jobs</em> article occurs in the <em>Learn GitHub Actions</em> section of the documentation, it would probably be better to just omit the comment about allowing dependent jobs to run when their precursors fail, or at least to provide or link to an example the clarifies how to set this up.</p>
+<h3 id="additional-information">Additional information</h3>
+<!-- Add any other context or screenshots about the feature request here. --></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Use operationId for `#anchor` tags of REST API endpoint titles</title>
 	<link>https://github.com/github/docs/issues/139</link>
 	<description><![CDATA[ <pre><h3 id="what-feature-or-product-is-affected">What feature or product is affected?</h3>
 <ul class="task-list">
@@ -656,25 +959,25 @@ REST API</li>
 <p>tbd</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Outstanding Grammar Issues</title>
 	<link>https://github.com/github/linguist/issues/3924</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Kotlin support</title>
 	<link>https://github.com/github/semantic/issues/233</link>
 	<description><![CDATA[ <pre><p>As a Kotlin user, it would be benefical if semantic support Kotlin programming language.
 https://kotlinlang.org/</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>F# support</title>
 	<link>https://github.com/github/semantic/issues/132</link>
 	<description><![CDATA[ <pre><p>Any interest in supporting F#?</p>
 <p>We have our own compiler APIs that enable all kinds of stuff based on structure and semantics; and it’s part of the compiler proper, not some janky thing that breaks because the compiler changed stuff. You can see this in the Fable REPL, which supports a wide range of tooling features in the editor: https://fable.io/repl/</p>
 <p>Based on looking at how you do things, you wouldn’t be able to use this directly, which would imply a lot of work. F# syntax and semantic aren’t trivial 😅. But if there was a way to extend this to allow the existing tooling support (which can run in a browser!), then we might be able to prioritize stuff on the F# side of things to make it easier.</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Build `x86` on Windows with the built-in tools</title>
 	<link>https://github.com/github/smimesign/issues/91</link>
 	<description><![CDATA[ <pre><p>We build <code>amd64</code> directly: https://github.com/github/smimesign/blob/e650daf6eaadf85c763fa06dcfb0e4d794d293dc/.github/workflows/build-binaries.yml#L89</p>
 <p>But I had trouble figuring out how to build for <code>GOARCH=386</code> without errors. Right now, we use https://github.com/egor-tensin/setup-mingw to switch to 32-bit builds, which pulls down a bunch of tooling and takes a few minutes:</p>
@@ -682,12 +985,12 @@ https://kotlinlang.org/</p></pre> ]]></description>
 <p>I can’t help but feel there must still be a nice (or at least much faster) way to do this using the built-in tools from Actions.</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Super-linter algorithm for finding changed files is broken</title>
 	<link>https://github.com/github/super-linter/issues/1167</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Versioned documentation</title>
 	<link>https://github.com/github/view_component/issues/1151</link>
 	<description><![CDATA[ <pre><h2 id="feature-request">Feature request</h2>
 <p>As a developer reading the ViewComponent documentation, it is unclear whether there are unreleased features in the docs.</p>
@@ -697,12 +1000,44 @@ https://kotlinlang.org/</p></pre> ]]></description>
 <p>I could see us solving this a couple ways. We could only publish the docs when a release is cut, we could version the docs (see https://glebbahmutov.com/blog/versioned-doc-pages/, or perhaps we could start with a disclaimer that the docs are for the <code>main</code> branch.</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Using asset_path in component previews</title>
 	<link>https://github.com/github/view_component/issues/1093</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><!-- If possible, please provide a PR with a failing test for bugs instead of filing an issue. -->
+<h3 id="steps-to-reproduce">Steps to reproduce</h3>
+<ul>
+<li>put <code>image.png</code> in <code>app/assets/images/image.png</code></li>
+<li>create an example component that accepts an <code>image</code> argument, with a preview file</li>
+<li>in the preview file, add <code>render ExampleComponent.new(image: image_path(\"image.png\")</code></li>
+<li>this will trigger a <code>NoMethodError</code></li>
+<li>add <code>include ActionView::Helpers::AssetUrlHelper</code> at the top of the preview class</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">class</span> <span class="dt">ExampleComponent</span> &lt; <span class="dt">ApplicationComponent</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="kw">def</span> initialize(image:)</span>
+<span id="cb1-3"><a href="#cb1-3"></a>    <span class="ot">@image</span> = image</span>
+<span id="cb1-4"><a href="#cb1-4"></a>  <span class="kw">end</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a></span>
+<span id="cb1-6"><a href="#cb1-6"></a>  <span class="kw">def</span> call</span>
+<span id="cb1-7"><a href="#cb1-7"></a>    image_tag <span class="ot">@image</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>  <span class="kw">end</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="kw">end</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">class</span> <span class="dt">ExampleComponentPreview</span> &lt; <span class="dt">ViewComponent</span>::<span class="dt">Preview</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>  include <span class="dt">ActionView</span>::<span class="dt">Helpers</span>::<span class="dt">AssetUrlHelper</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a>  <span class="kw">def</span> default</span>
+<span id="cb2-5"><a href="#cb2-5"></a>    render(<span class="dt">ExampleComponent</span>.new(<span class="st">image: </span>image_path(\<span class="st">&quot;image.png\&quot;)))</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="st">  end</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="st">end</span></span></code></pre></div>
+<h3 id="expected-behavior">Expected behavior</h3>
+<p>The preview renders the image with path <code>/assets/image-80b04a6277839296f66f0e7de1fb03a3061322fad2273b18a375bf2f5381c41f.png</code>.</p>
+<h3 id="actual-behavior">Actual behavior</h3>
+<p>The preview renders but the image path is <code>/images/image.png</code>.</p>
+<h3 id="system-configuration">System configuration</h3>
+<p><strong>Rails version</strong>: 6.1.4.1</p>
+<p><strong>Ruby version</strong>: 2.7.4</p>
+<p><strong>Gem version</strong>: 2.40.0</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>How to configure stimulus using the new rails 7 asset pipeline</title>
 	<link>https://github.com/github/view_component/issues/1064</link>
 	<description><![CDATA[ <pre><h2 id="feature-request">Feature request</h2>
 <p>Hello, how could this be done? In the javascript documentation the configuration needed to use webpack is indicated, but I am interested in using stimulus using importmap and sprockets, as it will be in rails 7 by default, using the asset pipeline.</p>
@@ -718,12 +1053,12 @@ context or references to similar behavior in other libraries? -->
 </ul></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Static types?</title>
 	<link>https://github.com/github/view_component/issues/1048</link>
 	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Add paved path for unit testing components with behaviors</title>
 	<link>https://github.com/github/view_component/issues/904</link>
 	<description><![CDATA[ <pre><h3 id="problem-statement">Problem statement</h3>
 <blockquote>
@@ -733,7 +1068,7 @@ context or references to similar behavior in other libraries? -->
 <p>In Primer ViewComponents, we use system tests powered by cuprite and ViewComponent Previews for testing behaviors. As this approach matures, we should aim to move of much of it as possible into ViewComponent.</p></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Support multiple views</title>
 	<link>https://github.com/github/view_component/issues/387</link>
 	<description><![CDATA[ <pre><h2 id="feature-request">Feature request</h2>
 <!-- Provide a summary of the behavior. -->
@@ -761,9 +1096,39 @@ Cells does allow multiple views per cell, and allows using <code>render view: 'a
 </ol></pre> ]]></description>
 </item>
 
-<item>	<title></title>
+<item>	<title>Components should play nicely with Rails caching mechanisms</title>
 	<link>https://github.com/github/view_component/issues/234</link>
-	<description><![CDATA[ <pre>Content clipped</pre> ]]></description>
+	<description><![CDATA[ <pre><h3 id="feature-request">Feature request</h3>
+<p>Components should provide a digest to Rails views, or be able to use Rails explicit caching directive comments or be able to provide a cache_key.</p>
+<p>Essentially we should be able to invalidate a cache based on whether the Component class or template has changed.</p>
+<h3 id="motivation">Motivation</h3>
+<p>I’m just building on some previous reports primarily around where templates live and the filenames of the template/s. My concerns come down to integrating with Rails caching basics.</p>
+<p>The issue that we run into is basically summed up by</p>
+<pre><code>## In any view/partial
+cache[object, another_object] do
+  render(MyComponent.new(attribute: value))
+end</code></pre>
+<p>In this case if the template for <code>MyComponent</code> is changed the cache will not be invalidated. I tried to add <code>MyComponent</code> to the array used by <code>cache</code> and provide a <code>self.cache_key</code> method that used <code>ActionView::Digestor</code> but without having some further mechanism to invalidate the digestor’s cache for the template/s when the template changes this didn’t work.</p>
+<p>Rails allows for explicit directives to be used (https://guides.rubyonrails.org/caching_with_rails.html#explicit-dependencies) but by default this will only look inside <code>app/views</code>. You can add a view path <code>append_view_path(\"app/components\")</code> but the digestor is expecting a partial and so a template filename would have to be prefixed with underscore.</p>
+<p>The way we are currently working around this is to have an <code>ApplicationComponent</code> that our components inherit from and where we override <code>ActionView::Component::Base.matching_views_in_source_location</code> so that templates are now found in <code>app/views/component_templates</code> and where the files are prefixed with underscore.</p>
+<pre><code>  def self.matching_views_in_source_location
+    return [] unless source_location
+
+    *path, file_name = source_location.chomp(File.extname(source_location)).split(\&quot;/\&quot;)
+    path.pop # remove components
+    path.concat([\&quot;views\&quot;, \&quot;component_templates\&quot;])
+    path_to_template = path.push(\&quot;_#{ file_name }\&quot;).join(\&quot;/\&quot;)
+
+    Dir[\&quot;#{ path_to_template }.*{#{ActionView::Template.template_handler_extensions.join(&#39;,&#39;)}}\&quot;]
+  end</code></pre>
+<p>Then in the above example where cache invalidation does not work via template digest changes we can do</p>
+<pre><code>## In any view/partial
+# Template Dependency: component_templates/my_component %&gt;
+cache[object, another_object] do
+  render(MyComponent, attribute: value)
+end</code></pre>
+<p>I think if AV::C is going to be core or integrate with Rails it would need a way to expose template digests nicely, or provide <code>cache_key</code> probably at the class level. If not then as a last resort we would need a way to use explicit directives in templates that use ActionView::Components internally.</p>
+<p>I’d also be all 👂 to people who have solved this already or if I’ve missed something about the features <code>ActionView::Component</code> provides!</p></pre> ]]></description>
 </item>
 
 
