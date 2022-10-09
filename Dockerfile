@@ -1,5 +1,6 @@
 #FROM alpine:3.10
-FROM conoria/alpine-pandoc:latest
+#FROM conoria/alpine-pandoc:latest
+FROM pandoc/core
 
 RUN apk --update add jq curl gettext perl 
 
